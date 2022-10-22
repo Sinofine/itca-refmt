@@ -1,6 +1,12 @@
 * ITCA reformatted (WIP)
 The repository is for storation of texts for the \(\TeX \) reformat of Atiyah's /Introduction to Commutative Algebra/.
 
+** Build Method
+
+TeXLive is required.
+#+begin_src bash
+  latexmk -lualatex main.tex
+#+end_src
 ** Process
 *** TODO Chap 1
 *** TODO Chap 2
