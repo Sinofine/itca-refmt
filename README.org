@@ -1,0 +1,15 @@
+* ITCA reformatted (WIP)
+The repository is for storation of texts for the \(\TeX \) reformat of Atiyah's /Introduction to Commutative Algebra/.
+
+** Process
+*** TODO Chap 1
+*** TODO Chap 2
+*** TODO Chap 3
+*** TODO Chap 4 [2/9]
+*** TODO Chap 5
+*** TODO Chap 6
+*** TODO Chap 7
+*** TODO Chap 8
+*** TODO Chap 9
+*** TODO Chap 10
+*** TODO Chap 11

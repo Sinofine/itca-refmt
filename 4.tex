@@ -1,0 +1,110 @@
+\documentclass{standalone}
+\usepackage{unicode-math}
+\setmathfont{texgyrepagella-math.otf}[math-style=TeX]
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{lemma}
+\newtheorem{example}{Example}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\begin{document}
+The decomposition of an ideal into primary ideals is a traditional pillar of ideal
+theory. It provides the algebraic foundation for decomposing an algebraic
+variety into its irreducible components---although it is only fair to point out
+that the algebraic picture is more complicated than na\"{i}ve geometry would
+suggest. From another point of view primary decomposition provides a generalization
+of the factorization of an integer as a product of prime-powers. In
+the modern treatment, with its emphasis on localization, primary decomposition
+is no longer such a central tool in the theory. It is still, however, of interest in
+itself and in this chapter we establish the classical uniqueness theorems.
+
+The prototypes of commutative rings are $\mathbf{Z}$ and the ring of polynomials
+ $k[x_1,\cdots,x_n]$ where $k$ is a field; both these are unique factorization domains.
+This is not true of arbitrary commutative rings, even if they are integral domains
+(the classical example is the ring $\mathbf{Z}[\sqrt{-5}]$, in which the element 6 has two
+essentially distinct factorizations, $2\cdot 3$ and $(1+\sqrt{-5})(1-\sqrt{-5})$. However,
+there is a generalized form of "unique factorization" of \textit{ideals} (not of elements)
+in a wide class of rings (the Noetherian rings).
+
+A prime ideal in a ring $A$ is in some sense a generalization of a prime number.
+The corresponding generalization of a power of a prime number is a
+primary ideal. An ideal $\symfrak{q}$ in a ring $A$ is \textit{primary}
+if $\symfrak{q}\neq A$ and if
+\[
+  xy\in\symfrak{q}\implies\text{either }x\in\symfrak{q}\text{ or
+  }y^n\in\symfrak{q}\text{ for some }n>0.
+\]
+In other words,
+\[
+\symfrak{q}\text{ is primary}\iff A/\symfrak{q}\ne 0 \text{ and every
+  zero-divisor in }A/\symfrak{q}\text{ is nilpotent}.
+\]
+
+Clearly every prime ideal is primary. Also the contraction of a primary
+ideal is primary, for if $f:A\to B$ and if $\symfrak{q}$ is a primary ideal in
+$B$
+, then $A/\symfrak{q}^c$ is isomorphic to a subring of $B/\symfrak{q}$.
+\begin{proposition}
+  Let $\symfrak{q}$ be a primary ideal in a ring $A$. Then $r(\symfrak{q})$ is the smallest
+  prime ideal containing $\symfrak{q}$.
+\end{proposition}
+\begin{proof}
+  By (1.8) it is enough to show that $\symfrak{p}=r(\symfrak{q})$ is prime.
+  Let $xy\in r(\symfrak{q})$, then $(xy)^m\in \symfrak{q}$ for some $m>0$, and
+  therefore either $x^m\in \symfrak{q}$ or $y^{mn}\in \symfrak{q}$ for some
+  $n>0$; i.e., either $x\in r(\symfrak{q})$ or $y \in r(\symfrak{q})$.
+\end{proof}
+
+If $\symfrak{p}=r(\symfrak{q})$, then $\symfrak{q}$ is said to be
+$\symfrak{p}$-primary.
+\begin{example}
+\begin{enumerate}
+\item The primary ideals in $\mathbf{Z}$ are $(0)$ and $(p^n)$, where $p$ is prime. For
+  these are the only ideals in $\mathbf{Z}$ with prime radical, and it is immediately checked
+  that they are primary.
+\item Let $A=k[x,y]$, $\symfrak{q} = (x, y^2)$. Then $A/\symfrak{q} \simeq
+  k[y]/(y^2)$,
+  in which the zero-divisors are all the multiples of $y$, hence are nilpotent.
+  Hence $\symfrak{q}$ is primary, and its radical $\symfrak{p}$ is $(x, y)$. We
+  have $\symfrak{p}^2\subset \symfrak{q}\subset \symfrak{p}$ (strict inclusions),
+  so that a primary ideal is not necessarily a prime-power.
+\item Conversely, a prime power $\symfrak{p}^n$ is not necessarily primary, although its
+  radical is the prime ideal $\symfrak{p}$. For example, let $A = k[x, y, z]/(xy
+  - z^2)$
+  and let $\bar{x},\bar{y}, \bar{z}$ denote the images of $x, y, z$ respectively
+  in $A$. Then $\symfrak{p} = (\bar{x}, \bar{z})$ is prime
+  (since $A/\symfrak{p}\simeq k[y]$, an integral domain);
+  we have $\bar{x}\bar{y} = \bar{z}^2\in \symfrak{p}^2$ but $x \notin
+  \symfrak{p}^2$ and $y \not\in r(\symfrak{p}^2 ) = \symfrak{p}$;
+  hence $\symfrak{p}^2$ is not primary. However, there is the following result:
+\end{enumerate}
+\end{example}
+Proposition 4.2. If r(a) is maximal, then a is primary. In particular, the
+powers of a maximal ideal m are m-primary.
+Proof. Let r(a) = m. The image of m in A fa is the nilradical of A/a, hence A fa
+has only one prime ideal, by (1.8). Hence every element of A/a is either a unit or
+nilpotent, and so every zero-divisor in A/a is nilpotent. •
+We are going to study presentations of an ideal as an intersection ofprimary
+ideals. First, a couple oflemmas:
+Lemma 4.3. If q, (I ~ i ~ n) are ~-primary, then q = nf= 1 q, is ~-primary.
+Proof. r(q) = r(nf= 1 q,) = n r(q1) = ~. Let xy E q, y ¢ q. Then for some i
+we have xy E q1 andy¢ q" hence x E ~.since q, is primary. •
+Lemma 4.4. Let q be a ~-primary ideal, x an element of A. Then
+i) ifx E q then (q:x) = (1);
+ii) ifx ¢ q then (q:x) is ~-primary, and therefore r(q:x) = ~;
+iii) ifx¢~ then (q:x) = q.
+Proof. i) and iii) follow immediately from the definitions.
+ii): if y E (q:x) then xy E q, hence (as x ¢ q) we have y E ~· Hence q s;;
+(q:x) s;; ~;takingradicals,wegetr(q:x) = ~· Letyze(q:x)withy¢~;then
+xyz E q, hence xz E q, hence z E (q:x). •
+A primary decomposition of an ideal a in A is an expression of a as a finite
+intersection of primary ideals, say
+(1)
+(In general such a primary decomposition need not exist; in this chapter we shall
+restrict our attention to ideals which have a primary decomposition.) If more-
+\end{document}

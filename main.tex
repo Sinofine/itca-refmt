@@ -1,2 +1,31 @@
 \documentclass{book}
+\usepackage{unicode-math}
+\setmathfont{texgyrepagella-math.otf}[math-style=TeX]
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
 \usepackage{standalone}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{lemma}
+\newtheorem{example}{Example}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\title{Introduction to Commutative Algebra}
+\author{M. F. ATIYAH \and I. G. MACDONALD}
+\begin{document}
+\frontmatter
+\maketitle
+\chapter{Introduction}
+\chapter{Notation and Terminology}
+\tableofcontents
+\mainmatter
+\chapter{Rings and Ideals}
+\chapter{Modules}
+\chapter{Rings and Modules of Fractions}
+\chapter{Primary Decomposition}
+\input{4.tex}
+\end{document}
