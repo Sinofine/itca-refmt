@@ -4,12 +4,12 @@
 \usepackage{fontspec}
 \setmainfont{TeX Gyre Pagella}
 \usepackage{amsthm}
-\newtheorem{theorem}{Theorem}
-\newtheorem{proposition}{Proposition}
-\newtheorem{lemma}{lemma}
-\newtheorem{example}{Example}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{lemma}
+\newtheorem*{example}{Example}
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
+\newtheorem{definition}[theorem]{Definition}
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 \begin{document}
@@ -28,7 +28,7 @@ The prototypes of commutative rings are $\mathbf{Z}$ and the ring of polynomials
 This is not true of arbitrary commutative rings, even if they are integral domains
 (the classical example is the ring $\mathbf{Z}[\sqrt{-5}]$, in which the element 6 has two
 essentially distinct factorizations, $2\cdot 3$ and $(1+\sqrt{-5})(1-\sqrt{-5})$. However,
-there is a generalized form of "unique factorization" of \textit{ideals} (not of elements)
+there is a generalized form of ``unique factorization'' of \textit{ideals} (not of elements)
 in a wide class of rings (the Noetherian rings).
 
 A prime ideal in a ring $A$ is in some sense a generalization of a prime number.
@@ -84,27 +84,94 @@ $\symfrak{p}$-primary.
   hence $\symfrak{p}^2$ is not primary. However, there is the following result:
 \end{enumerate}
 \end{example}
-Proposition 4.2. If r(a) is maximal, then a is primary. In particular, the
-powers of a maximal ideal m are m-primary.
-Proof. Let r(a) = m. The image of m in A fa is the nilradical of A/a, hence A fa
-has only one prime ideal, by (1.8). Hence every element of A/a is either a unit or
-nilpotent, and so every zero-divisor in A/a is nilpotent. •
-We are going to study presentations of an ideal as an intersection ofprimary
-ideals. First, a couple oflemmas:
-Lemma 4.3. If q, (I ~ i ~ n) are ~-primary, then q = nf= 1 q, is ~-primary.
-Proof. r(q) = r(nf= 1 q,) = n r(q1) = ~. Let xy E q, y ¢ q. Then for some i
-we have xy E q1 andy¢ q" hence x E ~.since q, is primary. •
-Lemma 4.4. Let q be a ~-primary ideal, x an element of A. Then
-i) ifx E q then (q:x) = (1);
-ii) ifx ¢ q then (q:x) is ~-primary, and therefore r(q:x) = ~;
-iii) ifx¢~ then (q:x) = q.
-Proof. i) and iii) follow immediately from the definitions.
-ii): if y E (q:x) then xy E q, hence (as x ¢ q) we have y E ~· Hence q s;;
-(q:x) s;; ~;takingradicals,wegetr(q:x) = ~· Letyze(q:x)withy¢~;then
-xyz E q, hence xz E q, hence z E (q:x). •
-A primary decomposition of an ideal a in A is an expression of a as a finite
+\begin{proposition}
+  If $r(\symfrak{a})$ is maximal, then $\symfrak{a}$ is primary. In particular, the
+  powers of a maximal ideal $\symfrak{m}$ are $\symfrak{m}$-primary.
+\end{proposition}
+\begin{proof}
+  Let $r(\symfrak{a}) = \symfrak{m}$. The image of $\symfrak{m}$ in
+  $A/\symfrak{a}$ is the nilradical of $A/\symfrak{a}$, hence $A/\symfrak{a}$ has only one prime ideal, by (1.8). Hence every element of $A/\symfrak{a}$ is either a unit or nilpotent, and so every zero-divisor in $A/\symfrak{a}$ is nilpotent.
+\end{proof}
+We are going to study presentations of an ideal as an intersection of primary
+ideals. First, a couple of lemmas:
+\begin{lemma}
+  If $\symfrak{q}_i, (1 \le i \le n)$ are $\symfrak{p}$-primary, then $\symfrak{q} = \bigcap_{i=1}^{n}\symfrak{q}_i$ is $\symfrak{p}$-primary.
+\end{lemma}
+\begin{proof}
+  $r(\symfrak{q}) = r(\bigcap_{i=1}^{n} \symfrak{q}_i) = \cap r(\symfrak{q}_i) = \symfrak{p}$. Let $xy\in \symfrak{q}$, $y \not\in
+  \symfrak{q}$. Then for some $i$ we have $xy \in \symfrak{q}_i$ and $y\not\in \symfrak{q}_i$ hence $x\in \symfrak{p}$. since $\symfrak{q}_i$ is primary.
+\end{proof}
+\begin{lemma}
+  Let $q$ be a $\symfrak{p}$-primary ideal, $x$ an element of $A$. Then
+\begin{enumerate}
+\item if $x \in \symfrak{q}$ then $(\symfrak{q}:x) = (1)$;
+\item if $x \not\in \symfrak{q}$ then $(\symfrak{q}:x)$ is $\symfrak{p}$-primary, and therefore $r(\symfrak{q}:x) = \symfrak{p}$;
+\item if $x\not\in \symfrak{p}$ then $(\symfrak{q}:x) = \symfrak{q}$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+  i) and iii) follow immediately from the definitions.
+  ii): if $y \in (\symfrak{q}:x)$ then $xy \in \symfrak{q}$, hence (as $x \not\in \symfrak{q}$) we have $y\in
+  \symfrak{p}$ Hence $\symfrak{q} \subseteq (\symfrak{q}:x)\subseteq \symfrak{p}$;taking radicals, we get $r(\symfrak{q}:x) = \symfrak{p}$.
+  Let $yz\in(\symfrak{q}:x)$ with $y\not\in \symfrak{p}$; then
+  $xyz \in \symfrak{q}$, hence $xz \in \symfrak{q}$, hence $z \in (\symfrak{q}:x)$.
+\end{proof}
+A primary decomposition of an ideal $a$ in $A$ is an expression of $a$ as a finite
 intersection of primary ideals, say
-(1)
+\begin{equation}
+  \label{eq:4.1}
+  a=\bigcap_{i=1}^{n}\symfrak{q}_i
+\end{equation}
 (In general such a primary decomposition need not exist; in this chapter we shall
-restrict our attention to ideals which have a primary decomposition.) If more-
+restrict our attention to ideals which have a primary decomposition.) If more
+
+% over (i) the r(q,) are all distinct, and (ii) we have q,
+% nh'l q, (1 ::;;; i ::;;; n) the
+% primary decomposition (1) is said to be minimal (or irredundant, or reduced, or
+% normal, ... ). By (4.3) we can achieve (i) and then we can omit any superfluous
+% terms to achieve (ii); thus any primary decomposition can be reduced to a
+% minimal one. We shall say that a is decomposable if it has a primary decomposi-
+% tion.
+% Theorem 4.5. (1st uniqueness theorem). Let a be a decomposable ideal and
+% let a = nf= 1q, be a minimal primary decomposition of a. Let -13t = r(q,)
+% (1 ::;;; i ::;;; n). Then the .);!, are precisely the prime ideals which occur in the set
+% of ideals r(a:x) (x E A), and hence are independent of the particular de-
+% composition of a.
+% Proof. For any X E A we have (a:x) =
+% q,:x) =
+% (q,:x), hence r(a:x) =
+% nf. 1r(q1:x) = nx~q1 .)31 by (4.4). Suppose r(a:x) is prime; then by (1.11) we
+% have r(a:x) = .)31 for somej. Hence every prime ideal of the form r(a.:x) is one of
+% the .);!,. Conversely, for each i there exists x, ¢
+% x,
+% q,, since the de-
+% composition is minimal; and we have r(a:x,) = .);1 1• •
+% en
+% n
+% qb En,,.,
+% Remarks. I) The above proof, coupled with the last part of (4.4), shows that
+% for each i there exists x, in A such that (a:x,) is .);!,-primary.
+% 2) Considering A/a as an A-module, (4.5) is equivalent to saying that the.);!,
+% are precisely the prime ideals which occur as radicals of annihilators of elements
+% of A/a.
+% Example. Let a = (x2, xy) in A = k[x, y]. Then a = .);1 1 n .);!~where .);1 1 = (x),
+% The ideal .);!~ is primary by (4.2). So the prime ideals are -lJ1o .);1 2•
+% In this example .);1 1 c: .);1 2; we have r(a) = -lJ1 n -lJ2 = -lJ1o but a is not a primary
+% ideal.
+% .);1 2 = (x, y).
+% The prime ideals .);!, in (4. 5) are said to belong to a, or to be associated with a.
+% The ideal a is primary if and only if it has only one associated prime ideal. The
+% minimal elements of the set {-131> ••• , -lJJ are called the minimal or isolated prime
+% ideals belonging to a. The others are called embedded prime ideals. In the
+% example above, .);1 2 = (x, y) is.embedded.
+% Proposition 4.6. Let a be a decomposable ideal. Then any prime ideal
+% .);! 2 a contains a minimal prime ideal belonging to a, and thus the minimal
+% prime ideals of a are precisely the minimal elements in the set of all prime
+% ideals containing a.
+% Proof. If -13 2 a = nf. 1q" then -13 = r(-13) 2 n r(q1) = n .);11. Hence by
+% (1.11) we have.);! 2 .);11 for some i; hence.);! contains a minimal prime ideal of a. •
+% Remarks. 1) The names isolated and embedded come from geometry. Thus if
+% A = k[xh ... , Xnl where k is a field, the ideal a gives rise to a variety X s;;; kn
+% (see Chapter 1, Exercise 25). The minimal primes .);!, correspond to the irre-
+% ducible components of X, and the embedded primes correspond to subvarieties
 \end{document}
