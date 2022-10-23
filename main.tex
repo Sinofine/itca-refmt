@@ -4,6 +4,8 @@
 \usepackage{fontspec}
 \setmainfont{TeX Gyre Pagella}
 \usepackage{standalone}
+\usepackage{biblatex}
+\addbibresource{intro.bib}
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{proposition}[theorem]{Proposition}
@@ -19,7 +21,71 @@
 \frontmatter
 \maketitle
 \tableofcontents
+\begin{refsection}
 \chapter{Introduction}
+Commutative algebra is essentially the study of commutative rings. Roughly
+speaking, it has developed from two sources: (1) algebraic geometry and (2)
+algebraic number theory. In (1) the prototype of the rings studied is the ring
+$k[x_1, \cdots , x_n]$ of polynomials in several variables over a field $k$;
+in (2) it is the
+ring $\mathbf{Z}$ of rational integers. Of these two the algebro-geometric case is the more
+far-reaching and, in its modern development by Grothendieck, it embraces much
+of algebraic number theory. Commutative algebra is now one of the foundation
+stones of this new algebraic geometry. It provides the complete local tools
+for the subject in much the same way as differential analysis provides the tools
+for differential geometry.
+
+This book grew out of a course of lectures given to third year under-
+graduates at Oxford University and it has the modest aim of providing a rapid
+introduction to the subject. It is designed to be read by students who have had a
+first elementary course in general algebra. On the other hand, it is not intended
+as a substitute for the more voluminous tracts on commutative algebra such as
+Zariski-Samuel \cite{zariski1960commutative} or Bourbaki \cite{bourbaki1961algebre}. We have concentrated on certain central
+topics, and large areas, such as field theory, are not touched. In content we
+cover rather more ground than Northcott \cite{northcott_1953} and our treatment is substantially
+different in that, following the modern trend, we put more emphasis on modules
+and localization.
+
+The central notion in commutative algebra is that of a prime ideal. This
+provides a common generalization of the primes of arithmetic and the points of
+geometry. The geometric notion of concentrating attention ``near a point''
+has as its algebraic analogue the important process of localizing a ring at a prime
+ideal. It is not surprising, therefore, that results about localization can usefully
+be thought of in geometric terms. This is done methodically in Grothendieck's
+theory of schemes and, partly as an introduction to Grothendieck's work \cite{grothendieck1960elements},
+and partly because of the geometric insight it provides, we have added schematic
+versions of many results in the form of exercises and remarks.
+
+The lecture-note origin of this book accounts for the rather terse style~ with
+little general padding, and for the condensed account of many proofs. We have
+resisted the temptation to expand it in the hope that the brevity of our presenta-
+tion will make clearer the mathematical structure of what is by now an elegant
+and attractive theory. Our philosophy has been to build up to the main theorems
+in a succession of simple steps and to omit routine verifications.
+
+Anyone writing now on commutative algebra faces a dilemma in connection
+with homological algebra, which plays such an important part in modern
+developments. A proper treatment of homological algebra is impossible within
+the confines of a small book: on the other hand, it is hardly sensible to ignore it
+completely. The compromise we have adopted is to use elementary homological
+methods-exact sequences, diagrams, etc.-but to stop short of any results
+requiring a deep study of homology. In this way we hope to prepare the ground
+for a systematic course on homological algebra which the reader should undertake
+if he wishes to pursue algebraic geometry in any depth.
+
+We have provided a substantial number of exercises at the end of each
+chapter. Some of them are easy and some of them are hard. Usually we have
+provided hints, and sometimes complete solutions, to the hard ones. We are
+indebted to Mr. R. Y. Sharp, who worked through them all and saved us from
+error more than once.
+
+We have made no attempt to describe the contributions of the many
+mathematicians who have helped to develop the theory as expounded in this
+book. We would, however, like to put on record our indebtedness to J.-P. Serre
+and J. Tate from whom we learnt the subject, and whose influence was the
+determining factor in our choice of material and mode of presentation.
+\printbibliography[heading=subbibliography]
+\end{refsection}
 \chapter{Notation and Terminology}
 \mainmatter
 \chapter{Rings and Ideals}
