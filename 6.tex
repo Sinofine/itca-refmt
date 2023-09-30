@@ -1,0 +1,197 @@
+\documentclass{standalone}
+\usepackage{unicode-math}
+\setmathfont{texgyrepagella-math.otf}[math-style=TeX]
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{lemma}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\usepackage[export]{adjustbox}\graphicspath{ {./images/} }
+\begin{document}
+So far we have considered quite arbitrary commutative rings (with identity). To go further, however, and obtain deeper theorems we need to impose some finiteness conditions. The most convenient way is in the form of "chain conditions". These apply both to rings and modules, and in this chapter we consider the case of modules. Most of the arguments are of a rather formal kind and because of this there is a symmetry between the ascending and descending chains-a symmetry which disappears in the case of rings as we shall see in subsequent chapters.
+
+Let $\Sigma$ be a set partially ordered by a relation $\leqslant$ (i.e., $\leqslant$ is reflexive and transitive and is such that $x \leqslant y$ and $y \leqslant x$ together imply $x=y$ ).
+
+Proposition 6.1. The following conditions on $\Sigma$ are equivalent:
+
+i) Every increasing sequence $x_{1} \leqslant x_{2} \leqslant \cdots$ in $\Sigma$ is stationary (i.e., there exists $n$ such that $x_{n}=x_{n+1}=\cdots$ ).
+
+ii) Every non-empty subset of $\Sigma$ has a maximal element.
+
+Proof. i) $\Rightarrow$ ii). If ii) is false there is a non-empty subset $T$ of $\Sigma$ with no maximal element, and we can construct inductively a non-terminating strictly increasing sequence in $T$.
+
+ii) $\Rightarrow$ i). The set $\left(x_{m}\right)_{m \geq 1}$ has a maximal element, say $x_{n}$.
+
+If $\Sigma$ is the set of submodules of a module $M$, ordered by the relation $\subseteq$, then i) is called the ascending chain condition (a.c.c. for short) and ii) the maximal condition. A module $M$ satisfying either of these equivalent conditions is said to be Noetherian (after Emmy Noether). If $\Sigma$ is ordered by $\supseteq$, then i) is the descending chain condition (d.c.c. for short) and ii) the minimal condition. A module $M$ satisfying these is said to be Artinian (after Emil Artin).
+
+Examples, 1) A finite abelian group (as Z-module) satisfies both a.c.c. and d.c.c.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item The ring $\mathbf{Z}$ (as $\mathbf{Z}$-module) satisfies a.c.c. but not d.c.c. For if $a \in \mathbf{Z}$ and $a \neq 0$ we have $(a) \supset\left(a^{2}\right) \supset \ldots \supset\left(a^{n}\right) \supset \ldots$ (strict inclusions).
+
+  \item Let $G$ be the subgroup of $Q / Z$ consisting of all elements whose order is a power of $p$, where $p$ is a fixed prime. Then $G$ has exactly one subgroup $G_{n}$ of order $p^{n}$ for each $n \geqslant 0$, and $G_{0} \subset G_{1} \subset \cdots \subset G_{n} \subset \cdots$ (strict inclusions) so that $G$ does not satisfy the a.c.c. On the other hand the only proper subgroups of $G$ are the $G_{n}$, so that $G$ does satisfy d.c.c.
+
+  \item The group $H$ of all rational numbers of the form $m / p^{n}(m, n \in \mathbf{Z}, n \geqslant 0)$ satisfies neither chain condition. For we have an exact sequence $0 \rightarrow \mathbf{Z} \rightarrow H \rightarrow$ $G \rightarrow 0$, so that $H$ doesn't satisfy d.c.c. because $Z$ doesn't; and $H$ doesn't satisfy a.c.c. because $G$ doesn't.
+
+  \item The ring $k[x]$ ( $k$ a field, $x$ an indeterminate) satisfies a.c.c. but not d.c.c. on ideals.
+
+  \item The polynomial ring $k\left[x_{1}, x_{2}, \ldots\right]$ in an infinite number of indeterminates $x_{n}$ satisfies neither chain condition on ideals: for the sequence $\left(x_{1}\right) \subset\left(x_{1}, x_{2}\right)$ $\subset \ldots$ is strictly increasing, and the sequence $\left(x_{1}\right) \supset\left(x_{1}^{2}\right) \supset\left(x_{1}^{3}\right) \supset \ldots$ is strictly decreasing.
+
+  \item We shall see later that a ring which satisfies d.c.c. on ideals must also satisfy a.c.c. on ideals. (This is not true in general for modules: see Examples 2, 3 above.)
+
+\end{enumerate}
+
+Proposition 6.2. $M$ is a Noetherian $A$-module $\Leftrightarrow$ every submodule of $M$ is finitely generated.
+
+Proof. $\Rightarrow$ : Let $N$ be a submodule of $M$, and let $\Sigma$ be the set of all finitely generated submodules of $N$. Then $\Sigma$ is not empty (since $0 \in \Sigma$ ) and therefore has a maximal element, say $N_{0}$. If $N_{0} \neq N$, consider the submodule $N_{0}, A x$ where $x \in N, x \notin N_{0}$; this is finitely generated and strictly contains $N_{0}$, so we have a contradiction. Hence $N=N_{0}$ and therefore $N$ is finitely generated.
+
+$\Leftarrow$ : Let $M_{1} \subseteq M_{2} \subseteq \cdots$ be an ascending chain of submodules of $M$. Then $N=\bigcup_{n=1}^{\infty} M_{n}$ is a submodule of $M$, hence is finitely generated, say by $x_{1}, \ldots, x_{r}$. Say $x_{i} \in M_{n_{i}}$ and let $n=\max _{i=1}^{r} n_{i}$; then each $x_{i} \in M_{n}$, hence $M_{n}=M$ and therefore the chain is stationary.
+
+Because of (6.2), Noetherian modules are more important than Artinian modules: the Noetherian condition is just the right finiteness condition to make a lot of theorems work. However, many of the elementary formal properties apply equally to Noetherian and Artinian modules.
+
+Proposition 6.3. Let $0 \rightarrow M^{\prime} \stackrel{\alpha}{\rightarrow} M \stackrel{\beta}{\rightarrow} M^{\prime \prime} \rightarrow 0$ be an exact sequence of A-modules. Then
+
+i) $M$ is Noetherian $\Leftrightarrow M^{\prime}$ and $M^{\prime \prime}$ are Noetherian;
+
+ii) $M$ is Artinian $\Leftrightarrow M^{\prime}$ and $M^{\prime \prime}$ are Artinian.
+
+Proof. We shall prove i); the proof of ii) is similar.
+
+$\Rightarrow$ : An ascending chain of submodules of $M^{\prime}$ (or $M^{\prime \prime}$ ) gives rise to a chain in $M$, hence is stationary. $\epsilon$ : Let $\left(L_{n}\right)_{n \geqslant 1}$ be an ascending chain of submodules of $M$; then $\left(\alpha^{-1}\left(L_{n}\right)\right)$ is a chain in $M^{\prime}$, and $\left(\beta\left(L_{n}\right)\right)$ is a chain in $M^{\prime \prime}$. For large enough $n$ both these chains are stationary, and it follows that the chain $\left(L_{n}\right)$ is stationary.
+
+Corollary 6.4. If $M_{i}(1 \leqslant i \leqslant n)$ are Noetherian (resp. Artinian) A-modules, so is $\bigoplus_{i=1}^{n} M_{i}$.
+
+Proof. Apply induction and (6.3) to the exact sequence
+
+\[
+0 \rightarrow M_{n} \rightarrow \bigoplus_{i=1}^{n} M_{i} \rightarrow \bigoplus_{i=1}^{n-1} M_{i} \rightarrow 0 .
+\]
+
+A ring $A$ is said to be Noetherian (resp. Artinian) if it is so as an $A$-module, i.e., if it satisfies a.c.c. (resp. d.c.c.) on ideals.
+
+Examples. 1) Any field is both Artinian and Noetherian; so is the ring $Z /(n)$ $(n \neq 0)$. The ring $Z$ is Noetherian, but not Artinian (Exercise 2 before (6.2)).
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item Any principal ideal domain is Noetherian (by (6.2): every ideal is finitely generated).
+
+  \item The ring $k\left[x_{1}, x_{2}, \ldots\right]$ is not Noetherian (Exercise 6 above). But it is an integral domain, hence has a field of fractions. Thus a subring of a Noetherian ring need not be Noetherian.
+
+  \item Let $X$ be a compact infinite Hausdorff space, $C(X)$ the ring of realvalued continuous functions on $X$. Take a strictly decreasing sequence $F_{1} \supset$ $F_{2} \supset \ldots$ of closed sets in $X$, and let $\mathfrak{a}_{n}=\left\{f \in C(X): f\left(F_{n}\right)=0\right\}$. Then the $\mathfrak{a}_{n}$ form a strictly increasing sequence of ideals in $C(X)$ : so $C(X)$ is not a Noetherian ring.
+
+\end{enumerate}
+
+Proposition 6.5. Let $A$ be a Noetherian (resp. Artinian) ring, $M$ a finitelygenerated A-module. Then $M$ is Noetherian (resp. Artinian).
+
+Proof. $M$ is a quotient of $A^{n}$ for some $n$ : apply (6.4) and (6.3).
+
+Proposition 6.6. Let $A$ be Noetherian (resp. Artinian), a an ideal of $A$.
+
+Then $A / \mathfrak{a}$ is a Noetherian (resp. Artinian) ring.
+
+Proof. By (6.3) $A / \mathfrak{a}$ is Noetherian (resp. Artinian) as an $A$-module, hence also as an $A / \mathfrak{a}$-module.
+
+A chain of submodules of a module $M$ is a sequence $\left(M_{i}\right)(0 \leqslant i \leqslant n)$ of submodules of $M$ such that
+
+\[
+M=M_{0} \supset M_{1} \supset \ldots \supset M_{n}=0 \text { (strict inclusions). }
+\]
+
+The length of the chain is $n$ (the number of "links"). A composition series of $M$ is a maximal chain, that is one in which no extra submodules can be inserted: this is equivalent to saying that each quotient $M_{t-1} / M_{t}(1 \leqslant i \leqslant n)$ is simple (that is, has no submodules except 0 and itself). Proposition 6.7. Suppose that $M$ has a composition series of length $n$. Then every composition series of $M$ has length $n$, and every chain in $M$ can be extended to a composition series.
+
+Proof. Let $l(M)$ denote the least length of a composition series of a module $M$. $(l(M)=+\infty$ if $M$ has no composition series.)
+
+i) $N \subset M \Rightarrow l(N)<l(M)$. Let $\left(M_{i}\right)$ be a composition series of $M$ of minimum length, and consider the submodules $N_{\mathfrak{t}}=N \cap M_{\mathfrak{t}}$ of $N$. Since $N_{t-1} / N_{1} \subseteq M_{i-1} / M_{t}$ and the latter is a simple module, we have either $N_{i-1} / N_{t}=$ $M_{t-1} / M_{i}$, or else $N_{t-1}=N_{i}$; hence, removing repeated terms, we have a composition series of $N$, so that $l(N) \leqslant l(M)$. If $l(N)=l(M)=n$, then $N_{i-1} / N_{i}=$ $M_{i-1} / M_{i}$ for each $i=1,2, \ldots, n$; hence $M_{n-1}=N_{n-1}$, hence $M_{n-2}=$ $N_{n-2}, \ldots$, and finally $M=N$.
+
+ii) Any chain in $M$ has length $\leqslant l(M)$. Let $M=M_{0} \supset M_{1} \supset \ldots$ be a chain of length $k$. Then by i) we have $l(M)>l\left(M_{1}\right)>\cdots>l\left(M_{k}\right)=0$, hence $l(M) \geqslant k$.
+
+iii) Consider any composition series of $M$. If it has length $k$, then $k \leqslant l(M)$ by ii), hence $k=l(M)$ by the definition of $l(M)$. Hence all composition series have the same length. Finally, consider any chain. If its length is $l(M)$ it must be a composition series, by ii); if its length is $<l(M)$ it is not a composition series, hence not maximal, and therefore new terms can be inserted until the length is $l(M)$.
+
+Proposition 6.8. $M$ has a composition series $\Leftrightarrow M$ satisfies both chain conditions.
+
+Proof. $\Rightarrow$ : All chains in $M$ are of bounded length, hence both a.c.c. and d.c.c. hold.
+
+$\Leftarrow$ : Construct a composition series of $M$ as follows. Since $M=M_{0}$ satisfies the maximum condition by (6.1), it has a maximal submodule $M_{1} \subset M_{0}$. Similarly $M_{1}$ has a maximal submodule $M_{2} \subset M_{1}$, and so on. Thus we have a strictly descending chain $M_{0} \supset M_{1} \supset \ldots$ which by d.c.c. must be finite, and hence is a composition series of $M$.
+
+A module satisfying both a.c.c. and d.c.c. is therefore called a module of finite length. By (6.7) all composition series of $M$ have the same length $l(M)$, called the length of $M$. The Jordan-Hölder theorem applies to modules of finite length: if $\left(M_{i}\right)_{0 \leqslant 1 \leqslant n}$ and $\left(M_{i}^{\prime}\right)_{0 \leqslant i \leqslant n}$ are any two composition series of $M$, there is a one-to-one correspondence between the set of quotients $\left(M_{1-1} / M_{1}\right)_{1<i<n}$ and the set of quotients $\left(M_{i-1}^{\prime} / M_{i}^{\prime}\right)_{1 \leqslant i \leqslant n}$, such that corresponding quotients are isomorphic. The proof is the same as for finite groups.
+
+Proposition 6.9. The length $l(M)$ is an additive function on the class of all A-modules of finite length.
+
+Proof. We have to show that if $0 \rightarrow M^{\prime} \stackrel{\alpha}{\rightarrow} M \stackrel{\beta}{\rightarrow} M^{\prime \prime} \rightarrow 0$ is an exact sequence, then $l(M)=l\left(M^{\prime}\right)+l\left(M^{\prime \prime}\right)$. Take the image under $\alpha$ of any composition series of $M^{\prime}$ and the inverse image under $\beta$ of any composition series of $M^{\prime \prime}$; these fit together to give a composition series of $M$, hence the result.
+
+Consider the particular case of modules over a field $k$, i.e., $k$-vector spaces:
+
+Proposition 6.10. For $k$-vector spaces $V$ the following conditions are equivalent:
+
+i) finite dimension;
+
+ii) finite length;
+
+iii) a.c.c.;
+
+iv) d.c.c.
+
+Moreover, if these conditions are satisfied, length $=$ dimension.
+
+Proof. i) $\Rightarrow$ ii) is elementary; ii) $\Rightarrow$ iii), ii) $\Rightarrow$ iv) from (6.8). Remains to prove iii) $\Rightarrow$ i) and iv) $\Rightarrow$ i). Suppose i) is false, then there exists an infinite sequence $\left(x_{n}\right)_{n>1}$ of linearly independent elements of $V$. Let $U_{n}$ (resp. $V_{n}$ ) be the vector space spanned by $x_{1}, \ldots, x_{n}$ (resp., $\left.x_{n+1}, x_{n+2}, \ldots\right)$. Then the chain $\left(U_{n}\right)_{n \geqslant 1}$ (resp. $\left.\left(V_{n}\right)_{n>1}\right)$ is infinite and strictly ascending (resp. strictly descending).
+
+Corollary 6.11. Let $A$ be a ring in which the zero ideal is a product $\mathfrak{m}_{1} \cdots \mathfrak{m}_{n}$ of (not necessarily distinct) maximal ideals. Then $A$ is Noetherian if and only if $A$ is Artinian.
+
+Proof. Consider the chain of ideals $A \supset \mathfrak{m}_{1} \supseteq \mathfrak{m}_{1} \mathrm{~m}_{2} \supseteq \cdots \supseteq \mathrm{m}_{1} \cdots \mathrm{m}_{n}=0$. Each factor $\mathfrak{m}_{1} \cdots \mathfrak{m}_{i-1} / \mathfrak{m}_{1} \cdots \mathfrak{m}_{i}$ is a vector space over the field $A / \mathfrak{m}_{i}$. Hence a.c.c. $\Leftrightarrow$ d.c.c. for each factor. But a.c.c. (resp. d.c.c.) for each factor $\Leftrightarrow$ a.c.c. (resp. d.c.c.) for $A$, by repeated application of (6.3). Hence a.c.c. $\Leftrightarrow$ d.c.c. for $A$.
+
+\section{EXERCISES}
+\begin{enumerate}
+  \item i) Let $M$ be a Noetherian $A$-module and $u: M \rightarrow M$ a module homomorphism. If $u$ is surjective, then $u$ is an isomorphism.
+\end{enumerate}
+
+ii) If $M$ is Artinian and $u$ is injective, then again $u$ is an isomorphism.
+
+[For (i), consider the submodules $\operatorname{Ker}\left(u^{n}\right)$; for (ii), the quotient modules Coker $\left(u^{n}\right)$.]
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item Let $M$ be an $A$-module. If every non-empty set of finitely generated submodules of $M$ has a maximal element, then $M$ is Noetherian.
+
+  \item Let $M$ be an $A$-module and let $N_{1}, N_{2}$ be submodules of $M$. If $M / N_{1}$ and $M / N_{2}$ are Noetherian, so is $M /\left(N_{1} \cap N_{2}\right)$. Similarly with Artinian in place of Noetherian.
+
+  \item Let $M$ be a Noetherian $A$-module and let $\mathfrak{a}$ be the annihilator of $M$ in $A$. Prove that $A / \mathfrak{a}$ is a Noetherian ring.
+
+\end{enumerate}
+
+If we replace "Noetherian" by "Artinian" in this result, is it still true? 5. A topological space $X$ is said to be Noetherian if the open subsets of $X$ satisfy the ascending chain condition (or, equivalently, the maximal condition). Since closed subsets are complements of open subsets, it comes to the same thing to say that the closed subsets of $X$ satisfy the descending chain condition (or, equivalently, the minimal condition). Show that, if $X$ is Noetherian, then every subspace of $X$ is Noetherian, and that $X$ is quasi-compact.
+
+\begin{enumerate}
+  \setcounter{enumi}{5}
+  \item Prove that the following are equivalent:
+\end{enumerate}
+
+i) $X$ is Noetherian.
+
+ii) Every open subspace of $X$ is quasi-compact.
+
+iii) Every subspace of $X$ is quasi-compact.
+
+\begin{enumerate}
+  \setcounter{enumi}{6}
+  \item A Noetherian space is a finite union of irreducible closed subspaces. [Consider the set $\boldsymbol{\Sigma}$ of closed subsets of $X$ which are not finite unions of irreducible closed subspaces.] Hence the set of irreducible components of a Noetherian space is finite.
+
+  \item If $A$ is a Noetherian ring then $\operatorname{Spec}(A)$ is a Noetherian topological space. Is the converse true?
+
+  \item Deduce from Exercise 8 that the set of minimal prime ideals in a Noetherian ring is finite.
+
+  \item If $M$ is a Noetherian module (over an arbitrary ring $A$ ) then Supp $(M)$ is a closed Noetherian subspace of $\operatorname{Spec}(A)$.
+
+  \item Let $f: A \rightarrow B$ be a ring homomorphism and suppose that $\operatorname{Spec}(B)$ is a Noetherian space (Exercise 5). Prove that $f^{*}: \operatorname{Spec}(B) \rightarrow \operatorname{Spec}(A)$ is a closed mapping if and only if $f$ has the going-up property (Chapter 5, Exercise 10).
+
+  \item Let $A$ be a ring such that $\operatorname{Spec}(A)$ is a Noetherian space. Show that the set of prime ideals of $A$ satisfies the ascending chain condition. Is the converse true?
+
+\end{enumerate}
+
+\end{document}

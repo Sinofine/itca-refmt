@@ -1,0 +1,126 @@
+\documentclass{standalone}
+\usepackage{unicode-math}
+\setmathfont{texgyrepagella-math.otf}[math-style=TeX]
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{lemma}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\usepackage[export]{adjustbox}\graphicspath{ {./images/} }
+\begin{document}
+An Artin ring is one which satisfies the d.c.c. (or equivalently the minimal condition) on ideals.
+
+The apparent symmetry with Noetherian rings is however misleading. In fact we will show that an Artin ring is necessarily Noetherian and of a very special kind. In a sense an Artin ring is the simplest kind of ring after a field, and we study them not because of their generality but because of their simplicity.
+
+Proposition 8.1. In an Artin ring A etery prime ideal is maximal.
+
+Proof. Let $\mathfrak{p}$ be a prime ideal of $A$. Then $B=A / \mathfrak{p}$ is an Artinian integral domain. Let $x \in B, x \neq 0$. By the d.c.c. we have $\left(x^{n}\right)=\left(x^{n+1}\right)$ for some $n$, hence $x^{n}=x^{n+1} y$ for some $y \in B$. Since $B$ is an integral domain and $x \neq 0$, it follows that we may cancel $x^{n}$, hence $x y=1$. Hence $x$ has an inverse in $B$, and therefore $B$ is a field, so that $\mathfrak{p}$ is a maximal ideal.
+
+Corollary 8.2. In an Artin ring the nilradical is equal to the Jacobson radical.
+
+Proposition 8.3. An Artin ring has only a finite number of maximal ideals. Proof. Consider the set of all finite intersections $\mathfrak{m}_{1} \cap \cdots \cap \mathfrak{m}_{r}$, where the $\mathfrak{m}_{i}$ are maximal ideals. This set has a minimal element, say $m_{1} \cap \cdots \cap m_{n}$; hence for any maximal ideal $\mathfrak{m}$ we have $\mathfrak{m} \cap \mathfrak{m}_{1} \cap \ldots \cap \mathfrak{m}_{n}=\mathfrak{m}_{1} \cap \cdots \cap \mathfrak{m}_{n}$, and therefore $\mathfrak{m} \supseteq \mathfrak{m}_{1} \cap \cdots \cap \mathfrak{m}_{n}$. By (1.11) $\mathfrak{m} \supseteq \mathfrak{m}_{i}$ for some $i$, hence $\mathfrak{m}=\mathfrak{m}_{i}$ since $\mathfrak{m}_{i}$ is maximal.
+
+Proposition 8.4. In an Artin ring the nilradical $\mathfrak{R}$ is nilpotent.
+
+Proof. By d.c.c. we have $\mathfrak{\Re}^{k}=\mathfrak{R}^{k+1}=\cdots=\mathfrak{a}$ say, for some $k>0$. Suppose $\mathfrak{a} \neq 0$, and let $\Sigma$ denote the set of all ideals $\mathfrak{b}$ such that $\mathfrak{a} \mathfrak{b} \neq 0$. Then $\Sigma$ is not empty, since $\mathfrak{a} \in \Sigma$. Let $\mathfrak{c}$ be a minimal element of $\Sigma$; then there exists $x \in \mathfrak{c}$ such that $x \mathfrak{a} \neq 0$; we have $(x) \subseteq \mathfrak{c}$, hence $(x)=\mathfrak{c}$ by the minimality of $\mathfrak{c}$. But $(x \mathfrak{a}) \mathfrak{a}=x \mathfrak{a}^{2}=x \mathfrak{a} \neq 0$, and $x \mathfrak{a} \subseteq(x)$, hence $x \mathfrak{a}=(x)$ (again by minimality). Hence $x=x y$ for some $y \in \mathfrak{a}$, and therefore $x=x y=x y^{2}=\cdots=x y^{n}=\cdots$. But $y \in \mathfrak{a}=\mathfrak{R}^{k} \supseteq \mathfrak{R}$, hence $y$ is nilpotent and therefore $x=x y^{n}=0$. This contradicts the choice of $x$, therefore $\mathfrak{a}=0$.
+
+By a chain of prime ideals of a ring $A$ we mean a finite strictly increasing sequence $\mathfrak{p}_{0} \subset \mathfrak{p}_{1} \subset \ldots \subset \mathfrak{p}_{n}$; the length of the chain is $n$. We define the dimension of $A$ to be the supremum of the lengths of all chains of prime ideals in $A$ : it is an integer $\geqslant 0$, or $+\infty$ (assuming $A \neq 0$ ). A field has dimension 0 ; the ring $\mathbf{Z}$ has dimension 1 .
+
+Theorem 8.5. A ring $A$ is Artin $\Leftrightarrow A$ is Noetherian and $\operatorname{dim} A=0$. Proof. $\Rightarrow:$ By (8.1) we have $\operatorname{dim} A=0$. Let $\mathfrak{n t}_{i}(1 \leqslant i \leqslant n)$ be the distinct maximal ideals of $A(8.3)$. Then $\prod_{i=1}^{n} \mathfrak{m}_{i}^{k} \subseteq\left(\bigcap_{i=1}^{n} \mathfrak{m}_{i}\right)^{k}=\mathfrak{R}^{k}=0$. Hence by (6.11) $A$ is Noetherian.
+
+$\epsilon$ : Since the zero ideal has a primary decomposition (7.13), $A$ has only a finite number of minimal prime ideals, and these are all maximal since $\operatorname{din} A=0$. Hence $\mathfrak{R}=\bigcap_{i=1}^{n} \mathfrak{m}_{i}$ say; we have $\mathfrak{R}^{k}=0$ by $(7.15)$, hence $\prod_{i=1}^{n} \mathfrak{m}_{i}^{k}=0$ as in the previous part of the proof. Hence by (6.11) $A$ is an Artin ring.
+
+If $A$ is an Artin local ring with maximal ideal $m$, then $m$ is the only prime ideal of $A$ and therefore $m$ is the nilradical of $A$. Hence every element of $m$ is nilpotent, and $\mathfrak{m}$ itself is nilpotent. Every element of $A$ is either a unit or is nilpotent. An example of such a ring is $Z /\left(p^{n}\right)$, where $p$ is prime and $n \geqslant 1$.
+
+Proposition 8.6. Let $A$ be a Noetherian local ring, $m$ its maximal ideal. Then exactly one of the following two statements is true:
+
+i) $\mathfrak{m}^{n} \neq \mathfrak{m}^{n+1}$ for all $n$;
+
+ii) $\mathrm{m}^{\mathrm{n}}=0$ for some $n$, in which case $A$ is an Artin local ring.
+
+Proof. Suppose $\mathfrak{m}^{n}=\mathfrak{m}^{n+1}$ for some $n$. By Nakayama's lemma (2.6) we have $\mathfrak{m}^{n}=0$. Let $\mathfrak{p}$ be any prime ideal of $A$. Then $\mathfrak{m}^{n} \subseteq \mathfrak{p}$, hence (taking radicals) $\mathfrak{m}=\mathfrak{p}$. Hence $\mathfrak{m}$ is the only prime ideal of $A$ and therefore $A$ is Artinian.
+
+Theorem 8.7. (structure theorem for Artin rings). An Artin ring $A$ is uniquely (up to isomorphism) a finite direct product of Artin local rings.
+
+Proof. Let $\mathfrak{m}_{i}(1 \leqslant i \leqslant n)$ be the distinct maximal ideals of $A$. From the proof of (8.5) we have $\prod_{i=1}^{n} \mathfrak{m}_{i}^{k}=0$ for some $k>0$. By (1.16) the ideals $\mathfrak{m}_{i}^{k}$ are coprime in pairs, hence $\bigcap \mathrm{m}_{i}^{k}=\Pi \mathrm{m}_{i}^{k}$ by (1.10). Consequently by (1.10) again the natural mapping $A \rightarrow \prod_{i=1}^{n}\left(A / \mathfrak{m}_{i}^{k}\right)$ is an isomorphism. Each $A / \mathfrak{m}_{i}^{k}$ is an Artin local ring, hence $A$ is a direct product of Artin local rings.
+
+Conversely, suppose $A \cong \prod_{i=1}^{m} A_{i}$, where the $A_{i}$ are Artin local rings. Then for each $i$ we have a natural surjective homomorphism (projection on the $i$ th factor) $\phi_{i}: A \rightarrow A_{i}$. Let $\mathfrak{a}_{i}=\operatorname{Ker}\left(\phi_{i}\right)$. By $(1.10)$ the $a_{i}$ are pairwise coprime, and $\cap a_{i}=0$. Let $\mathfrak{q}_{i}$ be the unique prime ideal of $A_{i}$, and let $\mathfrak{p}_{i}$ be its contraction $\phi_{i}^{-1}\left(\mathfrak{q}_{i}\right)$. The ideal $\mathfrak{p}_{i}$ is prime and therefore maximal by (8.1). Since $\mathfrak{q}_{i}$ is nilpotent it follows that $\mathfrak{a}_{\mathfrak{i}}$ is $\mathfrak{p}_{\mathfrak{i}}$-primary, and hence $\cap \mathfrak{a}_{\mathfrak{i}}=(0)$ is a primary decomposition of the zero ideal in $A$. Since the $\mathfrak{a}_{i}$ are pairwise coprime, so are the $\mathfrak{p}_{\mathfrak{l}}$, and they are therefore isolated prime ideals of $(0)$. Hence all the primary components $a_{i}$ are isolated, and therefore uniquely determined by $A$, by the 2 nd uniqueness theorem (4.11). Hence the rings $A_{i} \cong A / a_{i}$ are uniquely determined by $A$. Example. A ring with only one prime ideal need not be Noetherian (and hence not an Artin ring). Let $A=k\left[x_{1}, x_{2}, \ldots\right]$ be the polynomial ring in a countably infinite set of indeterminates $x_{n}$ over a field $k$, and let $a$ be the ideal $\left(x_{1}, x_{2}^{2}, \ldots\right.$, $x_{n}^{n}, \ldots$ ). The ring $B=A / \mathfrak{a}$ has only one prime ideal (namely the image of $\left.\left(x_{1}, x_{2}, \ldots, x_{n}, \ldots\right)\right)$, hence $B$ is a local ring of dimension 0 . But $B$ is not Noetherian, for it is not difficult to see that its prime ideal is not finitely generated.
+
+If $A$ is a local ring, $\mathfrak{m}$ its maximal ideal, $k=A / \mathfrak{m}$ its residue field, the $A$-module $\mathfrak{m} / \mathfrak{m}^{2}$ is annihilated by $\mathfrak{m}$ and therefore has the structure of a $k$-vector space. If $\mathfrak{m}$ is finitely generated (e.g., if $A$ is Noetherian), the images in $\mathfrak{m} / \mathfrak{m}^{2}$ of a set of generators of $\mathfrak{m}$ will span $\mathfrak{m} / \mathfrak{m}^{2}$ as a vector space, and therefore $\operatorname{dim}_{k}\left(\mathfrak{m} / \mathfrak{m}^{2}\right)$ is finite. (See (2.8).)
+
+Proposition 8.8. Let $A$ be an Artin local ring. Then the following are equivalent:
+
+i) every ideal in $A$ is principal;
+
+ii) the maximal ideal $\mathfrak{m}$ is principal;
+
+iii) $\operatorname{dim}_{k}\left(\mathfrak{m} / \mathfrak{m}^{2}\right) \leqslant 1$.
+
+Proof. i) $\Rightarrow$ ii) $\Rightarrow$ iii) is clear.
+
+iii) $\Rightarrow$ i): If $\operatorname{dim}_{k}\left(\mathfrak{m} / \mathfrak{m}^{2}\right)=0$, then $\mathfrak{m}=\mathfrak{m}^{2}$, hence $\mathfrak{m}=0$ by Nakayama's lemma (2.6), and therefore $\boldsymbol{A}$ is a field and there is nothing to prove.
+
+If $\operatorname{dim}_{k}\left(\mathfrak{m} / \mathfrak{m}^{2}\right)=1$, then $\mathfrak{m}$ is a principal ideal by (2.8) (take $M=\mathfrak{m}$ there), say $\mathfrak{m}=(x)$. Let $\mathfrak{a}$ be an ideal of $A$, other than (0) or (1). We have $\mathfrak{m}=\mathfrak{N}$, hence $\mathfrak{m}$ is nilpotent by (8.4) and therefore there exists an integer $r$ such that $a \subseteq \mathfrak{m}^{r}, \mathfrak{a} \neq \mathfrak{m}^{r+1}$; hence there exists $y \in \mathfrak{a}$ such that $y=a x^{r}$, $y \notin\left(x^{r+1}\right)$; consequently $a \notin(x)$ and $a$ is a unit in $A$. Hence $x^{r} \in \mathfrak{a}$, therefore $\mathfrak{m}^{r}=\left(x^{r}\right)$. $\subseteq \mathfrak{a}$ and hence $\mathfrak{a}=\mathfrak{m}^{r}=\left(x^{r}\right)$. Hence $\mathfrak{a}$ is principal.
+
+Example. The rings $Z /\left(p^{n}\right)$ ( $p$ prime), $k[x] /\left(f^{n}\right)(f$ irreducible) satisfy the conditions of (8.7). On the other hand, the Artin local ring $k\left[x^{2}, x^{3}\right] /\left(x^{4}\right)$ does not: here $\mathfrak{m}$ is generated by $x^{2}$ and $x^{3}\left(\bmod x^{4}\right)$, so that $\mathfrak{m}^{2}=0$ and $\operatorname{dim}\left(\mathfrak{m} / \mathfrak{m}^{2}\right)=2$.
+
+\section{EXERCISES}
+\begin{enumerate}
+  \item Let $q_{1} \cap \cdots \cap q_{n}=0$ be a minimal primary decomposition of the zero ideal in a Noetherian ring, and let $\mathfrak{q}_{i}$ be $\mathfrak{p}_{i}$-primary. Let $\mathfrak{p}_{i}^{(r)}$ be the $r$ th symbolic power of $p_{i}$ (Chapter 4, Exercise 13). Show that for each $i=1, \ldots, n$ there exists an integer $r_{i}$ such that $\mathfrak{p}_{i}^{\left(r_{i}\right)} \subseteq q_{i}$.
+\end{enumerate}
+
+Suppose $\mathfrak{q}_{i}$ is an isolated primary component. Then $A_{\mathfrak{p}_{\mathfrak{i}}}$ is an Artin local ring, hence if $\mathfrak{m}_{t}$ is its maximal ideal we have $\mathfrak{m}_{i}^{r}=0$ for all sufficiently large $r$, hence $\mathfrak{q}_{i}=\mathfrak{p}_{i}^{(r)}$ for all large $r$. If $q_{1}$ is an embedded primary component, then $A_{\psi_{1}}$ is not Artinian, hence the powers $\mathfrak{m}_{i}^{\prime}$ are all distinct, and so the $\mathfrak{p}_{i}^{(r)}$ are all distinct. Hence in the given primary decomposition we can replace $q_{\mathfrak{l}}$ by any of the infinite set of $\mathfrak{p}_{1}$-primary ideals $\mathfrak{p}_{\mathfrak{i}}^{(\prime)}$ where $r \geqslant r_{i}$, and so there are infinitely many minimal primary decompositions of 0 which differ only in the $\mathfrak{p}_{\mathfrak{r}}$-component.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item Let $A$ be a Noetherian ring. Prove that the following are equivalent:
+\end{enumerate}
+
+i) $A$ is Artinian;
+
+ii) Spec $(A)$ is discrete and finite;
+
+iii) $\operatorname{Spec}(A)$ is discrete.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item Let $k$ be a field and $A$ a finitely generated $k$-algebra. Prove that the following are equivalent:
+\end{enumerate}
+
+i) $A$ is Artinian;
+
+ii) $A$ is a finite $k$-algebra.
+
+[To prove that i) $\Rightarrow$ ii), use (8.7) to reduce to the case where $A$ is an Artin local ring. By the Nullstellensatz, the residue field of $A$ is a finite extension of $k$. Now use the fact that $A$ is of finite length as an $A$-module. To prove ii) $\Rightarrow \mathrm{i}$ ), observe that the ideals of $A$ are $k$-vector subspaces and therefore satisfy d.c.c.]
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item Let $f: A \rightarrow B$ be a ring homomorphism of finite type. Consider the following statements:
+\end{enumerate}
+
+i) $f$ is finite;
+
+ii) the fibres of $f^{*}$ are discrete subspaces of $\operatorname{Spec}(B)$;
+
+iii) for each prime ideal $\mathfrak{p}$ of $A$, the ring $B \otimes_{A} k(\mathfrak{p})$ is a finite $k(\mathfrak{p})$-algebra $\left(k(\mathfrak{p})\right.$ is the residue field of $\left.A_{\mathfrak{p}}\right)$;
+
+iv) the fibres of $f^{*}$ are finite.
+
+Prove that i) $\Rightarrow$ ii) $\Leftrightarrow$ iii) $\Rightarrow$ iv). [Use Exercises 2 and 3.]
+
+If $f$ is integral and the fibres of $f^{*}$ are finite, is $f$ necessarily finite?
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item In Chapter 5, Exercise 16, show that $X$ is a finite covering of $L$ (i.e., the number of points of $X$ lying over a given point of $L$ is finite and bounded).
+
+  \item Let $A$ be a Noetherian ring and $q$ a $p$-primary ideal in $A$. Consider chains of primary ideals from $q$ to $\mathfrak{p}$. Show that all such chains are of finite bounded length, and that all maximal chains have the same length.
+
+\end{enumerate}
+\end{document}
