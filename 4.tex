@@ -13,28 +13,30 @@
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 \begin{document}
-The decomposition of an ideal into primary ideals is a traditional pillar of ideal
-theory. It provides the algebraic foundation for decomposing an algebraic
+The decomposition of an ideal into primary ideals is a traditional pillar of
+ideal theory. It provides the algebraic foundation for decomposing an algebraic
 variety into its irreducible components---although it is only fair to point out
 that the algebraic picture is more complicated than na\"{i}ve geometry would
-suggest. From another point of view primary decomposition provides a generalization
-of the factorization of an integer as a product of prime-powers. In
-the modern treatment, with its emphasis on localization, primary decomposition
-is no longer such a central tool in the theory. It is still, however, of interest in
-itself and in this chapter we establish the classical uniqueness theorems.
+suggest. From another point of view primary decomposition provides a
+generalization of the factorization of an integer as a product of prime-powers.
+In the modern treatment, with its emphasis on localization, primary
+decomposition is no longer such a central tool in the theory. It is still,
+however, of interest in itself and in this chapter we establish the classical
+uniqueness theorems.
 
 The prototypes of commutative rings are $\mathbf{Z}$ and the ring of polynomials
- $k[x_1,\cdots,x_n]$ where $k$ is a field; both these are unique factorization domains.
-This is not true of arbitrary commutative rings, even if they are integral domains
-(the classical example is the ring $\mathbf{Z}[\sqrt{-5}]$, in which the element 6 has two
-essentially distinct factorizations, $2\cdot 3$ and $(1+\sqrt{-5})(1-\sqrt{-5})$. However,
-there is a generalized form of ``unique factorization'' of \textit{ideals} (not of elements)
-in a wide class of rings (the Noetherian rings).
+ $k[x_1,\cdots,x_n]$ where $k$ is a field; both these are unique factorization
+ domains. This is not true of arbitrary commutative rings, even if they are
+ integral domains (the classical example is the ring $\mathbf{Z}[\sqrt{-5}]$, in
+ which the element 6 has two essentially distinct factorizations, $2\cdot 3$ and
+ $(1+\sqrt{-5})(1-\sqrt{-5})$. However, there is a generalized form of ``unique
+ factorization'' of \textit{ideals} (not of elements) in a wide class of rings
+ (the Noetherian rings).
 
 A prime ideal in a ring $A$ is in some sense a generalization of a prime number.
-The corresponding generalization of a power of a prime number is a
-primary ideal. An ideal $\symfrak{q}$ in a ring $A$ is \textit{primary}
-if $\symfrak{q}\neq A$ and if
+The corresponding generalization of a power of a prime number is a primary
+ideal. An ideal $\symfrak{q}$ in a ring $A$ is \textit{primary} if
+$\symfrak{q}\neq A$ and if
 \[
   xy\in\symfrak{q}\implies\text{either }x\in\symfrak{q}\text{ or
   }y^n\in\symfrak{q}\text{ for some }n>0.
@@ -45,17 +47,16 @@ In other words,
   zero-divisor in }A/\symfrak{q}\text{ is nilpotent}.
 \]
 
-Clearly every prime ideal is primary. Also the contraction of a primary
-ideal is primary, for if $f:A\to B$ and if $\symfrak{q}$ is a primary ideal in
-$B$
-, then $A/\symfrak{q}^c$ is isomorphic to a subring of $B/\symfrak{q}$.
+Clearly every prime ideal is primary. Also the contraction of a primary ideal is
+primary, for if $f:A\to B$ and if $\symfrak{q}$ is a primary ideal in $B$ , then
+$A/\symfrak{q}^c$ is isomorphic to a subring of $B/\symfrak{q}$.
 \begin{proposition}
-  Let $\symfrak{q}$ be a primary ideal in a ring $A$. Then $r(\symfrak{q})$ is the smallest
-  prime ideal containing $\symfrak{q}$.
+  Let $\symfrak{q}$ be a primary ideal in a ring $A$. Then $r(\symfrak{q})$ is
+  the smallest prime ideal containing $\symfrak{q}$.
 \end{proposition}
 \begin{proof}
-  By (1.8) it is enough to show that $\symfrak{p}=r(\symfrak{q})$ is prime.
-  Let $xy\in r(\symfrak{q})$, then $(xy)^m\in \symfrak{q}$ for some $m>0$, and
+  By (1.8) it is enough to show that $\symfrak{p}=r(\symfrak{q})$ is prime. Let
+  $xy\in r(\symfrak{q})$, then $(xy)^m\in \symfrak{q}$ for some $m>0$, and
   therefore either $x^m\in \symfrak{q}$ or $y^{mn}\in \symfrak{q}$ for some
   $n>0$; i.e., either $x\in r(\symfrak{q})$ or $y \in r(\symfrak{q})$.
 \end{proof}
@@ -64,114 +65,595 @@ If $\symfrak{p}=r(\symfrak{q})$, then $\symfrak{q}$ is said to be
 $\symfrak{p}$-primary.
 \begin{example}
 \begin{enumerate}
-\item The primary ideals in $\mathbf{Z}$ are $(0)$ and $(p^n)$, where $p$ is prime. For
-  these are the only ideals in $\mathbf{Z}$ with prime radical, and it is immediately checked
-  that they are primary.
+\item The primary ideals in $\mathbf{Z}$ are $(0)$ and $(p^n)$, where $p$ is
+  prime. For these are the only ideals in $\mathbf{Z}$ with prime radical, and
+  it is immediately checked that they are primary.
 \item Let $A=k[x,y]$, $\symfrak{q} = (x, y^2)$. Then $A/\symfrak{q} \simeq
-  k[y]/(y^2)$,
-  in which the zero-divisors are all the multiples of $y$, hence are nilpotent.
-  Hence $\symfrak{q}$ is primary, and its radical $\symfrak{p}$ is $(x, y)$. We
-  have $\symfrak{p}^2\subset \symfrak{q}\subset \symfrak{p}$ (strict inclusions),
-  so that a primary ideal is not necessarily a prime-power.
-\item Conversely, a prime power $\symfrak{p}^n$ is not necessarily primary, although its
-  radical is the prime ideal $\symfrak{p}$. For example, let $A = k[x, y, z]/(xy
-  - z^2)$
-  and let $\bar{x},\bar{y}, \bar{z}$ denote the images of $x, y, z$ respectively
-  in $A$. Then $\symfrak{p} = (\bar{x}, \bar{z})$ is prime
-  (since $A/\symfrak{p}\simeq k[y]$, an integral domain);
-  we have $\bar{x}\bar{y} = \bar{z}^2\in \symfrak{p}^2$ but $x \notin
-  \symfrak{p}^2$ and $y \not\in r(\symfrak{p}^2 ) = \symfrak{p}$;
-  hence $\symfrak{p}^2$ is not primary. However, there is the following result:
+  k[y]/(y^2)$, in which the zero-divisors are all the multiples of $y$, hence
+  are nilpotent. Hence $\symfrak{q}$ is primary, and its radical $\symfrak{p}$
+  is $(x, y)$. We have $\symfrak{p}^2\subset \symfrak{q}\subset \symfrak{p}$
+  (strict inclusions), so that a primary ideal is not necessarily a prime-power.
+\item Conversely, a prime power $\symfrak{p}^n$ is not necessarily primary,
+  although its radical is the prime ideal $\symfrak{p}$. For example, let $A =
+  k[x, y, z]/(xy - z^2)$ and let $\bar{x},\bar{y}, \bar{z}$ denote the images of
+  $x, y, z$ respectively in $A$. Then $\symfrak{p} = (\bar{x}, \bar{z})$ is
+  prime (since $A/\symfrak{p}\simeq k[y]$, an integral domain); we have
+  $\bar{x}\bar{y} = \bar{z}^2\in \symfrak{p}^2$ but $x \notin \symfrak{p}^2$ and
+  $y \not\in r(\symfrak{p}^2 ) = \symfrak{p}$; hence $\symfrak{p}^2$ is not
+  primary. However, there is the following result:
 \end{enumerate}
 \end{example}
 \begin{proposition}
-  If $r(\symfrak{a})$ is maximal, then $\symfrak{a}$ is primary. In particular, the
-  powers of a maximal ideal $\symfrak{m}$ are $\symfrak{m}$-primary.
+  If $r(\symfrak{a})$ is maximal, then $\symfrak{a}$ is primary. In particular,
+  the powers of a maximal ideal $\symfrak{m}$ are $\symfrak{m}$-primary.
 \end{proposition}
 \begin{proof}
   Let $r(\symfrak{a}) = \symfrak{m}$. The image of $\symfrak{m}$ in
-  $A/\symfrak{a}$ is the nilradical of $A/\symfrak{a}$, hence $A/\symfrak{a}$ has only one prime ideal, by (1.8). Hence every element of $A/\symfrak{a}$ is either a unit or nilpotent, and so every zero-divisor in $A/\symfrak{a}$ is nilpotent.
+  $A/\symfrak{a}$ is the nilradical of $A/\symfrak{a}$, hence $A/\symfrak{a}$
+  has only one prime ideal, by (1.8). Hence every element of $A/\symfrak{a}$ is
+  either a unit or nilpotent, and so every zero-divisor in $A/\symfrak{a}$ is
+  nilpotent.
 \end{proof}
 We are going to study presentations of an ideal as an intersection of primary
 ideals. First, a couple of lemmas:
-\begin{lemma}
-  If $\symfrak{q}_i, (1 \le i \le n)$ are $\symfrak{p}$-primary, then $\symfrak{q} = \bigcap_{i=1}^{n}\symfrak{q}_i$ is $\symfrak{p}$-primary.
+\begin{lemma}\label{lem:4.3}
+  If $\symfrak{q}_i, (1 \le i \le n)$ are $\symfrak{p}$-primary, then
+  $\symfrak{q} = \bigcap_{i=1}^{n}\symfrak{q}_i$ is $\symfrak{p}$-primary.
 \end{lemma}
 \begin{proof}
-  $r(\symfrak{q}) = r(\bigcap_{i=1}^{n} \symfrak{q}_i) = \cap r(\symfrak{q}_i) = \symfrak{p}$. Let $xy\in \symfrak{q}$, $y \not\in
-  \symfrak{q}$. Then for some $i$ we have $xy \in \symfrak{q}_i$ and $y\not\in \symfrak{q}_i$ hence $x\in \symfrak{p}$. since $\symfrak{q}_i$ is primary.
+  $r(\symfrak{q}) = r(\bigcap_{i=1}^{n} \symfrak{q}_i) = \cap r(\symfrak{q}_i) =
+  \symfrak{p}$. Let $xy\in \symfrak{q}$, $y \not\in \symfrak{q}$. Then for some
+  $i$ we have $xy \in \symfrak{q}_i$ and $y\not\in \symfrak{q}_i$ hence $x\in
+  \symfrak{p}$. since $\symfrak{q}_i$ is primary.
 \end{proof}
-\begin{lemma}
+\begin{lemma}\label{lem:4.4}
   Let $q$ be a $\symfrak{p}$-primary ideal, $x$ an element of $A$. Then
 \begin{enumerate}
 \item if $x \in \symfrak{q}$ then $(\symfrak{q}:x) = (1)$;
-\item if $x \not\in \symfrak{q}$ then $(\symfrak{q}:x)$ is $\symfrak{p}$-primary, and therefore $r(\symfrak{q}:x) = \symfrak{p}$;
+\item if $x \not\in \symfrak{q}$ then $(\symfrak{q}:x)$ is
+$\symfrak{p}$-primary, and therefore $r(\symfrak{q}:x) = \symfrak{p}$;
 \item if $x\not\in \symfrak{p}$ then $(\symfrak{q}:x) = \symfrak{q}$.
 \end{enumerate}
 \end{lemma}
 \begin{proof}
-  i) and iii) follow immediately from the definitions.
-  ii): if $y \in (\symfrak{q}:x)$ then $xy \in \symfrak{q}$, hence (as $x \not\in \symfrak{q}$) we have $y\in
-  \symfrak{p}$ Hence $\symfrak{q} \subseteq (\symfrak{q}:x)\subseteq \symfrak{p}$;taking radicals, we get $r(\symfrak{q}:x) = \symfrak{p}$.
-  Let $yz\in(\symfrak{q}:x)$ with $y\not\in \symfrak{p}$; then
-  $xyz \in \symfrak{q}$, hence $xz \in \symfrak{q}$, hence $z \in (\symfrak{q}:x)$.
+  i) and iii) follow immediately from the definitions. ii): if $y \in
+  (\symfrak{q}:x)$ then $xy \in \symfrak{q}$, hence (as $x \not\in \symfrak{q}$)
+  we have $y\in \symfrak{p}$ Hence $\symfrak{q} \subseteq
+  (\symfrak{q}:x)\subseteq \symfrak{p}$;taking radicals, we get
+  $r(\symfrak{q}:x) = \symfrak{p}$. Let $yz\in(\symfrak{q}:x)$ with $y\not\in
+  \symfrak{p}$; then $xyz \in \symfrak{q}$, hence $xz \in \symfrak{q}$, hence $z
+  \in (\symfrak{q}:x)$.
 \end{proof}
-A primary decomposition of an ideal $a$ in $A$ is an expression of $a$ as a finite
-intersection of primary ideals, say
+A primary decomposition of an ideal $a$ in $A$ is an expression of $a$ as a
+finite intersection of primary ideals, say
 \begin{equation}
   \label{eq:4.1}
   a=\bigcap_{i=1}^{n}\symfrak{q}_i
 \end{equation}
-(In general such a primary decomposition need not exist; in this chapter we shall
-restrict our attention to ideals which have a primary decomposition.) If more
+(In general such a primary decomposition need not exist; in this chapter we
+shall restrict our attention to ideals which have a primary decomposition.) If
+moreover (i) the $r\left(\mathfrak{q}_{i}\right)$ are all distinct, and (ii) we
+have $\mathfrak{q}_{t} \neq \bigcap_{j \neq i} \mathfrak{q}_{j}(2 \leqslant i
+\leqslant n)$ the primary decomposition \eqref{eq:4.1} is said to be minimal (or
+irredundant, or reduced, or normal, ...). By Lemma~\ref{lem:4.3} we can achieve (i) and then
+we can omit any superfluous terms to achieve (ii); thus any primary
+decomposition can be reduced to a minimal one. We shall say that $\symfrak{a}$ is
+\textit{decomposable} if it has a primary decomposition.
 
-% over (i) the r(q,) are all distinct, and (ii) we have q,
-% nh'l q, (1 ::;;; i ::;;; n) the
-% primary decomposition (1) is said to be minimal (or irredundant, or reduced, or
-% normal, ... ). By (4.3) we can achieve (i) and then we can omit any superfluous
-% terms to achieve (ii); thus any primary decomposition can be reduced to a
-% minimal one. We shall say that a is decomposable if it has a primary decomposi-
-% tion.
-% Theorem 4.5. (1st uniqueness theorem). Let a be a decomposable ideal and
-% let a = nf= 1q, be a minimal primary decomposition of a. Let -13t = r(q,)
-% (1 ::;;; i ::;;; n). Then the .);!, are precisely the prime ideals which occur in the set
-% of ideals r(a:x) (x E A), and hence are independent of the particular de-
-% composition of a.
-% Proof. For any X E A we have (a:x) =
-% q,:x) =
-% (q,:x), hence r(a:x) =
-% nf. 1r(q1:x) = nx~q1 .)31 by (4.4). Suppose r(a:x) is prime; then by (1.11) we
-% have r(a:x) = .)31 for somej. Hence every prime ideal of the form r(a.:x) is one of
-% the .);!,. Conversely, for each i there exists x, ¢
-% x,
-% q,, since the de-
-% composition is minimal; and we have r(a:x,) = .);1 1• •
-% en
-% n
-% qb En,,.,
-% Remarks. I) The above proof, coupled with the last part of (4.4), shows that
-% for each i there exists x, in A such that (a:x,) is .);!,-primary.
-% 2) Considering A/a as an A-module, (4.5) is equivalent to saying that the.);!,
-% are precisely the prime ideals which occur as radicals of annihilators of elements
-% of A/a.
-% Example. Let a = (x2, xy) in A = k[x, y]. Then a = .);1 1 n .);!~where .);1 1 = (x),
-% The ideal .);!~ is primary by (4.2). So the prime ideals are -lJ1o .);1 2•
-% In this example .);1 1 c: .);1 2; we have r(a) = -lJ1 n -lJ2 = -lJ1o but a is not a primary
-% ideal.
-% .);1 2 = (x, y).
-% The prime ideals .);!, in (4. 5) are said to belong to a, or to be associated with a.
-% The ideal a is primary if and only if it has only one associated prime ideal. The
-% minimal elements of the set {-131> ••• , -lJJ are called the minimal or isolated prime
-% ideals belonging to a. The others are called embedded prime ideals. In the
-% example above, .);1 2 = (x, y) is.embedded.
-% Proposition 4.6. Let a be a decomposable ideal. Then any prime ideal
-% .);! 2 a contains a minimal prime ideal belonging to a, and thus the minimal
-% prime ideals of a are precisely the minimal elements in the set of all prime
-% ideals containing a.
-% Proof. If -13 2 a = nf. 1q" then -13 = r(-13) 2 n r(q1) = n .);11. Hence by
-% (1.11) we have.);! 2 .);11 for some i; hence.);! contains a minimal prime ideal of a. •
-% Remarks. 1) The names isolated and embedded come from geometry. Thus if
-% A = k[xh ... , Xnl where k is a field, the ideal a gives rise to a variety X s;;; kn
-% (see Chapter 1, Exercise 25). The minimal primes .);!, correspond to the irre-
-% ducible components of X, and the embedded primes correspond to subvarieties
+\begin{theorem}
+  [1st uniqueness theorem]\label{thm:4.5} Let $\symfrak{a}$ be a decomposable ideal and let
+  $\mathfrak{a}=\bigcap_{\mathfrak{i}=1}^{\mathfrak{n}} \mathfrak{q}_{i}$ be a
+  minimal primary decomposition of $\mathfrak{a}$. Let
+  $\mathfrak{p}_{i}=r\left(\mathfrak{q}_{i}\right)$ ($1 \leq i \leq n$).
+  Then the $\mathfrak{p}_{1}$ are precisely the prime ideals which occur in the
+  set of ideals $r(\mathfrak{a}: x)$ ($x \in A$), and hence are independent of
+  the particular decomposition of $\symfrak{a}$.
+\end{theorem}
+\begin{proof}
+  For any $x \in A$ we have $(\mathfrak{a}: x)=(\cap \mathfrak{q}_{i}:
+    x)=\bigcap(\mathfrak{q}_{i}: x)$, hence $r(\mathfrak{a}: x)=\bigcap_{i=1}^{n} r(\mathfrak{q}_{i}: x)=\bigcap_{x \not\in q_{j}}
+  \mathfrak{p}_{j}$ by Lemma~\ref{lem:4.4}. Suppose $r(a: x)$ is prime; then by (1.11) we have
+  $r(\mathfrak{a}: x)=\mathfrak{p}_{j}$ for some $j$. Hence every prime ideal of
+  the form $r(\mathfrak{a}: x)$ is one of the $\mathfrak{p}_{j}$. Conversely, for
+  each $i$ there exists $x_{i} \notin \mathfrak{q}_{i}, x_{i} \in \bigcap_{j \neq
+    i} \mathfrak{q}_{j}$, since the decomposition is minimal; and we have
+  $r(\mathfrak{a}: x_{\mathfrak{i}})=\mathfrak{p}_{i}$.
+
+\end{proof}
+\begin{remark}
+  \begin{enumerate}
+  \item The above proof, coupled with the last part of Lemma~\ref{lem:4.4},
+    shows that for each $i$ there exists $x_{i}$ in $A$ such that
+    $(\mathfrak{a}:x_{i})$ is $\mathfrak{p}_{i}$-primary.
+  \item Considering $A / \mathfrak{a}$ as an $A$-module, Theorem~\ref{thm:4.5}
+    is equivalent to saying that the $\mathfrak{p}_{i}$ are precisely the prime
+    ideals which occur as radicals of annihilators of elements of $A / \mathfrak{a}$
+  \end{enumerate}
+\end{remark}
+% TODO...
+Example. Let $\mathfrak{a}=\left(x^{2}, x y\right)$ in $A=k[x, y]$. Then
+$\mathfrak{a}=\mathfrak{p}_{1} \cap \mathfrak{p}_{2}^{2}$ where
+$\mathfrak{p}_{1}=(x)$, $\mathfrak{p}_{2}=(x, y)$. The ideal
+$\mathfrak{p}_{2}^{2}$ is primary by (4.2). So the prime ideals are
+$\mathfrak{p}_{1}, \mathfrak{p}_{2}$. In this example $\mathfrak{p}_{1} \subset
+\mathfrak{p}_{2}$; we have $r(\mathfrak{a})=\mathfrak{p}_{1} \cap
+\mathfrak{p}_{2}=\mathfrak{p}_{1}$, but $\mathfrak{a}$ is not a primary ideal.
+
+The prime ideals $\mathfrak{p}_{1}$ in (4.5) are said to belong to
+$\mathfrak{a}$, or to be associated with $a$. The ideal $a$ is primary if and
+only if it has only one associated prime ideal. The minimal elements of the set
+$\left\{\mathfrak{p}_{1}, \ldots, \mathfrak{p}_{n}\right\}$ are called the
+minimal or isolated prime ideals belonging to $a$. The others are called
+embedded prime ideals. In the example above, $\mathfrak{p}_{2}=(x, y)$ is
+embedded.
+
+Proposition 4.6. Let a be a decomposable ideal. Then any prime ideal
+$\mathfrak{p} \supseteq a$ contains a minimal prime ideal belonging to $a$, and
+thus the minimal prime ideals of $\mathfrak{a}$ are precisely the minimal
+elements in the set of all prime ideals containing $a$.
+
+Proof. If $\mathfrak{p} \supseteq \mathfrak{a}=\bigcap_{\mathfrak{i}-1}^{\pi}
+\mathfrak{q}_{\mathfrak{s}}$, then $\mathfrak{p}=r(\mathfrak{p}) \supseteq
+\bigcap r\left(\mathfrak{q}_{\mathfrak{k}}\right)=\bigcap
+\mathfrak{p}_{\mathfrak{k}}$. Hence by (1.11) we have $\mathfrak{p} \supseteq
+\mathfrak{p}_{i}$ for some $i$; hence $\mathfrak{p}$ contains a minimal prime
+ideal of $\mathfrak{a}$.
+
+Remarks. 1) The names isolated and embedded come from geometry. Thus if
+$A=k\left[x_{1}, \ldots, x_{n}\right]$ where $k$ is a field, the ideal a gives
+rise to a variety $X \subseteq k^{n}$ (see Chapter 1, Exercise 25). The minimal
+primes $\mathfrak{p}_{i}$ correspond to the irreducible components of $X$, and
+the embedded primes correspond to subvarieties of these, i.e., varieties
+embedded in the irreducible components. Thus in the example before (4.6) the
+variety defined by $a$ is the line $x=0$, and the embedded ideal
+$\mathfrak{p}_{2}=(x, y)$ corresponds to the origin $(0,0)$.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item It is not true that all the primary components are independent of the
+  decomposition. For example $\left(x^{2}, x y\right)=(x) \cap(x, y)^{2}=(x)
+  \cap\left(x^{2}, y\right)$ are two distinct minimal primary decompositions.
+  However, there are some uniqueness properties: see (4.10).
+\end{enumerate}
+
+Proposition 4.7. Let $\mathfrak{a}$ be a decomposable ideal, let
+$\mathfrak{a}=\bigcap_{i=1}^{n} \mathfrak{q}_{\mathfrak{i}}$ be $a$ minimal
+primary decomposition, and let
+$r\left(\mathfrak{q}_{\mathfrak{i}}\right)=\mathfrak{p}_{\mathfrak{i}}$. Then
+
+\[
+\bigcup_{i=1}^{n} \mathfrak{p}_{i}=\{x \in A:(\mathfrak{a}: x) \neq \mathfrak{a}\} .
+\]
+
+In particular, if the zero ideal is decomposable, the set $D$ of zero-divisors
+of $A$ is the union of the prime ideals belonging to 0.
+
+Proof. If $a$ is decomposable, then 0 is decomposable in $A / a$ : namely
+$0=\bigcap \bar{q}_{1}$ where $\bar{q}_{1}$ is the image of $q_{1}$ in $A /
+\mathfrak{a}$, and is primary. Hence it is enough to prove the last statement of
+(4.7). By (1.15) we have $D=\bigcup_{x \neq 0} r(0: x)$; from the proof of
+(4.5), we have $r(0: x)=\bigcap_{x \xi q_{1}} \mathfrak{p}_{j} \subseteq
+\mathfrak{p}_{j}$ for some $j$, hence $D \subseteq \bigcup_{i-1}^{n}
+\mathfrak{p}_{i}$. But also from (4.5) each $p_{i}$ is of the form $r(0: x)$ for
+some $x \in A$, hence $\cup p_{1} \subseteq D$.
+
+Thus (the zero ideal being decomposabie)
+
+\[
+\begin{aligned}
+D & =\text { set of zero-divisors } \\
+& =\bigcup \text { of all prime ideals belonging to } 0 ; \\
+\mathfrak{R} & =\text { set of nilpotent elements } \\
+& =\bigcap \text { of all minimal primes belonging to } 0 .
+\end{aligned}
+\]
+
+Next we investigate the behavior of primary ideals under localization.
+
+Proposition 4.8. Let $S$ be a multiplicatively closed subset of $A$, and let
+$\mathfrak{q}$ be a p-primary ideal.
+
+i) If $S \cap \mathfrak{p} \neq \varnothing$, then $S^{-1} \mathfrak{q}=S^{-1}
+A$.
+
+ii) If $S \cap \mathfrak{p}=\varnothing$, then $S^{-1} \mathfrak{q}$ is $S^{-1}
+\mathfrak{p}$-primary and its contraction in $A$ is $\mathfrak{q}$. Hence
+primary ideals correspond to primary ideals in the correspondence (3.11) between
+ideals in $S^{-1} A$ and contracted ideals in $A$.
+
+Proof. i) If $s \in S \cap \mathfrak{p}$, then $s^{n} \in S \cap \mathfrak{q}$
+for some $n>0$; hence $S^{-1} \mathfrak{q}$ contains $s^{n} / 1$, which is a
+unit in $S^{-1} A$.
+
+ii) If $S \cap \mathfrak{p}=\varnothing$, then $s \in S$ and $a s \in
+\mathfrak{q}$ imply $a \in \mathfrak{q}$, hence $q^{e c}=\mathfrak{q}$ by
+(3.11). Also from (3.11) we have $r\left(\mathfrak{q}^{e}\right)=r\left(S^{-1}
+\mathfrak{q}\right)=S^{-1} r(\mathfrak{q})=S^{-1} \mathfrak{p}$. The
+verification that $S^{-1} q$ is primary is straightforward. Finally, the
+contraction of a primary ideal is primary.
+
+For any ideal $\mathfrak{a}$ and any multiplicatively closed subset $S$ in $A$,
+the contraction in $A$ of the ideal $S^{-1} \mathfrak{a}$ is denoted by
+$S(\mathfrak{a})$. Proposition 4.9. Let $S$ be a multiplicatively closed subset
+of $A$ and let $\mathfrak{a}$ be a decomposable ideal. Let
+$\mathfrak{a}=\bigcap_{i=1}^{n} q_{i}$ be a minimal primary decomposition of
+$\mathfrak{a}$. Let $\mathfrak{p}_{i}=r\left(\mathfrak{q}_{\mathfrak{i}}\right)$
+and suppose the $\mathfrak{q}_{i}$ numbered so that $S$ meets
+$\mathfrak{p}_{m+1}, \ldots, \mathfrak{p}_{n}$ but not $\mathfrak{p}_{1},
+\ldots, \mathfrak{p}_{m}$. Then
+
+\[
+S^{-1} \mathfrak{a}=\bigcap_{i=1}^{m} S^{-1} \mathfrak{a}_{i}, \quad S(\mathfrak{a})=\bigcap_{i=1}^{m} a_{\mathfrak{i}},
+\]
+
+and these are minimal primary decompositions.
+
+Proof. $S^{-1} \mathfrak{a}=\bigcap_{i=1}^{n} S^{-1} q_{i}$ by (3.11)
+$=\bigcap_{i=1}^{m} S^{-1} q_{i}$ by (4.8), and $S^{-1} q_{i}$ is $S^{-1}
+\mathfrak{p}_{i}$-primary for $i=1, \ldots, m$. Since the $\mathfrak{p}_{i}$ are
+distinct, so are the $S^{-1} \mathfrak{p}_{i}$ $(1 \leqslant i \leqslant m)$,
+hence we have a minimal primary decomposition. Contracting both sides, we get
+
+\[
+S(\mathfrak{a})=\left(S^{-1} \mathfrak{a}\right)^{\mathfrak{c}}=\bigcap_{i=1}^{m}\left(S^{-1} a_{i}\right)^{\mathfrak{c}}=\bigcap_{i=1}^{m} a_{i}
+\]
+
+by (4.8) again.
+
+A set $\Sigma$ of prime ideals belonging to $\mathfrak{a}$ is said to be
+isolated if it satisfies the following condition: if $\mathfrak{p}^{\prime}$ is
+a prime ideal belonging to $\mathfrak{a}$ and $\mathfrak{p}^{\prime} \subseteq
+\mathfrak{p}$ for some $\mathfrak{p} \in \Sigma$, then $\mathfrak{p}^{\prime}
+\in \Sigma$.
+
+Let $\Sigma$ be an isolated set of prime ideals belonging to a, and let $S=A-$
+$U_{\text {per }} \mathfrak{p}$. Then $S$ is multiplicatively closed and, for
+any prime ideal $\mathfrak{p}^{\prime}$ belonging to $\mathfrak{a}$, we have
+
+\[
+\begin{gathered}
+\mathfrak{p}^{\prime} \in \Sigma \Rightarrow \mathfrak{p}^{\prime} \cap S=\varnothing ; \\
+\mathfrak{p}^{\prime} \notin \Sigma \Rightarrow \mathfrak{p}^{\prime} \neq \bigcup_{\mathfrak{p} \in \mathbb{\Sigma}} \mathfrak{p}(\text { by }(1.11)) \Rightarrow \mathfrak{p}^{\prime} \cap S \neq \varnothing .
+\end{gathered}
+\]
+
+Hence, from (4.9), we deduce
+
+Theorem 4.10. (2nd uniqueness theorem). Let $\mathfrak{a}$ be a decomposable
+ideal, let $\mathfrak{a}=\bigcap_{\mathfrak{i}=1}^{\mathfrak{m}}
+\mathfrak{q}_{\mathfrak{i}}$ be a minimal primary decomposition of
+$\mathfrak{a}$, and let $\left\{\mathfrak{p}_{\mathfrak{1}_{2}}, \ldots,
+\mathfrak{p}_{\mathfrak{i}_{m}}\right\}$ be an isolated set of prime ideals of
+$\mathfrak{a}$. Then $a_{i_{1}} \cap \ldots \cap a_{i_{m}}$ is independent of
+the decomposition.
+
+In particular:
+
+Corollary 4.11. The isolated primary components (i.e., the primary components
+$q_{i}$ corresponding to minimal prime ideals $\mathfrak{p}_{\mathfrak{i}}$ )
+are uniquely determined by a.
+
+Proof of (4.10). We have $q_{i_{2}} \cap \cdots \cap q_{i_{m}}=S(\mathfrak{a})$
+where $S=\bar{A}-\mathfrak{p}_{i_{2}} \cup \cdots \cup \mathfrak{p}_{i_{m}}$,
+hence depends only on $a$ (since the $\mathfrak{p}_{\mathfrak{l}}$ depend only
+on $\mathfrak{a}$ )
+
+Remark. On the other hand, the embedded primary components are in general not
+uniquely determined by $a$. If $A$ is a Noetherian ring, there are in fact
+infinitely many choices for each embedded component (see Chapter 8, Exercise 1).
+
+\section{EXERCISES}
+\begin{enumerate}
+  \item If an ideal $\mathfrak{a}$ has a primary decomposition, then
+  $\operatorname{Spec}(A / \mathfrak{a})$ has only finitely many irreducible
+  components.
+
+  \item If $\mathfrak{a}=r(\mathfrak{a})$, then $\mathfrak{a}$ has no embedded
+  prime ideals.
+
+  \item If $A$ is absolutely flat, every primary ideal is maximal.
+
+  \item In the polynomial ring $Z[t]$, the ideal $m=(2, t)$ is maximal and the
+  ideal $q=(4, t)$ is $m$-primary, but is not a power of $m$.
+
+  \item In the polynomial ring $K[x, y, z]$ where $K$ is a field and $x, y, z$
+  are independent indeterminates, let $\mathfrak{p}_{1}=(x, y),
+  \mathfrak{p}_{2}=(x, z), \mathfrak{m}=(x, y, z) ; \mathfrak{p}_{1}$ and
+  $\mathfrak{p}_{2}$ are prime, and $\mathfrak{m}$ is maximal. Let
+  $a=\mathfrak{p}_{1} \mathfrak{p}_{2}$. Show that $a=\mathfrak{p}_{1} \cap
+  \mathfrak{p}_{2} \cap \mathfrak{m}^{2}$ is a reduced primary decomposition of
+  $\mathfrak{a}$. Which components are isolated and which are embedded?
+
+  \item Let $X$ be an infinite compact Hausdorff space, $C(X)$ the ring of
+  real-valued continuous functions on $X$ (Chapter 1, Exercise 26). Is the zero
+  ideal decomposable in this ring?
+
+  \item Let $A$ be a ring and let $A[x]$ denote the ring of polynomials in one
+  indeterminate over $A$. For each ideal $\mathfrak{a}$ of $A$, let
+  $\mathfrak{a}[x]$ denote the set of all polynomials in $A[x]$ with
+  coefficients in $\mathfrak{a}$.
+
+\end{enumerate}
+
+i) $\mathfrak{a}[x]$ is the extension of $\mathfrak{a}$ to $A[x]$.
+
+ii) If $\mathfrak{p}$ is a prime ideal in $A$, then $\mathfrak{p}[x]$ is a prime
+ideal in $A[x]$.
+
+iii) If $\mathfrak{q}$ is a $\mathfrak{p}$-primary ideal in $A$, then
+$\mathfrak{q}[x]$ is a $\mathfrak{p}[x]$-primary ideal in $A[x]$. [Use Chapter
+1, Exercise 2.]
+
+iv) If $a=\bigcap_{1=1}^{n} \mathfrak{q}_{t}$ is a minimal primary decomposition
+in $A$, then $\mathfrak{a}[x]=$ $\cap_{i=1}^{n} \mathfrak{q}_{i}[x]$ is a
+minimal primary decomposition in $A[x]$.
+
+v) If $\mathfrak{p}$ is a minimal prime ideal of $\mathfrak{a}$, then
+$\mathfrak{p}[x]$ is a minimal prime ideal of $\mathfrak{a}[x]$.
+
+\begin{enumerate}
+  \setcounter{enumi}{7}
+  \item Let $k$ be a field. Show that in the polynomial ring $k\left[x_{1},
+  \ldots, x_{n}\right]$ the ideals $p_{i}=\left(x_{1}, \ldots, x_{i}\right)(1
+  \leqslant i \leqslant n)$ are prime and all their powers are primary. [Use
+  Exercise 7.]
+
+  \item In a ring $A$, let $D(A)$ denote the set of prime ideals $\mathfrak{p}$
+  which satisfy the following condition: there exists $a \in A$ such that
+  $\mathfrak{p}$ is minimal in the set of prime ideals containing (0:a). Show
+  that $x \in A$ is a zero divisor $\Leftrightarrow x \in \mathfrak{p}$ for some
+  $\mathfrak{p} \in D(A)$.
+
+\end{enumerate}
+
+Let $S$ be a multiplicatively closed subset of $A$, and identify
+$\operatorname{Spec}\left(S^{-1} A\right)$ with its image in Spec $(A)$ (Chapter
+3, Exercise 21). Show that
+
+\[
+D\left(S^{-1} A\right)=D(A) \cap \operatorname{Spec}\left(S^{-1} A\right) \text {. }
+\]
+
+If the zero ideal has a primary decomposition, show that $D(A)$ is the set of
+associated prime ideals of 0 .
+
+\begin{enumerate}
+  \setcounter{enumi}{9}
+  \item For any prime ideal $\mathfrak{p}$ in a ring $A$, let
+  $S_{\mathfrak{p}}(0)$ denote the kernel of the homomorphism $A \rightarrow
+  A_{p}$. Prove that
+\end{enumerate}
+
+i) $S_{\mathfrak{p}}(0) \subseteq \mathfrak{p}$.
+
+ii) $r\left(S_{\mathfrak{p}}(0)\right)=\mathfrak{p} \Leftrightarrow
+\mathfrak{p}$ is a minimal prime ideal of $A$.
+
+iii) If $\mathfrak{p} \supseteq \mathfrak{p}^{\prime}$, then
+$S_{\mathfrak{p}}(0) \subseteq S_{\mathfrak{p}},(0)$.
+
+iv) $\bigcap_{\mathfrak{D} \in D(A)} S_{\mathfrak{p}}(0)=0$, where $D(A)$ is
+defined in Exercise 9. 11. If $\mathfrak{p}$ is a minimal prime ideal of a ring
+$A$, show that $S_{\mathfrak{\downarrow}}(0)$ (Exercise 10) is the smallest
+$p$-primary ideal.
+
+Let $a$ be the intersection of the ideals $S_{\mathfrak{p}}(0)$ as
+$\mathfrak{p}$ runs through the minimal prime ideals of $A$. Show that
+$\mathfrak{a}$ is contained in the nilradical of $A$.
+
+Suppose that the zero ideal is decomposable. Prove that $\mathfrak{a}=0$ if and
+only if every prime ideal of 0 is isolated.
+
+\begin{enumerate}
+  \setcounter{enumi}{11}
+  \item Let $A$ be a ring, $S$ a multiplicatively closed subset of $A$. For any
+  ideal $a$, let $S(\mathfrak{a})$ denote the contraction of $S^{-1}
+  \mathfrak{a}$ in $A$. The ideal $S(\mathfrak{a})$ is called the saturation of
+  $a$ with respect to $S$. Prove that
+\end{enumerate}
+
+i) $S(\mathfrak{a}) \cap S(\mathfrak{b})=S(\mathfrak{a} \cap \mathfrak{b})$
+
+ii) $S(r(\mathfrak{a}))=r(S(\mathfrak{a}))$
+
+iii) $S(\mathfrak{a})=(1) \Leftrightarrow a$ meets $S$
+
+iv) $S_{1}\left(S_{2}(\mathfrak{a})\right)=\left(S_{1}
+S_{2}\right)(\mathfrak{a})$.
+
+If $\mathfrak{a}$ has a primary decomposition, prove that the set of ideals
+$S(\mathfrak{a})$ (where $S$ runs through all multiplicatively closed subsets of
+$A$ ) is finite.
+
+\begin{enumerate}
+  \setcounter{enumi}{12}
+  \item Let $A$ be a ring and $\mathfrak{p}$ a prime ideal of $A$. The $n t h$
+  symbolic power of $\mathfrak{p}$ is defined to be the ideal (in the notation
+  of Exercise 12)
+\end{enumerate}
+
+\[
+\mathfrak{p}^{(n)}=S_{\mathfrak{p}}\left(\mathfrak{p}^{n}\right)
+\]
+
+where $S_{\mathfrak{p}}=A-\mathfrak{p}$. Show that
+
+i) $\mathfrak{p}^{(n)}$ is a $\mathfrak{p}$-primary ideal;
+
+ii) if $\mathfrak{p}^{n}$ has a primary decomposition, then $\mathfrak{p}^{(n)}$
+is its $\mathfrak{p}$-primary component;
+
+iii) if $\mathfrak{p}^{(m)} \mathfrak{p}^{(n)}$ has a primary decomposition,
+then $\mathfrak{p}^{(m+n)}$ is its $\mathfrak{p}$-primary component;
+
+iv) $\mathfrak{p}^{(n)}=\mathfrak{p}^{n} \Leftrightarrow \mathfrak{p}^{(n)}$ is
+$\mathfrak{p}$-primary.
+
+\begin{enumerate}
+  \setcounter{enumi}{13}
+  \item Let $a$ be a decomposable ideal in a ring $A$ and let $p$ be a maximal
+  element of the set of ideals ( $\mathfrak{a}: x$ ), where $x \in A$ and $x
+  \notin \mathfrak{a}$. Show that $\mathfrak{p}$ is a prime ideal belonging to
+  $\mathfrak{a}$.
+
+  \item Let $a$ be a decomposable ideal in a ring $A$, let $\Sigma$ be an
+  isolated set of prime ideals belonging to $a$, and let $q_{\Sigma}$ be the
+  intersection of the corresponding primary components. Let $f$ be an element of
+  $A$ such that, for each prime ideal $\mathfrak{p}$ belonging to $a$, we have
+  $f \in \mathfrak{p} \Leftrightarrow \mathfrak{p} \notin \Sigma$, and let
+  $S_{f}$ be the set of all powers of $f$. Show that
+  $q_{\Sigma}=S_{f}(a)=\left(a: f^{n}\right)$ for all large $n$.
+
+  \item If $A$ is a ring in which every ideal has a primary decomposition, show
+  that every ring of fractions $S^{-1} A$ has the same property.
+
+  \item Let $A$ be a ring with the following property.
+
+\end{enumerate}
+
+(L1) For every ideal $\mathfrak{a} \neq(1)$ in $A$ and every prime ideal
+$\mathfrak{p}$, there exists $x \notin \mathfrak{p}$ such that
+$S_{\mathfrak{p}}(\mathfrak{a})=(\mathfrak{a}: x)$, where
+$S_{\mathfrak{p}}=A-\mathfrak{p}$.
+
+Then every ideal in $A$ is an intersection of (possibly infinitely many) primary
+ideals.
+
+[Let $a$ be an ideal $\neq(1)$ in $A$, and let $p_{1}$ be a minimal element of
+the set of prime ideals containing $\mathfrak{a}$. Then
+$\mathfrak{q}_{1}=S_{\mathfrak{p}_{1}}(\mathfrak{a})$ is
+$\mathfrak{p}_{1}$-primary (by Exercise 11), and $q_{1}=$ $(\mathfrak{a}: x)$
+for some $x \notin \mathfrak{p}_{1}$. Show that $\mathfrak{a}=\mathfrak{q}_{1}
+\cap(\mathfrak{a}+(x))$.
+
+Now let $a_{1}$ be a maximal element of the set of ideals $\mathfrak{b}
+\supseteq \mathfrak{a}$ such that $a_{1} \cap \mathfrak{b}=a$, and choose
+$a_{1}$ so that $x \in \mathfrak{a}_{1}$, and therefore $a_{1} \nsubseteq
+\mathfrak{p}_{1}$. Repeat the construction starting with $\mathfrak{a}_{1}$, and
+so on. At the $n$th stage we have $a=\mathfrak{q}_{1} \cap \ldots$ $\cap
+\mathfrak{q}_{n} \cap \mathfrak{a}_{n}$ where the $\mathfrak{q}_{\mathfrak{t}}$
+are primary ideals, $\mathfrak{a}_{n}$ is maximal among the ideals
+$\mathfrak{b}$ containing $\mathfrak{a}_{n-1}=\mathfrak{a}_{n} \cap
+\mathfrak{q}_{n}$ such that $\mathfrak{a}=q_{\mathfrak{z}} \cap \cdots \cap
+\mathfrak{q}_{n} \cap \mathfrak{b}$, and $\mathfrak{a}_{n} \nsubseteq
+\mathfrak{p}_{n}$. If at any stage we have $\mathfrak{a}_{n}=(1)$, the process
+stops, and $\mathfrak{a}$ is a finite intersection of primary ideals. If not,
+continue by transfinite induction, observing that each $\mathfrak{a}_{n}$
+strictly contains $a_{n-1}$.]
+
+\begin{enumerate}
+  \setcounter{enumi}{17}
+  \item Consider the following condition on a ring $A$ :
+\end{enumerate}
+
+(L2) Given an ideal $a$ and a descending chain $S_{1} \supseteq S_{2} \supseteq
+\cdots \geq S_{n} \supseteq \cdots$ of multiplicatively closed subsets of $A$,
+there exists an integer $n$ such that $S_{n}(\mathfrak{a})=$
+$S_{n+1}(\mathfrak{a})=\cdots$. Prove that the following are equivalent:
+
+i) Every ideal in $A$ has a primary decomposition;
+
+ii) $A$ satisfies (L1) and (L2).
+
+[For i) $\Rightarrow$ ii), use Exercises 12 and 15 . For ii) $\Rightarrow$ i)
+show, with the notation of the proof of Exercise 17, that if
+$S_{n}=S_{\mathfrak{p}_{1}} \cap \cdots \cap S_{\mathfrak{p}_{n}}$ then $S_{n}$
+meets $\mathfrak{a}_{n}$, hence $S_{n}\left(\mathfrak{a}_{n}\right)=(1)$, and
+therefore $S_{n}(\mathfrak{a})=\mathfrak{q}_{1} \cap \ldots \cap
+\mathfrak{q}_{n}$. Now use (L2) to show that the construction must terminate
+after a finite number of steps.]
+
+\begin{enumerate}
+  \setcounter{enumi}{18}
+  \item Let $A$ be a ring and $\mathfrak{p}$ a prime ideal of $A$. Show that
+  every $p$-primary ideal contains $S_{\mathfrak{p}}(0)$, the kernel of the
+  canonical homomorphism $A \rightarrow A_{\mathfrak{p}}$.
+\end{enumerate}
+
+Suppose that $A$ satisfies the following condition: for every prime ideal $p$,
+the intersection of all $\mathfrak{p}$-primary ideals of $A$ is equal to
+$S_{\mathfrak{p}}(0)$. (Noetherian rings satisfy this condition: see Chapter
+10.) Let $\mathfrak{p}_{1}, \ldots, \mathfrak{p}_{n}$ be distinct prime ideals,
+none of which is a minimal prime ideal of $A$. Then there exists an ideal $a$ in
+$A$ whose associated prime ideals are $p_{1}, \ldots, p_{n}$.
+
+[Proof by induction on $n$. The case $n=1$ is trivial (take $a=\mathfrak{p}_{1}$
+). Suppose $n>1$ and let $\mathfrak{p}_{n}$ be maximal in the set
+$\left\{\mathfrak{p}_{1}, \ldots, \mathfrak{p}_{n}\right\}$. By the inductive
+hypothesis there exists an ideal $\mathfrak{b}$ and a minimal primary
+decomposition $\mathfrak{b}=\mathfrak{q}_{1} \cap \ldots$ $\cap
+\mathfrak{q}_{n-1}$, where each $\mathfrak{q}_{t}$ is
+$\mathfrak{p}_{\mathfrak{t}}$-primary. If $\mathfrak{b} \subseteq
+S_{\mathfrak{p}_{n}}(0)$, let $\mathfrak{p}$ be a minimal prime ideal of $A$
+contained in $\mathfrak{p}_{n}$. Then $S_{\mathfrak{p}_{n}}(0) \subseteq
+S_{\mathfrak{p}}(0)$, hence $\mathfrak{b} \subseteq S_{\mathfrak{p}}(0)$. Taking
+radicals and using Exercise 10 , we have $\mathfrak{p}_{1} \cap \ldots \cap
+\mathfrak{p}_{n-1} \subseteq \mathfrak{p}$, hence some
+$\mathfrak{p}_{\mathfrak{t}} \subseteq \mathfrak{p}$, hence
+$\mathfrak{p}_{\mathfrak{t}}=\mathfrak{p}$ since $\mathfrak{p}$ is minimal. This
+is a contradiction since no $\mathfrak{p}_{\mathfrak{t}}$ is minimal. Hence
+$\mathfrak{b} \nsubseteq S_{\mathfrak{p}_{n}}(0)$ and therefore there exists a
+$\mathfrak{p}_{n}$-primary ideal $q_{n}$ such that $\mathfrak{b} \nsubseteq
+\mathfrak{q}_{n}$. Show that $\mathfrak{a}=\mathfrak{q}_{1} \cap \cdots \cap
+\mathfrak{q}_{n}$ has the required properties.]
+
+\section{Primary decomposition of modules}
+Practically the whole of this chapter can be transposed to the context of
+modules over a ring $A$. The following exercises indicate how this is done.
+
+\begin{enumerate}
+  \setcounter{enumi}{19}
+  \item Let $M$ be a fixed $A$-module, $N$ a submodule of $M$. The radical of
+  $N$ in $M$ is defined to be
+\end{enumerate}
+
+\[
+r_{M}(N)=\left\{x \in A: x^{q} M \subseteq N \text { for some } q>0\right\} .
+\]
+
+Show that $r_{M}(N)=r(N: M)=r($ Ann $(M / N))$. In particular, $r_{M}(N)$ is an
+ideal.
+
+State and prove the formulas for $r_{M}$ analogous to (1.13).
+
+\begin{enumerate}
+  \setcounter{enumi}{20}
+  \item An element $x \in A$ defines an endomorphism $\phi_{x}$ of $M$, namely
+  $m \mapsto x m$. The element $x$ is said to be a zero-divisor (resp.
+  nilpotent) in $M$ if $\phi_{x}$ is not injective (resp. is nilpotent). A
+  submodule $Q$ of $M$ is primary in $M$ if $Q \neq M$ and every zero-divisor in
+  $M / Q$ is nilpotent.
+\end{enumerate}
+
+Show that if $Q$ is primary in $M$, then $(Q: M)$ is a primary ideal and hence
+$r_{M}(Q)$ is a prime ideal $\mathfrak{p}$. We say that $Q$ is
+$\mathfrak{p}$-primary (in $\left.M\right)$.
+
+Prove the analogues of (4.3) and (4.4).
+
+\begin{enumerate}
+  \setcounter{enumi}{21}
+  \item A primary decomposition of $N$ in $M$ is a representation of $N$ as an
+  intersection
+\end{enumerate}
+
+\[
+N=Q_{1} \cap \cdots \cap Q_{n}
+\]
+
+of primary submodules of $M$; it is a minimal primary decomposition if the
+ideals $\mathfrak{p}_{i}=r_{M}\left(Q_{i}\right)$ are all distinct and if none
+of the components $Q_{i}$ can be omitted from the intersection, that is if
+$Q_{t} ¥ \bigcap_{t \neq 1} Q_{1}(1 \leqslant i \leqslant n)$.
+
+Prove the analogue of (4.5), that the prime ideals $\mathfrak{p}_{1}$ depend
+only on $N$ (and $M$ ). They are called the prime ideals belonging to $N$ in
+$M$. Show that they are also the prime ideals belonging to 0 in $M / N$.
+
+\begin{enumerate}
+  \setcounter{enumi}{22}
+  \item State and prove the analogues of (4.6)-(4.11) inclusive. (There is no
+  loss of generality in taking $N=0$.)
+\end{enumerate}
+
 \end{document}
