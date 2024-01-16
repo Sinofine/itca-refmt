@@ -8,7 +8,7 @@ TeXLive is required.
   latexmk -lualatex main.tex && latexmk -c
 #+end_src
 ** Process
-*** TODO Chap 1
+*** COMPLETE Chap 1
 *** TODO Chap 2
 *** TODO Chap 3
 *** TODO Chap 4 [2/9]

@@ -1,21 +1,27 @@
-\documentclass{book}
+\documentclass[a5paper]{book}
 \usepackage{hyperref}
-\usepackage{unicode-math}
-\setmathfont{texgyrepagella-math.otf}[math-style=TeX]
+\usepackage{amsmath,unicode-math}
+\setmathfont{TeX Gyre Termes}[math-style=TeX]
 \usepackage{fontspec}
-\setmainfont{TeX Gyre Pagella}
+\setmainfont{TeX Gyre Termes Math}
 \usepackage{standalone}
 \usepackage{biblatex}
 \addbibresource{intro.bib}
 \usepackage{amsthm}
+\usepackage[shortlabels]{enumitem}
 \newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{lemma}
-\newtheorem*{example}{Example}
+\newtheorem{corollary}[theorem]{corollary}
 \theoremstyle{definition}
+\newtheorem*{example}{Example}
 \newtheorem{definition}[theorem]{Definition}
+\newtheorem{exercise}[theorem]{Exercise}
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Max}{Max}
 \title{Introduction to Commutative Algebra}
 \author{M. F. ATIYAH \and I. G. MACDONALD}
 \begin{document}
