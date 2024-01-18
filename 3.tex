@@ -282,10 +282,9 @@ is true provided the ideal $\mathfrak{b}$ is finitely generated: see (3.15).
   \setcounter{enumi}{1}
   \item The proof in (1.8) that if $f \in A$ is not nilpotent there is a prime ideal of $A$ which does not contain $f$ can be expressed more concisely in the language of rings of fractions. Since the set $S=\left(f^{n}\right)_{n>0}$ does not contain 0 , the ring $S^{-1} A=A_{f}$ is not the zero ring and therefore by (1.3) has a maximal ideal, whose contraction in $A$ is a prime ideal $\mathfrak{p}$ which does not meet $S$ by (3.11); hence $f \notin \mathfrak{p}$.
 \end{enumerate}
-
-\begin{center}
-%graphic [max width=\textwidth]{2023_09_24_1e2d33f62eae9f354811g-051}
-\end{center}
+\begin{corollary}
+If $\Re$ is the inlradical of $A$, the nilradical of $S^{-1}A$ is $S^{-1}\Re$.
+\end{corollary}
 
 Corollary 3.13. If $\mathfrak{p}$ is a prime ideal of $A$, the prime ideals of the local ring $A_{\mathfrak{p}}$ are in one-to-one correspondence with the prime ideals of $A$ contained in $\mathfrak{p}$.
 
@@ -526,7 +525,10 @@ iii) If $U=U^{\prime}$, then $\rho$ is the identity map.
 iv) If $U \supseteq U^{\prime} \supseteq U^{\prime}$ are basic open sets in $X$, show that the diagram
 
 \begin{center}
-%graphic [max width=\textwidth]{2023_09_24_1e2d33f62eae9f354811g-056}
+  \begin{tikzcd}
+A(U) \arrow[rd] \arrow[rr] &                  & A(U'') \\
+                           & A(U') \arrow[ru] &
+\end{tikzcd}
 \end{center}
 
 (in which the arrows are restriction homomorphisms) is commutative.
@@ -534,10 +536,10 @@ iv) If $U \supseteq U^{\prime} \supseteq U^{\prime}$ are basic open sets in $X$,
 v) Let $x(=\mathfrak{p})$ be a point of $X$. Show that
 
 \[
-\underset{\lim _{\mathfrak{a} x}}{\longrightarrow} A(U) \cong A_{\mathfrak{p}} .
+\varinjlim_{U\ni x} A(U) \cong A_{\mathfrak{p}}.
 \]
 
-The assignment of the ring $A(U)$ to each basic open set $U$ of $X$, and the restriction homomorphisms $\rho$, satisfying the conditions iii) and iv) above, constitutes a presheaf of rings on the basis of open sets $\left(X_{f}\right)_{, \in A_{-}}$v) says that the stalk of this presheaf at $x \in X$ is the corresponding local ring $A_{\mathfrak{p}}$.
+The assignment of the ring $A(U)$ to each basic open set $U$ of $X$, and the restriction homomorphisms $\rho$, satisfying the conditions iii) and iv) above, constitutes a \textit{presheaf of rings} on the basis of open sets $\left(X_{f}\right)_{f\in A}$. v) says that the stalk of this presheaf at $x \in X$ is the corresponding local ring $A_{\mathfrak{p}}$.
 
 \begin{enumerate}
   \setcounter{enumi}{23}

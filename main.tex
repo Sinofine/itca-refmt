@@ -1,6 +1,7 @@
-\documentclass[a5paper]{book}
+\documentclass[b5paper]{book}
 \usepackage{hyperref}
-\usepackage{amsmath,unicode-math}
+\usepackage{amsmath,unicode-math,lualatex-math}
+\usepackage{tikz-cd}
 \setmathfont{STIX Two Math}[math-style=TeX]
 \usepackage{fontspec}
 \usepackage{tinos}
@@ -13,7 +14,7 @@
 \newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{lemma}
-\newtheorem{corollary}[theorem]{corollary}
+\newtheorem{corollary}[theorem]{Corollary}
 \theoremstyle{definition}
 \newtheorem*{example}{Example}
 \newtheorem{definition}[theorem]{Definition}
@@ -23,6 +24,11 @@
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Max}{Max}
+\DeclareMathOperator{\Ann}{Ann}
+\setcounter{secnumdepth}{0}
+% \setlist[enumerate,2]{
+%   noitemsep
+% }
 \title{Introduction to Commutative Algebra}
 \author{M. F. ATIYAH \and I. G. MACDONALD}
 \begin{document}

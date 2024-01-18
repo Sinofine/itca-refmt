@@ -99,13 +99,16 @@ The inverse limit definition of $G$ has many advantages. Its main drawback is th
 The exactness properties of completions are best studied by inverse limits. First let us observe that the inverse system $\left\{G / G_{n}\right\}$ has the special property that $\theta_{n+1}$ is always surjective. Any inverse system with this property we shall call a surjective system. Suppose now that $\left\{A_{n}\right\},\left\{B_{n}\right\},\left\{C_{n}\right\}$ are three inverse systems and that we have commutative diagrams of exact sequences
 
 \begin{center}
-%graphic [max width=\textwidth]{2023_09_24_1e2d33f62eae9f354811g-112}
+  \begin{tikzcd}
+0 \arrow[r] & A_{n+1} \arrow[r] \arrow[d] & B_{n+1} \arrow[r] \arrow[d] & C_{n+1} \arrow[r] \arrow[d] & 0  \\
+0 \arrow[r] & A_n \arrow[r]               & B_n \arrow[r]               & C_n \arrow[r]               & 0.
+\end{tikzcd}
 \end{center}
 
 We shall then say that we have an exact sequence of inverse systems. The diagram certainly induces homomorphisms
 
 \[
-0 \rightarrow \lim _{\longleftarrow} A_{n} \rightarrow \lim B_{n} \rightarrow \lim _{\longleftarrow} C_{n} \rightarrow 0
+0 \rightarrow \varprojlim A_{n} \rightarrow \varprojlim B_{n} \rightarrow \varprojlim C_{n} \rightarrow 0
 \]
 
 but this sequence is not always exact. However, we have
@@ -113,13 +116,13 @@ but this sequence is not always exact. However, we have
 Proposition 10.2. If $0 \rightarrow\left\{A_{n}\right\} \rightarrow\left\{B_{n}\right\} \rightarrow\left\{C_{n}\right\} \rightarrow 0$ is an exact sequence of inverse systems then
 
 \[
-0 \rightarrow \lim A_{n} \rightarrow \lim B_{n} \rightarrow \lim _{\longleftarrow} C_{n}
+0 \rightarrow \varprojlim A_{n} \rightarrow \varprojlim B_{n} \rightarrow \varprojlim C_{n}
 \]
 
 is always exact. If, moreover, $\left\{A_{n}\right\}$ is a surjective system then
 
 \[
-0 \rightarrow \lim _{\longleftarrow} A_{n} \rightarrow \lim B_{n} \rightarrow \lim _{\leftarrow} C_{n} \rightarrow 0
+0 \rightarrow \varprojlim A_{n} \rightarrow \varprojlim B_{n} \rightarrow \varprojlim  C_{n} \rightarrow 0
 \]
 
 is exact.
@@ -288,7 +291,10 @@ Proof. Using (10.3) or otherwise it is clear that a-adic completion commutes wit
 This gives rise to the commutative diagram
 
 \begin{center}
-%graphic [max width=\textwidth]{2023_09_24_1e2d33f62eae9f354811g-117}
+  \begin{tikzcd}
+            & \hat{A}\otimes_A N \arrow[r] \arrow[d, "\gamma"] & \hat{A}\otimes_A F \arrow[r] \arrow[d, "\beta"] & \hat{A}\otimes_A M \arrow[r] \arrow[d, "\alpha"] & 0 \\
+0 \arrow[r] & \hat{N} \arrow[r]                                & \hat{F} \arrow[r, "\delta"]                     & \hat{M} \arrow[r]                                & 0
+\end{tikzcd}
 \end{center}
 
 in which the top line is exact (by (2.18)). By (10.3) $\delta$ is surjective. Since $\beta$ is an isomorphism this implies that $\alpha$ is surjective, proving the first part of the proposition. Assume now that $A$ is Noetherian, then $N$ is also finitely generated so that $\gamma$ is surjective and, by (10.12), the bottom line is exact. A little diagram chasing now proves that $\alpha$ is injective and so an isomorphism. Propositions (10.12) and (10.13) together assert that the functor $M \mapsto$ $A \otimes_{A} M$ is exact on the category of finitely-generated $A$-modules (when $A$ is Noetherian). As shown in Chapter 2 this proves:
@@ -469,7 +475,10 @@ Proof. Pick a finite set of generators of $G(M)$, and split them up into their h
 of filtered groups, and $G(\phi): G(F) \rightarrow G(M)$ is a homomorphism of $G(A)$ modules. By construction it is surjective. Hence by $(10.23)$ ii) $\hat{\phi}$ is surjective. Consider now the diagram
 
 \begin{center}
-%graphic [max width=\textwidth]{2023_09_24_1e2d33f62eae9f354811g-122}
+  \begin{tikzcd}
+F \arrow[r, "\phi"] \arrow[d, "\alpha"'] & M \arrow[d, "\beta"] \\
+\hat{F} \arrow[r, "\hat{\phi}"]          & \hat{M}
+\end{tikzcd}
 \end{center}
 
 Since $F$ is free and $A=\hat{A}$ it follows that $\alpha$ is an isomorphism. Since $M$ is Hausdorff $\beta$ is injective. The surjectivity of $\hat{\phi}$ thus implies the surjectivity of $\phi$, and this means that $x_{1}, \ldots, x_{r}$ generate $M$ as an $A$-module.
