@@ -2,16 +2,32 @@
 \usepackage{hyperref}
 \usepackage{amsmath,unicode-math,lualatex-math}
 \usepackage{tikz-cd}
-\setmathfont{STIX Two Math}[math-style=TeX]
+\setmathfont{Libertinus Math}[math-style=TeX]
 \usepackage{fontspec}
-\usepackage{tinos}
+% \usepackage{tinos}
+\setmainfont{Libertinus Serif}
 % \setmainfont{TeX Gyre Termes}
 \usepackage{standalone}
 \usepackage{biblatex}
 \addbibresource{intro.bib}
 \usepackage{amsthm}
+\usepackage{thmtools}
 \usepackage[shortlabels]{enumitem}
 \newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{manualtheoreminner}{Theorem}
+\newenvironment{thman}[1]{%
+  \IfBlankTF{#1}
+    {\renewcommand{\themanualtheoreminner}{\unskip}}
+    {\renewcommand\themanualtheoreminner{#1}}%
+  \manualtheoreminner
+}{\endmanualtheoreminner}
+\newtheorem{manualpropositioninner}{Proposition}
+\newenvironment{thprop}[1]{%
+  \IfBlankTF{#1}
+    {\renewcommand{\themanualpropositioninner}{\unskip}}
+    {\renewcommand\themanualpropositioninner{#1}}%
+  \manualpropositioninner
+}{\endmanualpropositioninner}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{lemma}
 \newtheorem{corollary}[theorem]{Corollary}
@@ -23,8 +39,13 @@
 \newtheorem*{remark}{Remark}
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Det}{Det}
+\DeclareMathOperator{\Coker}{Coker}
+\DeclareMathOperator{\Img}{Im}
 \DeclareMathOperator{\Max}{Max}
 \DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Tor}{Tor}
 \setcounter{secnumdepth}{0}
 % \setlist[enumerate,2]{
 %   noitemsep

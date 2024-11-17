@@ -87,7 +87,7 @@ $\mathfrak{a}$ in $A$, and the mapping $\phi: A \to A / \mathfrak{a}$ which maps
 each $x \in A$ to its coset $x+a$ is a surjective ring homomorphism.
 
 We shall frequently use the following fact:
-\begin{proposition}
+\begin{proposition}\label{prop:1.1}
   There is a one-to-one order-preserving. correspondence between the ideals
   $\mathfrak{b}$ of $A$ which contain $\mathfrak{a}$, and the ideals $\bar{b}$
   of $A / \mathfrak{a}$, given by $\mathfrak{b}=\phi^{-1}(\bar{b})$.
@@ -122,7 +122,7 @@ A field is a ring $A$ in which $1 \neq 0$ and every non-zero element is a unit.
 Every field is an integral domain (but not conversely: $\mathbf{Z}$ is not a
 field).
 
-\begin{proposition}
+\begin{proposition}\label{prop:1.2}
   Let $A$ be a ring $\neq 0$. Then the following are equivalent:
   \begin{enumerate}[i)]
     \item $A$ is a field;
@@ -171,7 +171,7 @@ $A=\mathrm{Z}, B=\mathbf{Q}, \mathfrak{n}=0$.)
 Prime ideals are fundamental to the whole of commutative algebra. The following
 theorem and its corollaries ensure that there is always a sufficient supply of
 them.
-\begin{theorem}
+\begin{theorem}\label{thm:1.3}
   Every ring $A \neq 0$ has at least one maximal ideal. \textnormal{(Remember
     that ``ring'' means commutative ring with $1$.)}
 \end{theorem}
@@ -201,15 +201,15 @@ them.
   $a$ is an upper bound of the chain. Hence by Zorn's lemma $\Sigma$ has a
   maximal element.
 \end{proof}
-\begin{corollary}
+\begin{corollary}\label{cor:1.4}
   If $a \neq(1)$ is an ideal of $A$, there exists a maximal ideal of $A$
   containing a.
 \end{corollary}
 \begin{proof}
-  Apply (1.3) to $A / \mathfrak{a}$, bearing in mind (1.1). Alternatively,
-  modify the proof of (1.3).
+  Apply (\ref{thm:1.3}) to $A / \mathfrak{a}$, bearing in mind (\ref{prop:1.1}). Alternatively,
+  modify the proof of (\ref{thm:1.3}).
 \end{proof}
-\begin{corollary}
+\begin{corollary}\label{cor:1.5}
   Every non-unit of $A$ is contained in a maximal ideal.
 \end{corollary}
 \begin{remark}
@@ -221,7 +221,7 @@ them.
           The field $k=A / \mathfrak{m}$ is called the residue field of $A$.
   \end{enumerate}
 \end{remark}
-\begin{proposition}
+\begin{proposition}\label{prop:1.6}
   \begin{enumerate}[i)]
     \item Let $A$ be a ring and $\mathfrak{m} \neq(1)$ an ideal of $A$ such that
           every $x \in A-\mathfrak{m}$ is a unit in $A$. Then $A$ is a local
@@ -269,35 +269,35 @@ A ring with only a finite number of maximal ideals is called semi-local.
 \end{example}
 
 \section{Nilradical and Jacobson radical}
-\begin{proposition}
-  The set $\Re$ of all nilpotent elements in a ring $A$ is an ideal, and
-  $A / \Re$ has no nilpotent element $\neq 0$.
+\begin{proposition}\label{prop:1.7}
+  The set $\mathfrak{N}$ of all nilpotent elements in a ring $A$ is an ideal, and
+  $A / \mathfrak{N}$ has no nilpotent element $\neq 0$.
 \end{proposition}
 \begin{proof}
-  If $x \in \Re$, clearly $a x \in \Re$ for all $a \in A$. Let $x, y \in \Re$:
+  If $x \in \mathfrak{N}$, clearly $a x \in \mathfrak{N}$ for all $a \in A$. Let $x, y \in \mathfrak{N}$:
   say $x^{m}=0, y^{n}=0$. By the binomial theorem (which is valid in any
   commutative ring), $(x+y)^{m+n-1}$ is a sum of integer multiples of products
   $x^{r} y^{s}$, where $r+s=m+n-1$; we cannot have both $r<m$ and $s<n$, hence
   each of these products vanishes and therefore $(x+y)^{m+n-1}=0$. Hence
-  $x+y \in \Re$ and therefore $\Re$ is an ideal.
+  $x+y \in \mathfrak{N}$ and therefore $\mathfrak{N}$ is an ideal.
 
-  Let $\bar{x} \in A / \Re$ be represented by $x \in A$. Then $\bar{x}^{n}$ is
+  Let $\bar{x} \in A / \mathfrak{N}$ be represented by $x \in A$. Then $\bar{x}^{n}$ is
   represented by $x^{n}$, so that
-  $\bar{x}^{n}=0 \implies x^{n} \in \Re \implies\left(x^{n}\right)^{k}=0$ for
-  some $k>0 \implies x \in \Re \implies \bar{x}=0$.
+  $\bar{x}^{n}=0 \implies x^{n} \in \mathfrak{N} \implies\left(x^{n}\right)^{k}=0$ for
+  some $k>0 \implies x \in \mathfrak{N} \implies \bar{x}=0$.
 \end{proof}
 
-The ideal $\Re$ is called the \textit{nilradical} of $A$. The following
-proposition gives an alternative definition of $\Re$:
+The ideal $\mathfrak{N}$ is called the \textit{nilradical} of $A$. The following
+proposition gives an alternative definition of $\mathfrak{N}$:
 
-\begin{proposition}
+\begin{proposition}\label{prop:1.8}
   The nilradical of $A$ is the intersection of all the prime ideals of $A$.
 \end{proposition}
 \begin{proof}
-  Let $\Re'$ denote the intersection of all the prime ideals of $A$. If
+  Let $\mathfrak{N}'$ denote the intersection of all the prime ideals of $A$. If
   $f \in A$ is nilpotent and if $\mathfrak{p}$ is a prime ideal, then
   $f^{n}=0 \in \mathfrak{p}$ for some $n>0$, hence $f \in \mathfrak{p}$ (because
-  $\mathfrak{p}$ is prime). Hence $f \in \Re'$.
+  $\mathfrak{p}$ is prime). Hence $f \in \mathfrak{N}'$.
 
   Conversely, suppose that $f$ is not nilpotent. Let $\Sigma$ be the set of
   ideals $a$ with the property
@@ -309,7 +309,7 @@ proposition gives an alternative definition of $\Re$:
   $\Sigma$ has a maximal element. Let $\mathfrak{p}$ be a maximal element of
   $\Sigma$. We shall show that $\mathfrak{p}$ is a prime ideal. Let
   $x, y \notin \mathfrak{p}$. Then the ideals $\mathfrak{p}+(x)$,
-  $athfrak{p}+(y)$ strictly contain $\mathfrak{p}$ and therefore do not belong
+  $\mathfrak{p}+(y)$ strictly contain $\mathfrak{p}$ and therefore do not belong
   to $\Sigma$; hence
   \[
     f^{m} \in \mathfrak{p}+(x), \quad f^{n} \in \mathfrak{p}+(y)
@@ -317,17 +317,17 @@ proposition gives an alternative definition of $\Re$:
   for some $m, n$. It follows that $f^{m+n} \in \mathfrak{p}+(x y)$, hence the
   ideal $\mathfrak{p}+(x y)$ is not in $\Sigma$ and therefore
   $x y \notin \mathfrak{p}$. Hence we have a prime ideal $\mathfrak{p}$ such
-  that $f \notin \mathfrak{p}$, so that $f \not\in\Re'$.
+  that $f \notin \mathfrak{p}$, so that $f \not\in\mathfrak{N}'$.
 \end{proof}
 
-The \textit{Jacobson radical} $\Re$ of $A$ is defined to be the intersection of
+The \textit{Jacobson radical} $\mathfrak{R}$ of $A$ is defined to be the intersection of
 all the maximal ideals of $A$. It can be characterized as follows:
-\begin{proposition}
-  $x \in \Re \iff 1-x y$ is a unit in $A$ for all $y \in A$.
+\begin{proposition}\label{prop:1.9}
+  $x \in \mathfrak{R} \iff 1-x y$ is a unit in $A$ for all $y \in A$.
 \end{proposition}
 \begin{proof}
   $\implies$: Suppose $1-x y$ is not a unit. By (1.5) it belongs to some maximal
-  ideal $\mathfrak{m}$; but $x \in \Re \subseteq \mathfrak{m}$, hence
+  ideal $\mathfrak{m}$; but $x \in \mathfrak{R} \subseteq \mathfrak{m}$, hence
   $x y \in \mathfrak{m}$ and therefore $1 \in \mathfrak{m}$, which is absurd.
 
   $\impliedby$: Suppose $x \notin \mathfrak{m}$ for some maximal ideal
@@ -428,7 +428,7 @@ $A$. Define a homomorphism
 \]
 by the rule
 $\phi(x)=\left(x+\mathfrak{a}_{1}, \ldots, x+\mathfrak{a}_{n}\right)$.
-\begin{proposition}
+\begin{proposition}\label{prop:1.10}
   \begin{enumerate}[i)]
     \item If $\mathfrak{a}_{i}, \mathfrak{a}_{j}$ are coprime whenever
           $i \neq j$, then $\prod a_{i}=\bigcap a_{i}$.
@@ -466,12 +466,12 @@ $\phi(x)=\left(x+\mathfrak{a}_{1}, \ldots, x+\mathfrak{a}_{n}\right)$.
           then $x=\prod\left(1-u_{i}\right) \equiv 1\pmod{a_{1}}$, and
           $x \equiv 0\pmod{a_{i}}$, $i>1$. Hence $\phi(x)=(1,0, \ldots, 0)$ as
           required.
-    \item Clear, since $\cap a_{i}$ is the kernel of $\phi$.
+    \item Clear, since $\bigcap a_{i}$ is the kernel of $\phi$.
   \end{enumerate}
 \end{proof}
 The \textit{union} $\mathfrak{a} \cup \mathfrak{b}$ of ideals is not in general
 an ideal.
-\begin{proposition}
+\begin{proposition}\label{prop:1.11}
   \begin{enumerate}[i)]
     \item Let $\mathfrak{p}_{1}, \ldots, \mathfrak{p}_{n}$ be prime ideals and
           let $\mathfrak{a}$ be an ideal contained in
@@ -542,7 +542,7 @@ in place of $(\mathfrak{a}:(x))$.
 
 Hence $q=m /(m, n)$, where $(m, n)$ is the h.c.f. of $m$ and $n$.
 \end{example}
-\begin{exercise}
+\begin{exercise}\label{exc:1.12}
   \begin{enumerate}[i)]
     \item $a \subseteq(a: b)$
     \item $(\mathfrak{a}: \mathfrak{b}) \mathfrak{b} \subseteq \mathfrak{a}$
@@ -561,8 +561,8 @@ If $\mathfrak{a}$ is any ideal of $A$, the \textit{radical} of $\mathfrak{a}$ is
 \]
 If $\phi: A \to A / \mathfrak{a}$ is the standard homomorphism, then
 $r(\mathfrak{a})=\phi^{-1}\left(\mathfrak{R}_{A / \mathfrak{a}}\right)$ and
-hence $r(\mathfrak{a})$ is an ideal by (1.7).
-\begin{exercise}
+hence $r(\mathfrak{a})$ is an ideal by (\ref{prop:1.7}).
+\begin{exercise}\label{exc:1.13}
   \begin{enumerate}[i)]
     \item $r(\mathfrak{a}) \supseteq \mathfrak{a}$
     \item $r(r(\mathfrak{a}))=r(\mathfrak{a})$
@@ -574,19 +574,19 @@ hence $r(\mathfrak{a})$ is an ideal by (1.7).
           $r\left(\mathfrak{p}^{n}\right)=\mathfrak{p}$ for all $n>0$.
   \end{enumerate}
 \end{exercise}
-\begin{proposition}
+\begin{proposition}\label{prop:1.14}
   The radical of an ideal $\mathfrak{a}$ is the intersection of the prime ideals
   which contain $\mathfrak{a}$.
 \end{proposition}
 \begin{proof}
-  Apply (1.8) to $A / \mathfrak{a}$.
+  Apply (\ref{prop:1.8}) to $A / \mathfrak{a}$.
 \end{proof}
 
 More generally, we may define the radical $r(E)$ of any subset $E$ of $A$ in the
 same way. It is \textit{not} an ideal in general. We have
 $r\left(\bigcup_{\alpha} E_{\alpha}\right)=\bigcup r\left(E_{\alpha}\right)$,
 for any family of subsets $E_{\alpha}$ of $A$.
-\begin{proposition}
+\begin{proposition}\label{prop:1.15}
   $D=$ set of zero-divisors of $A=\bigcup_{x \neq 0} r(\operatorname{Ann}(x))$.
 \end{proposition}
 \begin{proof}
@@ -597,14 +597,14 @@ for any family of subsets $E_{\alpha}$ of $A$.
   distinct prime divisors of $m$. Then
   $r(\mathfrak{a})=\left(p_{1} \cdots p_{r}\right)=\bigcap_{i=1}^{r}\left(p_{i}\right)$.
 \end{example}
-\begin{proposition}
+\begin{proposition}\label{prop:1.16}
   Let $\mathfrak{a}, \mathfrak{b}$ be ideals in a ring $A$ such that
   $r(\mathfrak{a}), r(\mathfrak{b})$ are coprime. Then
   $\mathfrak{a}, \mathfrak{b}$ are coprime.
 \end{proposition}
 \begin{proof}
   $r(\mathfrak{a}+\mathfrak{b})=r(r(\mathfrak{a})+r(\mathfrak{b}))=r(1)=(1)$,
-  hence $\mathfrak{a}+\mathfrak{b}=(1)$ by (1.13).
+  hence $\mathfrak{a}+\mathfrak{b}=(1)$ by (\ref{exc:1.13}).
 \end{proof}
 \section{Extension and contraction}
 Let $f: A \to B$ be a ring homomorphism. If $\mathfrak{a}$ is an ideal in $A$,
@@ -655,7 +655,7 @@ complicated. The classical example is from algebraic number theory.
 \end{example}
 
 Let $f: A \to B$, $\mathfrak{a}$ and $\mathfrak{b}$ be as before. Then
-\begin{proposition}
+\begin{proposition}\label{prop:1.17}
   \begin{enumerate}[i)]
     \item
           $\mathfrak{a} \subseteq \mathfrak{a}^{e c}, \mathfrak{b} \supseteq \mathfrak{b}^{c e}$;
@@ -677,7 +677,7 @@ Let $f: A \to B$, $\mathfrak{a}$ and $\mathfrak{b}$ be as before. Then
           the contraction of $\mathfrak{a}^{e}$. Similarly for $E$.
   \end{enumerate}
 \end{proof}
-\begin{exercise}
+\begin{exercise}\label{exc:1.18}
   If $\mathfrak{a}_{1}$, $\mathfrak{a}_{2}$ are ideals of $A$ and if
   $\mathfrak{b}_{1}$, $\mathfrak{b}_{2}$ are ideals of $B$, then
   \[
@@ -754,12 +754,12 @@ ideal of $A$, and $m$ is generated by $\mathfrak{m}^{c}$ and $x$.
         $\mathfrak{a}=r(\mathfrak{a}) \iff \mathfrak{a}$ is an
         intersection of prime ideals.
 
-  \item Let $A$ be a ring, $\Re$ its nilradical. Show that the following are
+  \item Let $A$ be a ring, $\mathfrak{N}$ its nilradical. Show that the following are
         equivalent:
 \begin{enumerate}[i)]
   \item $A$ has exactly one prime ideal;
   \item every element of $\boldsymbol{A}$ is either a unit or nilpotent;
-  \item $A / \Re$ is a field.
+  \item $A / \mathfrak{N}$ is a field.
 \end{enumerate}
 
   \item A ring $A$ is Boolean if $x^{2}=x$ for all $x \in A$. In a Boolean ring
@@ -852,7 +852,7 @@ $X=\Spec(A)$. When thinking of $x$ as a prime ideal of $A$, we
 denote it by $\mathfrak{p}_{x}$ (logically, of course, it is the same thing).
 Show that
 \begin{enumerate}[i)]
-  \item the set $\{x\}$ is closed (we say that $x$ is a "closed point") in
+  \item the set $\{x\}$ is closed (we say that $x$ is a ``closed point'') in
 $\Spec(A) \iff \mathfrak{p}_{x}$ is maximal;
   \item $\overline{\{x\}}=V\left(\mathfrak{p}_{x}\right)$;
   \item $y \in \overline{\{x\}} \iff \mathfrak{p}_{x} \subseteq \mathfrak{p}_{y}$;
@@ -886,19 +886,19 @@ a minimal prime ideal of $A$ (Exercise 8).
         i.e., a point of $X$. Hence $\phi$ induces a mapping
         $\phi^{*}: Y \to X$. Show that
 \begin{enumerate}[i)]
-  \item If $f \in A$ then $\phi^{*-1}\left(X_{f}\right)=Y_{\phi(f)}$, and hence that
+  \item If $f \in A$ then ${\phi^{*}}^{-1}\left(X_{f}\right)=Y_{\phi(f)}$, and hence that
 $\phi^{*}$ is continuous.
   \item If $\mathfrak{a}$ is an ideal of $A$, then
-$\phi^{*-1}(V(\mathfrak{a}))=V\left(\mathfrak{a}^{e}\right)$.
+${\phi^{*}}^{-1}(V(\mathfrak{a}))=V\left(\mathfrak{a}^{e}\right)$.
   \item If $\mathfrak{b}$ is an ideal of $B$, then
 $\overline{\phi^{*}(V(\mathfrak{b}))}=V\left(\mathfrak{b}^{c}\right)$.
   \item If $\phi$ is surjective, then $\phi^{*}$ is a homeomorphism of $Y$ onto the
 closed subset $V(\Ker(\phi))$ of $X$. (In particular,
-$\Spec(A)$ and $\Spec(A / \Re)$ (where $\Re$ is the
+$\Spec(A)$ and $\Spec(A / \mathfrak{N})$ (where $\mathfrak{N}$ is the
 nilradical of $A$ ) are naturally homeomorphic.)
   \item If $\phi$ is injective, then $\phi^{*}(Y)$ is dense in $X$. More precisely,
 $\phi^{*}(Y)$ is dense in
-$X \iff \Ker(\phi) \subseteq \Re$.
+$X \iff \Ker(\phi) \subseteq \mathfrak{N}$.
   \item Let $\psi: B \to C$ be another ring homomorphism. Then
 $(\psi \circ \phi)^{*}=\phi^{*} \circ \psi^{*}$.
   \item Let $A$ be an integral domain with just one non-zero prime ideal
@@ -982,14 +982,14 @@ real-valued continuous functions on $X$ (add and multiply functions by adding
 and multiplying their values). For each $x \in X$, let $\mathfrak{m}_{x}$ be the
 set of all $f \in C(X)$ such that $f(x)=0$. The ideal $\mathfrak{m}_{x}$ is
 maximal, because it is the kernel of the (surjective) homomorphism
-$C(X) \to \mathrm{R}$ which takes $f$ to $f(x)$. If $\tilde{X}$ denotes
+$C(X) \to \mathbf{R}$ which takes $f$ to $f(x)$. If $\tilde{X}$ denotes
 $\Max(C(X))$, we have therefore defined a mapping
 $\mu: X \to \tilde{X}$, namely $x \to \mathfrak{m}_{x}$. We shall show that $\mu$
 is a homeomorphism of $X$ onto $\tilde{X}$.
 \begin{enumerate}[i)]
   \item Let $\mathfrak{m}$ be any maximal ideal of $C(X)$, and let $V=V(\mathfrak{m})$ be the set of common zeros of the functions in $\mathfrak{m}$ : that is,
 \[
-  V=\{x \in X: f(x)=0 \text { for all } f \in m\}.
+  V=\{x \in X: f(x)=0 \text { for all } f \in \mathfrak{m}\}.
 \]
 Suppose that $V$ is empty. Then for each $x \in X$ there exists
 $f_{x} \in \mathfrak{m}$ such that $f_{x}(x) \neq 0$. Since $f_{x}$ is
@@ -1029,7 +1029,7 @@ Thus $X$ can be reconstructed from the ring of functions $C(X)$.
 \begin{enumerate}[resume*=exc1]
   \item Let $k$ be an algebraically closed field and let
   \[
-  f_{\alpha}\left(t_{1}, \ldots, t_{n}\right)=0
+  f_{\alpha}\left(t_{1}, \cdots, t_{n}\right)=0
 \]
 be a set of polynomial equations in $n$ variables with coefficients in $k$. The
 set $X$ of all points $x=\left(x_{1}, \ldots, x_{n}\right) \in k^{n}$ which
@@ -1039,13 +1039,13 @@ Consider the set of all polynomials $g \in k\left[t_{1}, \ldots, t_{n}\right]$
 with the property that $g(x)=0$ for all $x \in X$. This set is an ideal $I(X)$
 in the polynomial ring, and is called the \textit{ideal of the variety} $X$. The quotient ring
 \[
-  P(X)=k\left[t_{1}, \ldots, t_{n}\right] / I(X)
+  P(X)=k\left[t_{1}, \cdots, t_{n}\right] / I(X)
 \]
 is the ring of polynomial functions on $X$, because two polynomials $g, h$
 define the same polynomial function on $X$ if and only if $g-h$ vanishes at
 every point of $X$, that is, if and only if $g-h \in I(X)$.
 
-Let $\xi_{l}$ be the
+Let $\xi_{i}$ be the
 image of $t_{i}$ in $P(X)$. The $\xi_{t}$ ($1 \leq i \leq n$) are the \textit{coordinate
 functions} on $X$: if $x \in X$, then $\xi_{i}(x)$ is the $i$ th coordinate of
 $x$. $P(X)$ is generated as a $k$-algebra by the coordinate functions, and is
@@ -1063,10 +1063,10 @@ $\mathfrak{m}_{x} \neq \mathfrak{m}_{y}$. What is less obvious (but still true)
 is that $\mu$ is surjective. This is one form of Hilbert's Nullstellensatz (see
 Chapter 7).
 
-\item Let $f_{1}, \ldots, f_{m}$ be elements of
-        $k\left[t_{1}, \ldots, t_{n}\right]$. They determine a \textit{polynomial
+\item Let $f_{1}, \cdots, f_{m}$ be elements of
+        $k\left[t_{1}, \cdots, t_{n}\right]$. They determine a \textit{polynomial
         mapping} $\phi: k^{n} \to k^{m}$: if $x \in k^{n}$, the coordinates of
-        $\phi(x)$ are $f_{1}(x), \ldots, f_{m}(x)$.
+        $\phi(x)$ are $f_{1}(x), \cdots, f_{m}(x)$.
 
 Let $X, Y$ be affine algebraic varieties in $k^{n}, k^{m}$ respectively. A
 mapping $\phi: X \to Y$ is said to be \textit{regular} if $\phi$ is the restriction to
