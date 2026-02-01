@@ -96,53 +96,38 @@ The rings $Z /\left(p^{n}\right)$ ( $p$ prime), $k[x] /\left(f^{n}\right)(f$ irr
 
 \section{Exercises}
 
-\begin{enumerate}
+\begin{enumerate}[1.]
   \item Let $q_{1} \cap \cdots \cap q_{n}=0$ be a minimal primary decomposition of the zero ideal in a Noetherian ring, and let $\mathfrak{q}_{i}$ be $\mathfrak{p}_{i}$-primary. Let $\mathfrak{p}_{i}^{(r)}$ be the $r$ th symbolic power of $p_{i}$ (Chapter 4, Exercise 13). Show that for each $i=1, \ldots, n$ there exists an integer $r_{i}$ such that $\mathfrak{p}_{i}^{\left(r_{i}\right)} \subseteq q_{i}$.
-\end{enumerate}
 
-Suppose $\mathfrak{q}_{i}$ is an isolated primary component. Then $A_{\mathfrak{p}_{\mathfrak{i}}}$ is an Artin local ring, hence if $\mathfrak{m}_{t}$ is its maximal ideal we have $\mathfrak{m}_{i}^{r}=0$ for all sufficiently large $r$, hence $\mathfrak{q}_{i}=\mathfrak{p}_{i}^{(r)}$ for all large $r$. If $q_{1}$ is an embedded primary component, then $A_{\psi_{1}}$ is not Artinian, hence the powers $\mathfrak{m}_{i}^{\prime}$ are all distinct, and so the $\mathfrak{p}_{i}^{(r)}$ are all distinct. Hence in the given primary decomposition we can replace $q_{\mathfrak{l}}$ by any of the infinite set of $\mathfrak{p}_{1}$-primary ideals $\mathfrak{p}_{\mathfrak{i}}^{(\prime)}$ where $r \geqslant r_{i}$, and so there are infinitely many minimal primary decompositions of 0 which differ only in the $\mathfrak{p}_{\mathfrak{r}}$-component.
+  Suppose $\mathfrak{q}_{i}$ is an isolated primary component. Then $A_{\mathfrak{p}_{\mathfrak{i}}}$ is an Artin local ring, hence if $\mathfrak{m}_{t}$ is its maximal ideal we have $\mathfrak{m}_{i}^{r}=0$ for all sufficiently large $r$, hence $\mathfrak{q}_{i}=\mathfrak{p}_{i}^{(r)}$ for all large $r$. If $q_{1}$ is an embedded primary component, then $A_{\psi_{1}}$ is not Artinian, hence the powers $\mathfrak{m}_{i}^{\prime}$ are all distinct, and so the $\mathfrak{p}_{i}^{(r)}$ are all distinct. Hence in the given primary decomposition we can replace $q_{\mathfrak{l}}$ by any of the infinite set of $\mathfrak{p}_{1}$-primary ideals $\mathfrak{p}_{\mathfrak{i}}^{(\prime)}$ where $r \geqslant r_{i}$, and so there are infinitely many minimal primary decompositions of 0 which differ only in the $\mathfrak{p}_{\mathfrak{r}}$-component.
 
-\begin{enumerate}
-  \setcounter{enumi}{1}
   \item Let $A$ be a Noetherian ring. Prove that the following are equivalent:
-\end{enumerate}
+    \begin{enumerate}[i)]
+      \item $A$ is Artinian;
+      \item Spec $(A)$ is discrete and finite;
+      \item $\operatorname{Spec}(A)$ is discrete.
+    \end{enumerate}
 
-\begin{enumerate}[i)]
-  \item $A$ is Artinian;
-  \item Spec $(A)$ is discrete and finite;
-  \item $\operatorname{Spec}(A)$ is discrete.
-\end{enumerate}
-
-\begin{enumerate}
-  \setcounter{enumi}{2}
   \item Let $k$ be a field and $A$ a finitely generated $k$-algebra. Prove that the following are equivalent:
-\end{enumerate}
+    \begin{enumerate}[i)]
+      \item $A$ is Artinian;
+      \item $A$ is a finite $k$-algebra.
+    \end{enumerate}
 
-\begin{enumerate}[i)]
-  \item $A$ is Artinian;
-  \item $A$ is a finite $k$-algebra.
-\end{enumerate}
+  [To prove that i) $\Rightarrow$ ii), use \eqref{thm:8.7} to reduce to the case where $A$ is an Artin local ring. By the Nullstellensatz, the residue field of $A$ is a finite extension of $k$. Now use the fact that $A$ is of finite length as an $A$-module. To prove ii) $\Rightarrow \mathrm{i}$ ), observe that the ideals of $A$ are $k$-vector subspaces and therefore satisfy d.c.c.]
 
-[To prove that i) $\Rightarrow$ ii), use \eqref{thm:8.7} to reduce to the case where $A$ is an Artin local ring. By the Nullstellensatz, the residue field of $A$ is a finite extension of $k$. Now use the fact that $A$ is of finite length as an $A$-module. To prove ii) $\Rightarrow \mathrm{i}$ ), observe that the ideals of $A$ are $k$-vector subspaces and therefore satisfy d.c.c.]
-
-\begin{enumerate}
-  \setcounter{enumi}{3}
   \item Let $f: A \rightarrow B$ be a ring homomorphism of finite type. Consider the following statements:
-\end{enumerate}
+    \begin{enumerate}[i)]
+      \item $f$ is finite;
+      \item the fibres of $f^{*}$ are discrete subspaces of $\operatorname{Spec}(B)$;
+      \item for each prime ideal $\mathfrak{p}$ of $A$, the ring $B \otimes_{A} k(\mathfrak{p})$ is a finite $k(\mathfrak{p})$-algebra $\left(k(\mathfrak{p})\right.$ is the residue field of $\left.A_{\mathfrak{p}}\right)$;
+      \item the fibres of $f^{*}$ are finite.
+    \end{enumerate}
 
-\begin{enumerate}[i)]
-  \item $f$ is finite;
-  \item the fibres of $f^{*}$ are discrete subspaces of $\operatorname{Spec}(B)$;
-  \item for each prime ideal $\mathfrak{p}$ of $A$, the ring $B \otimes_{A} k(\mathfrak{p})$ is a finite $k(\mathfrak{p})$-algebra $\left(k(\mathfrak{p})\right.$ is the residue field of $\left.A_{\mathfrak{p}}\right)$;
-  \item the fibres of $f^{*}$ are finite.
-\end{enumerate}
+  Prove that i) $\Rightarrow$ ii) $\Leftrightarrow$ iii) $\Rightarrow$ iv). [Use Exercises 2 and 3.]
 
-Prove that i) $\Rightarrow$ ii) $\Leftrightarrow$ iii) $\Rightarrow$ iv). [Use Exercises 2 and 3.]
+  If $f$ is integral and the fibres of $f^{*}$ are finite, is $f$ necessarily finite?
 
-If $f$ is integral and the fibres of $f^{*}$ are finite, is $f$ necessarily finite?
-
-\begin{enumerate}
-  \setcounter{enumi}{4}
   \item In Chapter 5, Exercise 16, show that $X$ is a finite covering of $L$ (i.e., the number of points of $X$ lying over a given point of $L$ is finite and bounded).
 
   \item Let $A$ be a Noetherian ring and $q$ a $p$-primary ideal in $A$. Consider chains of primary ideals from $q$ to $\mathfrak{p}$. Show that all such chains are of finite bounded length, and that all maximal chains have the same length.
