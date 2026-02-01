@@ -1,19 +1,3 @@
-\documentclass{standalone}
-\usepackage{unicode-math}
-\setmathfont{texgyrepagella-math.otf}[math-style=TeX]
-\usepackage{fontspec}
-\setmainfont{TeX Gyre Pagella}
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{lemma}[theorem]{lemma}
-\newtheorem*{example}{Example}
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\usepackage[export]{adjustbox}\graphicspath{ {./images/} }
-\begin{document}
 \section{Rings and Modules of Fractions}
 The formation of rings of fractions and the associated process of localization are perhaps the most important technical tools in commutative algebra. They correspond in the algebro-geometric picture to concentrating attention on an open set or near a point, and the importance of these notions should be selfevident. This chapter gives the definitions and simple properties of the formation of fractions.
 
@@ -31,7 +15,7 @@ Let $A$ be any ring. A multiplicatively closed subset of $A$ is a subset $S$ of 
 (a, s) \equiv(b, t) \Leftrightarrow(a t-b s) u=0 \text { for some } u \in S .
 \]
 
-Clearly this relation is reflexive and symmetric. To show that it is transitive, suppose $(a, s) \equiv(b, t)$ and $(b, t) \equiv(c, u)$. Then there exist $v, w$ in $S$ such that $(a t-b s) v=0$ and $(b u-c t) w=0$. Eliminate $b$ from these two equations and we have $(a u-c s) t v w=0$. Since $S$ is closed under multiplication, we have $t v w \in S$, hence $(a, s) \equiv(c, u)$. Thus we have an equivalence relation. Let $a / s$ denote the equivalence class of $(a, s)$, and let $S^{-1} A$ denote the set of equivalence classes. We put a ring structure on $S^{-1} A$ by defining addition and multiplication of these "fractions" $a / s$ in the same way as in elementary algebra: that is,
+Clearly this relation is reflexive and symmetric. To show that it is transitive, suppose $(a, s) \equiv(b, t)$ and $(b, t) \equiv(c, u)$. Then there exist $v, w$ in $S$ such that $(a t-b s) v=0$ and $(b u-c t) w=0$. Eliminate $b$ from these two equations and we have $(a u-c s) t v w=0$. Since $S$ is closed under multiplication, we have $t v w \in S$, hence $(a, s) \equiv(c, u)$. Thus we have an equivalence relation. Let $a / s$ denote the equivalence class of $(a, s)$, and let $S^{-1} A$ denote the set of equivalence classes. We put a ring structure on $S^{-1} A$ by defining addition and multiplication of these ``fractions'' $a / s$ in the same way as in elementary algebra: that is,
 
 \[
 \begin{aligned}
@@ -44,13 +28,19 @@ Exercise. Verify that these definitions are independent of the choices of repres
 
 We also have a ring homomorphism $f: A \rightarrow S^{-1} A$ defined by $f(x)=x / 1$. This is not in general injective.
 
-Remark. If $A$ is an integral domain and $S=A-\{0\}$, then $S^{-1} A$ is the field of fractions of $A$.
+\begin{remark}
+If $A$ is an integral domain and $S=A-\{0\}$, then $S^{-1} A$ is the field of fractions of $A$.
+\end{remark}
 
 The ring $S^{-1} A$ is called the ring of fractions of $A$ with respect to $S$. It has a universal property:
 
-Proposition 3.1. Let $g: A \rightarrow B$ be a ring homomorphism such that $g(s)$ is $a$ unit in $B$ for all $s \in S$. Then there exists a unique ring homomorphism $h: S^{-1} A \rightarrow B$ such that $g=h \circ f$.
+\begin{proposition}\label{prop:3.1}
+Let $g: A \rightarrow B$ be a ring homomorphism such that $g(s)$ is $a$ unit in $B$ for all $s \in S$. Then there exists a unique ring homomorphism $h: S^{-1} A \rightarrow B$ such that $g=h \circ f$.
+\end{proposition}
 
-Proof. i) Uniqueness. If $h$ satisfies the conditions, then $h(a / 1)=h f(a)=g(a)$ for all $a \in A$; hence, if $s \in S$,
+\begin{proof}
+\begin{enumerate}[i)]
+  \item Uniqueness. If $h$ satisfies the conditions, then $h(a / 1)=h f(a)=g(a)$ for all $a \in A$; hence, if $s \in S$,
 
 \[
 h(1 / s)=h\left((s / 1)^{-1}\right)=h(s / 1)^{-1}=g(s)^{-1}
@@ -58,17 +48,19 @@ h(1 / s)=h\left((s / 1)^{-1}\right)=h(s / 1)^{-1}=g(s)^{-1}
 
 and therefore $h(a / s)=h(a / 1) \cdot h(1 / s)=g(a) g(s)^{-1}$, so that $h$ is uniquely determined by $g$.
 
-ii) Existence. Let $h(a / s)=g(a) g(s)^{-1}$. Then $h$ will clearly be a ring homomorphism provided that it is well-defined. Suppose then that $a / s=a^{\prime} / s^{\prime}$; then there exists $t \in S$ such that $\left(a s^{\prime}-a^{\prime} s\right) t=0$, hence
+  \item Existence. Let $h(a / s)=g(a) g(s)^{-1}$. Then $h$ will clearly be a ring homomorphism provided that it is well-defined. Suppose then that $a / s=a^{\prime} / s^{\prime}$; then there exists $t \in S$ such that $\left(a s^{\prime}-a^{\prime} s\right) t=0$, hence
 
 \[
 \left(g(a) g\left(s^{\prime}\right)-g\left(a^{\prime}\right) g(s)\right) g(t)=0 ;
 \]
 
 now $g(t)$ is a unit in $B$, hence $g(a) g(s)^{-1}=g\left(a^{\prime}\right) g\left(s^{\prime}\right)^{-1}$.
+\end{enumerate}
+\end{proof}
 
 The ring $S^{-1} A$ and the homomorphism $f: A \rightarrow S^{-1} A$ have the following properties:
 
-\begin{enumerate}
+\begin{enumerate}[i)]
   \item $s \in S \Rightarrow f(s)$ is a unit in $S^{-1} A$;
 
   \item $f(a)=0 \Rightarrow a s=0$ for some $s \in S$;
@@ -79,26 +71,34 @@ The ring $S^{-1} A$ and the homomorphism $f: A \rightarrow S^{-1} A$ have the fo
 
 Conversely, these three conditions determine the ring $S^{-1} A$ up to isomorphism. Precisely:
 
-Corollary 3.2. If $g: A \rightarrow B$ is a ring homomorphism such that
+\begin{corollary}\label{cor:3.2}
+If $g: A \rightarrow B$ is a ring homomorphism such that
+\begin{enumerate}[i)]
+  \item $s \in S \Rightarrow g(s)$ is a unit in $B$;
 
-i) $s \in S \Rightarrow g(s)$ is a unit in $B$;
+  \item $g(a)=0 \Rightarrow a s=0$ for some $s \in S$;
 
-ii) $g(a)=0 \Rightarrow a s=0$ for some $s \in S$; iii) Every element of $B$ is of the form $g(a) g(s)^{-1}$; then there is a unique isomorphism $h: S^{-1} A \rightarrow B$ such that $g=h \circ f$.
+  \item Every element of $B$ is of the form $g(a) g(s)^{-1}$;
+\end{enumerate}
+then there is a unique isomorphism $h: S^{-1} A \rightarrow B$ such that $g=h \circ f$.
+\end{corollary}
 
-Proof. By (3.1) we have to show that $h: S^{-1} A \rightarrow B$, defined by
+\begin{proof}
+By (\ref{prop:3.1}) we have to show that $h: S^{-1} A \rightarrow B$, defined by
 
 \[
 h(a / s)=g(a) g(s)^{-1}
 \]
 
 (this definition uses i)) is an isomorphism. By iii), $h$ is surjective. To show $h$ is injective, look at the kernel of $h:$ if $h(a / s)=0$, then $g(a)=0$, hence by ii) we have $a t=0$ for some $t \in S$, hence $(a, s) \equiv(0,1)$, i.e., $a / s=0$ in $S^{-1} A$.
+\end{proof}
 
-Examples. 1) Let $\mathfrak{p}$ be a prime ideal of $A$. Then $S=A-\mathfrak{p}$ is multiplicatively closed (in fact $A-\mathfrak{p}$ is multiplicatively closed $\Leftrightarrow \mathfrak{p}$ is prime). We write $A_{\mathfrak{p}}$ for $S^{-1} A$ in this case. The elements $a / s$ with $a \in \mathfrak{p}$ form an ideal $\mathfrak{m}$ in $A_{\mathfrak{p}}$. If $b / t \notin \mathrm{m}$, then $b \notin \mathfrak{p}$, hence $b \in S$ and therefore $b / t$ is a unit in $A_{\mathfrak{p}}$. It follows that if $a$ is an ideal in $A_{\mathfrak{b}}$ and $\mathfrak{a} \neq \mathrm{m}$, then $\mathfrak{a}$ contains a unit and is therefore the whole ring. Hence $m$ is the only maximal ideal in $A_{\mathfrak{p}}$; in other words, $A_{\mathfrak{p}}$ is a local ring.
+\begin{example}
+\begin{enumerate}[1.]
+  \item Let $\mathfrak{p}$ be a prime ideal of $A$. Then $S=A-\mathfrak{p}$ is multiplicatively closed (in fact $A-\mathfrak{p}$ is multiplicatively closed $\Leftrightarrow \mathfrak{p}$ is prime). We write $A_{\mathfrak{p}}$ for $S^{-1} A$ in this case. The elements $a / s$ with $a \in \mathfrak{p}$ form an ideal $\mathfrak{m}$ in $A_{\mathfrak{p}}$. If $b / t \notin \mathfrak{m}$, then $b \notin \mathfrak{p}$, hence $b \in S$ and therefore $b / t$ is a unit in $A_{\mathfrak{p}}$. It follows that if $a$ is an ideal in $A_{\mathfrak{b}}$ and $\mathfrak{a} \neq \mathfrak{m}$, then $\mathfrak{a}$ contains a unit and is therefore the whole ring. Hence $m$ is the only maximal ideal in $A_{\mathfrak{p}}$; in other words, $A_{\mathfrak{p}}$ is a local ring.
 
 The process of passing from $A$ to $A_{\mathfrak{p}}$ is called localization at $\mathfrak{p}$.
 
-\begin{enumerate}
-  \setcounter{enumi}{1}
   \item $S^{-1} A$ is the zero ring $\Leftrightarrow 0 \in S$.
 
   \item Let $f \in A$ and let $S=\left\{f^{n}\right\}_{n>0}$. We write $A_{f}$ for $S^{-1} A$ in this case.
@@ -109,9 +109,12 @@ The process of passing from $A$ to $A_{\mathfrak{p}}$ is called localization at 
 
 \end{enumerate}
 
-i) $A=\mathbf{Z}, \mathfrak{p}=(p), p$ a prime number; $A_{\mathfrak{p}}=$ set of all rational numbers $m / n$ where $n$ is prime to $p$; if $f \in \mathbf{Z}$ and $f \neq 0$, then $A_{f}$ is the set of all rational numbers whose denominator is a power of $f$.
+\begin{enumerate}[i)]
+  \item $A=\mathbf{Z}, \mathfrak{p}=(p), p$ a prime number; $A_{\mathfrak{p}}=$ set of all rational numbers $m / n$ where $n$ is prime to $p$; if $f \in \mathbf{Z}$ and $f \neq 0$, then $A_{f}$ is the set of all rational numbers whose denominator is a power of $f$.
 
-ii) $A=k\left[t_{1}, \ldots, t_{n}\right]$, where $k$ is a field and the $t_{t}$ are independent indeterminates, $b$ a prime ideal in $A$. Then $A_{y}$ is the ring of all rational functions $f / g$, where $g \notin \mathfrak{p}$. If $V$ is the variety defined by the ideal $\mathfrak{p}$, that is to say the set of all $x=\left(x_{1}, \ldots, x_{n}\right) \in k^{n}$ such that $f(x)=0$ whenever $f \in \mathfrak{p}$, then (provided $k$ is infinite) $A_{\mathfrak{b}}$ can be identified with the ring of all rational functions on $k^{n}$ which are defined at almost all points of $V$; it is the local ring of $k^{n}$ along the variety $V$. This is the prototype of the local rings which arise in algebraic geometry.
+  \item $A=k\left[t_{1}, \ldots, t_{n}\right]$, where $k$ is a field and the $t_{t}$ are independent indeterminates, $b$ a prime ideal in $A$. Then $A_{y}$ is the ring of all rational functions $f / g$, where $g \notin \mathfrak{p}$. If $V$ is the variety defined by the ideal $\mathfrak{p}$, that is to say the set of all $x=\left(x_{1}, \ldots, x_{n}\right) \in k^{n}$ such that $f(x)=0$ whenever $f \in \mathfrak{p}$, then (provided $k$ is infinite) $A_{\mathfrak{b}}$ can be identified with the ring of all rational functions on $k^{n}$ which are defined at almost all points of $V$; it is the local ring of $k^{n}$ along the variety $V$. This is the prototype of the local rings which arise in algebraic geometry.
+\end{enumerate}
+\end{example}
 
 The construction of $S^{-1} A$ can be carried through with an $A$-module $M$ in place of the ring $A$. Define a relation $\equiv$ on $M \times S$ as follows:
 
@@ -119,39 +122,55 @@ The construction of $S^{-1} A$ can be carried through with an $A$-module $M$ in 
 (m, s) \equiv\left(m^{\prime}, s^{\prime}\right) \Leftrightarrow \exists t \in S \text { such that } t\left(s m^{\prime}-s^{\prime} m\right)=0 .
 \]
 
-As before, this is an equivalence relation. Let $\mathrm{m} / \mathrm{s}$ denote the equivalence class of the pair $(m, s)$, let $S^{-1} M$ denote the set of such fractions, and make $S^{-1} M$ into an $S^{-1} A$-module with the obvious definitions of addition and scalar multiplication. As in Examples 1) and 3) above, we write $M_{\mathfrak{p}}$ instead of $S^{-1} M$ when $S=A-\mathfrak{p}\left(p\right.$ prime) and $M_{f}$ when $S=\left\{f^{n}\right\}_{n}>0$.
+As before, this is an equivalence relation. Let $\mathfrak{m} / \mathrm{s}$ denote the equivalence class of the pair $(m, s)$, let $S^{-1} M$ denote the set of such fractions, and make $S^{-1} M$ into an $S^{-1} A$-module with the obvious definitions of addition and scalar multiplication. As in Examples 1) and 3) above, we write $M_{\mathfrak{p}}$ instead of $S^{-1} M$ when $S=A-\mathfrak{p}\left(p\right.$ prime) and $M_{f}$ when $S=\left\{f^{n}\right\}_{n}>0$.
 
-Let $u: M \rightarrow N$ be an $A$-module homomorphism. Then it gives rise to an $S^{-1} A$-module homomorphism $S^{-1} u: S^{-1} M \rightarrow S^{-1} N$, namely $S^{-1} u$ maps $m / s$ to $u(m) / s$. We have $S^{-1}(v \circ u)=\left(S^{-1} v\right) \circ\left(S^{-1} u\right)$. Proposition 3.3. The operation $S^{-1}$ is exact, i.e., if $M^{\prime} \stackrel{f}{\rightarrow} M \stackrel{0}{\rightarrow} M^{\prime \prime}$ is exact at $M$, then $S^{-1} M^{\prime} \stackrel{S^{-1} f}{\longrightarrow} S^{-1} M \stackrel{S^{-1} g}{\longrightarrow} S^{-1} M^{\prime \prime}$ is exact at $S^{-1} M$.
+Let $u: M \rightarrow N$ be an $A$-module homomorphism. Then it gives rise to an $S^{-1} A$-module homomorphism $S^{-1} u: S^{-1} M \rightarrow S^{-1} N$, namely $S^{-1} u$ maps $m / s$ to $u(m) / s$. We have $S^{-1}(v \circ u)=\left(S^{-1} v\right) \circ\left(S^{-1} u\right)$.
 
-Proof. We have $g \circ f=0$, hence $S^{-1} g \circ S^{-1} f=S^{-1}(0)=0$, hence $\operatorname{Im}\left(S^{-1} f\right)$ $\subseteq \operatorname{Ker}\left(S^{-1} g\right)$. To prove the reverse inclusion, let $\mathrm{m} / \mathrm{s} \in \operatorname{Ker}\left(S^{-1} g\right)$, then $g(m) / s=0$ in $S^{-1} M^{\prime \prime}$, hence there exists $t \in S$ such that $\operatorname{tg}(m)=0$ in $M^{\prime \prime}$. But $\operatorname{tg}(m)=g(t m)$ since $g$ is an $A$-module homomorphism, hence $t m \in \operatorname{Ker}(g)=$ $\operatorname{Im}(f)$ and therefore $t m=f\left(m^{\prime}\right)$ for some $m^{\prime} \in M^{\prime}$. Hence in $S^{-1} M$ we have $m / s=f\left(m^{\prime}\right) / s t=\left(S^{-1} f\right)\left(m^{\prime} / s t\right) \in \operatorname{Im}\left(S^{-1} f\right)$. Hence $\operatorname{Ker}\left(S^{-1} g\right) \subseteq \operatorname{Im}\left(S^{-1} f\right)$.
+\begin{proposition}\label{prop:3.3}
+The operation $S^{-1}$ is exact, i.e., if $M^{\prime} \stackrel{f}{\rightarrow} M \stackrel{0}{\rightarrow} M^{\prime \prime}$ is exact at $M$, then $S^{-1} M^{\prime} \stackrel{S^{-1} f}{\longrightarrow} S^{-1} M \stackrel{S^{-1} g}{\longrightarrow} S^{-1} M^{\prime \prime}$ is exact at $S^{-1} M$.
+\end{proposition}
 
-In particular, it follows from (3.3) that if $M^{\prime}$ is a submodule of $M$, the mapping $S^{-1} M^{\prime} \rightarrow S^{-1} M$ is injective and therefore $S^{-1} M^{\prime}$ can be regarded as a submodule of $S^{-1} M$. With this convention,
+\begin{proof}
+We have $g \circ f=0$, hence $S^{-1} g \circ S^{-1} f=S^{-1}(0)=0$, hence $\operatorname{Im}\left(S^{-1} f\right)$ $\subseteq \operatorname{Ker}\left(S^{-1} g\right)$. To prove the reverse inclusion, let $\mathfrak{m} / \mathrm{s} \in \operatorname{Ker}\left(S^{-1} g\right)$, then $g(m) / s=0$ in $S^{-1} M^{\prime \prime}$, hence there exists $t \in S$ such that $\operatorname{tg}(m)=0$ in $M^{\prime \prime}$. But $\operatorname{tg}(m)=g(t m)$ since $g$ is an $A$-module homomorphism, hence $t m \in \operatorname{Ker}(g)=$ $\operatorname{Im}(f)$ and therefore $t m=f\left(m^{\prime}\right)$ for some $m^{\prime} \in M^{\prime}$. Hence in $S^{-1} M$ we have $m / s=f\left(m^{\prime}\right) / s t=\left(S^{-1} f\right)\left(m^{\prime} / s t\right) \in \operatorname{Im}\left(S^{-1} f\right)$. Hence $\operatorname{Ker}\left(S^{-1} g\right) \subseteq \operatorname{Im}\left(S^{-1} f\right)$.
+\end{proof}
 
-Corollary 3.4. Formation of fractions commutes with formation of finite sums, finite intersections and quotients. Precisely, if $N, P$ are submodules of an A-module $M$, then
+In particular, it follows from (\ref{prop:3.3}) that if $M^{\prime}$ is a submodule of $M$, the mapping $S^{-1} M^{\prime} \rightarrow S^{-1} M$ is injective and therefore $S^{-1} M^{\prime}$ can be regarded as a submodule of $S^{-1} M$. With this convention,
 
-i) $S^{-1}(N+P)=S^{-1}(N)+S^{-1}(P)$
+\begin{corollary}\label{cor:3.4}
+Formation of fractions commutes with formation of finite sums, finite intersections and quotients. Precisely, if $N, P$ are submodules of an A-module $M$, then
+\begin{enumerate}[i)]
+  \item $S^{-1}(N+P)=S^{-1}(N)+S^{-1}(P)$
 
-ii) $S^{-1}(N \cap P)=S^{-1}(N) \cap S^{-1}(P)$
+  \item $S^{-1}(N \cap P)=S^{-1}(N) \cap S^{-1}(P)$
 
-iii) the $S^{-1} A$-modules $S^{-1}(M / N)$ and $\left(S^{-1} M\right) /\left(S^{-1} N\right)$ are isomorphic.
+  \item the $S^{-1} A$-modules $S^{-1}(M / N)$ and $\left(S^{-1} M\right) /\left(S^{-1} N\right)$ are isomorphic.
+\end{enumerate}
+\end{corollary}
 
-Proof. i) follows readily from the definitions and ii) is easy to verify: if $y / s=z / t(y \in N, z \in P, s, t \in S)$ then $u(t y-s z)=0$ for some $u \in S$, hence $w=u t y=u s z \in N \cap P$ and therefore $y / s=w / s t u \in S^{-1}(N \cap P)$. Consequently $S^{-1} N \cap S^{-1} P \subseteq S^{-1}(N \cap P)$, and the reverse inclusion is obvious.
+\begin{proof}
+\begin{enumerate}[i)]
+  \item follows readily from the definitions and ii) is easy to verify: if $y / s=z / t(y \in N, z \in P, s, t \in S)$ then $u(t y-s z)=0$ for some $u \in S$, hence $w=u t y=u s z \in N \cap P$ and therefore $y / s=w / s t u \in S^{-1}(N \cap P)$. Consequently $S^{-1} N \cap S^{-1} P \subseteq S^{-1}(N \cap P)$, and the reverse inclusion is obvious.
 
-iii) Apply $S^{-1}$ to the exact sequence $0 \rightarrow N \rightarrow M \rightarrow M / N \rightarrow 0$.
+  \item Apply $S^{-1}$ to the exact sequence $0 \rightarrow N \rightarrow M \rightarrow M / N \rightarrow 0$.
+\end{enumerate}
+\end{proof}
 
-Proposition 3.5. Let $M$ be an A-module. Then the $S^{-1} A$ modules $S^{-1} M$ and $S^{-1} A \otimes_{A} M$ are isomorphic; more precisely, there exists $a$ unique isomorphism $f: S^{-1} A \otimes_{1} M \rightarrow S^{-1} M$ for which
+\begin{proposition}\label{prop:3.5}
+Let $M$ be an A-module. Then the $S^{-1} A$ modules $S^{-1} M$ and $S^{-1} A \otimes_{A} M$ are isomorphic; more precisely, there exists $a$ unique isomorphism $f: S^{-1} A \otimes_{1} M \rightarrow S^{-1} M$ for which
 
 \[
 f((a / s) \otimes m)=a m / s \text { for all } a \in A, m \in M, s \in S \text {. }
 \]
+\end{proposition}
 
-Proof. The mapping $S^{-1} A \times M \rightarrow S^{-1} M$ defined by
+\begin{proof}
+The mapping $S^{-1} A \times M \rightarrow S^{-1} M$ defined by
 
 \[
 (a / s, m) \mapsto a m / s
 \]
 
-is $A$-bilinear, and therefore by the universal property (2.12) of the tensor product induces an $A$-homomorphism
+is $A$-bilinear, and therefore by the universal property \ref{prop:2.12} of the tensor product induces an $A$-homomorphism
 
 \[
 f: S^{-1} A \otimes_{1} M \rightarrow S^{-1} M
@@ -172,12 +191,18 @@ so that every element of $S^{-1} A \otimes M$ is of the form $(1 / s) \otimes m$
 \]
 
 Hence $f$ is injective and therefore an isomorphism.
+\end{proof}
 
-Corollary 3.6. $S^{-1} A$ is a flat A-module.
+\begin{corollary}\label{cor:3.6}
+$S^{-1} A$ is a flat A-module.
+\end{corollary}
 
-Proof. (3.3), (3.5).
+\begin{proof}
+(\ref{prop:3.3}), (\ref{prop:3.5}).
+\end{proof}
 
-Proposition 3.7. If $M, N$ are A-modules, there is a unique isomorphism of $S^{-1} A$-modules $f: S^{-1} M \otimes_{S^{-1}} S^{-1} N \rightarrow S^{-1}\left(M \otimes_{A} N\right)$ such that
+\begin{proposition}\label{prop:3.7}
+If $M, N$ are A-modules, there is a unique isomorphism of $S^{-1} A$-modules $f: S^{-1} M \otimes_{S^{-1}} S^{-1} N \rightarrow S^{-1}\left(M \otimes_{A} N\right)$ such that
 
 \[
 f((m / s) \otimes(n / t))=(m \otimes n) / s t .
@@ -190,144 +215,199 @@ M_{\mathfrak{p}} \otimes_{A_{\mathfrak{p}}} N_{\mathfrak{p}} \cong\left(M \otime
 \]
 
 as $A_{\mathfrak{p}}$-modules.
+\end{proposition}
 
-Proof. Use (3.5) and the canonical isomorphisms of Chapter 2.
+\begin{proof}
+Use (\ref{prop:3.5}) and the canonical isomorphisms of Chapter 2.
+\end{proof}
 
-\section{LOCAL PROPERTIES}
+\section{Local Properties}
 A property $P$ of a ring $A$ (or of an $A$-module $M$ ) is said to be a local property if the following is true:
 
 $A$ (or $M$ ) has $P \Leftrightarrow A_{\mathfrak{p}}$ (or $M_{\mathfrak{p}}$ ) has $P$, for each prime ideal $\mathfrak{p}$ of $A$. The following propositions give examples of local properties:
 
-Proposition 3.8. Let $M$ be an A-module. Then the following are equivalent:
+\begin{proposition}\label{prop:3.8}
+Let $M$ be an A-module. Then the following are equivalent:
 
-i) $M=0$;
+\begin{enumerate}[i)]
+\item $M=0$;
 
-ii) $M_{\mathfrak{p}}=0$ for all prime ideals $\mathfrak{p}$ of $A$;
+\item $M_{\mathfrak{p}}=0$ for all prime ideals $\mathfrak{p}$ of $A$;
 
-iii) $M_{\mathfrak{m}}=0$ for all maximal ideals $\mathfrak{m}$ of $A$.
+\item $M_{\mathfrak{m}}=0$ for all maximal ideals $\mathfrak{m}$ of $A$.
+\end{enumerate}
+\end{proposition}
 
-Proof. Clearly i) $\Rightarrow$ ii) $\Rightarrow$ iii). Suppose iii) satisfied and $M \neq 0$. Let $x$ be a non-zero element of $M$, and let $\mathfrak{a}=\operatorname{Ann}(x) ; \mathfrak{a}$ is an ideal $\neq(1)$, hence is contained in a maximal ideal $\mathfrak{m}$ by (1.4). Consider $x / l \in M_{\mathfrak{m}}$. Since $M_{\mathfrak{m}}=0$ we have $x / 1=0$, hence $x$ is killed by some element of $A-\mathfrak{m}$; but this is impossible since Ann $(x) \subseteq \mathfrak{m}$.
+\begin{proof}
+Clearly i) $\Rightarrow$ ii) $\Rightarrow$ iii). Suppose iii) satisfied and $M \neq 0$. Let $x$ be a non-zero element of $M$, and let $\mathfrak{a}=\operatorname{Ann}(x) ; \mathfrak{a}$ is an ideal $\neq(1)$, hence is contained in a maximal ideal $\mathfrak{m}$ by \ref{cor:1.4}. Consider $x / l \in M_{\mathfrak{m}}$. Since $M_{\mathfrak{m}}=0$ we have $x / 1=0$, hence $x$ is killed by some element of $A-\mathfrak{m}$; but this is impossible since Ann $(x) \subseteq \mathfrak{m}$.
+\end{proof}
 
-Proposition 3.9. Let $\phi: M \rightarrow N$ be an A-module homomorphism. Then the following are equivalent:
+\begin{proposition}\label{prop:3.9}
+Let $\phi: M \rightarrow N$ be an A-module homomorphism. Then the following are equivalent:
 
-i) $\phi$ is injective;
+\begin{enumerate}[i)]
+\item $\phi$ is injective;
 
-ii) $\phi_{\mathfrak{p}}: M_{\mathfrak{p}} \rightarrow N_{\mathfrak{p}}$ is injective for each prime ideal $\mathfrak{p}$;
+\item $\phi_{\mathfrak{p}}: M_{\mathfrak{p}} \rightarrow N_{\mathfrak{p}}$ is injective for each prime ideal $\mathfrak{p}$;
 
-iii) $\phi_{\mathfrak{m}}: M_{\mathfrak{m}} \rightarrow N_{\mathfrak{n}}$ is injective for each maximal ideal $\mathfrak{m}$.
+\item $\phi_{\mathfrak{m}}: M_{\mathfrak{m}} \rightarrow N_{\mathfrak{n}}$ is injective for each maximal ideal $\mathfrak{m}$.
+\end{enumerate}
 
-Similarly with "injective" replaced by "surjective" throughout. Proof. i) $\Rightarrow$ ii). $0 \rightarrow M \rightarrow N$ is exact, hence $0 \rightarrow M_{\mathfrak{p}} \rightarrow N_{\mathfrak{b}}$ is exact, i.e., $\phi_{\mathfrak{p}}$ is injective.
+Similarly with ``injective'' replaced by ``surjective'' throughout.
+\end{proposition}
 
-ii) $\Rightarrow$ iii) because a maximal ideal is prime.
+\begin{proof}
+\begin{enumerate}[i)]
+  \item $\Rightarrow$ ii). $0 \rightarrow M \rightarrow N$ is exact, hence $0 \rightarrow M_{\mathfrak{p}} \rightarrow N_{\mathfrak{b}}$ is exact, i.e., $\phi_{\mathfrak{p}}$ is injective.
 
-iii) $\Rightarrow$ i). Let $M^{\prime}=\operatorname{Ker}(\phi)$, then the sequence $0 \rightarrow M^{\prime} \rightarrow M \rightarrow N$ is exact, hence $0 \rightarrow M_{m}^{\prime} \rightarrow M_{m} \rightarrow N_{m}$ is exact by (3.3) and therefore $M_{m}^{\prime} \cong$ $\operatorname{Ker}\left(\phi_{m}\right)=0$ since $\phi_{m}$ is injective. Hence $M^{\prime}=0$ by (3.8), hence $\phi$ is injective. For the other part of the proposition, just reverse all the arrows.
+  \item $\Rightarrow$ iii) because a maximal ideal is prime.
+
+  \item $\Rightarrow$ i). Let $M^{\prime}=\operatorname{Ker}(\phi)$, then the sequence $0 \rightarrow M^{\prime} \rightarrow M \rightarrow N$ is exact, hence $0 \rightarrow M_{m}^{\prime} \rightarrow M_{m} \rightarrow N_{m}$ is exact by (\ref{prop:3.3}) and therefore $M_{m}^{\prime} \cong$ $\operatorname{Ker}\left(\phi_{m}\right)=0$ since $\phi_{m}$ is injective. Hence $M^{\prime}=0$ by (\ref{prop:3.8}), hence $\phi$ is injective. For the other part of the proposition, just reverse all the arrows.
+\end{enumerate}
+\end{proof}
 
 Flatness is a local property:
 
-Proposition 3.10. For any A-module $M$, the following statements are equivalent:
+\begin{proposition}\label{prop:3.10}
+For any A-module $M$, the following statements are equivalent:
 
-i) $M$ is a flat A-module:
+\begin{enumerate}[i)]
+\item $M$ is a flat A-module:
 
-ii) $M_{\mathfrak{p}}$ is a flat $A_{\mathfrak{p}}$-module for each prime ideal $\mathfrak{p}$;
+\item $M_{\mathfrak{p}}$ is a flat $A_{\mathfrak{p}}$-module for each prime ideal $\mathfrak{p}$;
 
-iii) $M_{\mathfrak{m}}$ is a flat $A_{\mathfrak{m}}$-module for each maximal ideal $\mathfrak{m}$.
+\item $M_{\mathfrak{m}}$ is a flat $A_{\mathfrak{m}}$-module for each maximal ideal $\mathfrak{m}$.
+\end{enumerate}
+\end{proposition}
 
-Proof. i) $\Rightarrow$ ii) by (3.5) and (2.20).
+\begin{proof}
+\begin{enumerate}[i)]
+  \item $\Rightarrow$ ii) by (\ref{prop:3.5}) and (2.20).
 
-ii) $\Rightarrow$ iii) O.K.
+  \item $\Rightarrow$ iii) O.K.
 
-iii) $\Rightarrow$ i). If $N \rightarrow P$ is a homomorphism of $A$-modules, and $\mathfrak{m}$ is any maximal ideal of $A$, then
+  \item $\Rightarrow$ i). If $N \rightarrow P$ is a homomorphism of $A$-modules, and $\mathfrak{m}$ is any maximal ideal of $A$, then
 
 \[
 \begin{aligned}
-N \rightarrow P \text { injective } & \Rightarrow N_{\mathfrak{m}} \rightarrow P_{\mathfrak{m}} \text { injective, by (3.9) } \\
-& \Rightarrow N_{\mathfrak{m}} \otimes_{A_{\mathfrak{m}}} M_{\mathfrak{m}} \rightarrow P_{\mathfrak{m}} \otimes_{A_{\mathfrak{m}}} M_{\mathfrak{m}} \text { injective, by (2.19) } \\
-& \Rightarrow\left(N \otimes_{A} M\right)_{\mathfrak{m}} \rightarrow\left(P \otimes_{A} M\right)_{\mathfrak{m}} \text { injective, by (3.7) } \\
-& \Rightarrow N \otimes_{A} M \rightarrow P \otimes_{A} M \text { injective, by (3.9). }
+N \rightarrow P \text { injective } & \Rightarrow N_{\mathfrak{m}} \rightarrow P_{\mathfrak{m}} \text { injective, by (\ref{prop:3.9}) } \\
+& \Rightarrow N_{\mathfrak{m}} \otimes_{A_{\mathfrak{m}}} M_{\mathfrak{m}} \rightarrow P_{\mathfrak{m}} \otimes_{A_{\mathfrak{m}}} M_{\mathfrak{m}} \text { injective, by \ref{prop:2.19} } \\
+& \Rightarrow\left(N \otimes_{A} M\right)_{\mathfrak{m}} \rightarrow\left(P \otimes_{A} M\right)_{\mathfrak{m}} \text { injective, by (\ref{prop:3.7}) } \\
+& \Rightarrow N \otimes_{A} M \rightarrow P \otimes_{A} M \text { injective, by (\ref{prop:3.9}). }
 \end{aligned}
 \]
 
-Hence $M$ is flat by (2.19).
+\end{enumerate}
+Hence $M$ is flat by \ref{prop:2.19}.
+\end{proof}
 
-\section{EXTENDED AND CONTRACTED IDEALS IN RINGS OF FRACTIONS}
-Let $A$ be a ring, $S$ a multiplicatively closed subset of $A$ and $f: A \rightarrow S^{-1} A$ the natural homomorphism, defined by $f(a)=a / 1$. Let $C$ be the set of contracted ideals in $A$, and let $E$ be the set of extended ideals in $S^{-1} A$ (cf. (1.17)). If $\mathfrak{a}$ is an ideal in $A$, its extension $a^{e}$ in $S^{-1} A$ is $S^{-1} \mathfrak{a}$ (for any $y \in a^{e}$ is of the form $\sum a_{\mathfrak{l}} / s_{\text {, }}$, where $a_{\mathfrak{t}} \in \mathfrak{a}$ and $s_{\mathfrak{i}} \in S$; bring this fraction to a common denominator).
+\section{Extended and Contracted Ideals in Rings of Fractions}
+Let $A$ be a ring, $S$ a multiplicatively closed subset of $A$ and $f: A \rightarrow S^{-1} A$ the natural homomorphism, defined by $f(a)=a / 1$. Let $C$ be the set of contracted ideals in $A$, and let $E$ be the set of extended ideals in $S^{-1} A$ (cf. \ref{prop:1.17}). If $\mathfrak{a}$ is an ideal in $A$, its extension $a^{e}$ in $S^{-1} A$ is $S^{-1} \mathfrak{a}$ (for any $y \in a^{e}$ is of the form $\sum a_{\mathfrak{l}} / s_{\text {, }}$, where $a_{\mathfrak{t}} \in \mathfrak{a}$ and $s_{\mathfrak{i}} \in S$; bring this fraction to a common denominator).
 
-Proposition 3.11. i) Every ideal in $S^{-1} A$ is an extended ideal.
+\begin{proposition}\label{prop:3.11}
+\begin{enumerate}[i)]
+\item Every ideal in $S^{-1} A$ is an extended ideal.
 
-ii) If $\mathfrak{a}$ is an ideal in $A$, then $\mathfrak{a}^{e c}=\bigcup_{s \in S}(\mathfrak{a}: s)$. Hence $\mathfrak{a}^{e}=(1)$ if and only if a meets $S$.
+\item If $\mathfrak{a}$ is an ideal in $A$, then $\mathfrak{a}^{e c}=\bigcup_{s \in S}(\mathfrak{a}: s)$. Hence $\mathfrak{a}^{e}=(1)$ if and only if a meets $S$.
 
-iii) $a \in C \Rightarrow$ no element of $S$ is a zero-divisor in $A / a$.
+\item $a \in C \Rightarrow$ no element of $S$ is a zero-divisor in $A / a$.
 
-iv) The prime ideals of $S^{-1} A$ are in one-to-one correspondence (p $\leftrightarrow S^{-1} \mathfrak{p}$ ) with the prime ideals of $A$ which don't meet $S$. v) The operation $S^{-1}$ commutes with formation of finite sums, products, intersections and radicals.
+\item The prime ideals of $S^{-1} A$ are in one-to-one correspondence (p $\leftrightarrow S^{-1} \mathfrak{p}$ ) with the prime ideals of $A$ which don't meet $S$.
 
-Proof. i) Let $\mathfrak{b}$ be an ideal in $S^{-1} A$, and let $x / s \in \mathfrak{b}$. Then $x / 1 \in \mathfrak{b}$, hence $x \in \mathfrak{b}^{\mathfrak{c}}$ and therefore $x / s \in \mathfrak{b}^{c \varepsilon}$. Since $\mathfrak{b} \supseteq \mathfrak{b}^{c e}$ in any case (1.17), it follows that $\mathfrak{b}=\mathfrak{b}^{c e}$.
+\item The operation $S^{-1}$ commutes with formation of finite sums, products, intersections and radicals.
+\end{enumerate}
+\end{proposition}
 
-ii) $x \in \mathfrak{a}^{e c}=\left(S^{-1} \mathfrak{a}\right)^{c} \Leftrightarrow x / 1=a / s$ for some $a \in \mathfrak{a}, s \in S \Leftrightarrow(x s-a) t=0$ for some $t \in S \Leftrightarrow x s t \in \mathfrak{a} \Leftrightarrow x \in \bigcup_{s \in S}(\mathfrak{a}: s)$.
+\begin{proof}
+\begin{enumerate}[i)]
+  \item Let $\mathfrak{b}$ be an ideal in $S^{-1} A$, and let $x / s \in \mathfrak{b}$. Then $x / 1 \in \mathfrak{b}$, hence $x \in \mathfrak{b}^{\mathfrak{c}}$ and therefore $x / s \in \mathfrak{b}^{c \varepsilon}$. Since $\mathfrak{b} \supseteq \mathfrak{b}^{c e}$ in any case \ref{prop:1.17}, it follows that $\mathfrak{b}=\mathfrak{b}^{c e}$.
 
-iii) $a \in C \Leftrightarrow \mathfrak{a}^{e c} \subseteq \mathfrak{a} \Leftrightarrow(s x \in \mathfrak{a}$ for some $s \in S \Rightarrow x \in \mathfrak{a}) \Leftrightarrow$ no $s \in S$ is a zero-divisor in $A / a$.
+  \item $x \in \mathfrak{a}^{e c}=\left(S^{-1} \mathfrak{a}\right)^{c} \Leftrightarrow x / 1=a / s$ for some $a \in \mathfrak{a}, s \in S \Leftrightarrow(x s-a) t=0$ for some $t \in S \Leftrightarrow x s t \in \mathfrak{a} \Leftrightarrow x \in \bigcup_{s \in S}(\mathfrak{a}: s)$.
 
-iv) If $q$ is a prime ideal in $S^{-1} A$, then $q^{c}$ is a prime ideal in $A$ (this much is true for any ring homomorphism). Conversely, if $\mathfrak{p}$ is a prime ideal in $A$, then $A / \mathfrak{p}$ is an integral domain; if $\bar{S}$ is the image of $S$ in $A / \mathfrak{p}$, we have $S^{-1} A / S^{-1} \mathfrak{p} \cong$ $S^{-1}(A / \mathfrak{p})$ which is either 0 or else is contained in the field of fractions of $A / \mathfrak{p}$ and is therefore an integral domain, and therefore $S^{-1} \mathfrak{p}$ is either prime or is the unit ideal; by i) the latter possibility occurs if and only if $\mathfrak{p}$ meets $S$.
+  \item $a \in C \Leftrightarrow \mathfrak{a}^{e c} \subseteq \mathfrak{a} \Leftrightarrow(s x \in \mathfrak{a}$ for some $s \in S \Rightarrow x \in \mathfrak{a}) \Leftrightarrow$ no $s \in S$ is a zero-divisor in $A / a$.
 
-v) For sums and products, this follows from (1.18); for intersections, from (3.4). As to radicals, we have $S^{-1} r(\mathfrak{a}) \subseteq r\left(S^{-1} \mathfrak{a}\right)$ from (1.18), and the proof of the reverse inclusion is a routine verification which we leave to the reader.
+  \item If $q$ is a prime ideal in $S^{-1} A$, then $q^{c}$ is a prime ideal in $A$ (this much is true for any ring homomorphism). Conversely, if $\mathfrak{p}$ is a prime ideal in $A$, then $A / \mathfrak{p}$ is an integral domain; if $\bar{S}$ is the image of $S$ in $A / \mathfrak{p}$, we have $S^{-1} A / S^{-1} \mathfrak{p} \cong$ $S^{-1}(A / \mathfrak{p})$ which is either 0 or else is contained in the field of fractions of $A / \mathfrak{p}$ and is therefore an integral domain, and therefore $S^{-1} \mathfrak{p}$ is either prime or is the unit ideal; by i) the latter possibility occurs if and only if $\mathfrak{p}$ meets $S$.
 
-Remarks. 1) If $a, \mathfrak{b}$ are ideals of $A$, the formula
+  \item For sums and products, this follows from \ref{exc:1.18}; for intersections, from (\ref{cor:3.4}). As to radicals, we have $S^{-1} r(\mathfrak{a}) \subseteq r\left(S^{-1} \mathfrak{a}\right)$ from \ref{exc:1.18}, and the proof of the reverse inclusion is a routine verification which we leave to the reader.
+\end{enumerate}
+\end{proof}
+
+\begin{remark}
+\begin{enumerate}[1.]
+\item If $a, \mathfrak{b}$ are ideals of $A$, the formula
 
 \[
 S^{-1}(\mathfrak{a}: \mathfrak{b})=\left(S^{-1} \mathfrak{a}: S^{-1} \mathfrak{b}\right)
 \]
 
-is true provided the ideal $\mathfrak{b}$ is finitely generated: see (3.15).
+is true provided the ideal $\mathfrak{b}$ is finitely generated: see (\ref{cor:3.15}).
 
-\begin{enumerate}
-  \setcounter{enumi}{1}
-  \item The proof in (1.8) that if $f \in A$ is not nilpotent there is a prime ideal of $A$ which does not contain $f$ can be expressed more concisely in the language of rings of fractions. Since the set $S=\left(f^{n}\right)_{n>0}$ does not contain 0 , the ring $S^{-1} A=A_{f}$ is not the zero ring and therefore by (1.3) has a maximal ideal, whose contraction in $A$ is a prime ideal $\mathfrak{p}$ which does not meet $S$ by (3.11); hence $f \notin \mathfrak{p}$.
+\item The proof in \ref{prop:1.8} that if $f \in A$ is not nilpotent there is a prime ideal of $A$ which does not contain $f$ can be expressed more concisely in the language of rings of fractions. Since the set $S=\left(f^{n}\right)_{n>0}$ does not contain 0, the ring $S^{-1} A=A_{f}$ is not the zero ring and therefore by \ref{thm:1.3} has a maximal ideal, whose contraction in $A$ is a prime ideal $\mathfrak{p}$ which does not meet $S$ by (\ref{prop:3.11}); hence $f \notin \mathfrak{p}$.
 \end{enumerate}
-\begin{corollary}
-If $\Re$ is the inlradical of $A$, the nilradical of $S^{-1}A$ is $S^{-1}\Re$.
+\end{remark}
+
+\begin{corollary}\label{cor:3.12}
+If $\mathfrak{N}$ is the nilradical of $A$, the nilradical of $S^{-1}A$ is $S^{-1}\mathfrak{N}$.
 \end{corollary}
 
-Corollary 3.13. If $\mathfrak{p}$ is a prime ideal of $A$, the prime ideals of the local ring $A_{\mathfrak{p}}$ are in one-to-one correspondence with the prime ideals of $A$ contained in $\mathfrak{p}$.
+\begin{corollary}\label{cor:3.13}
+If $\mathfrak{p}$ is a prime ideal of $A$, the prime ideals of the local ring $A_{\mathfrak{p}}$ are in one-to-one correspondence with the prime ideals of $A$ contained in $\mathfrak{p}$.
+\end{corollary}
 
-Proof. Take $S=A-\mathfrak{p}$ in (3.11) (iv).
+\begin{proof}
+Take $S=A-\mathfrak{p}$ in (\ref{prop:3.11}) (iv).
+\end{proof}
 
-Remark. Thus the passage from $A$ to $A_{\mathfrak{p}}$ cuts out all prime ideals except those contained in $\mathfrak{p}$. In the other direction, the passage from $A$ to $A / \mathfrak{p}$ cuts out all prime ideals except those containing $\mathfrak{p}$. Hence if $\mathfrak{p}, \mathfrak{q}$ are prime ideals such that $\mathfrak{p} \supseteq \mathfrak{q}$, then by localizing with respect to $\mathfrak{p}$ and taking the quotient mod $q$ (in either order: these two operations commute, by (3.4)), we restrict our attention to those prime ideals which lie between $\mathfrak{p}$ and $q$. In particular, if $\mathfrak{p}=\mathfrak{q}$ we end up with a field, called the residue field at $\mathfrak{p}$, which can be obtained either as the field of fractions of the integral domain $A / p$ or as the residue field of the local ring $A_{\mathfrak{p}}$.
+\begin{remark}
+Thus the passage from $A$ to $A_{\mathfrak{p}}$ cuts out all prime ideals except those contained in $\mathfrak{p}$. In the other direction, the passage from $A$ to $A / \mathfrak{p}$ cuts out all prime ideals except those containing $\mathfrak{p}$. Hence if $\mathfrak{p}, \mathfrak{q}$ are prime ideals such that $\mathfrak{p} \supseteq \mathfrak{q}$, then by localizing with respect to $\mathfrak{p}$ and taking the quotient mod $q$ (in either order: these two operations commute, by (\ref{cor:3.4})), we restrict our attention to those prime ideals which lie between $\mathfrak{p}$ and $q$. In particular, if $\mathfrak{p}=\mathfrak{q}$ we end up with a field, called the residue field at $\mathfrak{p}$, which can be obtained either as the field of fractions of the integral domain $A / p$ or as the residue field of the local ring $A_{\mathfrak{p}}$.
+\end{remark}
 
-Proposition 3.14. Let $M$ be a finitely generated A-module, $S$ a multiplicatively closed subset of $A$. Then $S^{-1}(\operatorname{Ann}(M))=\operatorname{Ann}\left(S^{-1} M\right)$.
+\begin{proposition}\label{prop:3.14}
+Let $M$ be a finitely generated A-module, $S$ a multiplicatively closed subset of $A$. Then $S^{-1}(\operatorname{Ann}(M))=\operatorname{Ann}\left(S^{-1} M\right)$.
+\end{proposition}
 
-Proof. If this is true for two $A$-modules, $M, N$, it is true for $M+N$ :
+\begin{proof}
+If this is true for two $A$-modules, $M, N$, it is true for $M+N$ :
 
 \[
 \begin{aligned}
-S^{-1}(\operatorname{Ann}(M+N)) & =S^{-1}(\operatorname{Ann}(M) \cap \operatorname{Ann}(N)) \text { by }(2.2) \\
-& =S^{-1}(\operatorname{Ann}(M)) \cap S^{-1}(\operatorname{Ann}(N)) \text { by (3.4) } \\
+S^{-1}(\operatorname{Ann}(M+N)) & =S^{-1}(\operatorname{Ann}(M) \cap \operatorname{Ann}(N)) \text { by }\ref{exc:2.2} \\
+& =S^{-1}(\operatorname{Ann}(M)) \cap S^{-1}(\operatorname{Ann}(N)) \text { by (\ref{cor:3.4}) } \\
 & =\operatorname{Ann}\left(S^{-1} M\right) \cap \operatorname{Ann}\left(S^{-1} N\right) \text { by hypothesis } \\
 & =\operatorname{Ann}\left(S^{-1} M+S^{-1} N\right)=\operatorname{Ann}\left(S^{-1}(M+N)\right) .
 \end{aligned}
 \]
 
-Hence it is enough to prove (3.14) for $M$ generated by a single element: then $M \cong A / \mathfrak{a}$ (as $A$-module), where $\mathfrak{a}=\operatorname{Ann}(M) ; S^{-1} M \cong\left(S^{-1} A\right) /\left(S^{-1} \mathfrak{a}\right)$ by (3.4), so that Ann $\left(S^{-1} M\right)=S^{-1} \mathfrak{a}=S^{-1}(\operatorname{Ann}(M))$.
+Hence it is enough to prove (\ref{prop:3.14}) for $M$ generated by a single element: then $M \cong A / \mathfrak{a}$ (as $A$-module), where $\mathfrak{a}=\operatorname{Ann}(M) ; S^{-1} M \cong\left(S^{-1} A\right) /\left(S^{-1} \mathfrak{a}\right)$ by (\ref{cor:3.4}), so that Ann $\left(S^{-1} M\right)=S^{-1} \mathfrak{a}=S^{-1}(\operatorname{Ann}(M))$.
+\end{proof}
 
-Corollary 3.15. If $N, P$ are submodules of an A-module $M$ and if $P$ is finitely generated, then $S^{-1}(N: P)=\left(S^{-1} N: S^{-1} P\right)$.
+\begin{corollary}\label{cor:3.15}
+If $N, P$ are submodules of an A-module $M$ and if $P$ is finitely generated, then $S^{-1}(N: P)=\left(S^{-1} N: S^{-1} P\right)$.
+\end{corollary}
 
-Proof. $(N: P)=$ Ann $((N+P) / N)$ by (2.2); now apply (3.14).
+\begin{proof}
+$(N: P)=$ Ann $((N+P) / N)$ by \ref{exc:2.2}; now apply (\ref{prop:3.14}).
+\end{proof}
 
-Proposition 3.16. Let $A \rightarrow B$ be a ring homomorphism and let $\mathfrak{p}$ be a prime ideal of $A$. Then $\mathfrak{p}$ is the contraction of a prime ideal of $B$ if and only if $\mathfrak{p}^{\text {ec }}=\mathfrak{p}$.
+\begin{proposition}\label{prop:3.16}
+Let $A \rightarrow B$ be a ring homomorphism and let $\mathfrak{p}$ be a prime ideal of $A$. Then $\mathfrak{p}$ is the contraction of a prime ideal of $B$ if and only if $\mathfrak{p}^{\text {ec }}=\mathfrak{p}$.
+\end{proposition}
 
-Proof. If $\mathfrak{p}=\mathfrak{q}^{c}$ then $\mathfrak{p}^{e c}=\mathfrak{p}$ by (1.17). Conversely, if $\mathfrak{p}^{e c}=\mathfrak{p}$, let $S$ be the image of $A-\mathfrak{p}$ in $B$. Then $\mathfrak{p}^{e}$ does not meet $S$, therefore by (3.11) its extension in $S^{-1} B$ is a proper ideal and hence is contained in a maximal ideal $\mathrm{m}$ of $S^{-1} B$. If $\mathfrak{q}$ is the contraction of $\mathfrak{m}$ in $B$, then $\mathfrak{q}$ is prime, $q \supseteq \mathfrak{p}^{*}$ and $q \cap S=\varnothing$. Hence $\mathfrak{q}^{c}=\mathfrak{p}$.
+\begin{proof}
+If $\mathfrak{p}=\mathfrak{q}^{c}$ then $\mathfrak{p}^{e c}=\mathfrak{p}$ by \ref{prop:1.17}. Conversely, if $\mathfrak{p}^{e c}=\mathfrak{p}$, let $S$ be the image of $A-\mathfrak{p}$ in $B$. Then $\mathfrak{p}^{e}$ does not meet $S$, therefore by (\ref{prop:3.11}) its extension in $S^{-1} B$ is a proper ideal and hence is contained in a maximal ideal $\mathfrak{m}$ of $S^{-1} B$. If $\mathfrak{q}$ is the contraction of $\mathfrak{m}$ in $B$, then $\mathfrak{q}$ is prime, $q \supseteq \mathfrak{p}^{*}$ and $q \cap S=\varnothing$. Hence $\mathfrak{q}^{c}=\mathfrak{p}$.
+\end{proof}
 
-\section{EXERCISES}
-\begin{enumerate}
+\section{Exercises}
+\begin{enumerate}[1.]
   \item Let $S$ be a multiplicatively closed subset of a ring $A$, and let $M$ be a finitely generated $A$-module. Prove that $S^{-1} M=0$ if and only if there exists $s \in S$ such that $s M=0$.
 
   \item Let $a$ be an ideal of a ring $A$, and let $S=1+\mathfrak{a}$. Show that $S^{-1} \mathfrak{a}$ is contained in the Jacobson radical of $S^{-1} A$.
 
-\end{enumerate}
+Use this result and Nakayama's lemma to give a proof of \ref{cor:2.5} which does not depend on determinants. [If $M=a M$, then $S^{-1} M=\left(S^{-1} a\right)\left(S^{-1} M\right)$, hence by Nakayama we have $S^{-1} M=0$. Now use Exercise 1.]
 
-Use this result and Nakayama's lemma to give a proof of (2.5) which does not depend on determinants. [If $M=a M$, then $S^{-1} M=\left(S^{-1} a\right)\left(S^{-1} M\right)$, hence by Nakayama we have $S^{-1} M=0$. Now use Exercise 1.]
+  \item Let $A$ be a ring, let $S$ and $T$ be two multiplicatively closed subsets of $A$, and let $U$ be the image of $T$ in $S^{-1} A$. Show that the rings $(S T)^{-1} A$ and $U^{-1}\left(S^{-1} A\right)$ are isomorphic.
 
-\begin{enumerate}
-  \setcounter{enumi}{2}
-  \item Let $A$ be a ring, let $S$ and $T$ be two multiplicatively closed subsets of $A$, and let $U$ be the image of $T$ in $S^{-1} A$. Show that the rings $(S T)^{-1} A$ and $U^{-1}\left(S^{-1} A\right)$ are isomorphic. 4. Let $f: A \rightarrow B$ be a homomorphism of rings and let $S$ be a multiplicatively closed subset of $A$. Let $T=f(S)$. Show that $S^{-1} B$ and $T^{-1} B$ are isomorphic as $S^{-1} A$-modules.
+  \item Let $f: A \rightarrow B$ be a homomorphism of rings and let $S$ be a multiplicatively closed subset of $A$. Let $T=f(S)$. Show that $S^{-1} B$ and $T^{-1} B$ are isomorphic as $S^{-1} A$-modules.
 
   \item Let $A$ be a ring. Suppose that, for each prime ideal $\mathfrak{p}$, the local ring $A_{\mathfrak{p}}$ has no nilpotent element $\neq 0$. Show that $A$ has no nilpotent element $\neq 0$. If each $A_{\mathfrak{p}}$ is an integral domain, is $A$ necessarily an integral domain?
 
@@ -335,194 +415,170 @@ Use this result and Nakayama's lemma to give a proof of (2.5) which does not dep
 
   \item A multiplicatively closed subset $S$ of a ring $A$ is said to be saturated if
 
-\end{enumerate}
-
-Prove that
-
 \[
 x y \in S \Leftrightarrow x \in S \text { and } y \in S \text {. }
 \]
 
-i) $S$ is saturated $\Leftrightarrow A-S$ is a union of prime ideals.
+Prove that
+\begin{enumerate}[i)]
+\item $S$ is saturated $\Leftrightarrow A-S$ is a union of prime ideals.
 
-ii) If $S$ is any multiplicatively closed subset of $A$, there is a unique smallest saturated multiplicatively closed subset $\bar{S}$ containing $S$, and that $S$ is the complement in $A$ of the union of the prime ideals which do not meet $S$. ( $S$ is called the saturation of $S$.)
+\item If $S$ is any multiplicatively closed subset of $A$, there is a unique smallest saturated multiplicatively closed subset $\bar{S}$ containing $S$, and that $S$ is the complement in $A$ of the union of the prime ideals which do not meet $S$. ($\bar{S}$ is called the saturation of $S$.)
+\end{enumerate}
 
-If $S=1+a$, where $a$ is an ideal of $A$, find $S$.
+If $S=1+a$, where $a$ is an ideal of $A$, find $\bar{S}$.
 
-\begin{enumerate}
-  \setcounter{enumi}{7}
   \item Let $S, T$ be multiplicatively closed subsets of $A$, such that $S \subseteq T$. Let $\phi: S^{-1} A$ $\rightarrow T^{-1} A$ be the homomorphism which maps each $a / s \in S^{-1} A$ to $a / s$ considered as an element of $T^{-1} A$. Show that the following statements are equivalent:
+\begin{enumerate}[i)]
+  \item $\phi$ is bijective.
+
+  \item For each $t \in T, t / 1$ is a unit in $S^{-1} A$.
+
+  \item For each $t \in T$ there exists $x \in A$ such that $x t \in S$.
+
+  \item $T$ is contained in the saturation of $S$ (Exercise 7).
+
+  \item Every prime ideal which meets $T$ also meets $S$.
 \end{enumerate}
 
-i) $\phi$ is bijective.
-
-ii) For each $t \in T, t / 1$ is a unit in $S^{-1} A$.
-
-iii) For each $t \in T$ there exists $x \in A$ such that $x t \in S$.
-
-iv) $T$ is contained in the saturation of $S$ (Exercise 7).
-
-v) Every prime ideal which meets $T$ also meets $S$.
-
-\begin{enumerate}
-  \setcounter{enumi}{8}
   \item The set $S_{0}$ of all non-zero-divisors in $A$ is a saturated multiplicatively closed subset of $A$. Hence the set $D$ of zero-divisors in $A$ is a union of prime ideals (see Chapter 1, Exercise 14). Show that every minimal prime ideal of $A$ is contained in $D$. [Use Exercise 6.]
-\end{enumerate}
 
 The ring $S_{0}^{-1} A$ is called the total ring of fractions of $A$. Prove that
+\begin{enumerate}[i)]
+  \item $S_{0}$ is the largest multiplicatively closed subset of $A$ for which the homomorphism $A \rightarrow S_{0}^{-1} A$ is injective.
 
-i) $S_{0}$ is the largest multiplicatively closed subset of $A$ for which the homomorphism $A \rightarrow S_{0}^{-1} A$ is injective.
+  \item Every element in $S_{0}^{-1} A$ is either a zero-divisor or a unit.
 
-ii) Every element in $S_{0}^{-1} A$ is either a zero-divisor or a unit.
+  \item Every ring in which every non-unit is a zero-divisor is equal to its total ring of fractions (i.e., $A \rightarrow S_{0}^{-1} A$ is bijective).
+\end{enumerate}
 
-iii) Every ring in which every non-unit is a zero-divisor is equal to its total ring of fractions (i.e., $A \rightarrow S_{0}^{-1} A$ is bijective).
-
-\begin{enumerate}
-  \setcounter{enumi}{9}
   \item Let $A$ be a ring.
+\begin{enumerate}[i)]
+  \item If $A$ is absolutely flat (Chapter 2, Exercise 27) and $S$ is any multiplicatively closed subset of $A$, then $S^{-1} A$ is absolutely flat.
+
+  \item $A$ is absolutely flat $\Leftrightarrow A_{\mathfrak{m}}$ is a field for each maximal ideal $\mathfrak{m}$.
 \end{enumerate}
 
-i) If $A$ is absolutely flat (Chapter 2, Exercise 27) and $S$ is any multiplicatively closed subset of $A$, then $S^{-1} A$ is absolutely flat.
-
-ii) $A$ is absolutely flat $\Leftrightarrow A_{\mathfrak{m}}$ is a field for each maximal ideal $\mathrm{m}$.
-
-\begin{enumerate}
-  \setcounter{enumi}{10}
   \item Let $A$ be a ring. Prove that the following are equivalent:
+\begin{enumerate}[i)]
+  \item $A / \mathfrak{N}$ is absolutely flat ($\mathfrak{R}$ being the nilradical of $A$ ).
+
+  \item Every prime ideal of $A$ is maximal.
+
+  \item $\operatorname{Spec}(A)$ is a $T_{1}$-space (i.e., every subset consisting of a s'ngle point is closed).
+
+  \item $\operatorname{Spec}(A)$ is Hausdorff.
 \end{enumerate}
-
-i) $A / \mathfrak{N}$ is absolutely flat ( $\mathfrak{R}$ being the nilradical of $A$ ).
-
-ii) Every prime ideal of $A$ is maximal. iii) Spec $(A)$ is a $T_{1}$-space (i.e., every subset consisting of a s'ngle point is closed).
-
-iv) $\operatorname{Spec}(A)$ is Hausdorff.
-
 If these conditions are satisfied, show that $\operatorname{Spec}(.4)$ is compact and totally disconnected (i.e. the only connected subsets of Spec $(A)$ are those consisting of a single point).
 
-\begin{enumerate}
-  \setcounter{enumi}{11}
-  \item Let $A$ be an integral domain and $M$ an $A$-module. An element $x \in M$ is a torsion element of $M$ if Ann (x) $\neq 0$, that is if $x$ is killed by some non-zero element of $A$. Show that the torsion elements of $M$ form a submodule of $M$. This submodule is called the torsion submodule of $M$ and is denoted by $T(M)$. If $T(M)=0$, the module $M$ is said to be torsion-free. Show that
+  \item Let $A$ be an integral domain and $M$ an $A$-module. An element $x \in M$ is a torsion element of $M$ if Ann $(x) \neq 0$, that is if $x$ is killed by some non-zero element of $A$. Show that the torsion elements of $M$ form a submodule of $M$. This submodule is called the torsion submodule of $M$ and is denoted by $T(M)$. If $T(M)=0$, the module $M$ is said to be torsion-free. Show that
+\begin{enumerate}[i)]
+  \item If $M$ is any $A$-module, then $M / T(M)$ is torsion-free.
+
+  \item If $f: M \rightarrow N$ is a module homomorphism, then $f(T(M)) \subseteq T(N)$.
+
+  \item If $0 \rightarrow M^{\prime} \rightarrow M \rightarrow M^{\prime \prime}$ is an exact sequence, then the sequence $0 \rightarrow T\left(M^{\prime}\right)$ $\rightarrow T(M) \rightarrow T\left(M^{\prime \prime}\right)$ is exact.
+
+  \item If $M$ is any $A$-module, then $T(M)$ is the kernel of the mapping $x \mapsto 1 \otimes x$ of $M$ into $K \otimes_{A} M$, where $K$ is the field of fractions of $A$.
 \end{enumerate}
-
-i) If $M$ is any $A$-module, then $M / T(M)$ is torsion-free.
-
-ii) If $f: M \rightarrow N$ is a module homomorphism, then $f(T(M)) \subseteq T(N)$.
-
-iii) If $0 \rightarrow M^{\prime} \rightarrow M \rightarrow M^{\prime \prime}$ is an exact sequence, then the sequence $0 \rightarrow T\left(M^{\prime}\right)$ $\rightarrow T(M) \rightarrow T\left(M^{\prime \prime}\right)$ is exact.
-
-iv) If $M$ is any $A$-module, then $T(M)$ is the kernel of the mapping $x \mapsto 1 \otimes x$ of $M$ into $K \otimes_{A} M$, where $K$ is the field of fractions of $A$.
 
 [For iv), show that $K$ may be regarded as the direct limit of its submodules $A \xi(\xi \in K)$; using Chapter 1 , Exercise 15 and Exercise 20, show that if $1 \otimes x=0$ in $K \otimes M$ then $1 \otimes x=0$ in $A \xi \otimes M$ for some $\xi \neq 0$. Deduce that $\xi^{-1} x=0$.]
 
-\begin{enumerate}
-  \setcounter{enumi}{12}
   \item Let $S$ be a multiplicatively closed subset of an integral domain $A$. In the notation of Exercise 12, show that $T\left(S^{-1} M\right)=S^{-1}(T M)$. Deduce that the following are equivalent:
+\begin{enumerate}[i)]
+  \item $M$ is torsion-free.
+
+  \item $M_{\mathfrak{p}}$ is torsion-free for all prime ideals $\mathfrak{p}$.
+
+  \item $M_{\mathfrak{m}}$ is torsion-free for all maximal ideals $\mathfrak{m}$.
 \end{enumerate}
 
-i) $M$ is torsion-free.
+  \item Let $M$ be an $A$-module and $a$ an ideal of $A$. Suppose that $M_{\mathfrak{m}}=0$ for all maximal ideals $m \supseteq \mathfrak{a}$. Prove that $M=\mathfrak{a} M$. [Pass to the $A / \mathfrak{a}$-module $M / \mathfrak{a} M$ and use (\ref{prop:3.8}).]
 
-ii) $M_{\mathfrak{p}}$ is torsion-free for all prime ideals $\mathfrak{p}$.
-
-iii) $M_{\mathfrak{m}}$ is torsion-free for all maximal ideals $\mathrm{m}$.
-
-\begin{enumerate}
-  \setcounter{enumi}{13}
-  \item Let $M$ be an $A$-module and $a$ an ideal of $A$. Suppose that $M_{\mathfrak{m}}=0$ for all maximal ideals $m \supseteq \mathfrak{a}$. Prove that $M=\mathfrak{a} M$. [Pass to the $A / \mathfrak{a}$-module $M / \mathfrak{a} M$ and use (3.8).]
-
-  \item Let $A$ be a ring, and let $F$ be the $A$-module $A^{n}$. Show that every set of $n$ generators of $F$ is a basis of $F$. [Let $x_{1}, \ldots, x_{n}$ be a set of generators and $e_{1}, \ldots, e_{n}$ the canonical basis of $F$. Define $\phi: F \rightarrow F$ by $\phi\left(e_{i}\right)=x_{i}$. Then $\phi$ is surjective and we have to prove that it is an isomorphism. By (3.9) we may assume that $A$ is a local ring. Let $N$ be the kernel of $\phi$ and let $k=A / \mathrm{m}$ be the residue field of $A$. Since $F$ is a flat $A$-module, the exact sequence $0 \rightarrow N \rightarrow F \rightarrow F \rightarrow 0$ gives an exact sequence $0 \longrightarrow k \otimes N \longrightarrow k \otimes F \stackrel{1 \otimes \phi}{\longrightarrow} k \otimes F \longrightarrow 0$. Now $k \otimes F=k^{n}$ is an $n$-dimensional vector space over $k ; 1 \otimes \phi$ is surjective, hence bijective, hence $k \otimes N=0$.
-
-\end{enumerate}
+  \item Let $A$ be a ring, and let $F$ be the $A$-module $A^{n}$. Show that every set of $n$ generators of $F$ is a basis of $F$. [Let $x_{1}, \ldots, x_{n}$ be a set of generators and $e_{1}, \ldots, e_{n}$ the canonical basis of $F$. Define $\phi: F \rightarrow F$ by $\phi\left(e_{i}\right)=x_{i}$. Then $\phi$ is surjective and we have to prove that it is an isomorphism. By (\ref{prop:3.9}) we may assume that $A$ is a local ring. Let $N$ be the kernel of $\phi$ and let $k=A / \mathfrak{m}$ be the residue field of $A$. Since $F$ is a flat $A$-module, the exact sequence $0 \rightarrow N \rightarrow F \rightarrow F \rightarrow 0$ gives an exact sequence $0 \longrightarrow k \otimes N \longrightarrow k \otimes F \stackrel{1 \otimes \phi}{\longrightarrow} k \otimes F \longrightarrow 0$. Now $k \otimes F=k^{n}$ is an $n$-dimensional vector space over $k ; 1 \otimes \phi$ is surjective, hence bijective, hence $k \otimes N=0$.
 
 Also $N$ is finitely generated, by Chapter 2 , Exercise 12 , hence $N=0$ by Nakayama's lemma. Hence $\phi$ is an isomorphism.]
 
 Deduce that every set of generators of $F$ has at least $n$ elements.
 
-\begin{enumerate}
-  \setcounter{enumi}{15}
   \item Let $B$ be a flat $A$-algebra. Then the following conditions are equivalent:
+\begin{enumerate}[i)]
+  \item $\mathfrak{a}^{e c}=a$ for all ideals $\mathfrak{a}$ of $A$.
+
+  \item $\operatorname{Spec}(B) \rightarrow \operatorname{Spec}(A)$ is surjective.
+
+  \item For every maximal ideal $m$ of $A$ we have $\mathfrak{m}^{e} \neq(1)$.
+
+  \item If $M$ is any non-zero $A$-module, then $M_{B} \neq 0$.
+
+  \item For every $A$-module $M$, the mapping $x \mapsto 1 \otimes x$ of $M$ into $M_{B}$ is injective.
 \end{enumerate}
-
-i) $\mathfrak{a}^{e c}=a$ for all ideals $\mathfrak{a}$ of $A$.
-
-ii) $\operatorname{Spec}(B) \rightarrow \operatorname{Spec}(A)$ is surjective.
-
-iii) For every maximal ideal $m$ of $A$ we have $\mathfrak{m}^{e} \neq(1)$. iv) If $M$ is any non-zero $A$-module, then $M_{B} \neq 0$.
-
-v) For every $A$-module $M$, the mapping $x \mapsto 1 \otimes x$ of $M$ into $M_{B}$ is injective. (For i) $\Rightarrow$ ii), use (3.16). ii) $\Rightarrow$ iii) is clear.
+(For i) $\Rightarrow$ ii), use (\ref{prop:3.16}). ii) $\Rightarrow$ iii) is clear.
 
 iii) $\Rightarrow$ iv): Let $x$ be a non-zero element of $M$ and let $M^{\prime}=A x$. Since $B$ is flat over $A$ it is enough to show that $M_{B}^{\prime} \neq 0$. We have $M^{\prime} \cong A / a$ for some ideal $a \neq(1)$, hence $M_{B}^{\prime} \cong B / \alpha^{*}$. Now $a \subseteq \mathfrak{m}$ for some maximal ideal $m$, hence $Q^{e} \subseteq \pi^{e} \neq(1)$. Hence $M_{B}^{\prime} \neq 0$.
 
-iv) $\Rightarrow v$ ): Let $M^{\prime}$ be the kernel of $M \rightarrow M_{B}$. Since $B$ is flat over $A$, the sequence $0 \rightarrow M_{B}^{\prime} \rightarrow M_{B} \rightarrow\left(M_{B}\right)_{B}$ is exact. But (Chapter 2, Exercise 13, with $\bar{N}=M_{B}$ ) the mapping $M_{B} \rightarrow\left(M_{B}\right)_{B}$ is injective, hence $M_{B}^{\prime}=0$ and therefore $M^{\prime}=0$.
+iv) $\Rightarrow$ v): Let $M^{\prime}$ be the kernel of $M \rightarrow M_{B}$. Since $B$ is flat over $A$, the sequence $0 \rightarrow M_{B}^{\prime} \rightarrow M_{B} \rightarrow\left(M_{B}\right)_{B}$ is exact. But (Chapter 2, Exercise 13, with $\bar{N}=M_{B}$ ) the mapping $M_{B} \rightarrow\left(M_{B}\right)_{B}$ is injective, hence $M_{B}^{\prime}=0$ and therefore $M^{\prime}=0$.
 
-v) $\Rightarrow$ i): Take $M=A /$ a.]
+v) $\Rightarrow$ i): Take $M=A / a$.]
 
 $B$ is said to be faithfully flat over $A$.
 
-\begin{enumerate}
-  \setcounter{enumi}{16}
   \item Let $A \stackrel{f}{\rightarrow} B \stackrel{g}{\rightarrow} C$ be ring homomorphisms. If $g \circ f$ is flat and $g$ is faithfully fiat, then $f$ is fiat.
 
-  \item Let $f: A \rightarrow B$ be a flat homomorphism of rings, let $q$ be a prime ideal of $B$ and let $\mathfrak{p}=q^{\mathfrak{c}}$. Then $f^{*}: \operatorname{Spec}\left(B_{q}\right) \rightarrow \operatorname{Spec}\left(A_{\mathfrak{p}}\right)$ is surjective. [For $B_{\mathfrak{p}}$ is fiat over $A_{\mathfrak{p}}$ by (3.10), and $B_{q}$ is a local ring of $B_{\mathfrak{p}}$, hence is flat over $B_{\mathfrak{p}}$. Hence $B_{q}$ is flat over $A_{\mathfrak{p}}$ and satisfies condition (3) of Exercise 16.]
+  \item Let $f: A \rightarrow B$ be a flat homomorphism of rings, let $q$ be a prime ideal of $B$ and let $\mathfrak{p}=q^{\mathfrak{c}}$. Then $f^{*}: \operatorname{Spec}\left(B_{q}\right) \rightarrow \operatorname{Spec}\left(A_{\mathfrak{p}}\right)$ is surjective. [For $B_{\mathfrak{p}}$ is fiat over $A_{\mathfrak{p}}$ by (\ref{prop:3.10}), and $B_{q}$ is a local ring of $B_{\mathfrak{p}}$, hence is flat over $B_{\mathfrak{p}}$. Hence $B_{q}$ is flat over $A_{\mathfrak{p}}$ and satisfies condition (3) of Exercise 16.]
 
   \item Let $A$ be a ring, $M$ an $A$-module. The support of $M$ is defined to be the set Supp $(M)$ of prime ideals $\mathfrak{p}$ of $A$ such that $M_{\mathfrak{p}} \neq 0$. Prove the following results:
+\begin{enumerate}[i)]
+  \item $M \neq 0 \leftrightarrow \operatorname{Supp}(M) \neq \varnothing$.
 
+  \item $V(\mathfrak{a})=\operatorname{Supp}(A / \mathfrak{a})$.
+
+  \item If $0 \rightarrow M^{\prime} \rightarrow M \rightarrow M^{\prime \prime} \rightarrow 0$ is an exact sequence, then Supp $(M)=$ Supp $\left(M^{\prime}\right) \cup \operatorname{Supp}\left(M^{\prime}\right)$.
+
+  \item If $M=\sum M_{i}$, then $\operatorname{Supp}(M)=\bigcup \operatorname{Supp}\left(M_{0}\right)$.
+
+  \item If $M$ is finitely generated, then Supp $(M)=V(\operatorname{Ann}(M)$ ) (and is therefore a closed subset of Spec $(A)$ ).
+
+  \item If $M, N$ are finitely generated, then $\operatorname{Supp}\left(M \otimes_{A} N\right)=\operatorname{Supp}(M) \cap$ Supp ( $N$ ), - [Use Chapter 2, Exercise 3.]
+
+  \item If $M$ is finitely generated and $\mathfrak{a}$ is an ideal of $A$, then Supp $(M / a M)=$ $V(\mathfrak{a}+\operatorname{Ann}(M))$.
+
+  \item If $f: A \rightarrow B$ is a ring homomorphism and $M$ is a finitely generated $A$-module, then Supp $\left(B \otimes_{A} M\right)=f^{\star-1}(\operatorname{Supp}(M))$.
 \end{enumerate}
 
-i) $M \neq 0 \leftrightarrow \operatorname{Supp}(M) \neq \varnothing$.
-
-ii) $V(\mathfrak{a})=\operatorname{Supp}(A / \mathfrak{a})$.
-
-iii) If $0 \rightarrow M^{\prime} \rightarrow M \rightarrow M^{\prime \prime} \rightarrow 0$ is an exact sequence, then Supp $(M)=$ Supp $\left(M^{\prime}\right) \cup \operatorname{Supp}\left(M^{\prime}\right)$.
-
-iv) If $M=\sum M_{i}$, then $\operatorname{Supp}(M)=\bigcup \operatorname{Supp}\left(M_{0}\right)$.
-
-v) If $M$ is finitely generated, then Supp $(M)=V(\operatorname{Ann}(M)$ ) (and is therefore a closed subset of Spec $(A)$ ).
-
-vi) If $M, N$ are finitely generated, then $\operatorname{Supp}\left(M \otimes_{A} N\right)=\operatorname{Supp}(M) \cap$ Supp ( $N$ ), - [Use Chapter 2, Exercise 3.]
-
-vii) If $M$ is finitely generated and $\mathfrak{a}$ is an ideal of $A$, then Supp $(M / a M)=$ $V(\mathfrak{a}+\operatorname{Ann}(M))$.
-
-viii) If $f: A \rightarrow B$ is a ring homomorphism and $M$ is a finitely generated $A$ module, then Supp $\left(B \otimes_{A} M\right)=f^{\star-1}(\operatorname{Supp}(M))$.
-
-\begin{enumerate}
-  \setcounter{enumi}{19}
   \item Let $f: A \rightarrow B$ be a ring homomorphism, $f^{\star}: \operatorname{Spec}(B) \rightarrow \operatorname{Spec}(A)$ the associated mapping. Show that
+\begin{enumerate}[i)]
+  \item Every prime ideal of $A$ is a contracted ideal $\Leftrightarrow f^{*}$ is surjective.
+
+  \item Every prime ideal of $B$ is an extended ideal $\Rightarrow f^{*}$ is injective.
 \end{enumerate}
-
-i) Every prime ideal of $A$ is a contracted ideal $\Leftrightarrow f^{*}$ is surjective.
-
-ii) Every prime ideal of $B$ is an extended ideal $\Rightarrow f^{*}$ is injective.
-
 Is the converse of ii) true?
 
-\begin{enumerate}
-  \setcounter{enumi}{20}
-  \item i) Let $A$ be a ring, $S$ a multiplicatively closed subset of $A$, and $\phi: A \rightarrow S^{-1} A$ the canonical homomorphism. Show that $\phi^{*}: \operatorname{Spec}\left(S^{-1} A\right) \rightarrow \operatorname{Spec}(A)$ is a homeomorphism of Spec $\left(S^{-1} A\right)$ onto its image in $X=\operatorname{Spec}(A)$. Let this image be denoted by $S^{-1} X$.
-\end{enumerate}
+  \item \begin{enumerate}[i)]
+    \item Let $A$ be a ring, $S$ a multiplicatively closed subset of $A$, and $\phi: A \rightarrow S^{-1} A$ the canonical homomorphism. Show that $\phi^{*}: \operatorname{Spec}\left(S^{-1} A\right) \rightarrow \operatorname{Spec}(A)$ is a homeomorphism of Spec $\left(S^{-1} A\right)$ onto its image in $X=\operatorname{Spec}(A)$. Let this image be denoted by $S^{-1} X$.
 
-In particular, if $f \in A$, the image of Spec $\left(A_{f}\right)$ in $X$ is the basic open set $X_{f}$ (Chapter 1, Exercise 17). ii) Let $f: A \rightarrow B$ be a ring homomorphism. Let $X=\operatorname{Spec}(A)$ and $Y=$ Spec $(B)$, and let $f^{*}: Y \rightarrow X$ be the mapping associated with $f$. Identifying Spec $\left(S^{-1} A\right)$ with its canonical image $S^{-1} X$ in $X$, and $\operatorname{Spec}\left(S^{-1} B\right)$ $\left(=\operatorname{Spec}\left(f(S)^{-1} B\right)\right.$ ) with its canonical image $S^{-1} Y$ in $Y$, show that $S^{-1} f^{*}$ : $\operatorname{Spec}\left(S^{-1} B\right) \rightarrow \operatorname{Spec}\left(S^{-1} A\right)$ is the restriction of $f^{*}$ to $S^{-1} Y$, and that $S^{-1} Y=f^{*-1}\left(S^{-1} X\right)$
+In particular, if $f \in A$, the image of Spec $\left(A_{f}\right)$ in $X$ is the basic open set $X_{f}$ (Chapter 1, Exercise 17).
 
-iii) Let $a$ be an ideal of $A$ and let $b=a^{a}$ be its extension in $B$. Let $f: A / a \rightarrow B / b$ be the homomorphism induced by $f$. If $\operatorname{Spec}(A / \mathfrak{a})$ is identified with its canonical image $V(\mathfrak{a})$ in $X$, and $\operatorname{Spec}(B / \mathfrak{b})$ with its image $V(\mathfrak{b})$ in $Y$, show that $f^{*}$ is the restriction of $f^{*}$ to $V(b)$.
+    \item Let $f: A \rightarrow B$ be a ring homomorphism. Let $X=\operatorname{Spec}(A)$ and $Y=$ Spec $(B)$, and let $f^{*}: Y \rightarrow X$ be the mapping associated with $f$. Identifying Spec $\left(S^{-1} A\right)$ with its canonical image $S^{-1} X$ in $X$, and $\operatorname{Spec}\left(S^{-1} B\right)$ $\left(=\operatorname{Spec}\left(f(S)^{-1} B\right)\right.$ ) with its canonical image $S^{-1} Y$ in $Y$, show that $S^{-1} f^{*}$ : $\operatorname{Spec}\left(S^{-1} B\right) \rightarrow \operatorname{Spec}\left(S^{-1} A\right)$ is the restriction of $f^{*}$ to $S^{-1} Y$, and that $S^{-1} Y=f^{*-1}\left(S^{-1} X\right)$
 
-iv) Let $\mathfrak{p}$ be a prime ideal of $A$. Take $S=A-\mathfrak{p}$ in ii) and then reduce $\bmod S^{-1} \mathfrak{p}$ as in iii). Deduce that the subspace $f^{*-1}(\mathfrak{p})$ of $Y$ is naturally homeomorphic to $\operatorname{Spec}\left(B_{\mathfrak{p}} / \mathfrak{p} B_{\mathfrak{p}}\right)=\operatorname{Spec}\left(k(\mathfrak{p}) \otimes_{A} B\right)$, where $k(\mathfrak{p})$ is the residue field of the local ring $A_{\mathfrak{p}}$.
+    \item Let $a$ be an ideal of $A$ and let $b=a^{a}$ be its extension in $B$. Let $f: A / a \rightarrow B / b$ be the homomorphism induced by $f$. If $\operatorname{Spec}(A / \mathfrak{a})$ is identified with its canonical image $V(\mathfrak{a})$ in $X$, and $\operatorname{Spec}(B / \mathfrak{b})$ with its image $V(\mathfrak{b})$ in $Y$, show that $f^{*}$ is the restriction of $f^{*}$ to $V(b)$.
+
+    \item Let $\mathfrak{p}$ be a prime ideal of $A$. Take $S=A-\mathfrak{p}$ in ii) and then reduce $\bmod S^{-1} \mathfrak{p}$ as in iii). Deduce that the subspace $f^{*-1}(\mathfrak{p})$ of $Y$ is naturally homeomorphic to $\operatorname{Spec}\left(B_{\mathfrak{p}} / \mathfrak{p} B_{\mathfrak{p}}\right)=\operatorname{Spec}\left(k(\mathfrak{p}) \otimes_{A} B\right)$, where $k(\mathfrak{p})$ is the residue field of the local ring $A_{\mathfrak{p}}$.
+  \end{enumerate}
 
 Spec $\left(k(\mathfrak{p}) \otimes_{1} B\right)$ is called the fiber of $f^{*}$ over $\mathfrak{p}$.
 
-\begin{enumerate}
-  \setcounter{enumi}{21}
   \item Let $A$ be a ring and $p$ a prime ideal of $A$. Then the canonical image of $\operatorname{Spec}\left(A_{\mathfrak{p}}\right)$ in Spec $(A)$ is equal to the intersection of all the open neighborhoods of $\mathfrak{p}$ in Spec $(A)$.
 
   \item Let $A$ be a ring, let $X=\operatorname{Spec}(A)$ and let $U$ be a basic open set in $X$ (i.e., $U=X$, for some $f \in A$ : Chapter 1, Exercise 17).
+\begin{enumerate}[i)]
+  \item If $U=X_{f}$, show that the ring $A(U)=A_{f}$ depends only on $U$ and not on $f$.
 
-\end{enumerate}
+  \item Let $U^{\prime}=X_{g}$ be another basic open set such that $U^{\prime} \subseteq U$. Show that there is an equation of the form $g^{n}=u f$ for some integer $n>0$ and some $u \in A$, and use this to define a homomorphism $\rho: A(U) \rightarrow A\left(U^{\prime}\right)$ (i.e., $A_{f} \rightarrow A_{g}$ ) by mapping $a / f^{m}$ to $a u^{m} / g^{m n}$. Show that $\rho$ depends only on $U$ and $U^{\prime}$. This homomorphism is called the restriction homomorphism.
 
-i) If $U=X_{f}$, show that the ring $A(U)=A_{f}$ depends only on $U$ and not on $f$.
+  \item If $U=U^{\prime}$, then $\rho$ is the identity map.
 
-ii) Let $U^{\prime}=X_{g}$ be another basic open set such that $U^{\prime} \subseteq U$. Show that there is an equation of the form $g^{n}=u f$ for some integer $n>0$ and some $u \in A$, and use this to define a homomorphism $\rho: A(U) \rightarrow A\left(U^{\prime}\right)$ (i.e., $A_{f} \rightarrow A_{g}$ ) by mapping $a / f^{m}$ to $a u^{m} / g^{m n}$. Show that $\rho$ depends only on $U$ and $U^{\prime}$. This homomorphism is called the restriction homomorphism.
-
-iii) If $U=U^{\prime}$, then $\rho$ is the identity map.
-
-iv) If $U \supseteq U^{\prime} \supseteq U^{\prime}$ are basic open sets in $X$, show that the diagram
+  \item If $U \supseteq U^{\prime} \supseteq U^{\prime}$ are basic open sets in $X$, show that the diagram
 
 \begin{center}
   \begin{tikzcd}
@@ -533,22 +589,22 @@ A(U) \arrow[rd] \arrow[rr] &                  & A(U'') \\
 
 (in which the arrows are restriction homomorphisms) is commutative.
 
-v) Let $x(=\mathfrak{p})$ be a point of $X$. Show that
+  \item Let $x(=\mathfrak{p})$ be a point of $X$. Show that
 
 \[
 \varinjlim_{U\ni x} A(U) \cong A_{\mathfrak{p}}.
 \]
 
 The assignment of the ring $A(U)$ to each basic open set $U$ of $X$, and the restriction homomorphisms $\rho$, satisfying the conditions iii) and iv) above, constitutes a \textit{presheaf of rings} on the basis of open sets $\left(X_{f}\right)_{f\in A}$. v) says that the stalk of this presheaf at $x \in X$ is the corresponding local ring $A_{\mathfrak{p}}$.
-
-\begin{enumerate}
-  \setcounter{enumi}{23}
-  \item Show that the presheaf of Exercise 23 has the following property. Let $\left(U_{t}\right)_{\text {ler }}$ be a covering of $X$ by basic open sets. For each $i \in I$ let $s_{i} \in A\left(U_{i}\right)$ be such that, for each pair of indices $i, j$, the images of $s_{i}$ and $s_{j}$ in $A\left(U_{i} \cap U_{j}\right)$ are equal. Then there exists a unique $s \in A(=A(X))$ whose image in $A\left(U_{i}\right)$ is $s_{i}$, for all $i \in I$. (This essentially implies that the presheaf is a sheaf.) 25. Let $f: A \rightarrow B, g: A \rightarrow C$ be ring homomorphisms and let $h: A \rightarrow B \otimes_{A} C$ be defined by $h(x)=f(x) \otimes g(x)$. Let $X, Y, Z, T$ be the prime spectra of $A, B, C$, $B \otimes_{A} C$ respectively. Then $h^{*}(T)=f^{*} Y \cap g^{*}(Z)$.
 \end{enumerate}
+
+  \item Show that the presheaf of Exercise 23 has the following property. Let $\left(U_{t}\right)_{\text {ler }}$ be a covering of $X$ by basic open sets. For each $i \in I$ let $s_{i} \in A\left(U_{i}\right)$ be such that, for each pair of indices $i, j$, the images of $s_{i}$ and $s_{j}$ in $A\left(U_{i} \cap U_{j}\right)$ are equal. Then there exists a unique $s \in A(=A(X))$ whose image in $A\left(U_{i}\right)$ is $s_{i}$, for all $i \in I$. (This essentially implies that the presheaf is a sheaf.)
+
+  \item Let $f: A \rightarrow B, g: A \rightarrow C$ be ring homomorphisms and let $h: A \rightarrow B \otimes_{A} C$ be defined by $h(x)=f(x) \otimes g(x)$. Let $X, Y, Z, T$ be the prime spectra of $A, B, C$, $B \otimes_{A} C$ respectively. Then $h^{*}(T)=f^{*} Y \cap g^{*}(Z)$.
 
 [Let $\mathfrak{p} \in X$, and let $k=k(\mathfrak{p})$ be the residue field at $\mathfrak{p}$. By Exercise 21, the fiber $h^{*-1}(\mathfrak{p})$ is the spectrum of $\left(B \otimes_{A} C\right) \otimes_{A} k \cong\left(B \otimes_{A} k\right) \otimes_{k}\left(C \otimes_{A} k\right)$. Hence $\mathfrak{p} \in h^{*}(T) \Leftrightarrow\left(B \otimes_{A} k\right) \otimes_{k}\left(C \otimes_{A} k\right) \neq 0 \Leftrightarrow B \otimes_{A} k \neq 0$ and $C \otimes_{A} k \neq 0 \Leftrightarrow$ $\left.\mathfrak{p} \in f^{*}(Y) \cap g^{*}(Z).\right]$
 
-2ó. Lêt $\left(B_{\alpha}, g_{\alpha \beta}\right)$ be a direct system of rings and $B$ the direct limit. For each $\alpha$, let $f_{\alpha}: A \rightarrow B_{\alpha}$ be a ring homomorphism such that $g_{\alpha \beta} \circ f_{\alpha}=f_{\beta}$ whenever $\alpha \leqslant \beta$ (i.e. the $B_{\alpha}$ form a direct system of $A$-algebras). The $f_{\alpha}$ induce $f: A \rightarrow B$. Show that
+  \item Let $\left(B_{\alpha}, g_{\alpha \beta}\right)$ be a direct system of rings and $B$ the direct limit. For each $\alpha$, let $f_{\alpha}: A \rightarrow B_{\alpha}$ be a ring homomorphism such that $g_{\alpha \beta} \circ f_{\alpha}=f_{\beta}$ whenever $\alpha \leqslant \beta$ (i.e. the $B_{\alpha}$ form a direct system of $A$-algebras). The $f_{\alpha}$ induce $f: A \rightarrow B$. Show that
 
 \[
 f^{*}(\operatorname{Spec}(B))=\bigcap_{\alpha} f_{\alpha}^{*}\left(\operatorname{Spec}\left(B_{\alpha}\right)\right)
@@ -562,10 +618,8 @@ B \otimes_{A} k(\mathfrak{p}) \cong \lim _{\longrightarrow}\left(B_{\alpha} \oti
 
 (since tensor products commute with direct limits: Chapter 2, Exercise 20). By Exercise 21 of Chapter 2 it follows that $f^{*-1}(p)=\varnothing$ if and only if $B_{\alpha} \otimes_{A} k(p)=0$ for some $\alpha$, i.e., if and only if $f_{\alpha}^{*-1}(p)=\varnothing$.]
 
-\begin{enumerate}
-  \setcounter{enumi}{26}
-  \item i) Let $f_{\alpha}: A \rightarrow B_{\alpha}$ be any family of $A$-algebras and let $f: A \rightarrow B$ be their tensor product over $A$ (Chapter 2, Exercise 23). Then
-\end{enumerate}
+  \item \begin{enumerate}[i)]
+    \item Let $f_{\alpha}: A \rightarrow B_{\alpha}$ be any family of $A$-algebras and let $f: A \rightarrow B$ be their tensor product over $A$ (Chapter 2, Exercise 23). Then
 
 \[
 f^{*}(\operatorname{Spec}(B))=\bigcap_{\alpha} f_{\alpha}^{*}\left(\operatorname{Spec}\left(B_{\alpha}\right)\right)
@@ -573,27 +627,25 @@ f^{*}(\operatorname{Spec}(B))=\bigcap_{\alpha} f_{\alpha}^{*}\left(\operatorname
 
 [Use Examples 25 and 26.]
 
-ii) Let $f_{\alpha}: A \rightarrow B_{\alpha}$ be any finite family of $A$-algebras and let $B=\prod_{\alpha} B_{\alpha}$. Define $f: A \rightarrow B$ by $f(x)=\left(f_{\alpha}(x)\right)$. Then $f^{*}(\operatorname{Spec}(B))=\bigcup_{\alpha} f_{\alpha}^{*}\left(\operatorname{Spec}\left(B_{\alpha}\right)\right)$.
+    \item Let $f_{\alpha}: A \rightarrow B_{\alpha}$ be any finite family of $A$-algebras and let $B=\prod_{\alpha} B_{\alpha}$. Define $f: A \rightarrow B$ by $f(x)=\left(f_{\alpha}(x)\right)$. Then $f^{*}(\operatorname{Spec}(B))=\bigcup_{\alpha} f_{\alpha}^{*}\left(\operatorname{Spec}\left(B_{\alpha}\right)\right)$.
 
-iii) Hence the subsets of $X=\operatorname{Spec}(A)$ of the form $f^{*}(\operatorname{Spec}(B))$, where $f: A \rightarrow B$ is a ring homomorphism, satisfy the axioms for closed sets in a topological space. The associated topology is the constructible topology on $X$. It is finer than the Zariski topology (i.e., there are more open sets, or equivalently more closed sets).
+    \item Hence the subsets of $X=\operatorname{Spec}(A)$ of the form $f^{*}(\operatorname{Spec}(B))$, where $f: A \rightarrow B$ is a ring homomorphism, satisfy the axioms for closed sets in a topological space. The associated topology is the constructible topology on $X$. It is finer than the Zariski topology (i.e., there are more open sets, or equivalently more closed sets).
 
-iv) Let $X_{C}$ denote the set $X$ endowed with the constructible topology. Show that $X_{C}$ is quasi-compact.
+    \item Let $X_{C}$ denote the set $X$ endowed with the constructible topology. Show that $X_{C}$ is quasi-compact.
+  \end{enumerate}
 
-\begin{enumerate}
-  \setcounter{enumi}{27}
   \item (Continuation of Exercise 27.)
+\begin{enumerate}[i)]
+  \item For each $g \in A$, the set $X_{g}$ (Chapter 1, Exercise 17) is both open and closed in the constructible topology.
+
+  \item Let $C^{\prime}$ denote the smallest topology on $X$ for which the sets $X_{g}$ are both open and closed, and let $X_{C}$, denote the set $X$ endowed with this topology. Show that $X_{C^{\prime}}$ is Hausdorff.
+
+  \item Deduce that the identity mapping $X_{C} \rightarrow X_{C}$, is a homeomorphism. Hence a subset $E$ of $X$ is of the form $f^{*}(\operatorname{Spec}(B))$ for some $f: A \rightarrow B$ if and only if it is closed in the topology $C^{\prime}$.
+
+  \item The topological space $X_{C}$ is compact, Hausdorff and totally disconnected.
 \end{enumerate}
 
-i) For each $g \in A$, the set $X_{g}$ (Chapter 1, Exercise 17) is both open and closed in the constructible topology.
+  \item Let $f: A \rightarrow B$ be a ring homomorphism. Show that $f^{*}: \operatorname{Spec}(B) \rightarrow \operatorname{Spec}(A)$ is a continuous closed mapping (i.e., maps closed sets to closed sets) for the constructible topology.
 
-ii) Let $C^{\prime}$ denote the smallest topology on $X$ for which the sets $X_{g}$ are both open and closed, and let $X_{C}$, denote the set $X$ endowed with this topology. Show that $X_{C^{\prime}}$ is Hausdorff.
-
-iii) Deduce that the identity mapping $X_{C} \rightarrow X_{C}$, is a homeomorphism. Hence a subset $E$ of $X$ is of the form $f^{*}(\operatorname{Spec}(B))$ for some $f: A \rightarrow B$ if and only if it is closed in the topology $C^{\prime}$.
-
-iv) The topological space $X_{C}$ is compact, Hausdorff and totally disconnected. 29. Let $f: A \rightarrow B$ be a ring homomorphism. Show that $f^{*}: \operatorname{Spec}(B) \rightarrow \operatorname{Spec}(A)$ is a continuous closed mapping (i.e., maps closed sets to closed sets) for the constructible topology.
-
-\begin{enumerate}
-  \setcounter{enumi}{29}
   \item Show that the Zariski topology and the constructible topology on $\operatorname{Spec}(A)$ are the same if and only if $A / \mathfrak{R}$ is absolutely flat (where $\mathfrak{N}$ is the nilradical of $A$ ). [Use Exercise 11.]
 \end{enumerate}
-\end{document}
