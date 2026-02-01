@@ -212,7 +212,6 @@ Conversely, if $\operatorname{Ann}(x)$ is a prime ideal $\mathfrak{p}$, then $r(
 Hence a ring in which every prime ideal is finitely generated is Noetherian (I. S. Cohen).
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{1}
   \item Let $A$ be a Noetherian ring and let $f=\sum_{n=0}^{\infty} a_{n} x^{n} \in A[[x]]$. Prove that $f$ is nilpotent if and only if each $a_{n}$ is nilpotent.
 
   \item Let $\mathfrak{a}$ be an irreducible ideal in a ring $A$. Then the following are equivalent:
@@ -224,7 +223,6 @@ Hence a ring in which every prime ideal is finitely generated is Noetherian (I. 
 \end{enumerate}
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{3}
   \item Which of the following rings are Noetherian?
 \end{enumerate}
 \begin{enumerate}[i)]
@@ -237,7 +235,6 @@ Hence a ring in which every prime ideal is finitely generated is Noetherian (I. 
 In all cases the coefficients are complex numbers.
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{4}
   \item Let $A$ be a Noetherian ring, $B$ a finitely generated $A$-algebra, $G$ a finite group of $A$-automorphisms of $B$, and $B^{G}$ the set of all elements of $B$ which are left fixed by every element of $G$. Show that $B^{G}$ is a finitely generated $A$-algebra.
 
   \item If a finitely generated ring $K$ is a field, it is a finite field.
@@ -246,7 +243,6 @@ In all cases the coefficients are complex numbers.
 [If $K$ has characteristic 0, we have $\mathbf{Z} \subset \mathbf{Q} \subseteq K$. Since $K$ is finitely generated over $\mathbf{Z}$ it is finitely generated over $\mathbf{Q}$, hence by \eqref{prop:7.9} is a finitely generated $\mathbf{Q}$-module. Now apply \eqref{prop:7.8} to obtain a contradiction. Hence $K$ is of characteristic $p>0$, hence is finitely generated as a $Z /(p)$-algebra. Use \eqref{prop:7.9} to complete the proof.]
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{6}
   \item Let $X$ be an affine algebraic variety given by a family of equations $f_{\alpha}\left(t_{1}, \ldots, t_{n}\right)$ $=0(\alpha \in I)$ (Chapter 1, Exercise 27). Show that there exists a finite subset $I_{0}$ of $I$ such that $X$ is given by the equations $f_{\alpha}\left(t_{1}, \ldots, t_{n}\right)=0$ for $\alpha \in I_{0}$.
 
   \item If $A[x]$ is Noetherian, is $A$ necessarily Noetherian?
@@ -262,7 +258,6 @@ Show that $A$ is Noetherian.
 [Let $\mathfrak{a} \neq 0$ be an ideal in $A$. Let $\mathfrak{m}_{1}, \ldots, \mathfrak{m}_{r}$ be the maximal ideals which contain $\mathfrak{a}$. Choose $x_{0} \neq 0$ in $\mathfrak{a}$ and let $\mathfrak{m}_{1}, \ldots, \mathfrak{m}_{r+s}$ be the maximal ideals which contain $x_{0}$. Since $\mathfrak{m}_{r+1}, \ldots, \mathfrak{m}_{r+s}$ do not contain $\mathfrak{a}$ there exist $x_{j} \in \mathfrak{a}$ such that $x_{j} \notin \mathfrak{m}_{r+j}(1 \leqslant j \leqslant s)$. Since each $A_{\mathfrak{m}_{l}}(1 \leqslant i \leqslant r)$ is Noetherian, the extension of $\mathfrak{a}$ in $A_{\mathrm{nt}_{t}}$ is finitely generated. Hence there exist $x_{3}+\ldots, \ldots, x_{t}$ in $\mathfrak{a}$ whose images in $A_{\mathfrak{m}_{t}}$ generate $A_{\mathfrak{m}_{i}} \mathfrak{a}$ for $i=1, \ldots, r$. Let $\mathfrak{a}_{0}=\left(x_{0}, \ldots, x_{t}\right)$. Show that $\mathfrak{a}_{0}$ and $\mathfrak{a}$ have the same extension in $A_{\mathfrak{m}}$ for every maximal ideal $\mathfrak{m}$, and deduce by \eqref{prop:3.9} that $\mathfrak{a}_{0}=\mathfrak{a}$.]
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{9}
   \item Let $M$ be a Noetherian $A$-module. Show that $M[x]$ (Chapter 2, Exercise 6 ) is a Noetherian $A[x]$-module.
 
   \item Let $A$ be a ring such that each local ring $A_{\mathfrak{p}}$ is Noetherian. Is $A$ necessarily Noetherian?
@@ -276,14 +271,12 @@ Show that $A$ is Noetherian.
 \section{Nullstellensatz, strong form}
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{13}
   \item Let $k$ be an algebraically closed field, let $A$ denote the polynomial ring $k\left[t_{1}, \ldots, t_{n}\right]$ and let $\mathfrak{a}$ be an ideal in $A$. Let $V$ be the variety in $k^{n}$ defined by the ideal $\mathfrak{a}$, so that $V$ is the set of all $x=\left(x_{1}, \ldots, x_{n}\right) \in k^{n}$ such that $f(x)=0$ for all $f \in \mathfrak{a}$. Let $I(V)$ be the ideal of $V$, i.e. the ideal of all polynomials $g \in A$ such that $g(x)=0$ for all $x \in V$. Then $I(V)=r(\mathfrak{a})$.
 \end{enumerate}
 
 [It is clear that $r(\mathfrak{a}) \subseteq I(V)$. Conversely, let $f \notin r(\mathfrak{a})$, then there is a prime ideal $\mathfrak{p}$ containing $\mathfrak{a}$ such that $f \notin \mathfrak{p}$. Let $\bar{f}$ be the image of $f$ in $B=A / \mathfrak{p}$, let $C=B_{\bar{f}}=$ $B[1 / \bar{f}]$, and let $\mathfrak{m}$ be a maximal ideal of $C$. Since $C$ is a finitely generated $k$-algebra we have $C / \mathfrak{m} \cong k$, by \eqref{prop:7.9}. The images $x_{i}$ in $C / \mathfrak{m}$ of the generators $t_{i}$ of $A$ thus define a point $x=\left(x_{1}, \ldots, x_{n}\right) \in k^{n}$, and the construction shows that $x \in V$ and $f(x) \neq 0$.]
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{14}
   \item Let $A$ be a Noetherian local ring, $\mathfrak{m}$ its maximal ideal and $k$ its residue field, and let $M$ be a finitely generated $A$-module. Then the following are equivalent:
 \end{enumerate}
 \begin{enumerate}[i)]
@@ -302,7 +295,6 @@ Show that $A$ is Noetherian.
 Since $k \otimes F$ and $k \otimes M$ are vector spaces of the same dimension over $k$, it follows that $1 \otimes \phi$ is an isomorphism, hence $k \otimes E=0$, hence $E=0$ by Nakayama's Lemma ( $E$ is finitely generated because it is a submodule of $F$, and $A$ is Noetherian).]
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{15}
   \item Let $A$ be a Noetherian ring, $M$ a finitely generated $A$-module. Then the following are equivalent:
 \end{enumerate}
 \begin{enumerate}[i)]
@@ -314,7 +306,6 @@ Since $k \otimes F$ and $k \otimes M$ are vector spaces of the same dimension ov
 In other words, flat $=$ locally free. [Use Exercise 15.]
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{16}
   \item Let $A$ be a Noetherian ring and let $F_{1}(A)$ be the set of all isomorphism classes of finitely generated flat $A$-modules. Repeating the construction of Exercise 26 we obtain a group $K_{1}(A)$. Let $\gamma_{1}(M)$ denote the image of $(M)$ in $K_{1}(A)$.
 \end{enumerate}
 \begin{enumerate}[i)]
@@ -338,7 +329,6 @@ Since $F_{1}(A)$ is a subset of $F(A)$ we have a group homomorphism $\epsilon: K
 \end{remark}
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{17}
   \item Let $A$ be a Noetherian ring, $\mathfrak{p}$ a prime ideal of $A$, and $M$ a finitely generated $A$-module. Show that the following are equivalent:
 \end{enumerate}
 \begin{enumerate}[i)]
@@ -354,7 +344,6 @@ Deduce that there exists a chain of submodules
 such that each quotient $M_{i} / M_{i-1}$ is of the form $A / \mathfrak{p}_{i}$, where $\mathfrak{p}_{i}$ is a prime ideal of $A$.
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{18}
   \item Let $\mathfrak{a}$ be an ideal in a Noetherian ring $A$. Let
 \end{enumerate}
 \[
@@ -368,7 +357,6 @@ be two minimal decompositions of $\mathfrak{a}$ as intersections of irreducible 
 State and prove an analogous result for modules.
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{19}
   \item Let $X$ be a topological space and let $\mathscr{F}$ be the smallest collection of subsets of $X$ which contains all open subsets of $X$ and is closed with respect to the formation of finite intersections and complements.
 \end{enumerate}
 \begin{enumerate}[i)]
@@ -378,7 +366,6 @@ State and prove an analogous result for modules.
 \end{enumerate}
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{20}
   \item Let $X$ be a Noetherian topological space (Chapter 6, Exercise 5) and let $E \subseteq X$. Show that $E \in \mathscr{F}$ if and only if, for each irreducible closed set $X_{0} \subseteq X$, either $\overline{E \cap X_{0}} \neq X_{0}$ or else $E \cap X_{0}$ contains a non-empty open subset of $X_{0}$. [Suppose $E \notin \mathscr{F}$. Then the collection of closed sets $X^{\prime} \subseteq X$ such that $E \cap X^{\prime} \notin \mathscr{F}$ is not empty and therefore has a minimal element $X_{0}$. Show that $X_{0}$ is irreducible and then that each of the alternatives above leads to the conclusion that $E \cap X_{0} \in \mathscr{F}$.] The sets belonging to $\mathscr{F}$ are called the constructible subsets of $X$.
 
   \item Let $X$ be a Noetherian topological space and let $E$ be a subset of $X$. Show that $E$ is open in $X$ if and only if, for each irreducible closed subset $X_{0}$ in $X$, either $E \cap X_{0}=\varnothing$ or else $E \cap X_{0}$ contains a non-empty open subset of $X_{0}$. [The proof is similar to that of Exercise 21.]
@@ -389,7 +376,6 @@ State and prove an analogous result for modules.
 [By Exercise 20 it is enough to take $E=U \cap C$ where $U$ is open and $C$ is closed in $Y$; then, replacing $B$ by a homomorphic image, we reduce to the case where $E$ is open in $Y$. Since $Y$ is Noetherian, $E$ is quasi-compact and therefore a finite union of open sets of the form $\operatorname{Spec}\left(B_{g}\right)$. Hence reduce to the case $E=Y$. To show that $f^{*}(Y)$ is constructible, use the criterion of Exercise 21. Let $X_{0}$ be an irreducible closed subset of $X$ such that $f^{*}(Y) \cap X_{0}$ is dense in $X_{0}$. We have $f^{*}(Y) \cap X_{0}=f^{*}\left(f^{*-1}\left(X_{0}\right)\right)$, and $f^{*-1}\left(X_{0}\right)=\operatorname{Spec}\left((A / \mathfrak{p}) \otimes_{A} B\right)$, where $X_{0}=\operatorname{Spec}(A / \mathfrak{p})$. Hence reduce to the case where $A$ is an integral domain and $f$ is injective. If $Y_{1}, \ldots, Y_{n}$ are the irreducible components of $Y$, it is enough to show that some $f^{*}\left(Y_{i}\right)$ contains a non-empty open set in $X$. So finally we are brought down to the situation in which $A, B$ are integral domains and $f$ is injective (and still of finite type); now use Chapter 5, Exercise 21 to complete the proof.]
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{23}
   \item With the notation and hypotheses of Exercise 23, $f^{*}$ is an open mapping $\Leftrightarrow$ $f$ has the going-down property (Chapter 5, Exercise 10). [Suppose $f$ has the going-down property. As in Exercise 23, reduce to proving that $E=f^{*}(Y)$ is open in $X$. The going-down property asserts that if $\mathfrak{p} \in E$ and $\mathfrak{p}^{\prime} \subseteq \mathfrak{p}$, then $\mathfrak{p}^{\prime} \in E$: in other words, that if $X_{0}$ is an irreducible closed subset of $X$ and $X_{0}$ meets $E$, then $E \cap X_{0}$ is dense in $X_{0}$. By Exercises 20 and 22, $E$ is open in $X$.]
 
   \item Let $A$ be Noetherian, $f: A \rightarrow B$ of finite type and flat (i.e., $B$ is flat as an $A$-module). Then $f^{*}: \operatorname{Spec}(B) \rightarrow \operatorname{Spec}(A)$ is an open mapping. [Exercise 24 and Chapter 5, Exercise 11.]
@@ -398,7 +384,6 @@ State and prove an analogous result for modules.
 \section{Grothendieck groups}
 
 \begin{enumerate}[1.]
-  \setcounter{enumi}{25}
   \item Let $A$ be a Noetherian ring and let $F(A)$ denote the set of all isomorphism classes of finitely generated $A$-modules. Let $C$ be the free abelian group generated by $F(A)$. With each short exact sequence $0 \rightarrow M^{\prime} \rightarrow M \rightarrow M^{\prime \prime} \rightarrow 0$ of finitely generated $A$-modules we associate the element $\left(M^{\prime}\right)-(M)+\left(M^{\prime \prime}\right)$ of $C$, where $(M)$ is the isomorphism class of $M$, etc. Let $D$ be the subgroup of $C$ generated by these elements, for all short exact sequences. The quotient group $C / D$ is called the Grothendieck group of $A$, and is denoted by $K(A)$. If $M$ is a finitely generated $A$-module, let $\gamma(M)$, or $\gamma_{A}(M)$, denote the image of $(M)$ in $K(A)$.
   \begin{enumerate}[i)]
     \item Show that $K(A)$ has the following universal property: for each additive function $\lambda$ on the class of finitely generated $A$-modules, with values in an abelian group $G$, there exists a unique homomorphism $\lambda_{0}: K(A) \rightarrow G$ such that $\lambda(M)=\lambda_{0}(\gamma(M))$ for all $M$.
