@@ -1,4 +1,4 @@
-The formation of rings of fractions and the associated process of localization are perhaps the most important technical tools in commutative algebra. They correspond in the algebro-geometric picture to concentrating attention on an open set or near a point, and the importance of these notions should be selfevident. This chapter gives the definitions and simple properties of the formation of fractions.
+The formation of rings of fractions\index{Fractions!ring of}\index{Ring of fractions} and the associated process of localization\index{Localisation} are perhaps the most important technical tools in commutative algebra. They correspond in the algebro-geometric picture to concentrating attention on an open set or near a point, and the importance of these notions should be selfevident. This chapter gives the definitions and simple properties of the formation of fractions.
 
 The procedure by which one constructs the rational field $\mathbf{Q}$ from the ring of integers $\mathbf{Z}$ (and embeds $\mathbf{Z}$ in $\mathbf{Q}$ ) extends easily to any integral domain $A$ and produces the field of fractions of $A$. The construction consists in taking all ordered pairs $(a, s)$ where $a, s \in A$ and $s \neq 0$, and setting up an equivalence relation between such pairs:
 
@@ -8,7 +8,7 @@ The procedure by which one constructs the rational field $\mathbf{Q}$ from the r
 
 This works only if $A$ is an integral domain, because the verification that the relation is transitive involves canceling, i.e. the fact that $A$ has no zero-divisor $\neq 0$. However, it can be generalized as follows:
 
-Let $A$ be any ring. A multiplicatively closed subset of $A$ is a subset $S$ of $A$ such that $1 \in S$ and $S$ is closed under multiplication: in other words $S$ is a subsemigroup of the multiplicative semigroup of $A$. Define a relation $\equiv$ on $A \times S$ as follows:
+Let $A$ be any ring. A \emph{multiplicatively closed subset}\index{Multiplicatively closed set} of $A$ is a subset $S$ of $A$ such that $1 \in S$ and $S$ is closed under multiplication: in other words $S$ is a subsemigroup of the multiplicative semigroup of $A$. Define a relation $\equiv$ on $A \times S$ as follows:
 
 \[
 (a, s) \equiv(b, t) \Leftrightarrow(a t-b s) u=0 \text { for some } u \in S .
@@ -31,7 +31,7 @@ We also have a ring homomorphism $f: A \rightarrow S^{-1} A$ defined by $f(x)=x 
 If $A$ is an integral domain and $S=A-\{0\}$, then $S^{-1} A$ is the field of fractions of $A$.
 \end{remark}
 
-The ring $S^{-1} A$ is called the ring of fractions of $A$ with respect to $S$. It has a universal property:
+The ring $S^{-1} A$ is called the \emph{ring of fractions}\index{Fractions!ring of}\index{Ring of fractions} of $A$ with respect to $S$. It has a universal property:
 
 \begin{proposition}\label{prop:3.1}
 Let $g: A \rightarrow B$ be a ring homomorphism such that $g(s)$ is $a$ unit in $B$ for all $s \in S$. Then there exists a unique ring homomorphism $h: S^{-1} A \rightarrow B$ such that $g=h \circ f$.
@@ -94,9 +94,9 @@ h(a / s)=g(a) g(s)^{-1}
 
 \begin{example}
 \begin{enumerate}[1.]
-  \item Let $\mathfrak{p}$ be a prime ideal of $A$. Then $S=A-\mathfrak{p}$ is multiplicatively closed (in fact $A-\mathfrak{p}$ is multiplicatively closed $\Leftrightarrow \mathfrak{p}$ is prime). We write $A_{\mathfrak{p}}$ for $S^{-1} A$ in this case. The elements $a / s$ with $a \in \mathfrak{p}$ form an ideal $\mathfrak{m}$ in $A_{\mathfrak{p}}$. If $b / t \notin \mathfrak{m}$, then $b \notin \mathfrak{p}$, hence $b \in S$ and therefore $b / t$ is a unit in $A_{\mathfrak{p}}$. It follows that if $a$ is an ideal in $A_{\mathfrak{b}}$ and $\mathfrak{a} \neq \mathfrak{m}$, then $\mathfrak{a}$ contains a unit and is therefore the whole ring. Hence $m$ is the only maximal ideal in $A_{\mathfrak{p}}$; in other words, $A_{\mathfrak{p}}$ is a local ring.
+  \item Let $\mathfrak{p}$ be a prime ideal of $A$. Then $S=A-\mathfrak{p}$ is multiplicatively closed (in fact $A-\mathfrak{p}$ is multiplicatively closed $\Leftrightarrow \mathfrak{p}$ is prime). We write $A_{\mathfrak{p}}$ for $S^{-1} A$ in this case. The elements $a / s$ with $a \in \mathfrak{p}$ form an ideal $\mathfrak{m}$ in $A_{\mathfrak{p}}$. If $b / t \notin \mathfrak{m}$, then $b \notin \mathfrak{p}$, hence $b \in S$ and therefore $b / t$ is a unit in $A_{\mathfrak{p}}$. It follows that if $a$ is an ideal in $A_{\mathfrak{b}}$ and $\mathfrak{a} \neq \mathfrak{m}$, then $\mathfrak{a}$ contains a unit and is therefore the whole ring. Hence $m$ is the only maximal ideal in $A_{\mathfrak{p}}$; in other words, $A_{\mathfrak{p}}$ is a \emph{local ring}\index{Ring!local}.
 
-The process of passing from $A$ to $A_{\mathfrak{p}}$ is called localization at $\mathfrak{p}$.
+The process of passing from $A$ to $A_{\mathfrak{p}}$ is called \emph{localization}\index{Localisation} at $\mathfrak{p}$.
 
   \item $S^{-1} A$ is the zero ring $\Leftrightarrow 0 \in S$.
 
@@ -121,7 +121,7 @@ The construction of $S^{-1} A$ can be carried through with an $A$-module $M$ in 
 (m, s) \equiv\left(m^{\prime}, s^{\prime}\right) \Leftrightarrow \exists t \in S \text { such that } t\left(s m^{\prime}-s^{\prime} m\right)=0 .
 \]
 
-As before, this is an equivalence relation. Let $\mathfrak{m} / \mathrm{s}$ denote the equivalence class of the pair $(m, s)$, let $S^{-1} M$ denote the set of such fractions, and make $S^{-1} M$ into an $S^{-1} A$-module with the obvious definitions of addition and scalar multiplication. As in Examples 1) and 3) above, we write $M_{\mathfrak{p}}$ instead of $S^{-1} M$ when $S=A-\mathfrak{p}\left(p\right.$ prime) and $M_{f}$ when $S=\left\{f^{n}\right\}_{n}>0$.
+As before, this is an equivalence relation. Let $\mathfrak{m} / \mathrm{s}$ denote the equivalence class of the pair $(m, s)$, let $S^{-1} M$ denote the set of such fractions, and make $S^{-1} M$ into an $S^{-1} A$-module with the obvious definitions of addition and scalar multiplication\index{Scalars!extension of}\index{Scalars!restriction of}. As in Examples 1) and 3) above, we write $M_{\mathfrak{p}}$ instead of $S^{-1} M$ when $S=A-\mathfrak{p}\left(p\right.$ prime) and $M_{f}$ when $S=\left\{f^{n}\right\}_{n}>0$.
 
 Let $u: M \rightarrow N$ be an $A$-module homomorphism. Then it gives rise to an $S^{-1} A$-module homomorphism $S^{-1} u: S^{-1} M \rightarrow S^{-1} N$, namely $S^{-1} u$ maps $m / s$ to $u(m) / s$. We have $S^{-1}(v \circ u)=\left(S^{-1} v\right) \circ\left(S^{-1} u\right)$.
 
@@ -412,7 +412,7 @@ Use this result and Nakayama's lemma to give a proof of \eqref{cor:2.5} which do
 
   \item Let $A$ be a ring $\neq 0$ and let $\Sigma$ be the set of all multiplicatively closed subsets $S$ of $A$ such that $0 \notin S$. Show that $\Sigma$ has maximal elements, and that $S \in \Sigma$ is maximal if and only if $A-S$ is a minimal prime ideal of $A$.
 
-  \item A multiplicatively closed subset $S$ of a ring $A$ is said to be saturated if
+  \item A multiplicatively closed subset $S$ of a ring $A$ is said to be \emph{saturated}\index{Saturated} if
 
 \[
 x y \in S \Leftrightarrow x \in S \text { and } y \in S \text {. }
@@ -453,7 +453,7 @@ The ring $S_{0}^{-1} A$ is called the total ring of fractions of $A$. Prove that
 
   \item Let $A$ be a ring.
 \begin{enumerate}[i)]
-  \item If $A$ is absolutely flat (Chapter 2, Exercise 27) and $S$ is any multiplicatively closed subset of $A$, then $S^{-1} A$ is absolutely flat.
+  \item If $A$ is \index{Ring!absolutely flat}absolutely flat (Chapter 2, Exercise 27) and $S$ is any multiplicatively closed subset of $A$, then $S^{-1} A$ is absolutely flat.
 
   \item $A$ is absolutely flat $\Leftrightarrow A_{\mathfrak{m}}$ is a field for each maximal ideal $\mathfrak{m}$.
 \end{enumerate}
@@ -464,13 +464,13 @@ The ring $S_{0}^{-1} A$ is called the total ring of fractions of $A$. Prove that
 
   \item Every prime ideal of $A$ is maximal.
 
-  \item $\operatorname{Spec}(A)$ is a $T_{1}$-space (i.e., every subset consisting of a s'ngle point is closed).
+  \item $\operatorname{Spec}(A)$\index{Spectrum!prime}\index{Spectrum!maximal}\index{Prime spectrum|see{Spectrum, prime}}\index{Maximal spectrum|see{Spectrum, maximal}} is a $T_{1}$-space (i.e., every subset consisting of a s'ngle point is closed).
 
   \item $\operatorname{Spec}(A)$ is Hausdorff.
 \end{enumerate}
-If these conditions are satisfied, show that $\operatorname{Spec}(.4)$ is compact and totally disconnected (i.e. the only connected subsets of Spec $(A)$ are those consisting of a single point).
+If these conditions are satisfied, show that $\operatorname{Spec}(A)$\index{Spectrum!prime}\index{Spectrum!maximal} is compact and totally disconnected (i.e. the only connected subsets of Spec $(A)$ are those consisting of a single point).
 
-  \item Let $A$ be an integral domain and $M$ an $A$-module. An element $x \in M$ is a torsion element of $M$ if Ann $(x) \neq 0$, that is if $x$ is killed by some non-zero element of $A$. Show that the torsion elements of $M$ form a submodule of $M$. This submodule is called the torsion submodule of $M$ and is denoted by $T(M)$. If $T(M)=0$, the module $M$ is said to be torsion-free. Show that
+  \item Let $A$ be an integral domain and $M$ an $A$-module. An element $x \in M$ is a \index{Torsion!element}torsion element of $M$ if Ann $(x) \neq 0$, that is if $x$ is killed by some non-zero element of $A$. Show that the torsion elements of $M$ form a submodule of $M$. This submodule is called the \index{Torsion!submodule}torsion submodule of $M$ and is denoted by $T(M)$. If $T(M)=0$, the module $M$ is said to be torsion-free. Show that
 \begin{enumerate}[i)]
   \item If $M$ is any $A$-module, then $M / T(M)$ is torsion-free.
 
@@ -520,13 +520,13 @@ iv) $\Rightarrow$ v): Let $M^{\prime}$ be the kernel of $M \rightarrow M_{B}$. S
 
 v) $\Rightarrow$ i): Take $M=A / a$.]
 
-$B$ is said to be faithfully flat over $A$.
+$B$ is said to be \textit{faithfully flat} over $A$.\index{Flat!faithfully}
 
   \item Let $A \stackrel{f}{\rightarrow} B \stackrel{g}{\rightarrow} C$ be ring homomorphisms. If $g \circ f$ is flat and $g$ is faithfully fiat, then $f$ is fiat.
 
   \item Let $f: A \rightarrow B$ be a flat homomorphism of rings, let $q$ be a prime ideal of $B$ and let $\mathfrak{p}=q^{\mathfrak{c}}$. Then $f^{*}: \operatorname{Spec}\left(B_{q}\right) \rightarrow \operatorname{Spec}\left(A_{\mathfrak{p}}\right)$ is surjective. [For $B_{\mathfrak{p}}$ is fiat over $A_{\mathfrak{p}}$ by (\eqref{prop:3.10}), and $B_{q}$ is a local ring of $B_{\mathfrak{p}}$, hence is flat over $B_{\mathfrak{p}}$. Hence $B_{q}$ is flat over $A_{\mathfrak{p}}$ and satisfies condition (3) of Exercise 16.]
 
-  \item Let $A$ be a ring, $M$ an $A$-module. The support of $M$ is defined to be the set Supp $(M)$ of prime ideals $\mathfrak{p}$ of $A$ such that $M_{\mathfrak{p}} \neq 0$. Prove the following results:
+  \item Let $A$ be a ring, $M$ an $A$-module. The \emph{support}\index{Support} of $M$ is defined to be the set Supp $(M)$ of prime ideals $\mathfrak{p}$ of $A$ such that $M_{\mathfrak{p}} \neq 0$. Prove the following results:
 \begin{enumerate}[i)]
   \item $M \neq 0 \leftrightarrow \operatorname{Supp}(M) \neq \varnothing$.
 
@@ -603,7 +603,7 @@ The assignment of the ring $A(U)$ to each basic open set $U$ of $X$, and the res
 
 [Let $\mathfrak{p} \in X$, and let $k=k(\mathfrak{p})$ be the residue field at $\mathfrak{p}$. By Exercise 21, the fiber $h^{*-1}(\mathfrak{p})$ is the spectrum of $\left(B \otimes_{A} C\right) \otimes_{A} k \cong\left(B \otimes_{A} k\right) \otimes_{k}\left(C \otimes_{A} k\right)$. Hence $\mathfrak{p} \in h^{*}(T) \Leftrightarrow\left(B \otimes_{A} k\right) \otimes_{k}\left(C \otimes_{A} k\right) \neq 0 \Leftrightarrow B \otimes_{A} k \neq 0$ and $C \otimes_{A} k \neq 0 \Leftrightarrow$ $\left.\mathfrak{p} \in f^{*}(Y) \cap g^{*}(Z).\right]$
 
-  \item Let $\left(B_{\alpha}, g_{\alpha \beta}\right)$ be a direct system of rings and $B$ the direct limit. For each $\alpha$, let $f_{\alpha}: A \rightarrow B_{\alpha}$ be a ring homomorphism such that $g_{\alpha \beta} \circ f_{\alpha}=f_{\beta}$ whenever $\alpha \leqslant \beta$ (i.e. the $B_{\alpha}$ form a direct system of $A$-algebras). The $f_{\alpha}$ induce $f: A \rightarrow B$. Show that
+  \item Let $\left(B_{\alpha}, g_{\alpha \beta}\right)$ be a \index{Limit!direct}direct system of rings and $B$ the direct limit. For each $\alpha$, let $f_{\alpha}: A \rightarrow B_{\alpha}$ be a ring homomorphism such that $g_{\alpha \beta} \circ f_{\alpha}=f_{\beta}$ whenever $\alpha \leqslant \beta$ (i.e. the $B_{\alpha}$ form a direct system of $A$-algebras). The $f_{\alpha}$ induce $f: A \rightarrow B$. Show that
 
 \[
 f^{*}(\operatorname{Spec}(B))=\bigcap_{\alpha} f_{\alpha}^{*}\left(\operatorname{Spec}\left(B_{\alpha}\right)\right)
@@ -628,7 +628,7 @@ f^{*}(\operatorname{Spec}(B))=\bigcap_{\alpha} f_{\alpha}^{*}\left(\operatorname
 
     \item Let $f_{\alpha}: A \rightarrow B_{\alpha}$ be any finite family of $A$-algebras and let $B=\prod_{\alpha} B_{\alpha}$. Define $f: A \rightarrow B$ by $f(x)=\left(f_{\alpha}(x)\right)$. Then $f^{*}(\operatorname{Spec}(B))=\bigcup_{\alpha} f_{\alpha}^{*}\left(\operatorname{Spec}\left(B_{\alpha}\right)\right)$.
 
-    \item Hence the subsets of $X=\operatorname{Spec}(A)$ of the form $f^{*}(\operatorname{Spec}(B))$, where $f: A \rightarrow B$ is a ring homomorphism, satisfy the axioms for closed sets in a topological space. The associated topology is the constructible topology on $X$. It is finer than the Zariski topology (i.e., there are more open sets, or equivalently more closed sets).
+    \item Hence the subsets of $X=\operatorname{Spec}(A)$\index{Spectrum!prime} of the form $f^{*}(\operatorname{Spec}(B))$, where $f: A \rightarrow B$ is a ring homomorphism, satisfy the axioms for closed sets in a topological space. The associated topology is the \emph{constructible topology}\index{Constructible topology} on $X$. It is finer than the \emph{Zariski topology}\index{Zariski!topology} (i.e., there are more open sets, or equivalently more closed sets).
 
     \item Let $X_{C}$ denote the set $X$ endowed with the constructible topology. Show that $X_{C}$ is quasi-compact.
   \end{enumerate}
@@ -646,5 +646,5 @@ f^{*}(\operatorname{Spec}(B))=\bigcap_{\alpha} f_{\alpha}^{*}\left(\operatorname
 
   \item Let $f: A \rightarrow B$ be a ring homomorphism. Show that $f^{*}: \operatorname{Spec}(B) \rightarrow \operatorname{Spec}(A)$ is a continuous closed mapping (i.e., maps closed sets to closed sets) for the constructible topology.
 
-  \item Show that the Zariski topology and the constructible topology on $\operatorname{Spec}(A)$ are the same if and only if $A / \mathfrak{R}$ is absolutely flat (where $\mathfrak{N}$ is the nilradical of $A$ ). [Use Exercise 11.]
+  \item Show that the \emph{Zariski topology}\index{Zariski!topology} and the \emph{constructible topology}\index{Constructible topology} on $\operatorname{Spec}(A)$ are the same if and only if $A / \mathfrak{R}$ is absolutely flat (where $\mathfrak{N}$ is the nilradical of $A$ ). [Use Exercise 11.]
 \end{enumerate}

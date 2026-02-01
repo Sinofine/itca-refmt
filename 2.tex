@@ -8,6 +8,7 @@ modules. We also give a brief treatment of tensor products, including a
 discussion of how they behave for exact sequences.
 
 \section{Modules and module homomorphisms}
+\index{Module}
 Let $A$ be a ring (commutative, as always). An $A$-module is an abelian group
 $M$ (written additively) on which $A$ acts linearly: more precisely, it is a
 pair $(M, \mu)$, where $M$ is an abelian group and $\mu$ is a mapping of
@@ -41,6 +42,8 @@ as the following examples show:
   \end{enumerate}
 \end{example}
 
+\index{Module!homomorphism}
+\index{Homomorphism}
 Let $M, N$ be $A$-modules. A mapping $f: M \to N$ is an $A$\textit{-module
   homomorphism} (or is $A$\textit{-linear}) if
 \begin{gather*}
@@ -77,24 +80,25 @@ $A$-module homomorphism $f: A \to M$ is uniquely determined by $f(1)$, which can
 be any element of $M$.
 
 \section{Submodules and quotient modules}
+\index{Module!sub-}
 A \textit{submodule} $M'$ of $M$ is a subgroup of $M$ which is closed under
 multiplication by elements of $A$. The abelian group $M / M'$ then inherits an
 $A$-module structure from $M$, defined by $a(x+M')=a x+M'$. The $A$-module
-$M / M'$ is the \textit{quotient} of $M$ by $M'$. The natural map of $M$ onto
+$M / M'$ is the \textit{quotient}\index{Module!quotient} of $M$ by $M'$. The natural map of $M$ onto
 $M / M'$ is an $A$-module homomorphism. There is a one-to-one order-preserving
 correspondence between submodules of $M$ which contain $M'$, and submodules of
 $M/M'$ (just as for ideals; the statement for ideals is a special case).
 
-If $f\colon M \to N$ is an $A$-module homomorphism, the \textit{kernel} of $f$ is the
+If $f\colon M \to N$ is an $A$-module homomorphism, the \textit{kernel}\index{Kernel} of $f$ is the
 set
 \[
   \Ker(f)=\{x \in M: f(x)=0\}
 \]
-and is a submodule of $M$. The \textit{image} of $f$ is the set
+and is a submodule of $M$. The \textit{image}\index{Image} of $f$ is the set
 \[
   \Img(f)=f(M)
 \]
-and is a submodule of $N$. The \textit{cokernel} of $f$ is
+and is a submodule of $N$. The \textit{cokernel}\index{Cokernel} of $f$ is
 \[
   \Coker(f)=N / \Img(f)
 \]
@@ -112,6 +116,7 @@ isomorphism of $A$-modules
 \]
 
 \section{Operations on submodules}
+\index{Module!sum}
 Most of the operations on ideals considered in Chapter 1 have their counterparts
 for modules. Let $M$ be an $A$-module and let $(M_{i})_{t \in I}$ be
 a family of submodules of $M$. Their \textit{sum} $\sum M_{i}$ is the set of all
@@ -144,7 +149,7 @@ submodules of $M$ form a complete lattice with respect to inclusion.
   \end{enumerate}
 \end{proof}
 
-We cannot in general define the \textit{product} of two submodules, but we can
+We cannot in general define the \textit{product}\index{Module!product} of two submodules, but we can
 define the product $\mathfrak{a} M$, where $\mathfrak{a}$ is an ideal and $M$ an
 $A$-module; it is the set of all finite sums $\sum a_{i} x_{i}$ with
 $a_{i} \in \mathfrak{a}, x_{i} \in M$, and is a submodule of $M$.
@@ -159,7 +164,7 @@ represented by $x \in A$, define $\bar{x} m$ to be $x m(m \in M)$: this is
 independent of the choice of the representative $x$ of $\bar{x}$, since
 $\mathfrak{a} M=0$.
 
-An $A$-module is \textit{faithful} if $\Ann(M)=0$. If $\Ann(M)=\mathfrak{a}$,
+An $A$-module is \textit{faithful}\index{Module!faithful} if $\Ann(M)=0$. If $\Ann(M)=\mathfrak{a}$,
 then $M$ is faithful as an $A / \mathfrak{a}$-module.
 \begin{exercise}\label{exc:2.2}
   \begin{enumerate}[i)]
@@ -170,12 +175,14 @@ then $M$ is faithful as an $A / \mathfrak{a}$-module.
 
 If $x$ is an element of $M$, the set of all multiples $a x(a \in A)$ is a
 submodule of $M$, denoted by $A x$ or $(x)$. If $M=\sum_{i \in I} A x_{i}$, the
-$x_{i}$ are said to be a \textit{set of generators} of $M$; this means that
+$x_{i}$ are said to be a \textit{set of generators}\index{Generators} of $M$; this means that
 every element of $M$ can be expressed (not necessarily uniquely) as a finite
 linear combination of the $x_{i}$ with coefficients in $A$. An $A$-module $M$ is
-said to be \textit{finitely generated} if it has a finite set of generators.
+said to be \textit{finitely generated}\index{Module!finitely-generated} if it has a finite set of generators.
 
 \section{Direct sum and product}
+\index{Module!direct sum}
+\index{Module!direct product}
 If $M, N$ are $A$-modules, their \textit{direct sum} $M \oplus N$ is the set of
 all pairs $(x, y)$ with $x \in M, y \in N$. This is an $A$-module if we define
 addition and scalar multiplication in the obvious way:
@@ -216,6 +223,7 @@ idempotent in $A$, and
 $\mathfrak{a}_{i}=(e_{i})$.
 
 \section{Finitely generated modules}
+\index{Module!free}
 A \textit{free} $A$-module is one which is isomorphic to an $A$-module of the form
 $\bigoplus_{i \in I} M_{i}$, where each $M_{i} \cong A$ (as an $A$-module). The
 notation $A^{(I)}$ is sometimes used. A finitely generated free $A$-module is
@@ -316,6 +324,7 @@ composite map $N \to M \to M / \mathfrak{m} M$ maps $N$ onto
 $M / \mathfrak{m} M$, hence $N+\mathfrak{m} M=M$, hence $N=M$ by (\eqref{cor:2.7}).
 \end{proof}
 \section{Exact sequences}
+\index{Exact sequence}
 A sequence of $A$-modules and $A$-homomorphisms
 
 \[
@@ -416,7 +425,7 @@ algebra.
 \end{remark}
 Let $C$ be a class of $A$-modules and let $\lambda$ be a function on $C$ with
 values in $\mathbf{Z}$ (or, more generally, with values in an abelian group $G$
-). The function $\lambda$ is additive if, for each short exact sequence (3) in
+). The function $\lambda$ is \index{Additive function}additive if, for each short exact sequence (3) in
 which all the terms belong to $C$, we have
 $\lambda(M')-\lambda(M)+\lambda(M'')=0$.
 \begin{example}
@@ -446,13 +455,14 @@ Now take the alternating sum of the $\lambda(M_{i})$, and everything
 cancels out.
 \end{proof}
 \section{Tensor product of modules}
+\index{Tensor product}
 Let $M, N, P$ be three $A$-modules. A mapping $f\colon M \times N \to P$ is said to
 be {\itshape $A$-bilinear} if for each $x \in M$ the mapping $y \mapsto f(x, y)$ of $N$
 into $P$ is $A$-linear, and for each $y \in N$ the mapping $x \mapsto f(x, y)$
 of $M$ into $P$ is $A$-linear.
 
 We shall construct an $A$-module $T$, called the {\itshape tensor
-  product} of $M$ and $N$, with the property that the $A$-bilinear
+  product}\index{Tensor product} of $M$ and $N$, with the property that the $A$-bilinear
 mappings $M \times N \to P$ are in a natural one-to-one correspondence
 with the $A$-linear mappings $T \to P$, for all $A$ modules $P$. More
 precisely:
@@ -671,6 +681,7 @@ $M \otimes N$, it follows that
   (f' \circ f) \otimes(g' \circ g)=(f' \otimes g') \circ(f \otimes g) .
 \]
 \section{Restriction and extension of scalars}
+\index{Scalars!restriction of}
 Let $f\colon A \to B$ be a homomorphism of rings and let $N$ be a $B$-module. Then
 $N$ has an $A$-module structure defined as follows: if $a \in A$ and $x \in N$,
 then $a x$ is defined to be $f(a) x$. This $A$-module is said to be obtained
@@ -693,7 +704,7 @@ as an $A$-module, we can form the $A$-module $M_{B}=B \otimes_{A} M$. In fact
 $M_{B}$ carries a $B$-module structure such that
 $b(b' \otimes x)=b b' \otimes x$ for all $b, b' \in B$ and all
 $x \in M$. The $B$-module $M_{B}$ is said to be obtained from $M$ by
-{\itshape extension of scalars}.
+{\itshape extension of scalars}\index{Scalars!extension of}.
 \begin{proposition}
   \label{prop:2.17}
   If $M$ is finitely generated as an $A$-module, then $M_{B}$ is
@@ -769,7 +780,7 @@ $\mathbf{Z} \otimes N \neq 0$.
 The functor $T_{N}\colon M \mapsto M \otimes_{A} N$ on the category of $A$-modules
 and homomorphisms is therefore not in general exact. If $T_{N}$ is exact, that
 is to say if tensoring with $N$ transforms all exact sequences into exact
-sequences, then $N$ is said to be a {\itshape flat} $A$-module.
+sequences, then $N$ is said to be a {\itshape flat}\index{Module!flat}\index{Flat} $A$-module.
 \begin{proposition}\label{prop:2.19}
   The following are equivalent, for an $A$-module $N$ :
 \begin{enumerate}[i)]

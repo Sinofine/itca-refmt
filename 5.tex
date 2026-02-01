@@ -3,7 +3,7 @@ In classical algebraic geometry curves were frequently studied by projecting the
 We also give a brief treatment of valuations.
 
 \section{Integral Dependence}
-Let $B$ be a ring, $A$ a subring of $B$ (so that $1 \in A$). An element $x$ of $B$ is said to be \textit{integral over} $A$ if $x$ is a root of a monic polynomial with coefficients in $A$, that is if $x$ satisfies an equation of the form
+Let $B$ be a ring, $A$ a subring of $B$ (so that $1 \in A$). An element $x$ of $B$ is said to be \textit{integral over}\index{Integral!element} $A$ if $x$ is a root of a monic polynomial with coefficients in $A$, that is if $x$ satisfies an equation of the form
 
 \[
 x^{n}+a_{1} x^{n-1}+\cdots+a_{n}=0
@@ -65,14 +65,14 @@ The set $C$ of elements of $B$ which are integral over $A$ is a subring of $B$ c
 If $x, y \in C$ then $A[x, y]$ is a finitely generated $A$-module by \eqref{cor:5.2}. Hence $x \pm y$ and $x y$ are integral over $A$, by iii) of \eqref{prop:5.1}.
 \end{proof}
 
-The ring $C$ in \eqref{cor:5.3} is called the \textit{integral closure} of $A$ in $B$. If $C=A$, then $A$ is said to be \textit{integrally closed} in $B$. If $C=B$, the ring $B$ is said to be \textit{integral} over $A$.
+The ring $C$ in \eqref{cor:5.3} is called the \textit{integral closure}\index{Integral closure} of $A$ in $B$. If $C=A$, then $A$ is said to be \textit{integrally closed} in $B$. If $C=B$, the ring $B$ is said to be \textit{integral} over $A$.
 
 \begin{remark}
-Let $f: A \rightarrow B$ be a ring homomorphism, so that $B$ is an $A$-algebra. Then $f$ is said to be \textit{integral}, and $B$ is said to be an \textit{integral} $A$-\textit{algebra}, if $B$ is integral over its subring $f(A)$. In this terminology, the above results show that
-
+Let $f: A \rightarrow B$ be a ring homomorphism, so that $B$ is an $A$-algebra\index{Algebra!finitely generated}\index{Algebra!of finite type}. Then $f$ is said to be \textit{integral}, and $B$ is said to be an \textit{integral} $A$-\textit{algebra}\index{Integral!A-algebra}, if $B$ is integral over its subring $f(A)$. In this terminology, the above results show that
 \[
-\text { finite type }+ \text { integral }=\text { finite. }
+\text { finite type }\index{type!finite}+ \text { integral }=\text { finite. }
 \]
+
 \end{remark}
 
 \begin{corollary}\label{cor:5.4}
@@ -205,7 +205,7 @@ By \eqref{prop:5.6}, $S^{-1} C$ is integral over $S^{-1} A$. Conversely, if $b /
 where $a_{1} \in A, s_{i} \in S(1 \leqslant i \leqslant n)$. Let $t=s_{1} \cdots s_{n}$ and multiply this equation by $(s t)^{n}$ throughout. Then it becomes an equation of integral dependence for $b t$ over $A$. Hence $b t \in C$ and therefore $b / s=b t / s t \in S^{-1} C$.
 \end{proof}
 
-An integral domain is said to be \textit{integrally closed} (without qualification) if it is integrally closed in its field of fractions. For example, $\mathbf{Z}$ is integrally closed (see (5.0)). The same argument shows that any unique factorization domain is integrally closed. In particular, a polynomial ring $k\left[x_{1}, \ldots, x_{n}\right]$ over a field is integrally closed.
+An integral domain is said to be \textit{integrally closed}\index{Integrally closed domain} (without qualification) if it is integrally closed in its field of fractions. For example, $\mathbf{Z}$ is integrally closed (see (5.0)). The same argument shows that any unique factorization domain is integrally closed. In particular, a polynomial ring $k\left[x_{1}, \ldots, x_{n}\right]$ over a field is integrally closed.
 
 Integral closure is a local property:
 
@@ -296,7 +296,7 @@ Let $T$ denote trace (from $L$ to $K$). Since $L / K$ is separable, the bilinear
 
 \section{Valuation Rings}
 
-Let $B$ be an integral domain, $K$ its field of fractions. $B$ is a \textit{valuation ring} of $K$ if, for each $x \neq 0$, either $x \in B$ or $x^{-1} \in B$ (or both).
+Let $B$ be an integral domain, $K$ its field of fractions. $B$ is a \textit{valuation ring}\index{Valuation ring} of $K$ if, for each $x \neq 0$, either $x \in B$ or $x^{-1} \in B$ (or both).
 
 \begin{proposition}\label{prop:5.18}
 \begin{enumerate}[i)]

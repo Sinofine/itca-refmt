@@ -7,6 +7,7 @@ on ideals. The Grothendieck language of schemes is dealt with in the exercises
 at the end.
 
 \section{Rings and ring homomorphisms}
+\index{Ring}
 A ring $A$ is a set with two binary operations (addition and multiplication)
 such that
 
@@ -40,6 +41,7 @@ identity element, that is, a ring satisfying axioms (1) to (4) above.
   denoted by $0$ (by abuse of notation).
 \end{remark}
 
+\index{Homomorphism}
 A ring homomorphism is a mapping $f$ of a ring $A$ into a ring $B$ such that
 \begin{enumerate}[i)]
   \item $f(x+y)=f(x)+f(y)$ (so that $f$ is a homomorphism of abelian groups, and
@@ -59,6 +61,7 @@ If $f: A\to B, g: B \to C$ are ring homomorphisms then so is their composition
 $g \circ f: A \to C$.
 
 \section{Ideals. Quotient rings}
+\index{Ideal}
 An ideal $\mathfrak{a}$ of a ring $A$ is a subset of $A$ which is an additive
 subgroup and is such that $A \mathfrak{a} \subseteq \mathfrak{a}$ (i.e.,
 $x \in A$ and $y \in \mathfrak{a}$ imply $x y \in \mathfrak{a}$). The quotient
@@ -75,8 +78,8 @@ We shall frequently use the following fact:
   of $A / \mathfrak{a}$, given by $\mathfrak{b}=\phi^{-1}(\bar{b})$.
 \end{proposition}
 
-If $f: A \to B$ is any ring homomorphism, the kernel of
-$f\left(=f^{-1}(0)\right)$ is an ideal a of $A$, and the image of $f$ ($=f(A)$)
+If $f: A \to B$ is any ring homomorphism, the \index{Kernel}kernel of
+$f\left(=f^{-1}(0)\right)$ is an ideal a of $A$, and the \index{Image}image of $f$ ($=f(A)$)
 is a subring $C$ of $B$; and $f$ induces a ring isomorphism
 $A / \mathfrak{a} \cong C$.
 
@@ -84,23 +87,24 @@ We shall sometimes use the notation $x \equiv y\pmod{a}$; this means that
 $x-y \in \mathfrak{a}$.
 
 \section{Zero-divisors. Nilpotent elements. Units}
+\index{Zero-divisor}
 A zero-divisor in a ring $A$ is an element $x$ which ``divides 0'', i.e., for
 which there exists $y \neq 0$ in $A$ such that $x y=0$. A ring with no
-zero-divisors $\neq 0$ (and in which $1 \neq 0$) is called an integral domain.
+zero-divisors $\neq 0$ (and in which $1 \neq 0$) is called an \index{Domain!integral}integral domain.
 For example, $\mathbf{Z}$ and $k\left[x_{1}, \ldots, x_{n}\right]$ ( $k$ a
 field, $x_{i}$ indeterminates) are integral domains.
 
-An element $x \in A$ is nilpotent if $x^{n}=0$ for some $n>0$. A nilpotent
+An element $x \in A$ is \index{Nilpotent}nilpotent if $x^{n}=0$ for some $n>0$. A nilpotent
 element is a zero-divisor (unless $A=0$), but not conversely (in general).
 
-A unit in $A$ is an element $x$ which ``divides 1'', i.e., an element $x$ such
+A \index{Unit}unit in $A$ is an element $x$ which ``divides 1'', i.e., an element $x$ such
 that $x y=1$ for some $y \in A$. The element $y$ is then uniquely determined by
 $x$, and is written $x^{-1}$. The units in $A$ form a (multiplicative) abelian
-group. The multiples $a x$ of an element $x \in A$ form a principal ideal,
+group. The multiples $a x$ of an element $x \in A$ form a \index{Ideal!principal}principal ideal,
 denoted by $(x)$ or $A x$. $x$ is a unit $\iff$ $(x)=A=(1)$. The zero ideal
 $(0)$ is usually denoted by $0$.
 
-A field is a ring $A$ in which $1 \neq 0$ and every non-zero element is a unit.
+A \index{Field}field is a ring $A$ in which $1 \neq 0$ and every non-zero element is a unit.
 Every field is an integral domain (but not conversely: $\mathbf{Z}$ is not a
 field).
 
@@ -129,10 +133,10 @@ field).
   \end{enumerate}
 \end{proof}
 \section{Prime ideals and maximal ideals}
-An ideal $\mathfrak{p}$ in $A$ is prime if $\mathfrak{p} \neq(1)$ and if
+An ideal $\mathfrak{p}$ in $A$ is \index{Ideal!prime}prime if $\mathfrak{p} \neq(1)$ and if
 $x y \in \mathfrak{p} \implies x \in \mathfrak{p}$ or $y \in \mathfrak{p}$.
 
-An ideal $\mathfrak{m}$ in $A$ is maximal if $\mathfrak{m} \neq(1)$ and if there
+An ideal $\mathfrak{m}$ in $A$ is \index{Ideal!maximal}maximal if $\mathfrak{m} \neq(1)$ and if there
 is no ideal $a$ such that $\mathfrak{m} \subset \mathfrak{a} \subset(1)$ (strict
 inclusions). Equivalently:
 
@@ -160,7 +164,7 @@ them.
     that ``ring'' means commutative ring with $1$.)}
 \end{theorem}
 \begin{proof}
-  This is a standard application of Zorn's lemma. \footnote{Let $S$ be a
+  This is a standard application of \index{Zorn's lemma}Zorn's lemma. \footnote{Let $S$ be a
     non-empty partially ordered set (i.e., we are given a relation $x \leq y$ on
     $S$ which is reflexive and transitive and such that $x \leq y$ and
     $y \leq x$ together imply $x=y$ ). A subset $T$ of $S$ is a chain if either
@@ -201,8 +205,8 @@ them.
     \item If $A$ is Noetherian (Chapter 7) we can avoid the use of Zorn's lemma:
           the set of all ideals $\neq(1)$ has a maximal element.
     \item There exist rings with exactly one maximal ideal, for example fields.
-          A ring $A$ with exactly one maximal ideal $m$ is called a local ring.
-          The field $k=A / \mathfrak{m}$ is called the residue field of $A$.
+          \index{Local ring}A ring $A$ with exactly one maximal ideal $m$ is called a \index{Ring!local}local ring.
+          The field $k=A / \mathfrak{m}$ is called the \index{Field!residue}residue field of $A$.
   \end{enumerate}
 \end{remark}
 \begin{proposition}\label{prop:1.6}
@@ -226,7 +230,7 @@ them.
           $i$).
   \end{enumerate}
 \end{proof}
-A ring with only a finite number of maximal ideals is called semi-local.
+A ring with only a finite number of maximal ideals is called \index{Ring!semi-local}semi-local.
 \begin{example}
   \begin{enumerate}[1.]
     \item $A=k\left[x_{1}, \ldots, x_{n}\right], k$ a field. Let $f \in A$ be an
@@ -243,7 +247,7 @@ A ring with only a finite number of maximal ideals is called semi-local.
           homomorphism $A \to k$ which maps $f \in A$ to $f(0)$ ). But if
           $n>1, \mathfrak{m}$ is not a principal ideal: in fact it requires at
           least $n$ generators.
-    \item A \textit{principal ideal domain} is an integral domain in which every
+    \item A \textit{\index{Domain!principal ideal}principal ideal domain} is an integral domain in which every
           ideal is principal. In such a ring every non-zero prime ideal is
           maximal. For if $(x) \neq 0$ is a prime ideal and $(y) \supset(x)$, we
           have $x \in(y)$, say $x=y z$, so that $y z \in(x)$ and $y \notin(x)$,
@@ -271,7 +275,7 @@ A ring with only a finite number of maximal ideals is called semi-local.
   some $k>0 \implies x \in \mathfrak{N} \implies \bar{x}=0$.
 \end{proof}
 
-The ideal $\mathfrak{N}$ is called the \textit{nilradical} of $A$. The following
+The ideal $\mathfrak{N}$ is called the \textit{\index{Radical!nil}nilradical} of $A$. The following
 proposition gives an alternative definition of $\mathfrak{N}$:
 
 \begin{proposition}\label{prop:1.8}
@@ -304,7 +308,7 @@ proposition gives an alternative definition of $\mathfrak{N}$:
   that $f \notin \mathfrak{p}$, so that $f \not\in\mathfrak{N}'$.
 \end{proof}
 
-The \textit{Jacobson radical} $\mathfrak{R}$ of $A$ is defined to be the intersection of
+The \textit{\index{Radical!Jacobson}Jacobson radical} $\mathfrak{R}$ of $A$ is defined to be the intersection of
 all the maximal ideals of $A$. It can be characterized as follows:
 \begin{proposition}\label{prop:1.9}
   $x \in \mathfrak{R} \iff 1-x y$ is a unit in $A$ for all $y \in A$.
@@ -320,7 +324,7 @@ all the maximal ideals of $A$. It can be characterized as follows:
   $1-x y \in \mathfrak{m}$ and is therefore not a unit.
 \end{proof}
 \section{Operations on ideals}
-If $\mathfrak{a}, \mathfrak{b}$ are ideals in a ring $A$, their sum
+If $\mathfrak{a}, \mathfrak{b}$ are ideals in a ring $A$, their \index{Ideal!sum}sum
 $\mathfrak{a}+\mathfrak{b}$ is the set of all $x+y$ where $x \in \mathfrak{a}$
 and $y \in \mathfrak{b}$. It is the smallest ideal containing $\mathfrak{a}$ and
 $\mathfrak{b}$. More generally, we may define the sum
@@ -330,12 +334,12 @@ where $x_{i} \in \mathfrak{a}_{i}$ for all $i \in I$ and almost all of the
 $x_{i}$ (i.e., all but a finite set) are zero. It is the smallest ideal of $A$
 which contains all the ideals $\mathfrak{a}_{i}$.
 
-The \textit{intersection} of any family
+The \textit{\index{Ideal!intersection}intersection} of any family
 $\left(\mathfrak{a}_{i}\right)_{i \in I}$ of ideals is an ideal. Thus the ideals
 of $A$ form a complete lattice with respect to inclusion.
 
-The \textit{product} of two ideals $\mathfrak{a}, \mathfrak{b}$ in $A$ is the
-ideal $\mathfrak{a} \mathfrak{b}$ \textit{generated by} all products $x y$,
+The \textit{\index{Ideal!product}product} of two ideals $\mathfrak{a}, \mathfrak{b}$ in $A$ is the
+ideal $\mathfrak{a} \mathfrak{b}$ \textit{\index{Ideal!generated by}generated by} all products $x y$,
 where $x \in \mathfrak{a}$ and $y \in \mathfrak{b}$. It is the set of all finite
 sums $\sum x_{i} y_{i}$ where each $x_{i} \in \mathfrak{a}$ and each
 $y_{i} \in \mathfrak{b}$. Similarly we define the product of any \textit{finite}
@@ -369,7 +373,7 @@ commutative and associative. Also there is the \textit{distributive law}
 
 In the ring $Z$, $\cap$ and $+$ are distributive over each other. This is not
 the case in general, and the best we have in this direction is the
-\textit{modular law}
+\index{Modular law}\textit{modular law}
 \[
   \mathfrak{a} \cap(\mathfrak{b}+\mathfrak{c})=\mathfrak{a} \cap \mathfrak{b}+\mathfrak{a} \cap \mathfrak{c} \text{
     if
@@ -389,7 +393,7 @@ hence
   } \mathfrak{a}+\mathfrak{b}=(1).
 \]
 
-Two ideals $\mathfrak{a}, \mathfrak{b}$ are said to be \textit{coprime} (or
+Two ideals $\mathfrak{a}, \mathfrak{b}$ are said to be \textit{\index{Ideal!coprime}coprime} (or
 comaximal) if $\mathfrak{a}+\mathfrak{b}=(1)$. Thus for coprime ideals we have
 $\mathfrak{a} \cap \mathfrak{b}=\mathfrak{a} \mathfrak{b}$. Clearly two ideals
 $\mathfrak{a}, \mathfrak{b}$ are coprime if and only if there exist
@@ -500,7 +504,7 @@ an ideal.
   \end{enumerate}
 \end{proof}
 
-If $\symfrak{a}, \symfrak{b}$ are ideals in a ring $A$, their \textit{ideal
+If $\symfrak{a}, \symfrak{b}$ are ideals in a ring $A$, their \textit{\index{Ideal!quotient}ideal
   quotient} is
 \[
   (\mathfrak{a}: \mathfrak{b})=\{x \in A: x \mathfrak{b} \subseteq \mathfrak{a}\}
@@ -591,6 +595,8 @@ for any family of subsets $E_{\alpha}$ of $A$.
   hence $\mathfrak{a}+\mathfrak{b}=(1)$ by (\eqref{exc:1.13}).
 \end{proof}
 \section{Extension and contraction}
+\index{Extension}
+\index{Contraction}
 Let $f: A \to B$ be a ring homomorphism. If $\mathfrak{a}$ is an ideal in $A$,
 the set $f(\mathfrak{a})$ is not necessarily an ideal in $B$ (e.g., let $f$ be
 the embedding of $\mathbf{Z}$ in $\mathbf{Q}$, the field of rationals, and take
@@ -746,7 +752,7 @@ ideal of $A$, and $m$ is generated by $\mathfrak{m}^{c}$ and $x$.
   \item $A / \mathfrak{N}$ is a field.
 \end{enumerate}
 
-  \item A ring $A$ is Boolean if $x^{2}=x$ for all $x \in A$. In a Boolean ring
+  \item A ring $A$ is \index{Boolean ring}Boolean if $x^{2}=x$ for all $x \in A$. In a Boolean ring
   $A$, show that
   \begin{enumerate}[i)]
     \item $2 x=0$ for all $x \in A$;
@@ -1017,7 +1023,7 @@ Thus $X$ can be reconstructed from the ring of functions $C(X)$.
 \]
 be a set of polynomial equations in $n$ variables with coefficients in $k$. The
 set $X$ of all points $x=\left(x_{1}, \ldots, x_{n}\right) \in k^{n}$ which
-satisfy these equations is an \textit{affine algebraic variety}.
+satisfy these equations is an \index{Varieties!affine algebraic}\textit{affine algebraic variety}.
 
 Consider the set of all polynomials $g \in k\left[t_{1}, \ldots, t_{n}\right]$
 with the property that $g(x)=0$ for all $x \in X$. This set is an ideal $I(X)$
@@ -1057,7 +1063,7 @@ mapping $\phi: X \to Y$ is said to be \textit{regular} if $\phi$ is the restrict
 $X$ of a polynomial mapping from $k^{n}$ to $k^{m}$.
 
 If $\eta$ is a polynomial function on $Y$, then $\eta \circ \phi$ is a
-polynomial function on $X$. Hence $\phi$ induces a $k$-algebra homomorphism
+polynomial function on $X$. Hence $\phi$ induces a $k$-\index{Algebra!homomorphism}algebra homomorphism
 $P(Y) \to P(X)$, namely $\eta \mapsto \eta \circ \phi$. Show that in this way we
 obtain a one-to-one correspondence between the regular mappings $X \to Y$ and
 the $k$-algebra homomorphisms $P(Y) \to P(X)$.
