@@ -304,7 +304,7 @@ This gives rise to the commutative diagram
 \end{tikzcd}
 \end{center}
 
-in which the top line is exact (by (2.18)). By \ref{cor:10.3} $\delta$ is surjective. Since $\beta$ is an isomorphism this implies that $\alpha$ is surjective, proving the first part of the proposition. Assume now that $A$ is Noetherian, then $N$ is also finitely generated so that $\gamma$ is surjective and, by \ref{prop:10.12}, the bottom line is exact. A little diagram chasing now proves that $\alpha$ is injective and so an isomorphism.
+in which the top line is exact (by \eqref{prop:2.18}). By \ref{cor:10.3} $\delta$ is surjective. Since $\beta$ is an isomorphism this implies that $\alpha$ is surjective, proving the first part of the proposition. Assume now that $A$ is Noetherian, then $N$ is also finitely generated so that $\gamma$ is surjective and, by \ref{prop:10.12}, the bottom line is exact. A little diagram chasing now proves that $\alpha$ is injective and so an isomorphism.
 \end{proof}
 
 Propositions \ref{prop:10.12} and \ref{prop:10.13} together assert that the functor $M \mapsto$ $A \otimes_{A} M$ is exact on the category of finitely-generated $A$-modules (when $A$ is Noetherian). As shown in Chapter 2 this proves:
@@ -376,7 +376,7 @@ Let $A$ be a Noetherian ring, a an ideal, $M$ a finitely-generated $A$-module an
 \end{theorem}
 
 \begin{proof}
-Since $E$ is the intersection of all neighborhoods of $0 \in M$, the topology induced on it is trivial, i.e., $E$ is the only neighborhood of $0 \in E$. By \ref{thm:10.11} the induced topology on $E$ coincides with its a-topology. Since $a E$ is a neighborhood in the a-topology it follows that $\mathfrak{a} E=E$. Since $M$ is finitely-generated and $A$ is Noetherian, $E$ is also finitely-generated and so we can apply (2.5) and deduce from $\alpha E=E$ that $(1-\alpha) E=0$ for some $\alpha \in a$. The converse is obvious: if $(1-\alpha) x=0$, then
+Since $E$ is the intersection of all neighborhoods of $0 \in M$, the topology induced on it is trivial, i.e., $E$ is the only neighborhood of $0 \in E$. By \ref{thm:10.11} the induced topology on $E$ coincides with its a-topology. Since $a E$ is a neighborhood in the a-topology it follows that $\mathfrak{a} E=E$. Since $M$ is finitely-generated and $A$ is Noetherian, $E$ is also finitely-generated and so we can apply \eqref{cor:2.5} and deduce from $\alpha E=E$ that $(1-\alpha) E=0$ for some $\alpha \in a$. The converse is obvious: if $(1-\alpha) x=0$, then
 
 \[
 x=\alpha x=\alpha^{2} x=\cdots \in \bigcap_{n=1}^{\infty} a^{n} M=E .
@@ -427,7 +427,7 @@ As a particularly important special case of \ref{cor:10.19} we have:
 Let $A$ be a Noetherian local ring, $m$ its maximal ideal, $M$ a finitely-generated A-module. Then the m-topology of $M$ is Hausdorff. In particular the m-topology of $A$ is Hausdorff.
 \end{corollary}
 
-We can restate \ref{cor:10.20} slightly differently if we recall that an m-primary ideal of $A$ is just any ideal contained between $\mathfrak{m}$ and some power $\mathfrak{m}^{n}$ (use (4.2) and (7.14)). Thus \ref{cor:10.20} implies that the intersection of all m-primary ideals of $A$ is zero. If now $A$ is any Noetherian ring, $\mathfrak{p}$ a prime ideal, we can apply this version of $\ref{cor:10.20}$ to the local ring $A_{\mathfrak{p}}$. Lifting back to $A$ and using the one-to-one correspondence (4.8) between $\mathfrak{p}$-primary ideals of $A$ and m-primary ideals of $A_{\mathfrak{p}}$ (where $\mathfrak{m}=\mathfrak{p} A_{\mathfrak{p}}$ ) we deduce:
+We can restate \ref{cor:10.20} slightly differently if we recall that an m-primary ideal of $A$ is just any ideal contained between $\mathfrak{m}$ and some power $\mathfrak{m}^{n}$ (use \eqref{prop:4.2} and \eqref{prop:7.14}). Thus \ref{cor:10.20} implies that the intersection of all m-primary ideals of $A$ is zero. If now $A$ is any Noetherian ring, $\mathfrak{p}$ a prime ideal, we can apply this version of $\ref{cor:10.20}$ to the local ring $A_{\mathfrak{p}}$. Lifting back to $A$ and using the one-to-one correspondence \eqref{prop:4.8} between $\mathfrak{p}$-primary ideals of $A$ and m-primary ideals of $A_{\mathfrak{p}}$ (where $\mathfrak{m}=\mathfrak{p} A_{\mathfrak{p}}$ ) we deduce:
 
 \begin{corollary}\label{cor:10.21}
 Let $A$ be a Noetherian ring, $p$ a prime ideal of $A$. Then the intersection of all $\mathfrak{p}$-primary ideals of $A$ is the kernel of $A \rightarrow A_{\mathfrak{p}}$.
@@ -536,7 +536,7 @@ With the hypotheses of \ref{prop:10.24}, if $G(M)$ is a Noetherian $G(A)$-module
 \end{corollary}
 
 \begin{proof}
-We have to show that every submodule $M^{\prime}$ of $M$ is finitely generated (6.2). Let $M_{n}^{\prime}=M^{\prime} \cap M_{n}$; then $\left(M_{n}^{\prime}\right)$ is an a-filtration of $M^{\prime}$, and the embedding $M_{n}^{\prime} \rightarrow M_{n}$ gives rise to an injective homomorphism $M_{n}^{\prime} / M_{n+1}^{\prime} \rightarrow$ $M_{n} / M_{n+1}$, hence to an embedding of $G\left(M^{\prime}\right)$ in $G(M)$. Since $G(M)$ is Noetherian, $G\left(M^{\prime}\right)$ is finitely generated by (6.2); also $M^{\prime}$ is Hausdorff, since $\cap M_{n}^{\prime} \subseteq$ $\cap M_{n}=0$; hence by \ref{prop:10.24} $M^{\prime}$ is finitely generated.
+We have to show that every submodule $M^{\prime}$ of $M$ is finitely generated \eqref{prop:6.2}. Let $M_{n}^{\prime}=M^{\prime} \cap M_{n}$; then $\left(M_{n}^{\prime}\right)$ is an a-filtration of $M^{\prime}$, and the embedding $M_{n}^{\prime} \rightarrow M_{n}$ gives rise to an injective homomorphism $M_{n}^{\prime} / M_{n+1}^{\prime} \rightarrow$ $M_{n} / M_{n+1}$, hence to an embedding of $G\left(M^{\prime}\right)$ in $G(M)$. Since $G(M)$ is Noetherian, $G\left(M^{\prime}\right)$ is finitely generated by \eqref{prop:6.2}; also $M^{\prime}$ is Hausdorff, since $\cap M_{n}^{\prime} \subseteq$ $\cap M_{n}=0$; hence by \ref{prop:10.24} $M^{\prime}$ is finitely generated.
 \end{proof}
 
 We can now deduce the result we are after:
