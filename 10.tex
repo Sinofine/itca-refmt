@@ -175,7 +175,7 @@ Likewise for an $A$-module $M$ : take $G=M, G_{n}=a^{n} M$. This defines the a-t
 \end{enumerate}
 \end{example}
 
-\section{Filtrations}\index{Filtration}\textit{Filtration}
+\section{Filtrations}\index{Filtration}
 The a-topology of an $A$-module $M$ was defined by taking the submodules $\mathfrak{a}^{n} M$ as basic neighborhoods of 0, but there are other ways of defining the same topology. An (infinite) chain $M=M_{0} \supseteq M_{1} \supseteq \cdots \supseteq M_{n} \supseteq \cdots$, where the $M_{n}$ are submodules of $M$, is called a filtration of $M$, and denoted by $\left(M_{n}\right)$. It is an a-filtration if $\mathfrak{a} M_{n} \subseteq M_{n+1}$ for all $n$, and a stable a-filtration if $\mathfrak{a} M_{n}=M_{n+1}$ for all sufficiently large $n$. Thus $\left(\mathfrak{a}^{n} M\right)$ is a stable $a$-filtration.
 
 \begin{lemma}\label{lem:10.6}
@@ -186,14 +186,14 @@ If $\left(M_{n}\right),\left(M_{n}^{\prime}\right)$ are stable a-filtrations of 
 Enough to take $M_{n}^{\prime}=\mathfrak{a}^{n} M$. Since $\mathfrak{a} M_{n} \subseteq M_{n+1}$ for all $n$, we have $\mathfrak{a}^{n} M \subseteq M_{n}$; also $\mathfrak{a} M_{n}=M_{n+1}$ for all $n \geqslant n_{0}$ say, hence $M_{n+n_{0}}=\mathfrak{a}^{n} M_{n_{0}}$ $\subseteq \mathfrak{a}^{n} M$.
 \end{proof}
 
-\section{Graded Rings and Modules}\index{Graded ring}\textit{Graded ring}
+\section{Graded Rings and Modules}\index{Graded ring}
 A graded ring is a ring $A$ together with a family $\left(A_{n}\right)_{n \geq 0}$ of subgroups of the additive group of $A$, such that $A=\bigoplus_{n=0}^{\infty} A_{n}$ and $A_{m} A_{n} \subseteq A_{m+n}$ for all $m, n \geqslant 0$. Thus $A_{0}$ is a subring of $A$, and each $A_{n}$ is an $A_{0}$-module.
 
 \begin{example}
 $A=k\left[x_{1}, \ldots, x_{r}\right], A_{n}=$ set of all homogeneous polynomials of degree $n$.
 \end{example}
 
-If $A$ is a graded ring, a graded $A$-module is an $A$-module $M$ together with a family\index{Graded!module}\textit{graded module} $\left(M_{n}\right)_{n \geq 0}$ of subgroups of $M$ such that $M=\bigoplus_{n=0}^{\infty} M_{n}$ and $A_{m} M_{n} \subseteq M_{m+n}$ for all $m, n \geqslant 0$. Thus each $M_{n}$ is an $A_{0}$-module. An element $x$ of $M$ is homogeneous if $x \in M_{n}$ for some $n(n=$ degree of $x)$. Any element $y \in M$ can be written uniquely as a finite sum $\sum_{n} y_{n}$, where $y_{n} \in M_{n}$ for all $n \geqslant 0$, and all but a finite number of the $y_{n}$ are 0. The non-zero components $y_{n}$ are called the homogeneous components of $y$.
+If $A$ is a graded ring, a graded $A$-module is an $A$-module $M$ together with a family\index{Graded!module} $\left(M_{n}\right)_{n \geq 0}$ of subgroups of $M$ such that $M=\bigoplus_{n=0}^{\infty} M_{n}$ and $A_{m} M_{n} \subseteq M_{m+n}$ for all $m, n \geqslant 0$. Thus each $M_{n}$ is an $A_{0}$-module. An element $x$ of $M$ is homogeneous if $x \in M_{n}$ for some $n(n=$ degree of $x)$. Any element $y \in M$ can be written uniquely as a finite sum $\sum_{n} y_{n}$, where $y_{n} \in M_{n}$ for all $n \geqslant 0$, and all but a finite number of the $y_{n}$ are 0. The non-zero components $y_{n}$ are called the homogeneous components of $y$.
 
 If $M, N$ are graded $A$-modules, a homomorphism of graded $A$-modules is an $A$-module homomorphism $f: M \rightarrow N$ such that $f\left(M_{n}\right) \subseteq N_{n}$ for all $n \geqslant 0$.
 
@@ -234,9 +234,8 @@ M_{n}^{*}=M_{0} \oplus \cdots \oplus M_{n} \oplus \mathfrak{a} M_{n} \oplus \mat
 Since $Q_{n}$ is finitely generated as an $A$-module, $M_{n}^{*}$ is finitely generated as an $A^{*}$-module. The $M_{n}^{*}$ form an ascending chain, whose union is $M^{*}$. Since $A^{*}$ is Noetherian, $M^{*}$ is finitely generated as an $A^{*}$-module $\Leftrightarrow$ the chain stops, i.e., $M^{*}=M_{n_{0}}^{*}$ for some $n_{0} \Leftrightarrow M_{n_{0}+r}=a^{r} M_{n_{0}}$ for all $r \geqslant 0 \Leftrightarrow$ the filtration is stable.
 \end{proof}
 
-\begin{proposition}\label{prop:10.9}
-\index{Artin-Rees lemma}\textit{Artin-Rees lemma}
-(Artin-Rees lemma). Let $A$ be a Noetherian ring, a an ideal in $A, M$ a finitely-generated A-module, $\left(M_{n}\right)$ a stable a-filtration of $M$. If $M^{\prime}$ is a submodule of $M$, then $\left(M^{\prime} \cap M_{n}\right)$ is a stable a-filtration of $M^{\prime}$.
+\begin{proposition}[\textit{Artin-Rees lemma}]\label{prop:10.9}
+ \index{Artin-Rees lemma}Let $A$ be a Noetherian ring, a an ideal in $A, M$ a finitely-generated A-module, $\left(M_{n}\right)$ a stable a-filtration of $M$. If $M^{\prime}$ is a submodule of $M$, then $\left(M^{\prime} \cap M_{n}\right)$ is a stable a-filtration of $M^{\prime}$.
 \end{proposition}
 
 \begin{proof}
@@ -615,7 +614,7 @@ now use \eqref{cor:10.19} and Exercise 6.]
 
 \item Let $A$ be the local ring of the origin in $C^{n}$ (i.e., the ring of all rational functions $f / g \in \mathbf{C}\left(z_{1}, \ldots, z_{n}\right)$ with $\left.g(0) \neq 0\right)$, let $B$ be the ring of power series in $z_{1}, \ldots, z_{n}$ which converge in some neighborhood of the origin, and let $C$ be the ring of formal power series in $z_{1}, \ldots, z_{n}$, so that $A \subset B \subset C$. Show that $B$ is a local ring and that its completion for the maximal ideal topology is $C$. Assuming that $B$ is Noetherian, prove that $B$ is $A$-flat. [Use Chapter 3, Exercise 17, and Exercise 7 above.]
 
-\item Let $A$ be a local ring, $\mathfrak{m}$ its maximal ideal. Assume that $A$ is $\mathfrak{m}$-adically complete. For any polynomial $f(x) \in A[x]$, let $\bar{f}(x) \in(A / \mathfrak{m})[x]$ denote its reduction mod. $\mathfrak{m}$. Prove Hensel's lemma\index{Hensel's lemma}\textit{Hensel's lemma}: if $f(x)$ is monic of degree $n$ and if there exist coprime monic polynomials $\bar{g}(x), \bar{h}(x) \in(A / \mathfrak{m})[x]$ of degrees $r, n-\boldsymbol{r}$ with $\bar{f}(x)=$ $\bar{g}(x) \bar{h}(x)$, then we can lift $\bar{g}(x), \bar{h}(x)$ back to monic polynomials $g(x), h(x) \in A[x]$ such that $f(x)=g(x) h(x)$.
+\item Let $A$ be a local ring, $\mathfrak{m}$ its maximal ideal. Assume that $A$ is $\mathfrak{m}$-adically complete. For any polynomial $f(x) \in A[x]$, let $\bar{f}(x) \in(A / \mathfrak{m})[x]$ denote its reduction mod. $\mathfrak{m}$. Prove \index{Hensel's lemma}\textit{Hensel's lemma}: if $f(x)$ is monic of degree $n$ and if there exist coprime monic polynomials $\bar{g}(x), \bar{h}(x) \in(A / \mathfrak{m})[x]$ of degrees $r, n-\boldsymbol{r}$ with $\bar{f}(x)=$ $\bar{g}(x) \bar{h}(x)$, then we can lift $\bar{g}(x), \bar{h}(x)$ back to monic polynomials $g(x), h(x) \in A[x]$ such that $f(x)=g(x) h(x)$.
 
 [Assume inductively that we have constructed $g_{k}(x), h_{k}(x) \in A[x]$ such that $g_{k}(x) h_{k}(x)-f(x) \in \mathfrak{m}^{k} A[x]$. Then use the fact that since $\bar{g}(x)$ and $\bar{h}(x)$ are coprime we can find $\bar{a}_{p}(x), \bar{b}_{p}(x)$, of degrees $\leqslant n-r, r$ respectively, such that $x^{p}=\bar{a}_{p}(x) \bar{g}_{k}(x)+\bar{b}_{p}(x) \bar{h}_{k}(x)$, where $p$ is any integer such that $1 \leqslant p \leqslant n$. Finally, use the completeness of $A$ to show that the sequences $g_{k}(x), h_{k}(x)$ converge to the required $g(x), h(x)$.]
 
