@@ -202,62 +202,51 @@ Conversely, if $\operatorname{Ann}(x)$ is a prime ideal $\mathfrak{p}$, then $r(
 \end{proof}
 
 \section{Exercises}
-
 \begin{enumerate}[1.]
   \item Let $A$ be a non-Noetherian ring and let $\Sigma$ be the set of ideals in $A$ which are not finitely generated. Show that $\Sigma$ has maximal elements and that the maximal elements of $\Sigma$ are prime ideals.
-\end{enumerate}
 
 [Let $\mathfrak{a}$ be a maximal element of $\Sigma$, and suppose that there exist $x, y \in A$ such that $x \notin \mathfrak{a}$ and $y \notin \mathfrak{a}$ and $x y \in \mathfrak{a}$. Show that there exists a finitely generated ideal $\mathfrak{a}_{0} \subseteq \mathfrak{a}$ such that $\mathfrak{a}_{0}+(x)=\mathfrak{a}+(x)$, and that $\mathfrak{a}=\mathfrak{a}_{0}+x \cdot(\mathfrak{a}: x)$. Since $(\mathfrak{a}: x)$ strictly contains $\mathfrak{a}$, it is finitely generated and therefore so is $\mathfrak{a}$.]
 
 Hence a ring in which every prime ideal is finitely generated is Noetherian (I. S. Cohen).
 
-\begin{enumerate}[1.]
   \item Let $A$ be a Noetherian ring and let $f=\sum_{n=0}^{\infty} a_{n} x^{n} \in A[[x]]$. Prove that $f$ is nilpotent if and only if each $a_{n}$ is nilpotent.
 
   \item Let $\mathfrak{a}$ be an irreducible ideal in a ring $A$. Then the following are equivalent:
-\end{enumerate}
-\begin{enumerate}[i)]
-  \item $\mathfrak{a}$ is primary;
-  \item for every multiplicatively closed subset $S$ of $A$ we have $\left(S^{-1} \mathfrak{a}\right)^{\mathfrak{c}}=(\mathfrak{a}: x)$ for some $x \in S$
-  \item the sequence $\left(\mathfrak{a}: x^{n}\right)$ is stationary, for every $x \in A$.
-\end{enumerate}
+    \begin{enumerate}[i)]
+      \item $\mathfrak{a}$ is primary;
+      \item for every multiplicatively closed subset $S$ of $A$ we have $\left(S^{-1} \mathfrak{a}\right)^{\mathfrak{c}}=(\mathfrak{a}: x)$ for some $x \in S$
+      \item the sequence $\left(\mathfrak{a}: x^{n}\right)$ is stationary, for every $x \in A$.
+    \end{enumerate}
 
-\begin{enumerate}[1.]
   \item Which of the following rings are Noetherian?
-\end{enumerate}
-\begin{enumerate}[i)]
-  \item The ring of rational functions of $z$ having no pole on the circle $|z|=1$.
-  \item The ring of power series in $z$ with a positive radius of convergence.
-  \item The ring of power series in $z$ with an infinite radius of convergence.
-  \item The ring of polynomials in $z$ whose first $k$ derivatives vanish at the origin ( $k$ being a fixed integer).
-  \item The ring of polynomials in $z, w$ all of whose partial derivatives with respect to $w$ vanish for $z=0$.
-\end{enumerate}
+    \begin{enumerate}[i)]
+      \item The ring of rational functions of $z$ having no pole on the circle $|z|=1$.
+      \item The ring of power series in $z$ with a positive radius of convergence.
+      \item The ring of power series in $z$ with an infinite radius of convergence.
+      \item The ring of polynomials in $z$ whose first $k$ derivatives vanish at the origin ( $k$ being a fixed integer).
+      \item The ring of polynomials in $z, w$ all of whose partial derivatives with respect to $w$ vanish for $z=0$.
+    \end{enumerate}
 In all cases the coefficients are complex numbers.
 
-\begin{enumerate}[1.]
   \item Let $A$ be a Noetherian ring, $B$ a finitely generated $A$-algebra, $G$ a finite group of $A$-automorphisms of $B$, and $B^{G}$ the set of all elements of $B$ which are left fixed by every element of $G$. Show that $B^{G}$ is a finitely generated $A$-algebra.
 
   \item If a finitely generated ring $K$ is a field, it is a finite field.
-\end{enumerate}
 
 [If $K$ has characteristic 0, we have $\mathbf{Z} \subset \mathbf{Q} \subseteq K$. Since $K$ is finitely generated over $\mathbf{Z}$ it is finitely generated over $\mathbf{Q}$, hence by \eqref{prop:7.9} is a finitely generated $\mathbf{Q}$-module. Now apply \eqref{prop:7.8} to obtain a contradiction. Hence $K$ is of characteristic $p>0$, hence is finitely generated as a $Z /(p)$-algebra. Use \eqref{prop:7.9} to complete the proof.]
 
-\begin{enumerate}[1.]
   \item Let $X$ be an affine algebraic variety given by a family of equations $f_{\alpha}\left(t_{1}, \ldots, t_{n}\right)$ $=0(\alpha \in I)$ (Chapter 1, Exercise 27). Show that there exists a finite subset $I_{0}$ of $I$ such that $X$ is given by the equations $f_{\alpha}\left(t_{1}, \ldots, t_{n}\right)=0$ for $\alpha \in I_{0}$.
 
   \item If $A[x]$ is Noetherian, is $A$ necessarily Noetherian?
 
   \item Let $A$ be a ring such that
-\end{enumerate}
-\begin{enumerate}[(1)]
-  \item for each maximal ideal $\mathfrak{m}$ of $A$, the local ring $A_{\mathfrak{m}}$ is Noetherian;
-  \item for each $x \neq 0$ in $A$, the set of maximal ideals of $A$ which contain $x$ is finite.
-\end{enumerate}
+    \begin{enumerate}[(1)]
+      \item for each maximal ideal $\mathfrak{m}$ of $A$, the local ring $A_{\mathfrak{m}}$ is Noetherian;
+      \item for each $x \neq 0$ in $A$, the set of maximal ideals of $A$ which contain $x$ is finite.
+    \end{enumerate}
 Show that $A$ is Noetherian.
 
 [Let $\mathfrak{a} \neq 0$ be an ideal in $A$. Let $\mathfrak{m}_{1}, \ldots, \mathfrak{m}_{r}$ be the maximal ideals which contain $\mathfrak{a}$. Choose $x_{0} \neq 0$ in $\mathfrak{a}$ and let $\mathfrak{m}_{1}, \ldots, \mathfrak{m}_{r+s}$ be the maximal ideals which contain $x_{0}$. Since $\mathfrak{m}_{r+1}, \ldots, \mathfrak{m}_{r+s}$ do not contain $\mathfrak{a}$ there exist $x_{j} \in \mathfrak{a}$ such that $x_{j} \notin \mathfrak{m}_{r+j}(1 \leqslant j \leqslant s)$. Since each $A_{\mathfrak{m}_{l}}(1 \leqslant i \leqslant r)$ is Noetherian, the extension of $\mathfrak{a}$ in $A_{\mathrm{nt}_{t}}$ is finitely generated. Hence there exist $x_{3}+\ldots, \ldots, x_{t}$ in $\mathfrak{a}$ whose images in $A_{\mathfrak{m}_{t}}$ generate $A_{\mathfrak{m}_{i}} \mathfrak{a}$ for $i=1, \ldots, r$. Let $\mathfrak{a}_{0}=\left(x_{0}, \ldots, x_{t}\right)$. Show that $\mathfrak{a}_{0}$ and $\mathfrak{a}$ have the same extension in $A_{\mathfrak{m}}$ for every maximal ideal $\mathfrak{m}$, and deduce by \eqref{prop:3.9} that $\mathfrak{a}_{0}=\mathfrak{a}$.]
 
-\begin{enumerate}[1.]
   \item Let $M$ be a Noetherian $A$-module. Show that $M[x]$ (Chapter 2, Exercise 6 ) is a Noetherian $A[x]$-module.
 
   \item Let $A$ be a ring such that each local ring $A_{\mathfrak{p}}$ is Noetherian. Is $A$ necessarily Noetherian?
@@ -266,8 +255,8 @@ Show that $A$ is Noetherian.
 
   \item Let $f: A \rightarrow B$ be a ring homomorphism of finite type and let $f^{*}: \operatorname{Spec}(B) \rightarrow$ $\operatorname{Spec}(A)$ be the mapping associated with $f$. Show that the fibers of $f^{*}$ are Noetherian subspaces of $B$.
 
-\end{enumerate}
 
+\end{enumerate}
 \section{Nullstellensatz, strong form}
 
 \begin{enumerate}[1.]
