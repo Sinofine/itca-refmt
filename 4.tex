@@ -41,7 +41,7 @@ $A/\mathfrak{q}^c$ is isomorphic to a subring of $B/\mathfrak{q}$.
   the smallest prime ideal containing $\mathfrak{q}$.
 \end{proposition}
 \begin{proof}
-  By \ref{prop:1.8} it is enough to show that $\mathfrak{p}=r(\mathfrak{q})$ is prime. Let
+  By \eqref{prop:1.8} it is enough to show that $\mathfrak{p}=r(\mathfrak{q})$ is prime. Let
   $xy\in r(\mathfrak{q})$, then $(xy)^m\in \mathfrak{q}$ for some $m>0$, and
   therefore either $x^m\in \mathfrak{q}$ or $y^{mn}\in \mathfrak{q}$ for some
   $n>0$; i.e., either $x\in r(\mathfrak{q})$ or $y \in r(\mathfrak{q})$.
@@ -78,7 +78,7 @@ $\mathfrak{p}$-primary.
 \begin{proof}
   Let $r(\mathfrak{a}) = \mathfrak{m}$. The image of $\mathfrak{m}$ in
   $A/\mathfrak{a}$ is the nilradical of $A/\mathfrak{a}$, hence $A/\mathfrak{a}$
-  has only one prime ideal, by \ref{prop:1.8}. Hence every element of $A/\mathfrak{a}$ is
+  has only one prime ideal, by \eqref{prop:1.8}. Hence every element of $A/\mathfrak{a}$ is
   either a unit or nilpotent, and so every zero-divisor in $A/\mathfrak{a}$ is
   nilpotent.
 \end{proof}
@@ -128,7 +128,7 @@ shall restrict our attention to ideals which have a primary decomposition.) If
 moreover (i) the $r\left(\mathfrak{q}_{i}\right)$ are all distinct, and (ii) we
 have $\mathfrak{q}_{t} \neq \bigcap_{j \neq i} \mathfrak{q}_{j}(2 \leqslant i
 \leqslant n)$ the primary decomposition \eqref{eq:4.1} is said to be minimal (or
-irredundant, or reduced, or normal, ...). By Lemma~\ref{lem:4.3} we can achieve (i) and then
+irredundant, or reduced, or normal, ...). By Lemma~\eqref{lem:4.3} we can achieve (i) and then
 we can omit any superfluous terms to achieve (ii); thus any primary
 decomposition can be reduced to a minimal one. We shall say that $\mathfrak{a}$ is
 \textit{decomposable} if it has a primary decomposition.
@@ -145,7 +145,7 @@ decomposition can be reduced to a minimal one. We shall say that $\mathfrak{a}$ 
 \begin{proof}
   For any $x \in A$ we have $(\mathfrak{a}: x)=(\cap \mathfrak{q}_{i}:
     x)=\bigcap(\mathfrak{q}_{i}: x)$, hence $r(\mathfrak{a}: x)=\bigcap_{i=1}^{n} r(\mathfrak{q}_{i}: x)=\bigcap_{x \not\in q_{j}}
-  \mathfrak{p}_{j}$ by Lemma~\ref{lem:4.4}. Suppose $r(a: x)$ is prime; then by \eqref{prop:1.11} we have
+  \mathfrak{p}_{j}$ by Lemma~\eqref{lem:4.4}. Suppose $r(a: x)$ is prime; then by \eqref{prop:1.11} we have
   $r(\mathfrak{a}: x)=\mathfrak{p}_{j}$ for some $j$. Hence every prime ideal of
   the form $r(\mathfrak{a}: x)$ is one of the $\mathfrak{p}_{j}$. Conversely, for
   each $i$ there exists $x_{i} \notin \mathfrak{q}_{i}, x_{i} \in \bigcap_{j \neq
@@ -155,10 +155,10 @@ decomposition can be reduced to a minimal one. We shall say that $\mathfrak{a}$ 
 
 \begin{remark}
   \begin{enumerate}[1.]
-  \item The above proof, coupled with the last part of Lemma~\ref{lem:4.4},
+  \item The above proof, coupled with the last part of Lemma~\eqref{lem:4.4},
     shows that for each $i$ there exists $x_{i}$ in $A$ such that
     $(\mathfrak{a}:x_{i})$ is $\mathfrak{p}_{i}$-primary.
-  \item Considering $A / \mathfrak{a}$ as an $A$-module, Theorem~\ref{thm:4.5}
+  \item Considering $A / \mathfrak{a}$ as an $A$-module, Theorem~\eqref{thm:4.5}
     is equivalent to saying that the $\mathfrak{p}_{i}$ are precisely the prime
     ideals which occur as radicals of annihilators of elements of $A / \mathfrak{a}$.
   \end{enumerate}
@@ -168,13 +168,13 @@ decomposition can be reduced to a minimal one. We shall say that $\mathfrak{a}$ 
 Let $\mathfrak{a}=\left(x^{2}, x y\right)$ in $A=k[x, y]$. Then
 $\mathfrak{a}=\mathfrak{p}_{1} \cap \mathfrak{p}_{2}^{2}$ where
 $\mathfrak{p}_{1}=(x)$, $\mathfrak{p}_{2}=(x, y)$. The ideal
-$\mathfrak{p}_{2}^{2}$ is primary by ~\ref{prop:4.2}. So the prime ideals are
+$\mathfrak{p}_{2}^{2}$ is primary by ~\eqref{prop:4.2}. So the prime ideals are
 $\mathfrak{p}_{1}, \mathfrak{p}_{2}$. In this example $\mathfrak{p}_{1} \subset
 \mathfrak{p}_{2}$; we have $r(\mathfrak{a})=\mathfrak{p}_{1} \cap
 \mathfrak{p}_{2}=\mathfrak{p}_{1}$, but $\mathfrak{a}$ is not a primary ideal.
 \end{example}
 
-The prime ideals $\mathfrak{p}_{1}$ in ~\ref{thm:4.5} are said to belong to
+The prime ideals $\mathfrak{p}_{1}$ in ~\eqref{thm:4.5} are said to belong to
 $\mathfrak{a}$, or to be associated with $a$. The ideal $a$ is primary if and
 only if it has only one associated prime ideal. The minimal elements of the set
 $\left\{\mathfrak{p}_{1}, \ldots, \mathfrak{p}_{n}\right\}$ are called the
@@ -192,7 +192,7 @@ elements in the set of all prime ideals containing $a$.
 If $\mathfrak{p} \supseteq \mathfrak{a}=\bigcap_{\mathfrak{i}-1}^{\pi}
 \mathfrak{q}_{\mathfrak{s}}$, then $\mathfrak{p}=r(\mathfrak{p}) \supseteq
 \bigcap r\left(\mathfrak{q}_{\mathfrak{k}}\right)=\bigcap
-\mathfrak{p}_{\mathfrak{k}}$. Hence by \ref{prop:1.11} we have $\mathfrak{p} \supseteq
+\mathfrak{p}_{\mathfrak{k}}$. Hence by \eqref{prop:1.11} we have $\mathfrak{p} \supseteq
 \mathfrak{p}_{i}$ for some $i$; hence $\mathfrak{p}$ contains a minimal prime
 ideal of $\mathfrak{a}$.
 \end{proof}
@@ -204,13 +204,13 @@ $A=k\left[x_{1}, \ldots, x_{n}\right]$ where $k$ is a field, the ideal a gives
 rise to a variety $X \subseteq k^{n}$ (see Chapter 1, Exercise 25). The minimal
 primes $\mathfrak{p}_{i}$ correspond to the irreducible components of $X$, and
 the embedded primes correspond to subvarieties of these, i.e., varieties
-embedded in the irreducible components. Thus in the example before ~\ref{prop:4.6} the
+embedded in the irreducible components. Thus in the example before ~\eqref{prop:4.6} the
 variety defined by $a$ is the line $x=0$, and the embedded ideal
 $\mathfrak{p}_{2}=(x, y)$ corresponds to the origin $(0,0)$.
 \item It is not true that all the primary components are independent of the
 decomposition. For example $\left(x^{2}, x y\right)=(x) \cap(x, y)^{2}=(x)
 \cap\left(x^{2}, y\right)$ are two distinct minimal primary decompositions.
-However, there are some uniqueness properties: see ~\ref{thm:4.10}.
+However, there are some uniqueness properties: see ~\eqref{thm:4.10}.
 \end{enumerate}
 \end{remark}
 
@@ -229,10 +229,10 @@ of $A$ is the union of the prime ideals belonging to 0.
 If $a$ is decomposable, then 0 is decomposable in $A / a$ : namely
 $0=\bigcap \bar{q}_{1}$ where $\bar{q}_{1}$ is the image of $q_{1}$ in $A /
 \mathfrak{a}$, and is primary. Hence it is enough to prove the last statement of
-~\ref{prop:4.7}. By \eqref{prop:1.15} we have $D=\bigcup_{x \neq 0} r(0: x)$; from the proof of
-~\ref{thm:4.5}, we have $r(0: x)=\bigcap_{x \xi q_{1}} \mathfrak{p}_{j} \subseteq
+~\eqref{prop:4.7}. By \eqref{prop:1.15} we have $D=\bigcup_{x \neq 0} r(0: x)$; from the proof of
+~\eqref{thm:4.5}, we have $r(0: x)=\bigcap_{x \xi q_{1}} \mathfrak{p}_{j} \subseteq
 \mathfrak{p}_{j}$ for some $j$, hence $D \subseteq \bigcup_{i-1}^{n}
-\mathfrak{p}_{i}$. But also from ~\ref{thm:4.5} each $p_{i}$ is of the form $r(0: x)$ for
+\mathfrak{p}_{i}$. But also from ~\eqref{thm:4.5} each $p_{i}$ is of the form $r(0: x)$ for
 some $x \in A$, hence $\cup p_{1} \subseteq D$.
 \end{proof}
 
@@ -256,7 +256,7 @@ $\mathfrak{q}$ be a p-primary ideal.
 A$.
 \item If $S \cap \mathfrak{p}=\varnothing$, then $S^{-1} \mathfrak{q}$ is $S^{-1}
 \mathfrak{p}$-primary and its contraction in $A$ is $\mathfrak{q}$. Hence
-primary ideals correspond to primary ideals in the correspondence \ref{prop:3.11} between
+primary ideals correspond to primary ideals in the correspondence \eqref{prop:3.11} between
 ideals in $S^{-1} A$ and contracted ideals in $A$.
 \end{enumerate}
 \end{proposition}
@@ -267,7 +267,7 @@ for some $n>0$; hence $S^{-1} \mathfrak{q}$ contains $s^{n} / 1$, which is a
 unit in $S^{-1} A$.
 \item If $S \cap \mathfrak{p}=\varnothing$, then $s \in S$ and $a s \in
 \mathfrak{q}$ imply $a \in \mathfrak{q}$, hence $q^{e c}=\mathfrak{q}$ by
-\ref{prop:3.11}. Also from \ref{prop:3.11} we have $r\left(\mathfrak{q}^{e}\right)=r\left(S^{-1}
+\eqref{prop:3.11}. Also from \eqref{prop:3.11} we have $r\left(\mathfrak{q}^{e}\right)=r\left(S^{-1}
 \mathfrak{q}\right)=S^{-1} r(\mathfrak{q})=S^{-1} \mathfrak{p}$. The
 verification that $S^{-1} q$ is primary is straightforward. Finally, the
 contraction of a primary ideal is primary.
@@ -292,15 +292,15 @@ S^{-1} \mathfrak{a}=\bigcap_{i=1}^{m} S^{-1} \mathfrak{a}_{i}, \quad S(\mathfrak
 and these are minimal primary decompositions.
 \end{proposition}
 \begin{proof}
-$S^{-1} \mathfrak{a}=\bigcap_{i=1}^{n} S^{-1} q_{i}$ by \ref{prop:3.11}
-$=\bigcap_{i=1}^{m} S^{-1} q_{i}$ by ~\ref{prop:4.8}, and $S^{-1} q_{i}$ is $S^{-1}
+$S^{-1} \mathfrak{a}=\bigcap_{i=1}^{n} S^{-1} q_{i}$ by \eqref{prop:3.11}
+$=\bigcap_{i=1}^{m} S^{-1} q_{i}$ by ~\eqref{prop:4.8}, and $S^{-1} q_{i}$ is $S^{-1}
 \mathfrak{p}_{i}$-primary for $i=1, \ldots, m$. Since the $\mathfrak{p}_{i}$ are
 distinct, so are the $S^{-1} \mathfrak{p}_{i}$ $(1 \leqslant i \leqslant m)$,
 hence we have a minimal primary decomposition. Contracting both sides, we get
 \[
 S(\mathfrak{a})=\left(S^{-1} \mathfrak{a}\right)^{\mathfrak{c}}=\bigcap_{i=1}^{m}\left(S^{-1} a_{i}\right)^{\mathfrak{c}}=\bigcap_{i=1}^{m} a_{i}
 \]
-by ~\ref{prop:4.8} again.
+by ~\eqref{prop:4.8} again.
 \end{proof}
 
 A set $\Sigma$ of prime ideals belonging to $\mathfrak{a}$ is said to be
@@ -315,11 +315,11 @@ any prime ideal $\mathfrak{p}^{\prime}$ belonging to $\mathfrak{a}$, we have
 \[
 \begin{gathered}
 \mathfrak{p}^{\prime} \in \Sigma \Rightarrow \mathfrak{p}^{\prime} \cap S=\varnothing ; \\
-\mathfrak{p}^{\prime} \notin \Sigma \Rightarrow \mathfrak{p}^{\prime} \neq \bigcup_{\mathfrak{p} \in \mathbb{\Sigma}} \mathfrak{p}(\text { by }\ref{prop:1.11}) \Rightarrow \mathfrak{p}^{\prime} \cap S \neq \varnothing .
+\mathfrak{p}^{\prime} \notin \Sigma \Rightarrow \mathfrak{p}^{\prime} \neq \bigcup_{\mathfrak{p} \in \mathbb{\Sigma}} \mathfrak{p}(\text { by }\eqref{prop:1.11}) \Rightarrow \mathfrak{p}^{\prime} \cap S \neq \varnothing .
 \end{gathered}
 \]
 
-Hence, from ~\ref{prop:4.9}, we deduce
+Hence, from ~\eqref{prop:4.9}, we deduce
 
 \begin{theorem}[2nd uniqueness theorem]\label{thm:4.10}
 Let $\mathfrak{a}$ be a decomposable
@@ -338,7 +338,7 @@ The isolated primary components (i.e., the primary components
 $q_{i}$ corresponding to minimal prime ideals $\mathfrak{p}_{\mathfrak{i}}$ )
 are uniquely determined by a.
 \end{corollary}
-\begin{proof}[Proof of ~\ref{thm:4.10}]
+\begin{proof}[Proof of ~\eqref{thm:4.10}]
 We have $q_{i_{2}} \cap \cdots \cap q_{i_{m}}=S(\mathfrak{a})$
 where $S=\bar{A}-\mathfrak{p}_{i_{2}} \cup \cdots \cup \mathfrak{p}_{i_{m}}$,
 hence depends only on $a$ (since the $\mathfrak{p}_{\mathfrak{l}}$ depend only
@@ -600,7 +600,7 @@ r_{M}(N)=\left\{x \in A: x^{q} M \subseteq N \text { for some } q>0\right\} .
 Show that $r_{M}(N)=r(N: M)=r($ Ann $(M / N))$. In particular, $r_{M}(N)$ is an
 ideal.
 
-State and prove the formulas for $r_{M}$ analogous to \ref{exc:1.13}.
+State and prove the formulas for $r_{M}$ analogous to \eqref{exc:1.13}.
 
   \item An element $x \in A$ defines an endomorphism $\phi_{x}$ of $M$, namely
   $m \mapsto x m$. The element $x$ is said to be a zero-divisor (resp.
@@ -612,7 +612,7 @@ Show that if $Q$ is primary in $M$, then $(Q: M)$ is a primary ideal and hence
 $r_{M}(Q)$ is a prime ideal $\mathfrak{p}$. We say that $Q$ is
 $\mathfrak{p}$-primary (in $\left.M\right)$.
 
-Prove the analogues of ~\ref{lem:4.3} and ~\ref{lem:4.4}.
+Prove the analogues of ~\eqref{lem:4.3} and ~\eqref{lem:4.4}.
 
   \item A primary decomposition of $N$ in $M$ is a representation of $N$ as an
   intersection
@@ -624,10 +624,10 @@ ideals $\mathfrak{p}_{i}=r_{M}\left(Q_{i}\right)$ are all distinct and if none
 of the components $Q_{i}$ can be omitted from the intersection, that is if
 $Q_{t} \not\subseteq \bigcap_{t \neq 1} Q_{1}(1 \leqslant i \leqslant n)$.
 
-Prove the analogue of ~\ref{thm:4.5}, that the prime ideals $\mathfrak{p}_{1}$ depend
+Prove the analogue of ~\eqref{thm:4.5}, that the prime ideals $\mathfrak{p}_{1}$ depend
 only on $N$ (and $M$ ). They are called the prime ideals belonging to $N$ in
 $M$. Show that they are also the prime ideals belonging to 0 in $M / N$.
 
-  \item State and prove the analogues of ~\ref{prop:4.6}--~\ref{cor:4.11} inclusive. (There is no
+  \item State and prove the analogues of ~\eqref{prop:4.6}--~\eqref{cor:4.11} inclusive. (There is no
   loss of generality in taking $N=0$.)
 \end{enumerate}

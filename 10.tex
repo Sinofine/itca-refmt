@@ -44,7 +44,7 @@ Two Cauchy sequences are equivalent if $x_{v}-y_{v} \rightarrow 0$ in $G$. The s
 \[
 \operatorname{Ker} \phi=\bigcap U
 \]
-where $U$ runs through all neighborhoods of 0 in $G$, and so by \ref{lem:10.1} $\phi$ is injective if and only if $G$ is Hausdorff.
+where $U$ runs through all neighborhoods of 0 in $G$, and so by \eqref{lem:10.1} $\phi$ is injective if and only if $G$ is Hausdorff.
 
 If $H$ is another abelian topological group and $f: G \rightarrow H$ a continuous homomorphism, then the image under $f$ of a Cauchy sequence in $G$ is a Cauchy sequence in $H$, and therefore $f$ induces a homomorphism $\hat{f}: \hat{G} \rightarrow \hat{H}$, which is continuous. If we have $G \stackrel{f}{\rightarrow} H \stackrel{\bullet}{\rightarrow} K$, then $\widehat{g} \circ f=\hat{g} \circ \hat{f}$.
 
@@ -113,7 +113,7 @@ d^{A} \downarrow & \rightarrow d^{B} \downarrow \quad d^{\complement} \downarrow
 0 & \rightarrow A \rightarrow B \rightarrow C \rightarrow 0
 \end{aligned}
 \]
-and hence by $\ref{prop:2.10}$ an exact sequence
+and hence by $\eqref{prop:2.10}$ an exact sequence
 
 $0 \rightarrow \operatorname{Ker} d^{A} \rightarrow \operatorname{Ker} d^{B} \rightarrow \operatorname{Ker} d^{C} \rightarrow$ Coker $d^{A} \rightarrow$ Coker $d^{B} \rightarrow$ Coker $d^{C} \rightarrow 0$.
 
@@ -140,13 +140,13 @@ Let $0 \rightarrow G^{\prime} \rightarrow G \stackrel{D}{\rightarrow} G^{\prime 
 is exact.
 \end{corollary}
 \begin{proof}
-Apply \ref{prop:10.2} to the exact sequences
+Apply \eqref{prop:10.2} to the exact sequences
 \[
 0 \rightarrow \frac{G^{\prime}}{G^{\prime} \cap G_{n}} \rightarrow \frac{G}{G_{n}} \rightarrow \frac{G^{\prime \prime}}{p G_{n}} \rightarrow 0 .
 \]
 \end{proof}
 
-In particular we can apply \ref{cor:10.3} with $G^{\prime}=G_{n}$, then $G^{\prime \prime}=G / G_{n}$ has the discrete topology so that $\hat{G}^{\prime \prime}=G^{\prime \prime}$. Hence we deduce
+In particular we can apply \eqref{cor:10.3} with $G^{\prime}=G_{n}$, then $G^{\prime \prime}=G / G_{n}$ has the discrete topology so that $\hat{G}^{\prime \prime}=G^{\prime \prime}$. Hence we deduce
 
 \begin{corollary}\label{cor:10.4}
 $\hat{G}_{n}$ is a subgroup of $\hat{G}$ and
@@ -155,15 +155,15 @@ $\hat{G}_{n}$ is a subgroup of $\hat{G}$ and
 \]
 \end{corollary}
 
-Taking inverse limits in \ref{cor:10.4} we deduce
+Taking inverse limits in \eqref{cor:10.4} we deduce
 
 \begin{proposition}\label{prop:10.5}
 $G \cong \hat{G}$.
 \end{proposition}
 
-If $\phi: G \rightarrow \hat{G}$ is an isomorphism we shall say that $G$ is complete. Thus \ref{prop:10.5} asserts that the completion of $G$ is complete. Note that our definition of complete includes Hausdorff (by \ref{lem:10.1}).
+If $\phi: G \rightarrow \hat{G}$ is an isomorphism we shall say that $G$ is complete. Thus \eqref{prop:10.5} asserts that the completion of $G$ is complete. Note that our definition of complete includes Hausdorff (by \eqref{lem:10.1}).
 
-The most important class of examples of topological groups of the kind we are considering are given by taking $G=A, G_{n}=a^{n}$, where $\mathfrak{a}$ is an ideal in a ring $A$. The topology so defined on $A$ is called the a-adic topology, or just the $\mathfrak{a}$-topology. Since the $\mathfrak{a}^{n}$ are ideals, it is not hard to check that with this topology $A$ is a topological ring, i.e. that the ring operations are continuous. By \ref{lem:10.1} the topology is Hausdorff $\Leftrightarrow \cap \mathfrak{a}^{n}=(0)$. The completion $\hat{A}$ of $A$ is again a topological ring; $\phi: A \rightarrow \hat{A}$ is a continuous ring homomorphism, whose kernel is $\cap \mathfrak{a}^{n}$.
+The most important class of examples of topological groups of the kind we are considering are given by taking $G=A, G_{n}=a^{n}$, where $\mathfrak{a}$ is an ideal in a ring $A$. The topology so defined on $A$ is called the a-adic topology, or just the $\mathfrak{a}$-topology. Since the $\mathfrak{a}^{n}$ are ideals, it is not hard to check that with this topology $A$ is a topological ring, i.e. that the ring operations are continuous. By \eqref{lem:10.1} the topology is Hausdorff $\Leftrightarrow \cap \mathfrak{a}^{n}=(0)$. The completion $\hat{A}$ of $A$ is again a topological ring; $\phi: A \rightarrow \hat{A}$ is a continuous ring homomorphism, whose kernel is $\cap \mathfrak{a}^{n}$.
 
 Likewise for an $A$-module $M$ : take $G=M, G_{n}=a^{n} M$. This defines the a-topology on $M$, and the completion $\hat{M}$ of $M$ is a topological $\hat{A}$-module (i.e. $\hat{A} \times \hat{M} \rightarrow \hat{M}$ is continuous). If $f: M \rightarrow N$ is any $A$-module homomorphism, then $f\left(\mathfrak{a}^{n} M\right)=\mathfrak{a}^{n} f(M) \subseteq \mathfrak{a}^{n} N$, and therefore $f$ is continuous (with respect to the a-topologies on $M$ and $N$ ) and so defines $\hat{f}: \hat{M} \rightarrow \hat{N}$.
 
@@ -211,9 +211,9 @@ The following are equivalent, for a graded ring $A$:
 \begin{enumerate}[i)]
 \item $\Rightarrow$ ii). $A_{0} \cong A / A_{+}$, hence is Noetherian. $A_{+}$is an ideal in $A$, hence is finitely generated, say by $x_{1}, \ldots, x_{s}$, which we may take to be homogeneous elements of $A$, of degrees $k_{1}, \ldots, k_{\mathrm{s}}$ say (all $>0$). Let $A^{\prime}$ be the subring of $A$ generated by $x_{1}, \ldots, x_{s}$ over $A_{0}$. We shall show that $A_{n} \subseteq A^{\prime}$ for all $n \geqslant 0$, by induction on $n$. This is certainly true for $n=0$. Let $n>0$ and let $y \in A_{n}$. Since $y \in A_{+}, y$ is a linear combination of the $x_{i}$, say $y=\sum_{i=1}^{s} a_{i} \bar{x}_{i}$, where $a_{i} \in A_{n-k_{i}}$ (conventionally $A_{m}=0$ if $m<0$). Since each $k_{i}>0$, the inductive hypothesis shows that each $a_{i}$ is a polynomial in the $x$ 's with coefficients in $A_{0}$. Hence the same is true of $y$, and therefore $y \in A^{\prime}$. Hence $A_{n} \subseteq A^{\prime}$ and therefore $A=A^{\prime}$.
 
-\item $\Rightarrow$ i): by Hilbert's basis theorem \ref{cor:7.6}. Let $A$ be a ring (not graded), $\mathfrak{a}$ an ideal of $A$. Then we can form a graded ring $A^{*}=\bigoplus_{n=0}^{\infty} a^{n}$. Similarly, if $M$ is an $A$-module and $M_{n}$ is an a-filtration of $M$, then $M^{*}=\bigoplus_{n} M_{n}$ is a graded $A^{*}$-module, since $a^{m} M_{n} \subseteq M_{m+n}$.
+\item $\Rightarrow$ i): by Hilbert's basis theorem \eqref{cor:7.6}. Let $A$ be a ring (not graded), $\mathfrak{a}$ an ideal of $A$. Then we can form a graded ring $A^{*}=\bigoplus_{n=0}^{\infty} a^{n}$. Similarly, if $M$ is an $A$-module and $M_{n}$ is an a-filtration of $M$, then $M^{*}=\bigoplus_{n} M_{n}$ is a graded $A^{*}$-module, since $a^{m} M_{n} \subseteq M_{m+n}$.
 
-If $A$ is Noetherian, $a$ is finitely generated, say by $x_{1}, \ldots, x_{r}$; then $A^{*}=$ $A\left[x_{1}, \ldots, x_{r}\right]$ and is Noetherian by \ref{cor:7.6}.
+If $A$ is Noetherian, $a$ is finitely generated, say by $x_{1}, \ldots, x_{r}$; then $A^{*}=$ $A\left[x_{1}, \ldots, x_{r}\right]$ and is Noetherian by \eqref{cor:7.6}.
 \end{enumerate}
 \end{proof}
 
@@ -239,7 +239,7 @@ Since $Q_{n}$ is finitely generated as an $A$-module, $M_{n}^{*}$ is finitely ge
 \end{proposition}
 
 \begin{proof}
-We have $a\left(\bar{M}^{\prime} \cap \bar{M}_{\mathrm{n}}\right) \subseteq \mathrm{a} \bar{M}^{\prime} \cap a M_{\mathrm{n}} \subseteq \bar{M}^{\prime} \cap \bar{M}_{\mathrm{n}+1}$, hence $\left(\bar{M}^{\prime} \cap \bar{M}_{n}\right)$ is an a-filtration. Hence it defines a graded $A^{*}$-module which is a submodule of $M^{*}$ and therefore finitely generated (since $A^{*}$ is Noetherian). Now use \ref{lem:10.8}.
+We have $a\left(\bar{M}^{\prime} \cap \bar{M}_{\mathrm{n}}\right) \subseteq \mathrm{a} \bar{M}^{\prime} \cap a M_{\mathrm{n}} \subseteq \bar{M}^{\prime} \cap \bar{M}_{\mathrm{n}+1}$, hence $\left(\bar{M}^{\prime} \cap \bar{M}_{n}\right)$ is an a-filtration. Hence it defines a graded $A^{*}$-module which is a submodule of $M^{*}$ and therefore finitely generated (since $A^{*}$ is Noetherian). Now use \eqref{lem:10.8}.
 \end{proof}
 
 Taking $M_{n}=\mathfrak{a}^{n} M$ we obtain what is usually known as the Artin-Rees lemma:
@@ -252,17 +252,17 @@ There exists an integer $k$ such that
 for all $n \geqslant k$.
 \end{corollary}
 
-On the other hand, combining \ref{prop:10.9} with the elementary lemma \ref{lem:10.6} we obtain the really significant version:
+On the other hand, combining \eqref{prop:10.9} with the elementary lemma \eqref{lem:10.6} we obtain the really significant version:
 
 \begin{theorem}\label{thm:10.11}
 Let $A$ be a Noetherian ring, a an ideal, $M$ a finitely-generated A-module and $M^{\prime}$ a submodule of $M$. Then the filtrations $a^{n} M^{\prime}$ and $\left(a^{n} M\right) \cap M^{\prime}$ have bounded difference. In particular the a-topology of $M^{\prime}$ coincides with the topology induced by the a-topology of $M$.
 \end{theorem}
 
 \begin{remark}
-In this chapter we shall apply the last part of \ref{thm:10.11} concerning topologies. However, in the next chapter the stronger result about bounded differences will be needed.
+In this chapter we shall apply the last part of \eqref{thm:10.11} concerning topologies. However, in the next chapter the stronger result about bounded differences will be needed.
 \end{remark}
 
-As a first application of \ref{thm:10.11} we combine it with \ref{cor:10.3} to get the important exactness property of completion:
+As a first application of \eqref{thm:10.11} we combine it with \eqref{cor:10.3} to get the important exactness property of completion:
 
 \begin{proposition}\label{prop:10.12}
 Let
@@ -289,7 +289,7 @@ For any ring $A$, if $M$ is finitely-generated, $\hat{A} \otimes_{A} M \rightarr
 \end{proposition}
 
 \begin{proof}
-Using \ref{cor:10.3} or otherwise it is clear that a-adic completion commutes with finite direct sums. Hence if $F \cong A^{n}$ we have $\hat{A} \otimes_{A} F \cong \hat{F}$. Now assume $M$ is finitely generated so that we have an exact sequence
+Using \eqref{cor:10.3} or otherwise it is clear that a-adic completion commutes with finite direct sums. Hence if $F \cong A^{n}$ we have $\hat{A} \otimes_{A} F \cong \hat{F}$. Now assume $M$ is finitely generated so that we have an exact sequence
 
 \[
 0 \rightarrow N \rightarrow F \rightarrow M \rightarrow 0 .
@@ -304,10 +304,10 @@ This gives rise to the commutative diagram
 \end{tikzcd}
 \end{center}
 
-in which the top line is exact (by \eqref{prop:2.18}). By \ref{cor:10.3} $\delta$ is surjective. Since $\beta$ is an isomorphism this implies that $\alpha$ is surjective, proving the first part of the proposition. Assume now that $A$ is Noetherian, then $N$ is also finitely generated so that $\gamma$ is surjective and, by \ref{prop:10.12}, the bottom line is exact. A little diagram chasing now proves that $\alpha$ is injective and so an isomorphism.
+in which the top line is exact (by \eqref{prop:2.18}). By \eqref{cor:10.3} $\delta$ is surjective. Since $\beta$ is an isomorphism this implies that $\alpha$ is surjective, proving the first part of the proposition. Assume now that $A$ is Noetherian, then $N$ is also finitely generated so that $\gamma$ is surjective and, by \eqref{prop:10.12}, the bottom line is exact. A little diagram chasing now proves that $\alpha$ is injective and so an isomorphism.
 \end{proof}
 
-Propositions \ref{prop:10.12} and \ref{prop:10.13} together assert that the functor $M \mapsto$ $A \otimes_{A} M$ is exact on the category of finitely-generated $A$-modules (when $A$ is Noetherian). As shown in Chapter 2 this proves:
+Propositions \eqref{prop:10.12} and \eqref{prop:10.13} together assert that the functor $M \mapsto$ $A \otimes_{A} M$ is exact on the category of finitely-generated $A$-modules (when $A$ is Noetherian). As shown in Chapter 2 this proves:
 
 \begin{proposition}\label{prop:10.14}
 If $A$ is a Noetherian ring, a an ideal, $\hat{A}$ the a-adic completion of $A$, then $\hat{A}$ is a flat A-algebra.
@@ -330,7 +330,7 @@ If $A$ is Noetherian, $\hat{A}$ its a-adic completion, then
 \end{proposition}
 
 \begin{proof}
-Since $A$ is Noetherian, $a$ is finitely-generated. \ref{prop:10.13} implies that the map
+Since $A$ is Noetherian, $a$ is finitely-generated. \eqref{prop:10.13} implies that the map
 
 \[
 \hat{A} \otimes_{A} \mathfrak{a} \rightarrow \hat{\mathbf{a}},
@@ -346,19 +346,19 @@ whose image is $\hat{A} a$, is an isomorphism. This proves $i)$. Now apply i) to
 \]
 by i).
 
-Applying \ref{cor:10.4} we now deduce
+Applying \eqref{cor:10.4} we now deduce
 
 \[
 A / \mathfrak{a}^{n} \cong \hat{A} / \hat{\mathbf{a}}^{n}
 \]
 
-from which iii) follows by taking quotients. By ii) and \ref{prop:10.5} we see that $\hat{A}$ is complete for its $\hat{a}$-topology. Hence for any $x \in \hat{a}$
+from which iii) follows by taking quotients. By ii) and \eqref{prop:10.5} we see that $\hat{A}$ is complete for its $\hat{a}$-topology. Hence for any $x \in \hat{a}$
 
 \[
 (1-x)^{-1}=1+x+x^{2}+\cdots
 \]
 
-converges in $\hat{A}$, so that $1-x$ is a unit. By \ref{prop:1.9} this implies that $\hat{\mathbf{a}}$ is contained in the Jacobson radical of $\hat{A}$.
+converges in $\hat{A}$, so that $1-x$ is a unit. By \eqref{prop:1.9} this implies that $\hat{\mathbf{a}}$ is contained in the Jacobson radical of $\hat{A}$.
 \end{proof}
 
 \begin{proposition}\label{prop:10.16}
@@ -366,7 +366,7 @@ Let $A$ be a Noetherian local ring, $m$ its maximal ideal. Then the $\mathfrak{m
 \end{proposition}
 
 \begin{proof}
-By \ref{prop:10.15} iii) we have $\hat{A} / \hat{\mathfrak{m}} \cong A / \mathfrak{m}$, hence $\hat{A} / \hat{\mathfrak{m}}$ is a field and so $\hat{\mathfrak{m}}$ is a maximal ideal. By \ref{prop:10.15} iv) it follows that $\hat{\mathfrak{m}}$ is the Jacobson radical of $\hat{A}$ and so is the unique maximal ideal. Thus $\hat{A}$ is a local ring.
+By \eqref{prop:10.15} iii) we have $\hat{A} / \hat{\mathfrak{m}} \cong A / \mathfrak{m}$, hence $\hat{A} / \hat{\mathfrak{m}}$ is a field and so $\hat{\mathfrak{m}}$ is a maximal ideal. By \eqref{prop:10.15} iv) it follows that $\hat{\mathfrak{m}}$ is the Jacobson radical of $\hat{A}$ and so is the unique maximal ideal. Thus $\hat{A}$ is a local ring.
 \end{proof}
 
 The important question of how much we lose on completion is answered by Krull's Theorem:
@@ -376,7 +376,7 @@ Let $A$ be a Noetherian ring, a an ideal, $M$ a finitely-generated $A$-module an
 \end{theorem}
 
 \begin{proof}
-Since $E$ is the intersection of all neighborhoods of $0 \in M$, the topology induced on it is trivial, i.e., $E$ is the only neighborhood of $0 \in E$. By \ref{thm:10.11} the induced topology on $E$ coincides with its a-topology. Since $a E$ is a neighborhood in the a-topology it follows that $\mathfrak{a} E=E$. Since $M$ is finitely-generated and $A$ is Noetherian, $E$ is also finitely-generated and so we can apply \eqref{cor:2.5} and deduce from $\alpha E=E$ that $(1-\alpha) E=0$ for some $\alpha \in a$. The converse is obvious: if $(1-\alpha) x=0$, then
+Since $E$ is the intersection of all neighborhoods of $0 \in M$, the topology induced on it is trivial, i.e., $E$ is the only neighborhood of $0 \in E$. By \eqref{thm:10.11} the induced topology on $E$ coincides with its a-topology. Since $a E$ is a neighborhood in the a-topology it follows that $\mathfrak{a} E=E$. Since $M$ is finitely-generated and $A$ is Noetherian, $E$ is also finitely-generated and so we can apply \eqref{cor:2.5} and deduce from $\alpha E=E$ that $(1-\alpha) E=0$ for some $\alpha \in a$. The converse is obvious: if $(1-\alpha) x=0$, then
 
 \[
 x=\alpha x=\alpha^{2} x=\cdots \in \bigcap_{n=1}^{\infty} a^{n} M=E .
@@ -385,7 +385,7 @@ x=\alpha x=\alpha^{2} x=\cdots \in \bigcap_{n=1}^{\infty} a^{n} M=E .
 
 \begin{remark}
 \begin{enumerate}[i)]
-\item If $S$ is the multiplicatively closed set $1+a$, then \ref{thm:10.17} asserts that
+\item If $S$ is the multiplicatively closed set $1+a$, then \eqref{thm:10.17} asserts that
 \[
 A \rightarrow \hat{A} \text{ and } A \rightarrow S^{-1} A
 \]
@@ -395,9 +395,9 @@ have the same kernel. Moreover for any $\alpha \in \hat{a}$
 (1-\alpha)^{-1}=1+\alpha+\alpha^{2}+\cdots
 \]
 
-converges in $\hat{A}$, so that every element of $S$ becomes a unit in $\hat{A}$. By the universal property of $S^{-1} A$ this means that there is a natural homomorphism $S^{-1} A \rightarrow \hat{A}$ and \ref{thm:10.17} implies that this is injective. Thus $S^{-1} A$ can be identified with a subring of $\hat{A}$.
+converges in $\hat{A}$, so that every element of $S$ becomes a unit in $\hat{A}$. By the universal property of $S^{-1} A$ this means that there is a natural homomorphism $S^{-1} A \rightarrow \hat{A}$ and \eqref{thm:10.17} implies that this is injective. Thus $S^{-1} A$ can be identified with a subring of $\hat{A}$.
 
-\item Krull's Theorem \ref{thm:10.17} may be false if $A$ is not Noetherian. Let $A$ be the ring of all $C^{\infty}$ functions on the real line, and let $a$ be the ideal of all $f$ which vanish at the origin ($\mathfrak{a}$ is maximal since $A / \mathfrak{a} \cong \mathbf{R}$). In fact $\mathfrak{a}$ is generated by the identity function $x$, and $\bigcap_{n=1}^{\infty} \mathfrak{a}^{n}$ is the set of all $f \in A$, all of whose derivatives vanish at the origin. On the other hand $f$ is annihilated by some element $1+\alpha$ $(\alpha \in a)$ if and only if $f$ vanishes identically in some neighborhood of 0. The wellknown function $e^{-1 / x^{2}}$, which is not identically zero near 0, but has vanishing derivatives at 0, then shows that the kernels of
+\item Krull's Theorem \eqref{thm:10.17} may be false if $A$ is not Noetherian. Let $A$ be the ring of all $C^{\infty}$ functions on the real line, and let $a$ be the ideal of all $f$ which vanish at the origin ($\mathfrak{a}$ is maximal since $A / \mathfrak{a} \cong \mathbf{R}$). In fact $\mathfrak{a}$ is generated by the identity function $x$, and $\bigcap_{n=1}^{\infty} \mathfrak{a}^{n}$ is the set of all $f \in A$, all of whose derivatives vanish at the origin. On the other hand $f$ is annihilated by some element $1+\alpha$ $(\alpha \in a)$ if and only if $f$ vanishes identically in some neighborhood of 0. The wellknown function $e^{-1 / x^{2}}$, which is not identically zero near 0, but has vanishing derivatives at 0, then shows that the kernels of
 \[
 A \rightarrow \hat{A} \text{ and } A \rightarrow S^{-1} A \quad (S=1+\mathfrak{a})
 \]
@@ -418,16 +418,16 @@ $1+a$ contains no zero-divisors.
 Let $A$ be a Noetherian ring, a an ideal of $A$ contained in the Jacobson radical and let $M$ be a finitely-generated A-module. Then the a-topology of $M$ is Hausdorff, i.e. $\cap \mathfrak{a}^{n} \boldsymbol{M}=0$.
 \end{corollary}
 \begin{proof}
-By \ref{prop:1.9} every element of $1+\mathfrak{a}$ is a unit.
+By \eqref{prop:1.9} every element of $1+\mathfrak{a}$ is a unit.
 \end{proof}
 
-As a particularly important special case of \ref{cor:10.19} we have:
+As a particularly important special case of \eqref{cor:10.19} we have:
 
 \begin{corollary}\label{cor:10.20}
 Let $A$ be a Noetherian local ring, $m$ its maximal ideal, $M$ a finitely-generated A-module. Then the m-topology of $M$ is Hausdorff. In particular the m-topology of $A$ is Hausdorff.
 \end{corollary}
 
-We can restate \ref{cor:10.20} slightly differently if we recall that an m-primary ideal of $A$ is just any ideal contained between $\mathfrak{m}$ and some power $\mathfrak{m}^{n}$ (use \eqref{prop:4.2} and \eqref{prop:7.14}). Thus \ref{cor:10.20} implies that the intersection of all m-primary ideals of $A$ is zero. If now $A$ is any Noetherian ring, $\mathfrak{p}$ a prime ideal, we can apply this version of $\ref{cor:10.20}$ to the local ring $A_{\mathfrak{p}}$. Lifting back to $A$ and using the one-to-one correspondence \eqref{prop:4.8} between $\mathfrak{p}$-primary ideals of $A$ and m-primary ideals of $A_{\mathfrak{p}}$ (where $\mathfrak{m}=\mathfrak{p} A_{\mathfrak{p}}$ ) we deduce:
+We can restate \eqref{cor:10.20} slightly differently if we recall that an m-primary ideal of $A$ is just any ideal contained between $\mathfrak{m}$ and some power $\mathfrak{m}^{n}$ (use \eqref{prop:4.2} and \eqref{prop:7.14}). Thus \eqref{cor:10.20} implies that the intersection of all m-primary ideals of $A$ is zero. If now $A$ is any Noetherian ring, $\mathfrak{p}$ a prime ideal, we can apply this version of $\eqref{cor:10.20}$ to the local ring $A_{\mathfrak{p}}$. Lifting back to $A$ and using the one-to-one correspondence \eqref{prop:4.8} between $\mathfrak{p}$-primary ideals of $A$ and m-primary ideals of $A_{\mathfrak{p}}$ (where $\mathfrak{m}=\mathfrak{p} A_{\mathfrak{p}}$ ) we deduce:
 
 \begin{corollary}\label{cor:10.21}
 Let $A$ be a Noetherian ring, $p$ a prime ideal of $A$. Then the intersection of all $\mathfrak{p}$-primary ideals of $A$ is the kernel of $A \rightarrow A_{\mathfrak{p}}$.
@@ -465,7 +465,7 @@ Let $A$ be a Noetherian ring, a an ideal of $A$. Then
 \begin{enumerate}[i)]
 \item Since $A$ is Noetherian, $\mathfrak{a}$ is finitely generated, say by $x_{1}, \ldots, x_{s}$. Let $\bar{x}_{i}$ be the image of $x_{i}$ in $\mathfrak{a} / \mathfrak{a}^{2}$, then $G(A)=(A / \mathfrak{a})\left[\bar{x}_{1}, \ldots, \bar{x}_{s}\right]$. Since $A / \mathfrak{a}$ is Noetherian, $G(A)$ is Noetherian by the Hilbert basis theorem.
 
-\item $\mathfrak{a}^{n} / \mathfrak{a}^{n+1} \cong \hat{\mathfrak{a}}^{n} / \hat{\mathfrak{a}}^{n+1}$ by \ref{prop:10.15} iii).
+\item $\mathfrak{a}^{n} / \mathfrak{a}^{n+1} \cong \hat{\mathfrak{a}}^{n} / \hat{\mathfrak{a}}^{n+1}$ by \eqref{prop:10.15} iii).
 
 \item There exists $n_{0}$ such that $M_{n_{0}+r}=a^{r} M_{n_{0}}$ for all $r \geqslant 0$, hence $G(M)$ is generated by $\bigoplus_{n \leqslant n_{0}} G_{n}(M)$. Each $G_{n}(M)=M_{n} / M_{n+1}$ is Noetherian and annihilated by $\mathfrak{a}$, hence is a finitely-generated $A / \mathfrak{a}$-module, hence $\bigoplus_{n \leqslant n_{0}} G_{n}(M)$ is generated by a finite number of elements (as an $A / a$-module), hence $G(M)$ is finitely generated as a $G(A)$-module.
 \end{enumerate}
@@ -503,10 +503,10 @@ This gives the exact sequence
 \end{aligned}
 \]
 
-From this we see, by induction on $n$, that $\operatorname{Ker} \alpha_{n}=0$ (case i)) or Coker $\alpha_{n}=0$ (case ii)). Moreover in case ii) we also have $\operatorname{Ker} \alpha_{n+1} \rightarrow \operatorname{Ker} \alpha_{n}$ surjective. Taking the inverse limit of the homomorphisms $\alpha_{n}$ and applying \ref{prop:10.2} the lemma follows.
+From this we see, by induction on $n$, that $\operatorname{Ker} \alpha_{n}=0$ (case i)) or Coker $\alpha_{n}=0$ (case ii)). Moreover in case ii) we also have $\operatorname{Ker} \alpha_{n+1} \rightarrow \operatorname{Ker} \alpha_{n}$ surjective. Taking the inverse limit of the homomorphisms $\alpha_{n}$ and applying \eqref{prop:10.2} the lemma follows.
 \end{proof}
 
-We can now form a result which is a partial converse of \ref{prop:10.22} iii) and is the main step in showing that $\hat{A}$ is Noetherian.
+We can now form a result which is a partial converse of \eqref{prop:10.22} iii) and is the main step in showing that $\hat{A}$ is Noetherian.
 
 \begin{proposition}\label{prop:10.24}
 Let $A$ be a ring, a an ideal of $A, M$ an $A$-module, $\left(M_{n}\right)$ an a-filtration of $M$. Suppose that $A$ is complete in the a-topology and that $M$ is Hausdorff in its filtration topology (i.e. that $\bigcap_{n} M_{n}=0$ ). Suppose also that $G(M)$ is a finitely-generated $G(A)$-module. Then $M$ is a finitely-generated A-module.
@@ -519,7 +519,7 @@ Pick a finite set of generators of $G(M)$, and split them up into their homogene
 \phi: F \rightarrow M
 \]
 
-of filtered groups, and $G(\phi): G(F) \rightarrow G(M)$ is a homomorphism of $G(A)$-modules. By construction it is surjective. Hence by $\ref{lem:10.23}$ ii) $\hat{\phi}$ is surjective. Consider now the diagram
+of filtered groups, and $G(\phi): G(F) \rightarrow G(M)$ is a homomorphism of $G(A)$-modules. By construction it is surjective. Hence by $\eqref{lem:10.23}$ ii) $\hat{\phi}$ is surjective. Consider now the diagram
 
 \begin{center}
   \begin{tikzcd}
@@ -532,11 +532,11 @@ Since $F$ is free and $A=\hat{A}$ it follows that $\alpha$ is an isomorphism. Si
 \end{proof}
 
 \begin{corollary}\label{cor:10.25}
-With the hypotheses of \ref{prop:10.24}, if $G(M)$ is a Noetherian $G(A)$-module, then $M$ is a Noetherian A-module.
+With the hypotheses of \eqref{prop:10.24}, if $G(M)$ is a Noetherian $G(A)$-module, then $M$ is a Noetherian A-module.
 \end{corollary}
 
 \begin{proof}
-We have to show that every submodule $M^{\prime}$ of $M$ is finitely generated \eqref{prop:6.2}. Let $M_{n}^{\prime}=M^{\prime} \cap M_{n}$; then $\left(M_{n}^{\prime}\right)$ is an a-filtration of $M^{\prime}$, and the embedding $M_{n}^{\prime} \rightarrow M_{n}$ gives rise to an injective homomorphism $M_{n}^{\prime} / M_{n+1}^{\prime} \rightarrow$ $M_{n} / M_{n+1}$, hence to an embedding of $G\left(M^{\prime}\right)$ in $G(M)$. Since $G(M)$ is Noetherian, $G\left(M^{\prime}\right)$ is finitely generated by \eqref{prop:6.2}; also $M^{\prime}$ is Hausdorff, since $\cap M_{n}^{\prime} \subseteq$ $\cap M_{n}=0$; hence by \ref{prop:10.24} $M^{\prime}$ is finitely generated.
+We have to show that every submodule $M^{\prime}$ of $M$ is finitely generated \eqref{prop:6.2}. Let $M_{n}^{\prime}=M^{\prime} \cap M_{n}$; then $\left(M_{n}^{\prime}\right)$ is an a-filtration of $M^{\prime}$, and the embedding $M_{n}^{\prime} \rightarrow M_{n}$ gives rise to an injective homomorphism $M_{n}^{\prime} / M_{n+1}^{\prime} \rightarrow$ $M_{n} / M_{n+1}$, hence to an embedding of $G\left(M^{\prime}\right)$ in $G(M)$. Since $G(M)$ is Noetherian, $G\left(M^{\prime}\right)$ is finitely generated by \eqref{prop:6.2}; also $M^{\prime}$ is Hausdorff, since $\cap M_{n}^{\prime} \subseteq$ $\cap M_{n}=0$; hence by \eqref{prop:10.24} $M^{\prime}$ is finitely generated.
 \end{proof}
 
 We can now deduce the result we are after:
@@ -546,11 +546,11 @@ If $A$ is a Noetherian ring, a an ideal of $A$, then the a-completion $\hat{A}$ 
 \end{theorem}
 
 \begin{proof}
-By \ref{prop:10.22} we know that
+By \eqref{prop:10.22} we know that
 \[
 G_{\mathfrak{a}}(A)=G_{\mathfrak{a}}(\hat{A})
 \]
-is Noetherian. Now apply \ref{cor:10.25} to the complete ring $\hat{A}$, taking $M=\hat{A}$ (filtered by $\hat{a}^{n}$, and so Hausdorff).
+is Noetherian. Now apply \eqref{cor:10.25} to the complete ring $\hat{A}$, taking $M=\hat{A}$ (filtered by $\hat{a}^{n}$, and so Hausdorff).
 \end{proof}
 
 \begin{corollary}\label{cor:10.27}
@@ -598,19 +598,19 @@ A \text{ is an integral domain } \Rightarrow \hat{A} \text{ is an integral domai
 \[
 0 \rightarrow \mathfrak{b}^{m} M \rightarrow M / \mathfrak{b}^{m} M \rightarrow 0
 \]
-and apply \ref{prop:10.13}. Then use the isomorphism
+and apply \eqref{prop:10.13}. Then use the isomorphism
 \[
 \underset{m}{\lim }\left(\underset{\leftarrow}{\lim } M /\left(\mathfrak{a}^{n} M+\mathfrak{b}^{m} M\right)\right) \cong \underset{\leftarrow}{\lim } M /\left(\mathfrak{a}^{n} M+\mathfrak{b}^{n} M\right)
 \]
 and the inclusions $(\mathfrak{a}+\mathfrak{b})^{2 n} \subseteq \mathfrak{a}^{n}+\mathfrak{b}^{n} \subseteq(\mathfrak{a}+\mathfrak{b})^{n}$.]
 
-\item Let $A$ be a Noetherian ring and $\mathfrak{a}$ an ideal in $A$. Prove that $\mathfrak{a}$ is contained in the Jacobson radical of $A$ if and only if every maximal ideal of $A$ is closed for the a-topology. (A Noetherian topological ring in which the topology is defined by an ideal contained in the Jacobson radical is called a Zariski ring. Examples are local rings and (by \ref{prop:10.15}(iv)) $a$-adic completions.)
+\item Let $A$ be a Noetherian ring and $\mathfrak{a}$ an ideal in $A$. Prove that $\mathfrak{a}$ is contained in the Jacobson radical of $A$ if and only if every maximal ideal of $A$ is closed for the a-topology. (A Noetherian topological ring in which the topology is defined by an ideal contained in the Jacobson radical is called a Zariski ring. Examples are local rings and (by \eqref{prop:10.15}(iv)) $a$-adic completions.)
 
 \item Let $A$ be a Noetherian ring, $\alpha$ an ideal of $A$, and $\hat{A}$ the $a$-adic completion. Prove that $\hat{A}$ is faithfully flat over $A$ (Chapter 3, Exercise 16) if and only if $A$ is a Zariski ring (for the $a$-topology). [Since $\hat{A}$ is flat over $A$, it is enough to show that
 \[
 M \rightarrow \hat{M} \text{ injective for all finitely generated } M \Leftrightarrow A \text{ is Zariski; }
 \]
-now use \ref{cor:10.19} and Exercise 6.]
+now use \eqref{cor:10.19} and Exercise 6.]
 
 \item Let $A$ be the local ring of the origin in $C^{n}$ (i.e., the ring of all rational functions $f / g \in \mathbf{C}\left(z_{1}, \ldots, z_{n}\right)$ with $\left.g(0) \neq 0\right)$, let $B$ be the ring of power series in $z_{1}, \ldots, z_{n}$ which converge in some neighborhood of the origin, and let $C$ be the ring of formal power series in $z_{1}, \ldots, z_{n}$, so that $A \subset B \subset C$. Show that $B$ is a local ring and that its completion for the maximal ideal topology is $C$. Assuming that $B$ is Noetherian, prove that $B$ is $A$-flat. [Use Chapter 3, Exercise 17, and Exercise 7 above.]
 
@@ -628,7 +628,7 @@ now use \ref{cor:10.19} and Exercise 6.]
 (This gives the ``analytic branch'' of the curve $f=0$ through the point $\left(0, a_{0}\right)$.)
 \end{enumerate}
 
-\item Show that the converse of \ref{thm:10.26} is false, even if we assume that $A$ is local and that $\hat{A}$ is a finitely-generated $A$-module.
+\item Show that the converse of \eqref{thm:10.26} is false, even if we assume that $A$ is local and that $\hat{A}$ is a finitely-generated $A$-module.
 
 [Take $A$ to be the ring of germs of $C^{\infty}$ functions of $x$ at $x=0$, and use Borel's Theorem that every power series occurs as the Taylor expansion of some $C^{\infty}$ function.]
 

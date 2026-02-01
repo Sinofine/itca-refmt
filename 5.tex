@@ -45,7 +45,7 @@ for all $r \geqslant 0$; hence, by induction, all positive powers of $x$ lie in 
 
 \item $\Rightarrow$ iv). Take $M=C$, which is a faithful $A[x]$-module (since $y C=0 \Rightarrow$ $y \cdot 1=0$ ).
 
-\item $\Rightarrow$ i). This follows from \ref{prop:2.4}: take $\phi$ to be multiplication by $x$, and $\mathfrak{a}=A$ (we have $x M \subseteq M$ since $M$ is an $A[x]$-module); since $M$ is faithful, we have $x^{n}+a_{1} x^{n-1}+\cdots+a_{n}=0$ for suitable $a_{i} \in A$.
+\item $\Rightarrow$ i). This follows from \eqref{prop:2.4}: take $\phi$ to be multiplication by $x$, and $\mathfrak{a}=A$ (we have $x M \subseteq M$ since $M$ is an $A[x]$-module); since $M$ is faithful, we have $x^{n}+a_{1} x^{n-1}+\cdots+a_{n}=0$ for suitable $a_{i} \in A$.
 \end{enumerate}
 \end{proof}
 
@@ -54,7 +54,7 @@ Let $x_{i}(1 \leqslant i \leqslant n)$ be elements of $B$, each integral over $A
 \end{corollary}
 
 \begin{proof}
-By induction on $n$. The case $n=1$ is part of \ref{prop:5.1}. Assume $n>1$, let $A_{r}=A\left[x_{1}, \ldots, x_{r}\right]$; then by the inductive hypothesis $A_{n-1}$ is a finitely generated $A$-module. $A_{n}=A_{n-1}\left[x_{n}\right]$ is a finitely generated $A_{n-1}$-module (by the case $n=1$, since $x_{n}$ is integral over $A_{n-1}$). Hence by \eqref{prop:2.16} $A_{n}$ is finitely generated as an $A$-module.
+By induction on $n$. The case $n=1$ is part of \eqref{prop:5.1}. Assume $n>1$, let $A_{r}=A\left[x_{1}, \ldots, x_{r}\right]$; then by the inductive hypothesis $A_{n-1}$ is a finitely generated $A$-module. $A_{n}=A_{n-1}\left[x_{n}\right]$ is a finitely generated $A_{n-1}$-module (by the case $n=1$, since $x_{n}$ is integral over $A_{n-1}$). Hence by \eqref{prop:2.16} $A_{n}$ is finitely generated as an $A$-module.
 \end{proof}
 
 \begin{corollary}\label{cor:5.3}
@@ -62,10 +62,10 @@ The set $C$ of elements of $B$ which are integral over $A$ is a subring of $B$ c
 \end{corollary}
 
 \begin{proof}
-If $x, y \in C$ then $A[x, y]$ is a finitely generated $A$-module by \ref{cor:5.2}. Hence $x \pm y$ and $x y$ are integral over $A$, by iii) of \ref{prop:5.1}.
+If $x, y \in C$ then $A[x, y]$ is a finitely generated $A$-module by \eqref{cor:5.2}. Hence $x \pm y$ and $x y$ are integral over $A$, by iii) of \eqref{prop:5.1}.
 \end{proof}
 
-The ring $C$ in \ref{cor:5.3} is called the \textit{integral closure} of $A$ in $B$. If $C=A$, then $A$ is said to be \textit{integrally closed} in $B$. If $C=B$, the ring $B$ is said to be \textit{integral} over $A$.
+The ring $C$ in \eqref{cor:5.3} is called the \textit{integral closure} of $A$ in $B$. If $C=A$, then $A$ is said to be \textit{integrally closed} in $B$. If $C=B$, the ring $B$ is said to be \textit{integral} over $A$.
 
 \begin{remark}
 Let $f: A \rightarrow B$ be a ring homomorphism, so that $B$ is an $A$-algebra. Then $f$ is said to be \textit{integral}, and $B$ is said to be an \textit{integral} $A$-\textit{algebra}, if $B$ is integral over its subring $f(A)$. In this terminology, the above results show that
@@ -86,7 +86,7 @@ Let $x \in C$, then we have an equation
 x^{n}+b_{1} x^{n-1}+\cdots+b_{n}=0 \quad\left(b_{i} \in B\right) .
 \]
 
-The ring $B^{\prime}=A\left[b_{1}, \ldots, b_{n}\right]$ is a finitely generated $A$-module by \ref{cor:5.2}, and $B^{\prime}[x]$ is a finitely generated $B^{\prime}$-module (since $x$ is integral over $B^{\prime}$). Hence $B^{\prime}[x]$ is a finitely generated $A$-module by \eqref{prop:2.16} and therefore $x$ is integral over $A$ by iii) of \ref{prop:5.1}.
+The ring $B^{\prime}=A\left[b_{1}, \ldots, b_{n}\right]$ is a finitely generated $A$-module by \eqref{cor:5.2}, and $B^{\prime}[x]$ is a finitely generated $B^{\prime}$-module (since $x$ is integral over $B^{\prime}$). Hence $B^{\prime}[x]$ is a finitely generated $A$-module by \eqref{prop:2.16} and therefore $x$ is integral over $A$ by iii) of \eqref{prop:5.1}.
 \end{proof}
 
 \begin{corollary}\label{cor:5.5}
@@ -94,7 +94,7 @@ Let $A \subseteq B$ be rings and let $C$ be the integral closure of $A$ in $B$. 
 \end{corollary}
 
 \begin{proof}
-Let $x \in B$ be integral over $C$. By \ref{cor:5.4} $x$ is integral over $A$, hence $x \in C$.
+Let $x \in B$ be integral over $C$. By \eqref{cor:5.4} $x$ is integral over $A$, hence $x \in C$.
 \end{proof}
 
 The next proposition shows that integral dependence is preserved on passing to quotients and to rings of fractions:
@@ -150,7 +150,7 @@ Let $A \subseteq B$ be rings, $B$ integral over $A$; let $\mathfrak{q}$ be a pri
 \end{corollary}
 
 \begin{proof}
-By \ref{prop:5.6}, $B / \mathfrak{q}$ is integral over $A / \mathfrak{p}$, and both these rings are integral domains. Now use \ref{prop:5.7}.
+By \eqref{prop:5.6}, $B / \mathfrak{q}$ is integral over $A / \mathfrak{p}$, and both these rings are integral domains. Now use \eqref{prop:5.7}.
 \end{proof}
 
 \begin{corollary}\label{cor:5.9}
@@ -158,7 +158,7 @@ Let $A \subseteq B$ be rings, $B$ integral over $A$; let $q, q^{\prime}$ be prim
 \end{corollary}
 
 \begin{proof}
-By \ref{prop:5.6}, $B_{\mathfrak{p}}$ is integral over $A_{\mathfrak{p}}$. Let $\mathfrak{m}$ be the extension of $\mathfrak{p}$ in $A_{\mathfrak{p}}$ and let $\mathfrak{n}, \mathfrak{n}^{\prime}$ be the extensions of $\mathfrak{q}, q^{\prime}$ respectively in $B_{\mathfrak{p}}$. Then $\mathfrak{m}$ is the maximal ideal of $A_{\mathfrak{p}}$; $\mathfrak{n} \subseteq \mathfrak{n}^{\prime}$, and $\mathfrak{n}^{c}=\mathfrak{n}^{\prime c}=\mathfrak{m}$. By \ref{cor:5.8} it follows that $\mathfrak{n}, \mathfrak{n}^{\prime}$ are maximal, hence $\mathfrak{n}=\mathfrak{n}^{\prime}$, hence by \eqref{prop:3.11}(iv) $q=q^{\prime}$.
+By \eqref{prop:5.6}, $B_{\mathfrak{p}}$ is integral over $A_{\mathfrak{p}}$. Let $\mathfrak{m}$ be the extension of $\mathfrak{p}$ in $A_{\mathfrak{p}}$ and let $\mathfrak{n}, \mathfrak{n}^{\prime}$ be the extensions of $\mathfrak{q}, q^{\prime}$ respectively in $B_{\mathfrak{p}}$. Then $\mathfrak{m}$ is the maximal ideal of $A_{\mathfrak{p}}$; $\mathfrak{n} \subseteq \mathfrak{n}^{\prime}$, and $\mathfrak{n}^{c}=\mathfrak{n}^{\prime c}=\mathfrak{m}$. By \eqref{cor:5.8} it follows that $\mathfrak{n}, \mathfrak{n}^{\prime}$ are maximal, hence $\mathfrak{n}=\mathfrak{n}^{\prime}$, hence by \eqref{prop:3.11}(iv) $q=q^{\prime}$.
 \end{proof}
 
 \begin{theorem}\label{thm:5.10}
@@ -166,7 +166,7 @@ Let $A \subseteq B$ be rings, $B$ integral over $A$, and let $\mathfrak{p}$ be a
 \end{theorem}
 
 \begin{proof}
-By \ref{prop:5.6}, $B_{\mathfrak{p}}$ is integral over $A_{\mathfrak{p}}$, and the diagram
+By \eqref{prop:5.6}, $B_{\mathfrak{p}}$ is integral over $A_{\mathfrak{p}}$, and the diagram
 
 \[
 \begin{aligned}
@@ -176,7 +176,7 @@ A_{\mathfrak{p}} & \rightarrow B_{\mathfrak{p}}
 \end{aligned}
 \]
 
-(in which the horizontal arrows are injections) is commutative. Let $\mathfrak{n}$ be a maximal ideal of $B_{\mathfrak{p}}$; then $\mathfrak{m}=\mathfrak{n} \cap A_{\mathfrak{p}}$ is maximal by \ref{cor:5.8}, hence is the unique maximal ideal of the local ring $A_{\mathfrak{p}}$. If $\mathfrak{q}=\beta^{-1}(\mathfrak{n})$, then $\mathfrak{q}$ is prime and we have $\mathfrak{q} \cap A=\alpha^{-1}(\mathfrak{m})=\mathfrak{p}$.
+(in which the horizontal arrows are injections) is commutative. Let $\mathfrak{n}$ be a maximal ideal of $B_{\mathfrak{p}}$; then $\mathfrak{m}=\mathfrak{n} \cap A_{\mathfrak{p}}$ is maximal by \eqref{cor:5.8}, hence is the unique maximal ideal of the local ring $A_{\mathfrak{p}}$. If $\mathfrak{q}=\beta^{-1}(\mathfrak{n})$, then $\mathfrak{q}$ is prime and we have $\mathfrak{q} \cap A=\alpha^{-1}(\mathfrak{m})=\mathfrak{p}$.
 \end{proof}
 
 \begin{theorem}[Going-up theorem]\label{thm:5.11}
@@ -184,19 +184,19 @@ Let $A \subseteq B$ be rings, $B$ integral over $A$; let $\mathfrak{p}_{1} \subs
 \end{theorem}
 
 \begin{proof}
-By induction we reduce immediately to the case $m=1, n=2$. Let $\bar{A}=A / \mathfrak{p}_{1}, \bar{B}=B / \mathfrak{q}_{1}$; then $\bar{A} \subseteq \bar{B}$, and $\bar{B}$ is integral over $\bar{A}$ by \ref{prop:5.6}. Hence, by \ref{thm:5.10}, there exists a prime ideal $\bar{\mathfrak{q}}_{2}$ of $\bar{B}$ such that $\bar{\mathfrak{q}}_{2} \cap \bar{A}=\overline{\mathfrak{p}}_{2}$, the image of $\mathfrak{p}_{2}$ in $\bar{A}$. Lift back $\bar{\mathfrak{q}}_{2}$ to $B$ and we have a prime ideal $\mathfrak{q}_{2}$ with the required properties.
+By induction we reduce immediately to the case $m=1, n=2$. Let $\bar{A}=A / \mathfrak{p}_{1}, \bar{B}=B / \mathfrak{q}_{1}$; then $\bar{A} \subseteq \bar{B}$, and $\bar{B}$ is integral over $\bar{A}$ by \eqref{prop:5.6}. Hence, by \eqref{thm:5.10}, there exists a prime ideal $\bar{\mathfrak{q}}_{2}$ of $\bar{B}$ such that $\bar{\mathfrak{q}}_{2} \cap \bar{A}=\overline{\mathfrak{p}}_{2}$, the image of $\mathfrak{p}_{2}$ in $\bar{A}$. Lift back $\bar{\mathfrak{q}}_{2}$ to $B$ and we have a prime ideal $\mathfrak{q}_{2}$ with the required properties.
 \end{proof}
 
 \section{Integrally Closed Integral Domains. The Going-down Theorem}
 
-Proposition \ref{prop:5.6}(ii) can be sharpened:
+Proposition \eqref{prop:5.6}(ii) can be sharpened:
 
 \begin{proposition}\label{prop:5.12}
 Let $A \subseteq B$ be rings, $C$ the integral closure of $A$ in $B$. Let $S$ be a multiplicatively closed subset of $A$. Then $S^{-1} C$ is the integral closure of $S^{-1} A$ in $S^{-1} B$.
 \end{proposition}
 
 \begin{proof}
-By \ref{prop:5.6}, $S^{-1} C$ is integral over $S^{-1} A$. Conversely, if $b / s \in S^{-1} B$ is integral over $S^{-1} A$, then we have an equation of the form
+By \eqref{prop:5.6}, $S^{-1} C$ is integral over $S^{-1} A$. Conversely, if $b / s \in S^{-1} B$ is integral over $S^{-1} A$, then we have an equation of the form
 
 \[
 (b / s)^{n}+\left(a_{1} / s_{1}\right)(b / s)^{n-1}+\cdots+a_{n} / s_{n}=0
@@ -219,7 +219,7 @@ Let $A$ be an integral domain. Then the following are equivalent:
 \end{proposition}
 
 \begin{proof}
-Let $K$ be the field of fractions of $A$, let $C$ be the integral closure of $A$ in $K$, and let $f: A \rightarrow C$ be the identity mapping of $A$ into $C$. Then $A$ is integrally closed $\Leftrightarrow f$ is surjective, and by \ref{prop:5.12} $A_{\mathfrak{p}}$ (resp. $A_{\mathfrak{m}}$) is integrally closed $\Leftrightarrow f_{\mathfrak{p}}$ (resp. $f_{\mathfrak{m}}$) is surjective. Now use \eqref{prop:3.9}.
+Let $K$ be the field of fractions of $A$, let $C$ be the integral closure of $A$ in $K$, and let $f: A \rightarrow C$ be the identity mapping of $A$ into $C$. Then $A$ is integrally closed $\Leftrightarrow f$ is surjective, and by \eqref{prop:5.12} $A_{\mathfrak{p}}$ (resp. $A_{\mathfrak{m}}$) is integrally closed $\Leftrightarrow f_{\mathfrak{p}}$ (resp. $f_{\mathfrak{m}}$) is surjective. Now use \eqref{prop:3.9}.
 \end{proof}
 
 Let $A \subseteq B$ be rings and let $\mathfrak{a}$ be an ideal of $A$. An element of $B$ is said to be \textit{integral over} $\mathfrak{a}$ if it satisfies an equation of integral dependence over $A$ in which all the coefficients lie in $\mathfrak{a}$. The \textit{integral closure} of $\mathfrak{a}$ in $B$ is the set of all elements of $B$ which are integral over $\mathfrak{a}$.
@@ -235,7 +235,7 @@ If $x \in B$ is integral over $\mathfrak{a}$, we have an equation of the form
 x^{n}+a_{1} x^{n-1}+\cdots+a_{n}=0
 \]
 
-with $a_{1}, \ldots, a_{n}$ in $\mathfrak{a}$. Hence $x \in C$ and $x^{n} \in \mathfrak{a}^{e}$, that is $x \in r\left(\mathfrak{a}^{e}\right)$. Conversely, if $x \in r\left(\mathfrak{a}^{e}\right)$ then $x^{n}=\sum a_{i} x_{i}$ for some $n>0$, where the $a_{i}$ are elements of $\mathfrak{a}$ and the $x_{i}$ are elements of $C$. Since each $x_{i}$ is integral over $A$ it follows from \ref{cor:5.2} that $M=A\left[x_{1}, \ldots, x_{n}\right]$ is a finitely generated $A$-module, and we have $x^{n} M \subseteq \mathfrak{a} M$. Hence by \eqref{prop:2.4} (taking $\phi$ there to be multiplication by $x^{n}$) we see that $x^{n}$ is integral over $\mathfrak{a}$, hence $x$ is integral over $\mathfrak{a}$.
+with $a_{1}, \ldots, a_{n}$ in $\mathfrak{a}$. Hence $x \in C$ and $x^{n} \in \mathfrak{a}^{e}$, that is $x \in r\left(\mathfrak{a}^{e}\right)$. Conversely, if $x \in r\left(\mathfrak{a}^{e}\right)$ then $x^{n}=\sum a_{i} x_{i}$ for some $n>0$, where the $a_{i}$ are elements of $\mathfrak{a}$ and the $x_{i}$ are elements of $C$. Since each $x_{i}$ is integral over $A$ it follows from \eqref{cor:5.2} that $M=A\left[x_{1}, \ldots, x_{n}\right]$ is a finitely generated $A$-module, and we have $x^{n} M \subseteq \mathfrak{a} M$. Hence by \eqref{prop:2.4} (taking $\phi$ there to be multiplication by $x^{n}$) we see that $x^{n}$ is integral over $\mathfrak{a}$, hence $x$ is integral over $\mathfrak{a}$.
 \end{proof}
 
 \begin{proposition}\label{prop:5.15}
@@ -243,7 +243,7 @@ Let $A \subseteq B$ be integral domains, $A$ integrally closed, and let $x \in B
 \end{proposition}
 
 \begin{proof}
-Clearly $x$ is algebraic over $K$. Let $L$ be an extension field of $K$ which contains all the conjugates $x_{1}, \ldots, x_{n}$ of $x$. Each $x_{i}$ satisfies the same equation of integral dependence as $x$ does, hence each $x_{i}$ is integral over $\mathfrak{a}$. The coefficients of the minimal polynomial of $x$ over $K$ are polynomials in the $x_{i}$, hence by \ref{lem:5.14} are integral over $\mathfrak{a}$. Since $A$ is integrally closed, they must lie in $r(\mathfrak{a})$, by \ref{lem:5.14} again.
+Clearly $x$ is algebraic over $K$. Let $L$ be an extension field of $K$ which contains all the conjugates $x_{1}, \ldots, x_{n}$ of $x$. Each $x_{i}$ satisfies the same equation of integral dependence as $x$ does, hence each $x_{i}$ is integral over $\mathfrak{a}$. The coefficients of the minimal polynomial of $x$ over $K$ are polynomials in the $x_{i}$, hence by \eqref{lem:5.14} are integral over $\mathfrak{a}$. Since $A$ is integrally closed, they must lie in $r(\mathfrak{a})$, by \eqref{lem:5.14} again.
 \end{proof}
 
 \begin{theorem}[Going-down theorem]\label{thm:5.16}
@@ -251,9 +251,9 @@ Let $A \subseteq B$ be integral domains, $A$ integrally closed, $B$ integral ove
 \end{theorem}
 
 \begin{proof}
-As in \ref{thm:5.11} we reduce immediately to the case $m=1, n=2$. Then we have to show that $\mathfrak{p}_{2}$ is the contraction of a prime ideal in the ring $B_{\mathfrak{q}_{1}}$, or equivalently \eqref{prop:3.16} that $B_{\mathfrak{q}_{1}} \mathfrak{p}_{2} \cap A=\mathfrak{p}_{2}$.
+As in \eqref{thm:5.11} we reduce immediately to the case $m=1, n=2$. Then we have to show that $\mathfrak{p}_{2}$ is the contraction of a prime ideal in the ring $B_{\mathfrak{q}_{1}}$, or equivalently \eqref{prop:3.16} that $B_{\mathfrak{q}_{1}} \mathfrak{p}_{2} \cap A=\mathfrak{p}_{2}$.
 
-Every $x \in B_{\mathfrak{q}_{1}} \mathfrak{p}_{2}$ is of the form $y / s$, where $y \in B \mathfrak{p}_{2}$ and $s \in B-\mathfrak{q}_{1}$. By \ref{lem:5.14}, $y$ is integral over $\mathfrak{p}_{2}$, and hence by \ref{prop:5.15} its minimal equation over $K$, the field of fractions of $A$, is of the form
+Every $x \in B_{\mathfrak{q}_{1}} \mathfrak{p}_{2}$ is of the form $y / s$, where $y \in B \mathfrak{p}_{2}$ and $s \in B-\mathfrak{q}_{1}$. By \eqref{lem:5.14}, $y$ is integral over $\mathfrak{p}_{2}$, and hence by \eqref{prop:5.15} its minimal equation over $K$, the field of fractions of $A$, is of the form
 
 \[
 y^{r}+u_{1} y^{r-1}+\cdots+u_{r}=0
@@ -273,7 +273,7 @@ where $v_{i}=u_{i} / x^{i}$. Consequently
 x^{i} v_{i}=u_{i} \in \mathfrak{p}_{2} \quad(1 \leqslant i \leqslant r) .
 \]
 
-But $s$ is integral over $A$, hence by \ref{prop:5.15} (with $\mathfrak{a}=(1)$ ) each $v_{i}$ is in $A$. Suppose $x \notin \mathfrak{p}_{2}$. Then (3) shows that each $v_{i} \in \mathfrak{p}_{2}$, hence (2) shows that $s^{r} \in B \mathfrak{p}_{2} \subseteq B \mathfrak{p}_{1} \subseteq \mathfrak{q}_{1}$, and therefore $s \in \mathfrak{q}_{1}$, which is a contradiction. Hence $x \in \mathfrak{p}_{2}$ and therefore $B_{\mathfrak{q}_{1}} \mathfrak{p}_{2} \cap A=\mathfrak{p}_{2}$ as required.
+But $s$ is integral over $A$, hence by \eqref{prop:5.15} (with $\mathfrak{a}=(1)$ ) each $v_{i}$ is in $A$. Suppose $x \notin \mathfrak{p}_{2}$. Then (3) shows that each $v_{i} \in \mathfrak{p}_{2}$, hence (2) shows that $s^{r} \in B \mathfrak{p}_{2} \subseteq B \mathfrak{p}_{1} \subseteq \mathfrak{q}_{1}$, and therefore $s \in \mathfrak{q}_{1}$, which is a contradiction. Hence $x \in \mathfrak{p}_{2}$ and therefore $B_{\mathfrak{q}_{1}} \mathfrak{p}_{2} \cap A=\mathfrak{p}_{2}$ as required.
 \end{proof}
 
 The proof of the next proposition assumes some standard facts from field theory.
@@ -291,7 +291,7 @@ a_{0} v^{r}+a_{1} v^{r-1}+\cdots+a_{r}=0\left(a_{i} \in A\right) .
 
 Multiplying this equation by $a_{0}^{r-1}$, we see that $a_{0} v=u$ is integral over $A$, and hence is in $B$. Thus, given any basis of $L$ over $K$ we may multiply the basis elements by suitable elements of $A$ to get a basis $u_{1}, \ldots, u_{n}$ such that each $u_{i} \in B$.
 
-Let $T$ denote trace (from $L$ to $K$). Since $L / K$ is separable, the bilinear form $(x, y) \mapsto T(x y)$ on $L$ (considered as a vector space over $K$ ) is non-degenerate, and hence we have a dual basis $v_{1}, \ldots, v_{n}$ of $L$ over $K$, defined by $T\left(u_{i} v_{j}\right)=\delta_{i j}$. Let $x \in B$, say $x=\sum_{j} x_{j} v_{j}\left(x_{j} \in K\right)$. We have $x u_{i} \in B$ (since $u_{i} \in B$ ) and therefore $T\left(x u_{i}\right) \in A$ by \ref{prop:5.15} (for the trace of an element is a multiple of one of the coefficients in the minimal polynomial). But $T\left(x u_{i}\right)=\sum_{j} T\left(x_{j} u_{i} v_{j}\right)=\sum_{j} x_{j} T\left(u_{i} v_{j}\right)=\sum_{j} x_{j} \delta_{i j}=x_{i}$, hence $x_{i} \in A$. Consequently $B \subseteq \sum_{j} A v_{j}$.
+Let $T$ denote trace (from $L$ to $K$). Since $L / K$ is separable, the bilinear form $(x, y) \mapsto T(x y)$ on $L$ (considered as a vector space over $K$ ) is non-degenerate, and hence we have a dual basis $v_{1}, \ldots, v_{n}$ of $L$ over $K$, defined by $T\left(u_{i} v_{j}\right)=\delta_{i j}$. Let $x \in B$, say $x=\sum_{j} x_{j} v_{j}\left(x_{j} \in K\right)$. We have $x u_{i} \in B$ (since $u_{i} \in B$ ) and therefore $T\left(x u_{i}\right) \in A$ by \eqref{prop:5.15} (for the trace of an element is a multiple of one of the coefficients in the minimal polynomial). But $T\left(x u_{i}\right)=\sum_{j} T\left(x_{j} u_{i} v_{j}\right)=\sum_{j} x_{j} T\left(u_{i} v_{j}\right)=\sum_{j} x_{j} \delta_{i j}=x_{i}$, hence $x_{i} \in A$. Consequently $B \subseteq \sum_{j} A v_{j}$.
 \end{proof}
 
 \section{Valuation Rings}
@@ -308,7 +308,7 @@ Let $B$ be an integral domain, $K$ its field of fractions. $B$ is a \textit{valu
 
 \begin{proof}
 \begin{enumerate}[i)]
-\item Let $\mathfrak{m}$ be the set of non-units of $B$, so that $x \in \mathfrak{m} \Leftrightarrow$ either $x=0$ or $x^{-1} \notin B$. If $a \in B$ and $x \in \mathfrak{m}$ we have $a x \in \mathfrak{m}$, for otherwise $(a x)^{-1} \in B$ and therefore $x^{-1}=a \cdot(a x)^{-1} \in B$. Next let $x, y$ be non-zero elements of $\mathfrak{m}$. Then either $x y^{-1} \in B$ or $x^{-1} y \in B$. If $x y^{-1} \in B$ then $x+y=\left(1+x y^{-1}\right) y \in B \mathfrak{m} \subseteq \mathfrak{m}$, and similarly if $x^{-1} y \in B$. Hence $\mathfrak{m}$ is an ideal and therefore $B$ is a local ring by \ref{prop:1.6}.
+\item Let $\mathfrak{m}$ be the set of non-units of $B$, so that $x \in \mathfrak{m} \Leftrightarrow$ either $x=0$ or $x^{-1} \notin B$. If $a \in B$ and $x \in \mathfrak{m}$ we have $a x \in \mathfrak{m}$, for otherwise $(a x)^{-1} \in B$ and therefore $x^{-1}=a \cdot(a x)^{-1} \in B$. Next let $x, y$ be non-zero elements of $\mathfrak{m}$. Then either $x y^{-1} \in B$ or $x^{-1} y \in B$. If $x y^{-1} \in B$ then $x+y=\left(1+x y^{-1}\right) y \in B \mathfrak{m} \subseteq \mathfrak{m}$, and similarly if $x^{-1} y \in B$. Hence $\mathfrak{m}$ is an ideal and therefore $B$ is a local ring by \eqref{prop:1.6}.
 
 \item Clear from the definitions.
 
@@ -360,7 +360,7 @@ in which we may assume that the degrees $m, n$ are as small as possible. Suppose
 \left(1-v_{0}\right) x^{n}=v_{1} x^{n-1}+\cdots+v_{n} .
 \]
 
-Since $v_{0} \in \mathfrak{m}$, it follows from \ref{lem:5.19} that $1-v_{0}$ is a unit in $B$, and (3) may therefore be written in the form
+Since $v_{0} \in \mathfrak{m}$, it follows from \eqref{lem:5.19} that $1-v_{0}$ is a unit in $B$, and (3) may therefore be written in the form
 
 \[
 x^{n}=w_{1} x^{n-1}+\cdots+w_{n} \quad\left(w_{j} \in \mathfrak{m}\right) .
@@ -374,9 +374,9 @@ Let $(B, g)$ be a maximal element of $\Sigma$. Then $B$ is a valuation ring of t
 \end{theorem}
 
 \begin{proof}
-We have to show that if $x \neq 0$ is an element of $K$, then either $x \in B$ or $x^{-1} \in B$. By \ref{lem:5.20} we may as well assume that $\mathfrak{m}[x]$ is not the unit ideal of the ring $B^{\prime}=B[x]$. Then $\mathfrak{m}[x]$ is contained in a maximal ideal $\mathfrak{m}^{\prime}$ of $B^{\prime}$, and we have $\mathfrak{m}^{\prime} \cap B=\mathfrak{m}$ (because $\mathfrak{m}^{\prime} \cap B$ is a proper ideal of $B$ and contains $\mathfrak{m}$). Hence the embedding of $B$ in $B^{\prime}$ induces an embedding of the field $k=B / \mathfrak{m}$ in the field $k^{\prime}=$ $B^{\prime} / \mathfrak{m}^{\prime}$; also $k^{\prime}=k[\bar{x}]$ where $\bar{x}$ is the image of $x$ in $k^{\prime}$, hence $\bar{x}$ is algebraic over $k$, and therefore $k^{\prime}$ is a finite algebraic extension of $k$.
+We have to show that if $x \neq 0$ is an element of $K$, then either $x \in B$ or $x^{-1} \in B$. By \eqref{lem:5.20} we may as well assume that $\mathfrak{m}[x]$ is not the unit ideal of the ring $B^{\prime}=B[x]$. Then $\mathfrak{m}[x]$ is contained in a maximal ideal $\mathfrak{m}^{\prime}$ of $B^{\prime}$, and we have $\mathfrak{m}^{\prime} \cap B=\mathfrak{m}$ (because $\mathfrak{m}^{\prime} \cap B$ is a proper ideal of $B$ and contains $\mathfrak{m}$). Hence the embedding of $B$ in $B^{\prime}$ induces an embedding of the field $k=B / \mathfrak{m}$ in the field $k^{\prime}=$ $B^{\prime} / \mathfrak{m}^{\prime}$; also $k^{\prime}=k[\bar{x}]$ where $\bar{x}$ is the image of $x$ in $k^{\prime}$, hence $\bar{x}$ is algebraic over $k$, and therefore $k^{\prime}$ is a finite algebraic extension of $k$.
 
-Now the homomorphism $g$ induces an embedding $\bar{g}$ of $k$ in $\Omega$, since by \ref{lem:5.19} $\mathfrak{m}$ is the kernel of $g$. Since $\Omega$ is algebraically closed, $\bar{g}$ can be extended to an embedding $\bar{g}^{\prime}$ of $k^{\prime}$ into $\Omega$. Composing $\bar{g}^{\prime}$ with the natural homomorphism $B^{\prime} \rightarrow k^{\prime}$, we have, say, $g^{\prime}: B^{\prime} \rightarrow \Omega$ which extends $g$. Since the pair $(B, g)$ is maximal, it follows that $B^{\prime}=B$ and therefore $x \in B$.
+Now the homomorphism $g$ induces an embedding $\bar{g}$ of $k$ in $\Omega$, since by \eqref{lem:5.19} $\mathfrak{m}$ is the kernel of $g$. Since $\Omega$ is algebraically closed, $\bar{g}$ can be extended to an embedding $\bar{g}^{\prime}$ of $k^{\prime}$ into $\Omega$. Composing $\bar{g}^{\prime}$ with the natural homomorphism $B^{\prime} \rightarrow k^{\prime}$, we have, say, $g^{\prime}: B^{\prime} \rightarrow \Omega$ which extends $g$. Since the pair $(B, g)$ is maximal, it follows that $B^{\prime}=B$ and therefore $x \in B$.
 \end{proof}
 
 \begin{corollary}\label{cor:5.22}
@@ -384,9 +384,9 @@ Let $A$ be a subring of a field $K$. Then the integral closure $\bar{A}$ of $A$ 
 \end{corollary}
 
 \begin{proof}
-Let $B$ be a valuation ring of $K$ such that $A \subseteq B$. Since $B$ is integrally closed, by \ref{prop:5.18} iii), it follows that $\bar{A} \subseteq B$.
+Let $B$ be a valuation ring of $K$ such that $A \subseteq B$. Since $B$ is integrally closed, by \eqref{prop:5.18} iii), it follows that $\bar{A} \subseteq B$.
 
-Conversely, let $x \notin \bar{A}$. Then $x$ is not in the ring $A^{\prime}=A\left[x^{-1}\right]$. Hence $x^{-1}$ is a non-unit in $A^{\prime}$ and is therefore contained in a maximal ideal $\mathfrak{m}^{\prime}$ of $A^{\prime}$. Let $\Omega$ be an algebraic closure of the field $k^{\prime}=A^{\prime} / \mathfrak{m}^{\prime}$. Then the restriction to $A$ of the natural homomorphism $A^{\prime} \rightarrow k^{\prime}$ defines a homomorphism of $A$ into $\Omega$. By \ref{thm:5.21} this can be extended to some valuation ring $B \supseteq A$. Since $x^{-1}$ maps to zero, it follows that $x \notin B$.
+Conversely, let $x \notin \bar{A}$. Then $x$ is not in the ring $A^{\prime}=A\left[x^{-1}\right]$. Hence $x^{-1}$ is a non-unit in $A^{\prime}$ and is therefore contained in a maximal ideal $\mathfrak{m}^{\prime}$ of $A^{\prime}$. Let $\Omega$ be an algebraic closure of the field $k^{\prime}=A^{\prime} / \mathfrak{m}^{\prime}$. Then the restriction to $A$ of the natural homomorphism $A^{\prime} \rightarrow k^{\prime}$ defines a homomorphism of $A$ into $\Omega$. By \eqref{thm:5.21} this can be extended to some valuation ring $B \supseteq A$. Since $x^{-1}$ maps to zero, it follows that $x \notin B$.
 \end{proof}
 
 \begin{proposition}\label{prop:5.23}
@@ -408,7 +408,7 @@ a_{0}^{\prime} v^{-n}+a_{1}^{\prime} v^{1-n}+\cdots+a_{n}^{\prime}=0 & \left(a_{
 \end{array}
 \]
 
-Let $u=a_{0} a_{0}^{\prime}$, and let $f: A \rightarrow \Omega$ be such that $f(u) \neq 0$. Then $f$ can be extended, first to a homomorphism $f_{1}: A\left[u^{-1}\right] \rightarrow \Omega$ (with $f_{1}\left(u^{-1}\right)=f(u)^{-1}$ ), and then by \ref{thm:5.21} to a homomorphism $h: C \rightarrow \Omega$, where $C$ is a valuation ring containing $A\left[u^{-1}\right]$. From (1), $x$ is integral over $A\left[u^{-1}\right]$, hence by \ref{cor:5.22} $x \in C$, so that $C$ contains $B$, and in particular $v \in C$. On the other hand, from (2), $v^{-1}$ is integral over $A\left[u^{-1}\right]$, and therefore by \ref{cor:5.22} again is in $C$. Therefore $v$ is a unit in $C$, and hence $h(v) \neq 0$. Now take $g$ to be the restriction of $h$ to $B$.
+Let $u=a_{0} a_{0}^{\prime}$, and let $f: A \rightarrow \Omega$ be such that $f(u) \neq 0$. Then $f$ can be extended, first to a homomorphism $f_{1}: A\left[u^{-1}\right] \rightarrow \Omega$ (with $f_{1}\left(u^{-1}\right)=f(u)^{-1}$ ), and then by \eqref{thm:5.21} to a homomorphism $h: C \rightarrow \Omega$, where $C$ is a valuation ring containing $A\left[u^{-1}\right]$. From (1), $x$ is integral over $A\left[u^{-1}\right]$, hence by \eqref{cor:5.22} $x \in C$, so that $C$ contains $B$, and in particular $v \in C$. On the other hand, from (2), $v^{-1}$ is integral over $A\left[u^{-1}\right]$, and therefore by \eqref{cor:5.22} again is in $C$. Therefore $v$ is a unit in $C$, and hence $h(v) \neq 0$. Now take $g$ to be the restriction of $h$ to $B$.
 \end{enumerate}
 \end{proof}
 
@@ -420,15 +420,15 @@ Let $k$ be a field and $B$ a finitely generated $k$-algebra. If $B$ is a field t
 Take $A=k, v=1$ and $\Omega=$ algebraic closure of $k$.
 \end{proof}
 
-\ref{cor:5.24} is one form of Hilbert's Nullstellensatz. For another proof, see \eqref{prop:7.9}.
+\eqref{cor:5.24} is one form of Hilbert's Nullstellensatz. For another proof, see \eqref{prop:7.9}.
 
 \section{Exercises}
 \begin{enumerate}
-\item Let $f: A \rightarrow B$ be an integral homomorphism of rings. Show that $f^{*}: \operatorname{Spec}(B) \rightarrow \operatorname{Spec}(A)$ is a closed mapping, i.e. that it maps closed sets to closed sets. (This is a geometrical equivalent of \ref{thm:5.10}.)
+\item Let $f: A \rightarrow B$ be an integral homomorphism of rings. Show that $f^{*}: \operatorname{Spec}(B) \rightarrow \operatorname{Spec}(A)$ is a closed mapping, i.e. that it maps closed sets to closed sets. (This is a geometrical equivalent of \eqref{thm:5.10}.)
 
-\item Let $A$ be a subring of a ring $B$ such that $B$ is integral over $A$, and let $f: A \rightarrow \Omega$ be a homomorphism of $A$ into an algebraically closed field $\Omega$. Show that $f$ can be extended to a homomorphism of $B$ into $\Omega$. [Use \ref{thm:5.10}.]
+\item Let $A$ be a subring of a ring $B$ such that $B$ is integral over $A$, and let $f: A \rightarrow \Omega$ be a homomorphism of $A$ into an algebraically closed field $\Omega$. Show that $f$ can be extended to a homomorphism of $B$ into $\Omega$. [Use \eqref{thm:5.10}.]
 
-\item Let $f: B \rightarrow B^{\prime}$ be a homomorphism of $A$-algebras, and let $C$ be an $A$-algebra. If $f$ is integral, prove that $f \otimes 1: B \otimes_{A} C \rightarrow B^{\prime} \otimes_{A} C$ is integral. (This includes \ref{prop:5.6} ii) as a special case.)
+\item Let $f: B \rightarrow B^{\prime}$ be a homomorphism of $A$-algebras, and let $C$ be an $A$-algebra. If $f$ is integral, prove that $f \otimes 1: B \otimes_{A} C \rightarrow B^{\prime} \otimes_{A} C$ is integral. (This includes \eqref{prop:5.6} ii) as a special case.)
 
 \item Let $A$ be a subring of a ring $B$ such that $B$ is integral over $A$. Let $\mathfrak{n}$ be a maximal ideal of $B$ and let $\mathfrak{m}=\mathfrak{n} \cap A$ be the corresponding maximal ideal of $A$. Is $B_{\mathfrak{n}}$ necessarily integral over $A_{\mathfrak{m}}$?
 
@@ -469,7 +469,7 @@ f_{1}^{m}+h_{1} f_{1}^{m-1}+\cdots+h_{m}=0 \text {, }
 
 where $h_{m}=\left(x^{r}\right)^{m}+g_{1}\left(x^{r}\right)^{m-1}+\cdots+g_{m} \in A[x]$. Now apply Exercise 8 to the polynomials $-f_{1}$ and $f_{1}^{m-1}+h_{1} f_{1}^{m-2}+\cdots+h_{m-1}$.]
 
-\item A ring homomorphism $f: A \rightarrow B$ is said to have the \textit{going-up property} (resp. the \textit{going-down property}) if the conclusion of the going-up theorem \ref{thm:5.11} (resp. the going-down theorem \ref{thm:5.16}) holds for $B$ and its subring $f(A)$.
+\item A ring homomorphism $f: A \rightarrow B$ is said to have the \textit{going-up property} (resp. the \textit{going-down property}) if the conclusion of the going-up theorem \eqref{thm:5.11} (resp. the going-down theorem \eqref{thm:5.16}) holds for $B$ and its subring $f(A)$.
 
 Let $f^{*}: \operatorname{Spec}(B) \rightarrow \operatorname{Spec}(A)$ be the mapping associated with $f$.
 \begin{enumerate}[i)]
@@ -498,7 +498,7 @@ Prove that $\left(a^{\prime}\right) \Rightarrow\left(b^{\prime}\right) \Rightarr
 
 Let $S$ be a multiplicatively closed subset of $A$ such that $\sigma(S) \subseteq S$ for all $\sigma \in G$, and let $S^{G}=S \cap A^{G}$. Show that the action of $G$ on $A$ extends to an action on $S^{-1} A$, and that $\left(S^{G}\right)^{-1} A^{G} \cong\left(S^{-1} A\right)^{G}$.
 
-\item In the situation of Exercise 12, let $\mathfrak{p}$ be a prime ideal of $A^{G}$, and let $P$ be the set of prime ideals of $A$ whose contraction is $\mathfrak{p}$. Show that $G$ acts transitively on $P$. In particular, $P$ is finite. [Let $\mathfrak{p}_{1}, \mathfrak{p}_{2} \in P$ and let $x \in \mathfrak{p}_{1}$. Then $\prod_{\sigma} \sigma(x) \in \mathfrak{p}_{1} \cap A^{G}=\mathfrak{p} \subseteq \mathfrak{p}_{2}$, hence $\sigma(x) \in \mathfrak{p}_{2}$ for some $\sigma \in G$. Deduce that $\mathfrak{p}_{1}$ is contained in $\bigcup_{\sigma \in G} \sigma\left(\mathfrak{p}_{2}\right)$, and then apply \eqref{prop:1.11} and \ref{cor:5.9}.]
+\item In the situation of Exercise 12, let $\mathfrak{p}$ be a prime ideal of $A^{G}$, and let $P$ be the set of prime ideals of $A$ whose contraction is $\mathfrak{p}$. Show that $G$ acts transitively on $P$. In particular, $P$ is finite. [Let $\mathfrak{p}_{1}, \mathfrak{p}_{2} \in P$ and let $x \in \mathfrak{p}_{1}$. Then $\prod_{\sigma} \sigma(x) \in \mathfrak{p}_{1} \cap A^{G}=\mathfrak{p} \subseteq \mathfrak{p}_{2}$, hence $\sigma(x) \in \mathfrak{p}_{2}$ for some $\sigma \in G$. Deduce that $\mathfrak{p}_{1}$ is contained in $\bigcup_{\sigma \in G} \sigma\left(\mathfrak{p}_{2}\right)$, and then apply \eqref{prop:1.11} and \eqref{cor:5.9}.]
 
 \item Let $A$ be an integrally closed domain, $K$ its field of fractions and $L$ a finite normal separable extension of $K$. Let $G$ be the Galois group of $L$ over $K$ and let $B$ be the integral closure of $A$ in $L$. Show that $\sigma(B)=B$ for all $\sigma \in G$, and that $A=B^{G}$.
 
@@ -516,11 +516,11 @@ From the proof it follows that $y_{1}, \ldots, y_{r}$ may be chosen to be linear
 \item \textbf{Nullstellensatz (weak form).}
 Let $X$ be an affine algebraic variety in $k^{n}$, where $k$ is an algebraically closed field, and let $I(X)$ be the ideal of $X$ in the polynomial ring $k\left[t_{1}, \ldots, t_{n}\right]$ (Chapter 1, Exercise 27). If $I(X) \neq(1)$ then $X$ is not empty. [Let $A=k\left[t_{1}, \ldots, t_{n}\right] / I(X)$ be the coordinate ring of $X$. Then $A \neq 0$, hence by Exercise 16 there exists a linear subspace $L$ of dimension $\geqslant 0$ in $k^{n}$ and a mapping of $X$ onto $L$. Hence $X \neq \varnothing$. Deduce that every maximal ideal in the ring $k\left[t_{1}, \ldots, t_{n}\right]$ is of the form $\left(t_{1}-a_{1}, \ldots, t_{n}-a_{n}\right)$ where $a_{i} \in k$.
 
-\item Let $k$ be a field and let $B$ be a finitely generated $k$-algebra. Suppose that $B$ is a field. Then $B$ is a finite algebraic extension of $k$. (This is another version of Hilbert's Nullstellensatz. The following proof is due to Zariski. For other proofs, see \ref{cor:5.24}, \eqref{prop:7.9}.)
+\item Let $k$ be a field and let $B$ be a finitely generated $k$-algebra. Suppose that $B$ is a field. Then $B$ is a finite algebraic extension of $k$. (This is another version of Hilbert's Nullstellensatz. The following proof is due to Zariski. For other proofs, see \eqref{cor:5.24}, \eqref{prop:7.9}.)
 
 Let $x_{1}, \ldots, x_{n}$ generate $B$ as a $k$-algebra. The proof is by induction on $n$. If $n=1$ the result is clearly true, so assume $n>1$. Let $A=k\left[x_{1}\right]$ and let $K=k\left(x_{1}\right)$ be the field of fractions of $A$. By the inductive hypothesis, $B$ is a finite algebraic extension of $K$, hence each of $x_{2}, \ldots, x_{n}$ satisfies a monic polynomial equation with coefficients in $K$, i.e. coefficients of the form $a / b$ where $a$ and $b$ are in $A$. If $f$ is the product of the denominators of all these coefficients, then each of $x_{2}, \ldots, x_{n}$ is integral over $A_{f}$. Hence $B$ and therefore $K$ is integral over $A_{f}$.
 
-Suppose $x_{1}$ is transcendental over $k$. Then $A$ is integrally closed, because it is a unique factorization domain. Hence $A_{f}$ is integrally closed \ref{prop:5.12}, and therefore $A_{f}=K$, which is clearly absurd. Hence $x_{1}$ is algebraic over $k$, hence $K$ (and therefore $B$) is a finite extension of $k$.
+Suppose $x_{1}$ is transcendental over $k$. Then $A$ is integrally closed, because it is a unique factorization domain. Hence $A_{f}$ is integrally closed \eqref{prop:5.12}, and therefore $A_{f}=K$, which is clearly absurd. Hence $x_{1}$ is algebraic over $k$, hence $K$ (and therefore $B$) is a finite extension of $k$.
 
 \item Deduce the result of Exercise 17 from Exercise 18.
 
@@ -554,7 +554,7 @@ In particular, every finitely generated ring, and every finitely generated algeb
 [\begin{enumerate}[i)]
 \item $\Rightarrow$ ii). Reduce to the case where $A$ is a subring of $B$, and use Exercise 21. If $s \in A$ is as in Exercise 21, then there exists a maximal ideal $\mathfrak{m}$ of $A$ not containing $s$, and the homomorphism $A \rightarrow A / \mathfrak{m}=k$ extends to a homomorphism $g$ of $B$ into the algebraic closure of $k$. Since $B$ is a field, $g$ is injective, and $g(B)$ is algebraic over $k$, hence finite algebraic over $k$.
 
-\item $\Rightarrow$ i). Use criterion iii) of Exercise 23. Let $\mathfrak{p}$ be a prime ideal of $A$ which is not maximal, and let $\bar{B}=A / \mathfrak{p}$. Let $f$ be a non-zero element of $\bar{B}$. Then $\bar{B}_{f}$ is a finitely generated $A$-algebra. If it is a field it is finite over $\bar{B}$, hence integral over $\bar{B}$ and therefore $\bar{B}$ is a field by \ref{prop:5.7}. Hence $\bar{B}_{f}$ is not a field and therefore has a non-zero prime ideal, whose contraction in $\bar{B}$ is a non-zero ideal $\mathfrak{p}^{\prime}$ such that $f \notin \mathfrak{p}^{\prime}$.
+\item $\Rightarrow$ i). Use criterion iii) of Exercise 23. Let $\mathfrak{p}$ be a prime ideal of $A$ which is not maximal, and let $\bar{B}=A / \mathfrak{p}$. Let $f$ be a non-zero element of $\bar{B}$. Then $\bar{B}_{f}$ is a finitely generated $A$-algebra. If it is a field it is finite over $\bar{B}$, hence integral over $\bar{B}$ and therefore $\bar{B}$ is a field by \eqref{prop:5.7}. Hence $\bar{B}_{f}$ is not a field and therefore has a non-zero prime ideal, whose contraction in $\bar{B}$ is a non-zero ideal $\mathfrak{p}^{\prime}$ such that $f \notin \mathfrak{p}^{\prime}$.
 \end{enumerate}]
 
 \item Let $X$ be a topological space. A subset of $X$ is \textit{locally closed} if it is the intersection of an open set and a closed set, or equivalently if it is open in its closure.
@@ -579,7 +579,7 @@ If $A$ is a ring, show that the following are equivalent:
 \section{Valuation rings and valuations}
 \begin{enumerate}
 \setcounter{enumi}{26}
-\item Let $A, B$ be two local rings. $B$ is said to \textit{dominate} $A$ if $A$ is a subring of $B$ and the maximal ideal $\mathfrak{m}$ of $A$ is contained in the maximal ideal $\mathfrak{n}$ of $B$ (or, equivalently, if $\mathfrak{m}=\mathfrak{n} \cap A$). Let $K$ be a field and let $\Sigma$ be the set of all local subrings of $K$. If $\Sigma$ is ordered by the relation of domination, show that $\Sigma$ has maximal elements and that $A \in \Sigma$ is maximal if and only if $A$ is a valuation ring of $K$. [Use \ref{thm:5.21}.]
+\item Let $A, B$ be two local rings. $B$ is said to \textit{dominate} $A$ if $A$ is a subring of $B$ and the maximal ideal $\mathfrak{m}$ of $A$ is contained in the maximal ideal $\mathfrak{n}$ of $B$ (or, equivalently, if $\mathfrak{m}=\mathfrak{n} \cap A$). Let $K$ be a field and let $\Sigma$ be the set of all local subrings of $K$. If $\Sigma$ is ordered by the relation of domination, show that $\Sigma$ has maximal elements and that $A \in \Sigma$ is maximal if and only if $A$ is a valuation ring of $K$. [Use \eqref{thm:5.21}.]
 
 \item Let $A$ be an integral domain, $K$ its field of fractions. Show that the following are equivalent:
 \begin{enumerate}
@@ -620,7 +620,7 @@ Let $K$ be the field of fractions of $A$. Show that $v_{0}$ can be uniquely exte
 
 \item From Exercises 1 and 3 it follows that, if $f: A \rightarrow B$ is integral and $C$ is any $A$-algebra, then the mapping $(f \otimes 1)^{*}: \operatorname{Spec}\left(B \otimes_{A} C\right) \rightarrow \operatorname{Spec}(C)$ is a closed map.
 
-Conversely, suppose that $f: A \rightarrow B$ has this property and that $B$ is an integral domain. Then $f$ is integral. [Replacing $A$ by its image in $B$, reduce to the case where $A \subseteq B$ and $f$ is the injection. Let $K$ be the field of fractions of $B$ and let $A^{\prime}$ be a valuation ring of $K$ containing $A$. By \ref{cor:5.22} it is enough to show that $A^{\prime}$ contains $B$. By hypothesis $\operatorname{Spec}\left(B \otimes_{A} A^{\prime}\right) \rightarrow \operatorname{Spec}\left(A^{\prime}\right)$ is a closed map. Apply the result of Exercise 34 to the homomorphism $B \otimes_{A} A^{\prime} \rightarrow K$ defined by $b \otimes a^{\prime} \mapsto b a^{\prime}$. It follows that $b a^{\prime} \in A^{\prime}$ for all $b \in B$ and all $a^{\prime} \in A^{\prime}$; taking $a^{\prime}=1$, we have what we want.]
+Conversely, suppose that $f: A \rightarrow B$ has this property and that $B$ is an integral domain. Then $f$ is integral. [Replacing $A$ by its image in $B$, reduce to the case where $A \subseteq B$ and $f$ is the injection. Let $K$ be the field of fractions of $B$ and let $A^{\prime}$ be a valuation ring of $K$ containing $A$. By \eqref{cor:5.22} it is enough to show that $A^{\prime}$ contains $B$. By hypothesis $\operatorname{Spec}\left(B \otimes_{A} A^{\prime}\right) \rightarrow \operatorname{Spec}\left(A^{\prime}\right)$ is a closed map. Apply the result of Exercise 34 to the homomorphism $B \otimes_{A} A^{\prime} \rightarrow K$ defined by $b \otimes a^{\prime} \mapsto b a^{\prime}$. It follows that $b a^{\prime} \in A^{\prime}$ for all $b \in B$ and all $a^{\prime} \in A^{\prime}$; taking $a^{\prime}=1$, we have what we want.]
 
 Show that the result just proved remains valid if $B$ is a ring with only finitely many minimal prime ideals (e.g., if $B$ is Noetherian). [Let $\mathfrak{p}_{i}$ be the minimal prime ideals. Then each composite homomorphism $A \rightarrow B \rightarrow B / \mathfrak{p}_{i}$ is integral, hence $A \rightarrow \prod\left(B / \mathfrak{p}_{i}\right)$ is integral, hence $A \rightarrow B / \mathfrak{N}$ is integral (where $\mathfrak{N}$ is the nilradical of $B$), hence finally $A \rightarrow B$ is integral.]
 \end{enumerate}

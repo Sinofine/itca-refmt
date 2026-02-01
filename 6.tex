@@ -49,7 +49,7 @@ $\Rightarrow$ : Let $N$ be a submodule of $M$, and let $\Sigma$ be the set of al
 $\Leftarrow$ : Let $M_{1} \subseteq M_{2} \subseteq \cdots$ be an ascending chain of submodules of $M$. Then $N=\bigcup_{n=1}^{\infty} M_{n}$ is a submodule of $M$, hence is finitely generated, say by $x_{1}, \ldots, x_{r}$. Say $x_{i} \in M_{n_{i}}$ and let $n=\max _{i=1}^{r} n_{i}$; then each $x_{i} \in M_{n}$, hence $M_{n}=M$ and therefore the chain is stationary.
 \end{proof}
 
-Because of \ref{prop:6.2}, Noetherian modules are more important than Artinian modules: the Noetherian condition is just the right finiteness condition to make a lot of theorems work. However, many of the elementary formal properties apply equally to Noetherian and Artinian modules.
+Because of \eqref{prop:6.2}, Noetherian modules are more important than Artinian modules: the Noetherian condition is just the right finiteness condition to make a lot of theorems work. However, many of the elementary formal properties apply equally to Noetherian and Artinian modules.
 
 \begin{proposition}\label{prop:6.3}
 Let $0 \rightarrow M^{\prime} \stackrel{\alpha}{\rightarrow} M \stackrel{\beta}{\rightarrow} M^{\prime \prime} \rightarrow 0$ be an exact sequence of A-modules. Then
@@ -71,7 +71,7 @@ If $M_{i}(1 \leqslant i \leqslant n)$ are Noetherian (resp. Artinian) A-modules,
 \end{corollary}
 
 \begin{proof}
-Apply induction and \ref{prop:6.3} to the exact sequence
+Apply induction and \eqref{prop:6.3} to the exact sequence
 
 \[
 0 \rightarrow M_{n} \rightarrow \bigoplus_{i=1}^{n} M_{i} \rightarrow \bigoplus_{i=1}^{n-1} M_{i} \rightarrow 0 .
@@ -80,11 +80,11 @@ Apply induction and \ref{prop:6.3} to the exact sequence
 
 A ring $A$ is said to be Noetherian (resp. Artinian) if it is so as an $A$-module, i.e., if it satisfies a.c.c. (resp. d.c.c.) on ideals.
 
-Examples. 1) Any field is both Artinian and Noetherian; so is the ring $Z /(n)$ $(n \neq 0)$. The ring $Z$ is Noetherian, but not Artinian (Exercise 2 before \ref{prop:6.2}).
+Examples. 1) Any field is both Artinian and Noetherian; so is the ring $Z /(n)$ $(n \neq 0)$. The ring $Z$ is Noetherian, but not Artinian (Exercise 2 before \eqref{prop:6.2}).
 
 \begin{enumerate}
   \setcounter{enumi}{1}
-  \item Any principal ideal domain is Noetherian (by \ref{prop:6.2}: every ideal is finitely generated).
+  \item Any principal ideal domain is Noetherian (by \eqref{prop:6.2}: every ideal is finitely generated).
 
   \item The ring $k\left[x_{1}, x_{2}, \ldots\right]$ is not Noetherian (Exercise 6 above). But it is an integral domain, hence has a field of fractions. Thus a subring of a Noetherian ring need not be Noetherian.
 
@@ -97,7 +97,7 @@ Let $A$ be a Noetherian (resp. Artinian) ring, $M$ a finitelygenerated A-module.
 \end{proposition}
 
 \begin{proof}
-$M$ is a quotient of $A^{n}$ for some $n$ : apply \ref{cor:6.4} and \ref{prop:6.3}.
+$M$ is a quotient of $A^{n}$ for some $n$ : apply \eqref{cor:6.4} and \eqref{prop:6.3}.
 \end{proof}
 
 \begin{proposition}\label{prop:6.6}
@@ -107,7 +107,7 @@ Then $A / \mathfrak{a}$ is a Noetherian (resp. Artinian) ring.
 \end{proposition}
 
 \begin{proof}
-By \ref{prop:6.3} $A / \mathfrak{a}$ is Noetherian (resp. Artinian) as an $A$-module, hence also as an $A / \mathfrak{a}$-module.
+By \eqref{prop:6.3} $A / \mathfrak{a}$ is Noetherian (resp. Artinian) as an $A$-module, hence also as an $A / \mathfrak{a}$-module.
 \end{proof}
 
 A chain of submodules of a module $M$ is a sequence $\left(M_{i}\right)(0 \leqslant i \leqslant n)$ of submodules of $M$ such that
@@ -140,10 +140,10 @@ $M$ has a composition series $\Leftrightarrow M$ satisfies both chain conditions
 \begin{proof}
 $\Rightarrow$ : All chains in $M$ are of bounded length, hence both a.c.c. and d.c.c. hold.
 
-$\Leftarrow$ : Construct a composition series of $M$ as follows. Since $M=M_{0}$ satisfies the maximum condition by \ref{prop:6.1}, it has a maximal submodule $M_{1} \subset M_{0}$. Similarly $M_{1}$ has a maximal submodule $M_{2} \subset M_{1}$, and so on. Thus we have a strictly descending chain $M_{0} \supset M_{1} \supset \ldots$ which by d.c.c. must be finite, and hence is a composition series of $M$.
+$\Leftarrow$ : Construct a composition series of $M$ as follows. Since $M=M_{0}$ satisfies the maximum condition by \eqref{prop:6.1}, it has a maximal submodule $M_{1} \subset M_{0}$. Similarly $M_{1}$ has a maximal submodule $M_{2} \subset M_{1}$, and so on. Thus we have a strictly descending chain $M_{0} \supset M_{1} \supset \ldots$ which by d.c.c. must be finite, and hence is a composition series of $M$.
 \end{proof}
 
-A module satisfying both a.c.c. and d.c.c. is therefore called a module of finite length. By \ref{prop:6.7} all composition series of $M$ have the same length $l(M)$, called the length of $M$. The Jordan-Hölder theorem applies to modules of finite length: if $\left(M_{i}\right)_{0 \leqslant 1 \leqslant n}$ and $\left(M_{i}^{\prime}\right)_{0 \leqslant i \leqslant n}$ are any two composition series of $M$, there is a one-to-one correspondence between the set of quotients $\left(M_{1-1} / M_{1}\right)_{1<i<n}$ and the set of quotients $\left(M_{i-1}^{\prime} / M_{i}^{\prime}\right)_{1 \leqslant i \leqslant n}$, such that corresponding quotients are isomorphic. The proof is the same as for finite groups.
+A module satisfying both a.c.c. and d.c.c. is therefore called a module of finite length. By \eqref{prop:6.7} all composition series of $M$ have the same length $l(M)$, called the length of $M$. The Jordan-Hölder theorem applies to modules of finite length: if $\left(M_{i}\right)_{0 \leqslant 1 \leqslant n}$ and $\left(M_{i}^{\prime}\right)_{0 \leqslant i \leqslant n}$ are any two composition series of $M$, there is a one-to-one correspondence between the set of quotients $\left(M_{1-1} / M_{1}\right)_{1<i<n}$ and the set of quotients $\left(M_{i-1}^{\prime} / M_{i}^{\prime}\right)_{1 \leqslant i \leqslant n}$, such that corresponding quotients are isomorphic. The proof is the same as for finite groups.
 
 \begin{proposition}\label{prop:6.9}
 The length $l(M)$ is an additive function on the class of all A-modules of finite length.
@@ -170,7 +170,7 @@ Moreover, if these conditions are satisfied, length $=$ dimension.
 \end{proposition}
 
 \begin{proof}
-i) $\Rightarrow$ ii) is elementary; ii) $\Rightarrow$ iii), ii) $\Rightarrow$ iv) from \ref{prop:6.8}. Remains to prove iii) $\Rightarrow$ i) and iv) $\Rightarrow$ i). Suppose i) is false, then there exists an infinite sequence $\left(x_{n}\right)_{n>1}$ of linearly independent elements of $V$. Let $U_{n}$ (resp. $V_{n}$ ) be the vector space spanned by $x_{1}, \ldots, x_{n}$ (resp., $\left.x_{n+1}, x_{n+2}, \ldots\right)$. Then the chain $\left(U_{n}\right)_{n \geqslant 1}$ (resp. $\left.\left(V_{n}\right)_{n>1}\right)$ is infinite and strictly ascending (resp. strictly descending).
+i) $\Rightarrow$ ii) is elementary; ii) $\Rightarrow$ iii), ii) $\Rightarrow$ iv) from \eqref{prop:6.8}. Remains to prove iii) $\Rightarrow$ i) and iv) $\Rightarrow$ i). Suppose i) is false, then there exists an infinite sequence $\left(x_{n}\right)_{n>1}$ of linearly independent elements of $V$. Let $U_{n}$ (resp. $V_{n}$ ) be the vector space spanned by $x_{1}, \ldots, x_{n}$ (resp., $\left.x_{n+1}, x_{n+2}, \ldots\right)$. Then the chain $\left(U_{n}\right)_{n \geqslant 1}$ (resp. $\left.\left(V_{n}\right)_{n>1}\right)$ is infinite and strictly ascending (resp. strictly descending).
 \end{proof}
 
 \begin{corollary}\label{cor:6.11}
@@ -178,7 +178,7 @@ Let $A$ be a ring in which the zero ideal is a product $\mathfrak{m}_{1} \cdots 
 \end{corollary}
 
 \begin{proof}
-Consider the chain of ideals $A \supset \mathfrak{m}_{1} \supseteq \mathfrak{m}_{1} \mathrm{~m}_{2} \supseteq \cdots \supseteq \mathfrak{m}_{1} \cdots \mathfrak{m}_{n}=0$. Each factor $\mathfrak{m}_{1} \cdots \mathfrak{m}_{i-1} / \mathfrak{m}_{1} \cdots \mathfrak{m}_{i}$ is a vector space over the field $A / \mathfrak{m}_{i}$. Hence a.c.c. $\Leftrightarrow$ d.c.c. for each factor. But a.c.c. (resp. d.c.c.) for each factor $\Leftrightarrow$ a.c.c. (resp. d.c.c.) for $A$, by repeated application of \ref{prop:6.3}. Hence a.c.c. $\Leftrightarrow$ d.c.c. for $A$.
+Consider the chain of ideals $A \supset \mathfrak{m}_{1} \supseteq \mathfrak{m}_{1} \mathrm{~m}_{2} \supseteq \cdots \supseteq \mathfrak{m}_{1} \cdots \mathfrak{m}_{n}=0$. Each factor $\mathfrak{m}_{1} \cdots \mathfrak{m}_{i-1} / \mathfrak{m}_{1} \cdots \mathfrak{m}_{i}$ is a vector space over the field $A / \mathfrak{m}_{i}$. Hence a.c.c. $\Leftrightarrow$ d.c.c. for each factor. But a.c.c. (resp. d.c.c.) for each factor $\Leftrightarrow$ a.c.c. (resp. d.c.c.) for $A$, by repeated application of \eqref{prop:6.3}. Hence a.c.c. $\Leftrightarrow$ d.c.c. for $A$.
 \end{proof}
 
 \section{Exercises}

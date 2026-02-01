@@ -83,7 +83,7 @@ then there is a unique isomorphism $h: S^{-1} A \rightarrow B$ such that $g=h \c
 \end{corollary}
 
 \begin{proof}
-By (\ref{prop:3.1}) we have to show that $h: S^{-1} A \rightarrow B$, defined by
+By (\eqref{prop:3.1}) we have to show that $h: S^{-1} A \rightarrow B$, defined by
 
 \[
 h(a / s)=g(a) g(s)^{-1}
@@ -133,7 +133,7 @@ The operation $S^{-1}$ is exact, i.e., if $M^{\prime} \stackrel{f}{\rightarrow} 
 We have $g \circ f=0$, hence $S^{-1} g \circ S^{-1} f=S^{-1}(0)=0$, hence $\operatorname{Im}\left(S^{-1} f\right)$ $\subseteq \operatorname{Ker}\left(S^{-1} g\right)$. To prove the reverse inclusion, let $\mathfrak{m} / \mathrm{s} \in \operatorname{Ker}\left(S^{-1} g\right)$, then $g(m) / s=0$ in $S^{-1} M^{\prime \prime}$, hence there exists $t \in S$ such that $\operatorname{tg}(m)=0$ in $M^{\prime \prime}$. But $\operatorname{tg}(m)=g(t m)$ since $g$ is an $A$-module homomorphism, hence $t m \in \operatorname{Ker}(g)=$ $\operatorname{Im}(f)$ and therefore $t m=f\left(m^{\prime}\right)$ for some $m^{\prime} \in M^{\prime}$. Hence in $S^{-1} M$ we have $m / s=f\left(m^{\prime}\right) / s t=\left(S^{-1} f\right)\left(m^{\prime} / s t\right) \in \operatorname{Im}\left(S^{-1} f\right)$. Hence $\operatorname{Ker}\left(S^{-1} g\right) \subseteq \operatorname{Im}\left(S^{-1} f\right)$.
 \end{proof}
 
-In particular, it follows from (\ref{prop:3.3}) that if $M^{\prime}$ is a submodule of $M$, the mapping $S^{-1} M^{\prime} \rightarrow S^{-1} M$ is injective and therefore $S^{-1} M^{\prime}$ can be regarded as a submodule of $S^{-1} M$. With this convention,
+In particular, it follows from (\eqref{prop:3.3}) that if $M^{\prime}$ is a submodule of $M$, the mapping $S^{-1} M^{\prime} \rightarrow S^{-1} M$ is injective and therefore $S^{-1} M^{\prime}$ can be regarded as a submodule of $S^{-1} M$. With this convention,
 
 \begin{corollary}\label{cor:3.4}
 Formation of fractions commutes with formation of finite sums, finite intersections and quotients. Precisely, if $N, P$ are submodules of an A-module $M$, then
@@ -169,7 +169,7 @@ The mapping $S^{-1} A \times M \rightarrow S^{-1} M$ defined by
 (a / s, m) \mapsto a m / s
 \]
 
-is $A$-bilinear, and therefore by the universal property \ref{prop:2.12} of the tensor product induces an $A$-homomorphism
+is $A$-bilinear, and therefore by the universal property \eqref{prop:2.12} of the tensor product induces an $A$-homomorphism
 
 \[
 f: S^{-1} A \otimes_{1} M \rightarrow S^{-1} M
@@ -197,7 +197,7 @@ $S^{-1} A$ is a flat A-module.
 \end{corollary}
 
 \begin{proof}
-(\ref{prop:3.3}), (\ref{prop:3.5}).
+(\eqref{prop:3.3}), (\eqref{prop:3.5}).
 \end{proof}
 
 \begin{proposition}\label{prop:3.7}
@@ -217,7 +217,7 @@ as $A_{\mathfrak{p}}$-modules.
 \end{proposition}
 
 \begin{proof}
-Use (\ref{prop:3.5}) and the canonical isomorphisms of Chapter 2.
+Use (\eqref{prop:3.5}) and the canonical isomorphisms of Chapter 2.
 \end{proof}
 
 \section{Local Properties}
@@ -238,7 +238,7 @@ Let $M$ be an A-module. Then the following are equivalent:
 \end{proposition}
 
 \begin{proof}
-Clearly i) $\Rightarrow$ ii) $\Rightarrow$ iii). Suppose iii) satisfied and $M \neq 0$. Let $x$ be a non-zero element of $M$, and let $\mathfrak{a}=\operatorname{Ann}(x) ; \mathfrak{a}$ is an ideal $\neq(1)$, hence is contained in a maximal ideal $\mathfrak{m}$ by \ref{cor:1.4}. Consider $x / l \in M_{\mathfrak{m}}$. Since $M_{\mathfrak{m}}=0$ we have $x / 1=0$, hence $x$ is killed by some element of $A-\mathfrak{m}$; but this is impossible since Ann $(x) \subseteq \mathfrak{m}$.
+Clearly i) $\Rightarrow$ ii) $\Rightarrow$ iii). Suppose iii) satisfied and $M \neq 0$. Let $x$ be a non-zero element of $M$, and let $\mathfrak{a}=\operatorname{Ann}(x) ; \mathfrak{a}$ is an ideal $\neq(1)$, hence is contained in a maximal ideal $\mathfrak{m}$ by \eqref{cor:1.4}. Consider $x / l \in M_{\mathfrak{m}}$. Since $M_{\mathfrak{m}}=0$ we have $x / 1=0$, hence $x$ is killed by some element of $A-\mathfrak{m}$; but this is impossible since Ann $(x) \subseteq \mathfrak{m}$.
 \end{proof}
 
 \begin{proposition}\label{prop:3.9}
@@ -261,7 +261,7 @@ Similarly with ``injective'' replaced by ``surjective'' throughout.
 
   \item $\Rightarrow$ iii) because a maximal ideal is prime.
 
-  \item $\Rightarrow$ i). Let $M^{\prime}=\operatorname{Ker}(\phi)$, then the sequence $0 \rightarrow M^{\prime} \rightarrow M \rightarrow N$ is exact, hence $0 \rightarrow M_{m}^{\prime} \rightarrow M_{m} \rightarrow N_{m}$ is exact by (\ref{prop:3.3}) and therefore $M_{m}^{\prime} \cong$ $\operatorname{Ker}\left(\phi_{m}\right)=0$ since $\phi_{m}$ is injective. Hence $M^{\prime}=0$ by (\ref{prop:3.8}), hence $\phi$ is injective. For the other part of the proposition, just reverse all the arrows.
+  \item $\Rightarrow$ i). Let $M^{\prime}=\operatorname{Ker}(\phi)$, then the sequence $0 \rightarrow M^{\prime} \rightarrow M \rightarrow N$ is exact, hence $0 \rightarrow M_{m}^{\prime} \rightarrow M_{m} \rightarrow N_{m}$ is exact by (\eqref{prop:3.3}) and therefore $M_{m}^{\prime} \cong$ $\operatorname{Ker}\left(\phi_{m}\right)=0$ since $\phi_{m}$ is injective. Hence $M^{\prime}=0$ by (\eqref{prop:3.8}), hence $\phi$ is injective. For the other part of the proposition, just reverse all the arrows.
 \end{enumerate}
 \end{proof}
 
@@ -281,7 +281,7 @@ For any A-module $M$, the following statements are equivalent:
 
 \begin{proof}
 \begin{enumerate}[i)]
-  \item $\Rightarrow$ ii) by (\ref{prop:3.5}) and (2.20).
+  \item $\Rightarrow$ ii) by (\eqref{prop:3.5}) and (2.20).
 
   \item $\Rightarrow$ iii) O.K.
 
@@ -289,19 +289,19 @@ For any A-module $M$, the following statements are equivalent:
 
 \[
 \begin{aligned}
-N \rightarrow P \text { injective } & \Rightarrow N_{\mathfrak{m}} \rightarrow P_{\mathfrak{m}} \text { injective, by (\ref{prop:3.9}) } \\
-& \Rightarrow N_{\mathfrak{m}} \otimes_{A_{\mathfrak{m}}} M_{\mathfrak{m}} \rightarrow P_{\mathfrak{m}} \otimes_{A_{\mathfrak{m}}} M_{\mathfrak{m}} \text { injective, by \ref{prop:2.19} } \\
-& \Rightarrow\left(N \otimes_{A} M\right)_{\mathfrak{m}} \rightarrow\left(P \otimes_{A} M\right)_{\mathfrak{m}} \text { injective, by (\ref{prop:3.7}) } \\
-& \Rightarrow N \otimes_{A} M \rightarrow P \otimes_{A} M \text { injective, by (\ref{prop:3.9}). }
+N \rightarrow P \text { injective } & \Rightarrow N_{\mathfrak{m}} \rightarrow P_{\mathfrak{m}} \text { injective, by (\eqref{prop:3.9}) } \\
+& \Rightarrow N_{\mathfrak{m}} \otimes_{A_{\mathfrak{m}}} M_{\mathfrak{m}} \rightarrow P_{\mathfrak{m}} \otimes_{A_{\mathfrak{m}}} M_{\mathfrak{m}} \text { injective, by \eqref{prop:2.19} } \\
+& \Rightarrow\left(N \otimes_{A} M\right)_{\mathfrak{m}} \rightarrow\left(P \otimes_{A} M\right)_{\mathfrak{m}} \text { injective, by (\eqref{prop:3.7}) } \\
+& \Rightarrow N \otimes_{A} M \rightarrow P \otimes_{A} M \text { injective, by (\eqref{prop:3.9}). }
 \end{aligned}
 \]
 
 \end{enumerate}
-Hence $M$ is flat by \ref{prop:2.19}.
+Hence $M$ is flat by \eqref{prop:2.19}.
 \end{proof}
 
 \section{Extended and Contracted Ideals in Rings of Fractions}
-Let $A$ be a ring, $S$ a multiplicatively closed subset of $A$ and $f: A \rightarrow S^{-1} A$ the natural homomorphism, defined by $f(a)=a / 1$. Let $C$ be the set of contracted ideals in $A$, and let $E$ be the set of extended ideals in $S^{-1} A$ (cf. \ref{prop:1.17}). If $\mathfrak{a}$ is an ideal in $A$, its extension $a^{e}$ in $S^{-1} A$ is $S^{-1} \mathfrak{a}$ (for any $y \in a^{e}$ is of the form $\sum a_{\mathfrak{l}} / s_{\text {, }}$, where $a_{\mathfrak{t}} \in \mathfrak{a}$ and $s_{\mathfrak{i}} \in S$; bring this fraction to a common denominator).
+Let $A$ be a ring, $S$ a multiplicatively closed subset of $A$ and $f: A \rightarrow S^{-1} A$ the natural homomorphism, defined by $f(a)=a / 1$. Let $C$ be the set of contracted ideals in $A$, and let $E$ be the set of extended ideals in $S^{-1} A$ (cf. \eqref{prop:1.17}). If $\mathfrak{a}$ is an ideal in $A$, its extension $a^{e}$ in $S^{-1} A$ is $S^{-1} \mathfrak{a}$ (for any $y \in a^{e}$ is of the form $\sum a_{\mathfrak{l}} / s_{\text {, }}$, where $a_{\mathfrak{t}} \in \mathfrak{a}$ and $s_{\mathfrak{i}} \in S$; bring this fraction to a common denominator).
 
 \begin{proposition}\label{prop:3.11}
 \begin{enumerate}[i)]
@@ -319,7 +319,7 @@ Let $A$ be a ring, $S$ a multiplicatively closed subset of $A$ and $f: A \righta
 
 \begin{proof}
 \begin{enumerate}[i)]
-  \item Let $\mathfrak{b}$ be an ideal in $S^{-1} A$, and let $x / s \in \mathfrak{b}$. Then $x / 1 \in \mathfrak{b}$, hence $x \in \mathfrak{b}^{\mathfrak{c}}$ and therefore $x / s \in \mathfrak{b}^{c \varepsilon}$. Since $\mathfrak{b} \supseteq \mathfrak{b}^{c e}$ in any case \ref{prop:1.17}, it follows that $\mathfrak{b}=\mathfrak{b}^{c e}$.
+  \item Let $\mathfrak{b}$ be an ideal in $S^{-1} A$, and let $x / s \in \mathfrak{b}$. Then $x / 1 \in \mathfrak{b}$, hence $x \in \mathfrak{b}^{\mathfrak{c}}$ and therefore $x / s \in \mathfrak{b}^{c \varepsilon}$. Since $\mathfrak{b} \supseteq \mathfrak{b}^{c e}$ in any case \eqref{prop:1.17}, it follows that $\mathfrak{b}=\mathfrak{b}^{c e}$.
 
   \item $x \in \mathfrak{a}^{e c}=\left(S^{-1} \mathfrak{a}\right)^{c} \Leftrightarrow x / 1=a / s$ for some $a \in \mathfrak{a}, s \in S \Leftrightarrow(x s-a) t=0$ for some $t \in S \Leftrightarrow x s t \in \mathfrak{a} \Leftrightarrow x \in \bigcup_{s \in S}(\mathfrak{a}: s)$.
 
@@ -327,7 +327,7 @@ Let $A$ be a ring, $S$ a multiplicatively closed subset of $A$ and $f: A \righta
 
   \item If $q$ is a prime ideal in $S^{-1} A$, then $q^{c}$ is a prime ideal in $A$ (this much is true for any ring homomorphism). Conversely, if $\mathfrak{p}$ is a prime ideal in $A$, then $A / \mathfrak{p}$ is an integral domain; if $\bar{S}$ is the image of $S$ in $A / \mathfrak{p}$, we have $S^{-1} A / S^{-1} \mathfrak{p} \cong$ $S^{-1}(A / \mathfrak{p})$ which is either 0 or else is contained in the field of fractions of $A / \mathfrak{p}$ and is therefore an integral domain, and therefore $S^{-1} \mathfrak{p}$ is either prime or is the unit ideal; by i) the latter possibility occurs if and only if $\mathfrak{p}$ meets $S$.
 
-  \item For sums and products, this follows from \ref{exc:1.18}; for intersections, from (\ref{cor:3.4}). As to radicals, we have $S^{-1} r(\mathfrak{a}) \subseteq r\left(S^{-1} \mathfrak{a}\right)$ from \ref{exc:1.18}, and the proof of the reverse inclusion is a routine verification which we leave to the reader.
+  \item For sums and products, this follows from \eqref{exc:1.18}; for intersections, from (\eqref{cor:3.4}). As to radicals, we have $S^{-1} r(\mathfrak{a}) \subseteq r\left(S^{-1} \mathfrak{a}\right)$ from \eqref{exc:1.18}, and the proof of the reverse inclusion is a routine verification which we leave to the reader.
 \end{enumerate}
 \end{proof}
 
@@ -339,9 +339,9 @@ Let $A$ be a ring, $S$ a multiplicatively closed subset of $A$ and $f: A \righta
 S^{-1}(\mathfrak{a}: \mathfrak{b})=\left(S^{-1} \mathfrak{a}: S^{-1} \mathfrak{b}\right)
 \]
 
-is true provided the ideal $\mathfrak{b}$ is finitely generated: see (\ref{cor:3.15}).
+is true provided the ideal $\mathfrak{b}$ is finitely generated: see (\eqref{cor:3.15}).
 
-\item The proof in \ref{prop:1.8} that if $f \in A$ is not nilpotent there is a prime ideal of $A$ which does not contain $f$ can be expressed more concisely in the language of rings of fractions. Since the set $S=\left(f^{n}\right)_{n>0}$ does not contain 0, the ring $S^{-1} A=A_{f}$ is not the zero ring and therefore by \ref{thm:1.3} has a maximal ideal, whose contraction in $A$ is a prime ideal $\mathfrak{p}$ which does not meet $S$ by (\ref{prop:3.11}); hence $f \notin \mathfrak{p}$.
+\item The proof in \eqref{prop:1.8} that if $f \in A$ is not nilpotent there is a prime ideal of $A$ which does not contain $f$ can be expressed more concisely in the language of rings of fractions. Since the set $S=\left(f^{n}\right)_{n>0}$ does not contain 0, the ring $S^{-1} A=A_{f}$ is not the zero ring and therefore by \eqref{thm:1.3} has a maximal ideal, whose contraction in $A$ is a prime ideal $\mathfrak{p}$ which does not meet $S$ by (\eqref{prop:3.11}); hence $f \notin \mathfrak{p}$.
 \end{enumerate}
 \end{remark}
 
@@ -354,11 +354,11 @@ If $\mathfrak{p}$ is a prime ideal of $A$, the prime ideals of the local ring $A
 \end{corollary}
 
 \begin{proof}
-Take $S=A-\mathfrak{p}$ in (\ref{prop:3.11}) (iv).
+Take $S=A-\mathfrak{p}$ in (\eqref{prop:3.11}) (iv).
 \end{proof}
 
 \begin{remark}
-Thus the passage from $A$ to $A_{\mathfrak{p}}$ cuts out all prime ideals except those contained in $\mathfrak{p}$. In the other direction, the passage from $A$ to $A / \mathfrak{p}$ cuts out all prime ideals except those containing $\mathfrak{p}$. Hence if $\mathfrak{p}, \mathfrak{q}$ are prime ideals such that $\mathfrak{p} \supseteq \mathfrak{q}$, then by localizing with respect to $\mathfrak{p}$ and taking the quotient mod $q$ (in either order: these two operations commute, by (\ref{cor:3.4})), we restrict our attention to those prime ideals which lie between $\mathfrak{p}$ and $q$. In particular, if $\mathfrak{p}=\mathfrak{q}$ we end up with a field, called the residue field at $\mathfrak{p}$, which can be obtained either as the field of fractions of the integral domain $A / p$ or as the residue field of the local ring $A_{\mathfrak{p}}$.
+Thus the passage from $A$ to $A_{\mathfrak{p}}$ cuts out all prime ideals except those contained in $\mathfrak{p}$. In the other direction, the passage from $A$ to $A / \mathfrak{p}$ cuts out all prime ideals except those containing $\mathfrak{p}$. Hence if $\mathfrak{p}, \mathfrak{q}$ are prime ideals such that $\mathfrak{p} \supseteq \mathfrak{q}$, then by localizing with respect to $\mathfrak{p}$ and taking the quotient mod $q$ (in either order: these two operations commute, by (\eqref{cor:3.4})), we restrict our attention to those prime ideals which lie between $\mathfrak{p}$ and $q$. In particular, if $\mathfrak{p}=\mathfrak{q}$ we end up with a field, called the residue field at $\mathfrak{p}$, which can be obtained either as the field of fractions of the integral domain $A / p$ or as the residue field of the local ring $A_{\mathfrak{p}}$.
 \end{remark}
 
 \begin{proposition}\label{prop:3.14}
@@ -370,14 +370,14 @@ If this is true for two $A$-modules, $M, N$, it is true for $M+N$ :
 
 \[
 \begin{aligned}
-S^{-1}(\operatorname{Ann}(M+N)) & =S^{-1}(\operatorname{Ann}(M) \cap \operatorname{Ann}(N)) \text { by }\ref{exc:2.2} \\
-& =S^{-1}(\operatorname{Ann}(M)) \cap S^{-1}(\operatorname{Ann}(N)) \text { by (\ref{cor:3.4}) } \\
+S^{-1}(\operatorname{Ann}(M+N)) & =S^{-1}(\operatorname{Ann}(M) \cap \operatorname{Ann}(N)) \text { by }\eqref{exc:2.2} \\
+& =S^{-1}(\operatorname{Ann}(M)) \cap S^{-1}(\operatorname{Ann}(N)) \text { by (\eqref{cor:3.4}) } \\
 & =\operatorname{Ann}\left(S^{-1} M\right) \cap \operatorname{Ann}\left(S^{-1} N\right) \text { by hypothesis } \\
 & =\operatorname{Ann}\left(S^{-1} M+S^{-1} N\right)=\operatorname{Ann}\left(S^{-1}(M+N)\right) .
 \end{aligned}
 \]
 
-Hence it is enough to prove (\ref{prop:3.14}) for $M$ generated by a single element: then $M \cong A / \mathfrak{a}$ (as $A$-module), where $\mathfrak{a}=\operatorname{Ann}(M) ; S^{-1} M \cong\left(S^{-1} A\right) /\left(S^{-1} \mathfrak{a}\right)$ by (\ref{cor:3.4}), so that Ann $\left(S^{-1} M\right)=S^{-1} \mathfrak{a}=S^{-1}(\operatorname{Ann}(M))$.
+Hence it is enough to prove (\eqref{prop:3.14}) for $M$ generated by a single element: then $M \cong A / \mathfrak{a}$ (as $A$-module), where $\mathfrak{a}=\operatorname{Ann}(M) ; S^{-1} M \cong\left(S^{-1} A\right) /\left(S^{-1} \mathfrak{a}\right)$ by (\eqref{cor:3.4}), so that Ann $\left(S^{-1} M\right)=S^{-1} \mathfrak{a}=S^{-1}(\operatorname{Ann}(M))$.
 \end{proof}
 
 \begin{corollary}\label{cor:3.15}
@@ -385,7 +385,7 @@ If $N, P$ are submodules of an A-module $M$ and if $P$ is finitely generated, th
 \end{corollary}
 
 \begin{proof}
-$(N: P)=$ Ann $((N+P) / N)$ by \ref{exc:2.2}; now apply (\ref{prop:3.14}).
+$(N: P)=$ Ann $((N+P) / N)$ by \eqref{exc:2.2}; now apply (\eqref{prop:3.14}).
 \end{proof}
 
 \begin{proposition}\label{prop:3.16}
@@ -393,7 +393,7 @@ Let $A \rightarrow B$ be a ring homomorphism and let $\mathfrak{p}$ be a prime i
 \end{proposition}
 
 \begin{proof}
-If $\mathfrak{p}=\mathfrak{q}^{c}$ then $\mathfrak{p}^{e c}=\mathfrak{p}$ by \ref{prop:1.17}. Conversely, if $\mathfrak{p}^{e c}=\mathfrak{p}$, let $S$ be the image of $A-\mathfrak{p}$ in $B$. Then $\mathfrak{p}^{e}$ does not meet $S$, therefore by (\ref{prop:3.11}) its extension in $S^{-1} B$ is a proper ideal and hence is contained in a maximal ideal $\mathfrak{m}$ of $S^{-1} B$. If $\mathfrak{q}$ is the contraction of $\mathfrak{m}$ in $B$, then $\mathfrak{q}$ is prime, $q \supseteq \mathfrak{p}^{*}$ and $q \cap S=\varnothing$. Hence $\mathfrak{q}^{c}=\mathfrak{p}$.
+If $\mathfrak{p}=\mathfrak{q}^{c}$ then $\mathfrak{p}^{e c}=\mathfrak{p}$ by \eqref{prop:1.17}. Conversely, if $\mathfrak{p}^{e c}=\mathfrak{p}$, let $S$ be the image of $A-\mathfrak{p}$ in $B$. Then $\mathfrak{p}^{e}$ does not meet $S$, therefore by (\eqref{prop:3.11}) its extension in $S^{-1} B$ is a proper ideal and hence is contained in a maximal ideal $\mathfrak{m}$ of $S^{-1} B$. If $\mathfrak{q}$ is the contraction of $\mathfrak{m}$ in $B$, then $\mathfrak{q}$ is prime, $q \supseteq \mathfrak{p}^{*}$ and $q \cap S=\varnothing$. Hence $\mathfrak{q}^{c}=\mathfrak{p}$.
 \end{proof}
 
 \section{Exercises}
@@ -402,7 +402,7 @@ If $\mathfrak{p}=\mathfrak{q}^{c}$ then $\mathfrak{p}^{e c}=\mathfrak{p}$ by \re
 
   \item Let $a$ be an ideal of a ring $A$, and let $S=1+\mathfrak{a}$. Show that $S^{-1} \mathfrak{a}$ is contained in the Jacobson radical of $S^{-1} A$.
 
-Use this result and Nakayama's lemma to give a proof of \ref{cor:2.5} which does not depend on determinants. [If $M=a M$, then $S^{-1} M=\left(S^{-1} a\right)\left(S^{-1} M\right)$, hence by Nakayama we have $S^{-1} M=0$. Now use Exercise 1.]
+Use this result and Nakayama's lemma to give a proof of \eqref{cor:2.5} which does not depend on determinants. [If $M=a M$, then $S^{-1} M=\left(S^{-1} a\right)\left(S^{-1} M\right)$, hence by Nakayama we have $S^{-1} M=0$. Now use Exercise 1.]
 
   \item Let $A$ be a ring, let $S$ and $T$ be two multiplicatively closed subsets of $A$, and let $U$ be the image of $T$ in $S^{-1} A$. Show that the rings $(S T)^{-1} A$ and $U^{-1}\left(S^{-1} A\right)$ are isomorphic.
 
@@ -492,9 +492,9 @@ If these conditions are satisfied, show that $\operatorname{Spec}(.4)$ is compac
   \item $M_{\mathfrak{m}}$ is torsion-free for all maximal ideals $\mathfrak{m}$.
 \end{enumerate}
 
-  \item Let $M$ be an $A$-module and $a$ an ideal of $A$. Suppose that $M_{\mathfrak{m}}=0$ for all maximal ideals $m \supseteq \mathfrak{a}$. Prove that $M=\mathfrak{a} M$. [Pass to the $A / \mathfrak{a}$-module $M / \mathfrak{a} M$ and use (\ref{prop:3.8}).]
+  \item Let $M$ be an $A$-module and $a$ an ideal of $A$. Suppose that $M_{\mathfrak{m}}=0$ for all maximal ideals $m \supseteq \mathfrak{a}$. Prove that $M=\mathfrak{a} M$. [Pass to the $A / \mathfrak{a}$-module $M / \mathfrak{a} M$ and use (\eqref{prop:3.8}).]
 
-  \item Let $A$ be a ring, and let $F$ be the $A$-module $A^{n}$. Show that every set of $n$ generators of $F$ is a basis of $F$. [Let $x_{1}, \ldots, x_{n}$ be a set of generators and $e_{1}, \ldots, e_{n}$ the canonical basis of $F$. Define $\phi: F \rightarrow F$ by $\phi\left(e_{i}\right)=x_{i}$. Then $\phi$ is surjective and we have to prove that it is an isomorphism. By (\ref{prop:3.9}) we may assume that $A$ is a local ring. Let $N$ be the kernel of $\phi$ and let $k=A / \mathfrak{m}$ be the residue field of $A$. Since $F$ is a flat $A$-module, the exact sequence $0 \rightarrow N \rightarrow F \rightarrow F \rightarrow 0$ gives an exact sequence $0 \longrightarrow k \otimes N \longrightarrow k \otimes F \stackrel{1 \otimes \phi}{\longrightarrow} k \otimes F \longrightarrow 0$. Now $k \otimes F=k^{n}$ is an $n$-dimensional vector space over $k ; 1 \otimes \phi$ is surjective, hence bijective, hence $k \otimes N=0$.
+  \item Let $A$ be a ring, and let $F$ be the $A$-module $A^{n}$. Show that every set of $n$ generators of $F$ is a basis of $F$. [Let $x_{1}, \ldots, x_{n}$ be a set of generators and $e_{1}, \ldots, e_{n}$ the canonical basis of $F$. Define $\phi: F \rightarrow F$ by $\phi\left(e_{i}\right)=x_{i}$. Then $\phi$ is surjective and we have to prove that it is an isomorphism. By (\eqref{prop:3.9}) we may assume that $A$ is a local ring. Let $N$ be the kernel of $\phi$ and let $k=A / \mathfrak{m}$ be the residue field of $A$. Since $F$ is a flat $A$-module, the exact sequence $0 \rightarrow N \rightarrow F \rightarrow F \rightarrow 0$ gives an exact sequence $0 \longrightarrow k \otimes N \longrightarrow k \otimes F \stackrel{1 \otimes \phi}{\longrightarrow} k \otimes F \longrightarrow 0$. Now $k \otimes F=k^{n}$ is an $n$-dimensional vector space over $k ; 1 \otimes \phi$ is surjective, hence bijective, hence $k \otimes N=0$.
 
 Also $N$ is finitely generated, by Chapter 2 , Exercise 12 , hence $N=0$ by Nakayama's lemma. Hence $\phi$ is an isomorphism.]
 
@@ -512,7 +512,7 @@ Deduce that every set of generators of $F$ has at least $n$ elements.
 
   \item For every $A$-module $M$, the mapping $x \mapsto 1 \otimes x$ of $M$ into $M_{B}$ is injective.
 \end{enumerate}
-(For i) $\Rightarrow$ ii), use (\ref{prop:3.16}). ii) $\Rightarrow$ iii) is clear.
+(For i) $\Rightarrow$ ii), use (\eqref{prop:3.16}). ii) $\Rightarrow$ iii) is clear.
 
 iii) $\Rightarrow$ iv): Let $x$ be a non-zero element of $M$ and let $M^{\prime}=A x$. Since $B$ is flat over $A$ it is enough to show that $M_{B}^{\prime} \neq 0$. We have $M^{\prime} \cong A / a$ for some ideal $a \neq(1)$, hence $M_{B}^{\prime} \cong B / \alpha^{*}$. Now $a \subseteq \mathfrak{m}$ for some maximal ideal $m$, hence $Q^{e} \subseteq \pi^{e} \neq(1)$. Hence $M_{B}^{\prime} \neq 0$.
 
@@ -524,7 +524,7 @@ $B$ is said to be faithfully flat over $A$.
 
   \item Let $A \stackrel{f}{\rightarrow} B \stackrel{g}{\rightarrow} C$ be ring homomorphisms. If $g \circ f$ is flat and $g$ is faithfully fiat, then $f$ is fiat.
 
-  \item Let $f: A \rightarrow B$ be a flat homomorphism of rings, let $q$ be a prime ideal of $B$ and let $\mathfrak{p}=q^{\mathfrak{c}}$. Then $f^{*}: \operatorname{Spec}\left(B_{q}\right) \rightarrow \operatorname{Spec}\left(A_{\mathfrak{p}}\right)$ is surjective. [For $B_{\mathfrak{p}}$ is fiat over $A_{\mathfrak{p}}$ by (\ref{prop:3.10}), and $B_{q}$ is a local ring of $B_{\mathfrak{p}}$, hence is flat over $B_{\mathfrak{p}}$. Hence $B_{q}$ is flat over $A_{\mathfrak{p}}$ and satisfies condition (3) of Exercise 16.]
+  \item Let $f: A \rightarrow B$ be a flat homomorphism of rings, let $q$ be a prime ideal of $B$ and let $\mathfrak{p}=q^{\mathfrak{c}}$. Then $f^{*}: \operatorname{Spec}\left(B_{q}\right) \rightarrow \operatorname{Spec}\left(A_{\mathfrak{p}}\right)$ is surjective. [For $B_{\mathfrak{p}}$ is fiat over $A_{\mathfrak{p}}$ by (\eqref{prop:3.10}), and $B_{q}$ is a local ring of $B_{\mathfrak{p}}$, hence is flat over $B_{\mathfrak{p}}$. Hence $B_{q}$ is flat over $A_{\mathfrak{p}}$ and satisfies condition (3) of Exercise 16.]
 
   \item Let $A$ be a ring, $M$ an $A$-module. The support of $M$ is defined to be the set Supp $(M)$ of prime ideals $\mathfrak{p}$ of $A$ such that $M_{\mathfrak{p}} \neq 0$. Prove the following results:
 \begin{enumerate}[i)]
