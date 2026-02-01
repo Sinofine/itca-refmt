@@ -1,4 +1,4 @@
-So far we have considered quite arbitrary commutative rings (with identity). To go further, however, and obtain deeper theorems we need to impose some finiteness conditions. The most convenient way is in the form of "chain conditions"\index{Chain conditions}. These apply both to rings and modules, and in this chapter we consider the case of modules. Most of the arguments are of a rather formal kind and because of this there is a symmetry between the ascending and descending chains-a symmetry which disappears in the case of rings as we shall see in subsequent chapters.
+So far we have considered quite arbitrary commutative rings (with identity). To go further, however, and obtain deeper theorems we need to impose some finiteness conditions. The most convenient way is in the form of \textit{chain conditions}\index{Chain conditions}. These apply both to rings and modules, and in this chapter we consider the case of modules. Most of the arguments are of a rather formal kind and because of this there is a symmetry between the ascending and descending chains-a symmetry which disappears in the case of rings as we shall see in subsequent chapters.
 
 Let $\Sigma$ be a set partially ordered by a relation $\leqslant$ (i.e., $\leqslant$ is reflexive and transitive and is such that $x \leqslant y$ and $y \leqslant x$ together imply $x=y$ ).
 
@@ -19,7 +19,7 @@ The following conditions on $\Sigma$ are equivalent:
 \end{enumerate}
 \end{proof}
 
-If $\Sigma$ is the set of submodules of a module $M$, ordered by the relation $\subseteq$, then i) is called the ascending chain condition (a.c.c. for short) and ii) the maximal condition. A module $M$ satisfying either of these equivalent conditions is said to be Noetherian\index{Module!Noetherian}\index{Noetherian!module} (after Emmy Noether). If $\Sigma$ is ordered by $\supseteq$, then i) is the descending chain condition (d.c.c. for short) and ii) the minimal condition. A module $M$ satisfying these is said to be Artinian\index{Module!Artinian}\index{Artinian!module} (after Emil Artin).
+If $\Sigma$ is the set of submodules of a module $M$, ordered by the relation $\subseteq$, then i) is called the ascending chain condition (a.c.c. for short) and ii) the maximal condition. A module $M$ satisfying either of these equivalent conditions is said to be \textit{Noetherian}\index{Module!Noetherian}\index{Noetherian!module} (after Emmy Noether). If $\Sigma$ is ordered by $\supseteq$, then i) is the descending chain condition (d.c.c. for short) and ii) the minimal condition. A module $M$ satisfying these is said to be \textit{Artinian}\index{Module!Artinian}\index{Artinian!module} (after Emil Artin).
 
 Examples, 1) A finite abelian group (as Z-module) satisfies both a.c.c. and d.c.c.
 
@@ -78,7 +78,7 @@ Apply induction and \eqref{prop:6.3} to the exact sequence
 \]
 \end{proof}
 
-A ring $A$ is said to be Noetherian\index{Noetherian!ring} (resp. Artinian\index{Artinian!ring}) if it is so as an $A$-module, i.e., if it satisfies a.c.c. (resp. d.c.c.) on ideals.
+A ring $A$ is said to be \textit{Noetherian}\index{Noetherian!ring} (resp. \textit{Artinian}\index{Artinian!ring}) if it is so as an $A$-module, i.e., if it satisfies a.c.c. (resp. d.c.c.) on ideals.
 
 Examples. 1) Any field is both Artinian and Noetherian; so is the ring $Z /(n)$ $(n \neq 0)$. The ring $Z$ is Noetherian, but not Artinian (Exercise 2 before \eqref{prop:6.2}).
 
@@ -110,13 +110,13 @@ Then $A / \mathfrak{a}$ is a Noetherian (resp. Artinian) ring.
 By \eqref{prop:6.3} $A / \mathfrak{a}$ is Noetherian (resp. Artinian) as an $A$-module, hence also as an $A / \mathfrak{a}$-module.
 \end{proof}
 
-A chain of submodules\index{Chain of submodules} of a module $M$ is a sequence $\left(M_{i}\right)(0 \leqslant i \leqslant n)$ of submodules of $M$ such that
+A \textit{chain of submodules}\index{Chain of submodules} of a module $M$ is a sequence $\left(M_{i}\right)(0 \leqslant i \leqslant n)$ of submodules of $M$ such that
 
 \[
 M=M_{0} \supset M_{1} \supset \ldots \supset M_{n}=0 \text { (strict inclusions). }
 \]
 
-The length\index{Length} of the chain is $n$ (the number of "links"). A composition series\index{Composition series} of $M$ is a maximal chain, that is one in which no extra submodules can be inserted: this is equivalent to saying that each quotient $M_{t-1} / M_{t}(1 \leqslant i \leqslant n)$ is simple (that is, has no submodules except 0 and itself).
+The \textit{length}\index{Length} of the chain is $n$ (the number of "links"). A \textit{composition series}\index{Composition series} of $M$ is a maximal chain, that is one in which no extra submodules can be inserted: this is equivalent to saying that each quotient $M_{t-1} / M_{t}(1 \leqslant i \leqslant n)$ is simple (that is, has no submodules except 0 and itself).
 
 \begin{proposition}\label{prop:6.7}
 Suppose that $M$ has a composition series of length $n$. Then every composition series of $M$ has length $n$, and every chain in $M$ can be extended to a composition series.

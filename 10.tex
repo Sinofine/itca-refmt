@@ -1,4 +1,4 @@
-In classical algebraic geometry (i.e. over the field of complex numbers) we can use transcendental methods. This means that we regard a rational function as an analytic function (of one or more complex variables) and consider its power series expansion about a point. In abstract algebraic geometry the best we can do is to consider the corresponding formal power series. This is not so powerful as in the holomorphic case but it can be a very useful tool. The process of replacing polynomials by formal power series is an example of a general device known as completion.\index{Completion} Another important instance of completion occurs in number theory in the formation of $p$-adic numbers. If $p$ is a prime number in $\mathbf{Z}$ we can work in the various quotient rings $\mathbf{Z} / p^{n} \mathbf{Z}$ : in other words, we can try and solve congruences modulo $p^{n}$ for higher and higher values of $n$. This is analogous to the successive approximations given by the terms of a Taylor expansion and, just as it is convenient to introduce formal power series, so it is convenient to introduce the $p$-adic numbers, these being the limit in a certain sense of $\mathbf{Z} / p^{n} \mathbf{Z}$ as $n \rightarrow \infty$. In one respect, however, the $p$-adic numbers are more complicated than formal power series (in, say, one variable $x$ ). Whereas the polynomials of degree $n$ are naturally embedded in the power series, the group $\mathbf{Z} / p^{n} \mathbf{Z}$ cannot be embedded in $\mathbf{Z}$. Although a $p$-adic integer can be thought of as a power series $\sum a_{n} p^{n}\left(0 \leqslant a_{n}<p\right)$ this representation does not behave well under the ring operations.
+In classical algebraic geometry (i.e. over the field of complex numbers) we can use transcendental methods. This means that we regard a rational function as an analytic function (of one or more complex variables) and consider its power series expansion about a point. In abstract algebraic geometry the best we can do is to consider the corresponding formal power series. This is not so powerful as in the holomorphic case but it can be a very useful tool. The process of replacing polynomials by formal power series is an example of a general device known as \textit{completion}.\index{Completion} Another important instance of completion occurs in number theory in the formation of $p$-adic numbers. If $p$ is a prime number in $\mathbf{Z}$ we can work in the various quotient rings $\mathbf{Z} / p^{n} \mathbf{Z}$ : in other words, we can try and solve congruences modulo $p^{n}$ for higher and higher values of $n$. This is analogous to the successive approximations given by the terms of a Taylor expansion and, just as it is convenient to introduce formal power series, so it is convenient to introduce the $p$-adic numbers, these being the limit in a certain sense of $\mathbf{Z} / p^{n} \mathbf{Z}$ as $n \rightarrow \infty$. In one respect, however, the $p$-adic numbers are more complicated than formal power series (in, say, one variable $x$ ). Whereas the polynomials of degree $n$ are naturally embedded in the power series, the group $\mathbf{Z} / p^{n} \mathbf{Z}$ cannot be embedded in $\mathbf{Z}$. Although a $p$-adic integer can be thought of as a power series $\sum a_{n} p^{n}\left(0 \leqslant a_{n}<p\right)$ this representation does not behave well under the ring operations.
 
 In this chapter we shall describe the general process of ``adic'' completionthe prime $p$ being replaced by a general ideal. It is most conveniently expressed in topological terms but the reader should beware of using the topology of the real numbers as an intuitive guide. Instead he should think of the power series topology in which a power series is ``small'' if it has only terms of high order. Alternatively he can think of the $p$-adic topology on $Z$, in which an integer is ``small'' if it is divisible by a high power of $p$.
 
@@ -35,7 +35,7 @@ ii) implies that the cosets of $H$ are all closed; thus points are closed in $G 
 \end{enumerate}
 \end{proof}
 
-Assume for simplicity that $0 \in G$ has a countable fundamental system of neighborhoods. Then the \index{Complete}completion $G$ of $G$ may be defined in the usual way by means of Cauchy sequences. A Cauchy sequence in $G$ is defined to be a sequence $\left(x_{v}\right)$ of elements of $\boldsymbol{G}$ such that, for any neighborhood $U$ of 0, there exists an integer $s(U)$ with the property that
+Assume for simplicity that $0 \in G$ has a countable fundamental system of neighborhoods. Then the \index{Complete}\textit{completion} $G$ of $G$ may be defined in the usual way by means of Cauchy sequences. A Cauchy sequence in $G$ is defined to be a sequence $\left(x_{v}\right)$ of elements of $\boldsymbol{G}$ such that, for any neighborhood $U$ of 0, there exists an integer $s(U)$ with the property that
 \[
 x_{\mu}-x_{\nu} \in U \text{ for all } \mu, \nu \geqslant s(U) \text{. }
 \]
@@ -70,7 +70,7 @@ We have now arrived at a special case of inverse limits. More generally, conside
 \theta_{n+1}: A_{n+1} \rightarrow A_{n} \text{. }
 \]
 
-We call this an inverse system, and the group of all coherent sequences $\left(a_{n}\right)$ (i.e., $a_{n} \in A_{n}$ and $\theta_{n+1} a_{n+1}=a_{n}$ ) is called the \index{Limit!inverse}inverse limit of the system. It is usually written $\lim _{\leftarrow} A_{n}$, the homomorphisms $\theta_{n}$ being understood. With this notation we have
+We call this an inverse system, and the group of all coherent sequences $\left(a_{n}\right)$ (i.e., $a_{n} \in A_{n}$ and $\theta_{n+1} a_{n+1}=a_{n}$ ) is called the \index{Limit!inverse}\textit{inverse limit} of the system. It is usually written $\lim _{\leftarrow} A_{n}$, the homomorphisms $\theta_{n}$ being understood. With this notation we have
 \[
 \hat{G} \cong \lim G / G_{n} .
 \]
@@ -163,7 +163,7 @@ $G \cong \hat{G}$.
 
 If $\phi: G \rightarrow \hat{G}$ is an isomorphism we shall say that $G$ is complete. Thus \eqref{prop:10.5} asserts that the completion of $G$ is complete. Note that our definition of complete includes Hausdorff (by \eqref{lem:10.1}).
 
-The most important class of examples of topological groups of the kind we are considering are given by taking $G=A, G_{n}=a^{n}$, where $\mathfrak{a}$ is an ideal in a ring $A$. The topology so defined on $A$ is called the a-adic topology, or just the $\mathfrak{a}$-topology.\index{Adic topology} Since the $\mathfrak{a}^{n}$ are ideals, it is not hard to check that with this topology $A$ is a topological ring, i.e. that the ring operations are continuous. By \eqref{lem:10.1} the topology is Hausdorff $\Leftrightarrow \cap \mathfrak{a}^{n}=(0)$. The completion $\hat{A}$ of $A$ is again a topological ring; $\phi: A \rightarrow \hat{A}$ is a continuous ring homomorphism, whose kernel is $\cap \mathfrak{a}^{n}$.
+The most important class of examples of topological groups of the kind we are considering are given by taking $G=A, G_{n}=a^{n}$, where $\mathfrak{a}$ is an ideal in a ring $A$. The topology so defined on $A$ is called the a-adic topology, or just the $\mathfrak{a}$-\textit{topology}.\index{Adic topology} Since the $\mathfrak{a}^{n}$ are ideals, it is not hard to check that with this topology $A$ is a topological ring, i.e. that the ring operations are continuous. By \eqref{lem:10.1} the topology is Hausdorff $\Leftrightarrow \cap \mathfrak{a}^{n}=(0)$. The completion $\hat{A}$ of $A$ is again a topological ring; $\phi: A \rightarrow \hat{A}$ is a continuous ring homomorphism, whose kernel is $\cap \mathfrak{a}^{n}$.
 
 Likewise for an $A$-module $M$ : take $G=M, G_{n}=a^{n} M$. This defines the a-topology on $M$, and the completion $\hat{M}$ of $M$ is a topological $\hat{A}$-module (i.e. $\hat{A} \times \hat{M} \rightarrow \hat{M}$ is continuous). If $f: M \rightarrow N$ is any $A$-module homomorphism, then $f\left(\mathfrak{a}^{n} M\right)=\mathfrak{a}^{n} f(M) \subseteq \mathfrak{a}^{n} N$, and therefore $f$ is continuous (with respect to the a-topologies on $M$ and $N$ ) and so defines $\hat{f}: \hat{M} \rightarrow \hat{N}$.
 
@@ -175,7 +175,7 @@ Likewise for an $A$-module $M$ : take $G=M, G_{n}=a^{n} M$. This defines the a-t
 \end{enumerate}
 \end{example}
 
-\section{Filtrations}\index{Filtration}
+\section{Filtrations}\index{Filtration}\textit{Filtration}
 The a-topology of an $A$-module $M$ was defined by taking the submodules $\mathfrak{a}^{n} M$ as basic neighborhoods of 0, but there are other ways of defining the same topology. An (infinite) chain $M=M_{0} \supseteq M_{1} \supseteq \cdots \supseteq M_{n} \supseteq \cdots$, where the $M_{n}$ are submodules of $M$, is called a filtration of $M$, and denoted by $\left(M_{n}\right)$. It is an a-filtration if $\mathfrak{a} M_{n} \subseteq M_{n+1}$ for all $n$, and a stable a-filtration if $\mathfrak{a} M_{n}=M_{n+1}$ for all sufficiently large $n$. Thus $\left(\mathfrak{a}^{n} M\right)$ is a stable $a$-filtration.
 
 \begin{lemma}\label{lem:10.6}
@@ -186,14 +186,14 @@ If $\left(M_{n}\right),\left(M_{n}^{\prime}\right)$ are stable a-filtrations of 
 Enough to take $M_{n}^{\prime}=\mathfrak{a}^{n} M$. Since $\mathfrak{a} M_{n} \subseteq M_{n+1}$ for all $n$, we have $\mathfrak{a}^{n} M \subseteq M_{n}$; also $\mathfrak{a} M_{n}=M_{n+1}$ for all $n \geqslant n_{0}$ say, hence $M_{n+n_{0}}=\mathfrak{a}^{n} M_{n_{0}}$ $\subseteq \mathfrak{a}^{n} M$.
 \end{proof}
 
-\section{Graded Rings and Modules}\index{Graded ring}
+\section{Graded Rings and Modules}\index{Graded ring}\textit{Graded ring}
 A graded ring is a ring $A$ together with a family $\left(A_{n}\right)_{n \geq 0}$ of subgroups of the additive group of $A$, such that $A=\bigoplus_{n=0}^{\infty} A_{n}$ and $A_{m} A_{n} \subseteq A_{m+n}$ for all $m, n \geqslant 0$. Thus $A_{0}$ is a subring of $A$, and each $A_{n}$ is an $A_{0}$-module.
 
 \begin{example}
 $A=k\left[x_{1}, \ldots, x_{r}\right], A_{n}=$ set of all homogeneous polynomials of degree $n$.
 \end{example}
 
-If $A$ is a graded ring, a graded $A$-module is an $A$-module $M$ together with a family\index{Graded!module} $\left(M_{n}\right)_{n \geq 0}$ of subgroups of $M$ such that $M=\bigoplus_{n=0}^{\infty} M_{n}$ and $A_{m} M_{n} \subseteq M_{m+n}$ for all $m, n \geqslant 0$. Thus each $M_{n}$ is an $A_{0}$-module. An element $x$ of $M$ is homogeneous if $x \in M_{n}$ for some $n(n=$ degree of $x)$. Any element $y \in M$ can be written uniquely as a finite sum $\sum_{n} y_{n}$, where $y_{n} \in M_{n}$ for all $n \geqslant 0$, and all but a finite number of the $y_{n}$ are 0. The non-zero components $y_{n}$ are called the homogeneous components of $y$.
+If $A$ is a graded ring, a graded $A$-module is an $A$-module $M$ together with a family\index{Graded!module}\textit{graded module} $\left(M_{n}\right)_{n \geq 0}$ of subgroups of $M$ such that $M=\bigoplus_{n=0}^{\infty} M_{n}$ and $A_{m} M_{n} \subseteq M_{m+n}$ for all $m, n \geqslant 0$. Thus each $M_{n}$ is an $A_{0}$-module. An element $x$ of $M$ is homogeneous if $x \in M_{n}$ for some $n(n=$ degree of $x)$. Any element $y \in M$ can be written uniquely as a finite sum $\sum_{n} y_{n}$, where $y_{n} \in M_{n}$ for all $n \geqslant 0$, and all but a finite number of the $y_{n}$ are 0. The non-zero components $y_{n}$ are called the homogeneous components of $y$.
 
 If $M, N$ are graded $A$-modules, a homomorphism of graded $A$-modules is an $A$-module homomorphism $f: M \rightarrow N$ such that $f\left(M_{n}\right) \subseteq N_{n}$ for all $n \geqslant 0$.
 
@@ -235,7 +235,7 @@ Since $Q_{n}$ is finitely generated as an $A$-module, $M_{n}^{*}$ is finitely ge
 \end{proof}
 
 \begin{proposition}\label{prop:10.9}
-\index{Artin-Rees lemma}
+\index{Artin-Rees lemma}\textit{Artin-Rees lemma}
 (Artin-Rees lemma). Let $A$ be a Noetherian ring, a an ideal in $A, M$ a finitely-generated A-module, $\left(M_{n}\right)$ a stable a-filtration of $M$. If $M^{\prime}$ is a submodule of $M$, then $\left(M^{\prime} \cap M_{n}\right)$ is a stable a-filtration of $M^{\prime}$.
 \end{proposition}
 
@@ -605,7 +605,7 @@ and apply \eqref{prop:10.13}. Then use the isomorphism
 \]
 and the inclusions $(\mathfrak{a}+\mathfrak{b})^{2 n} \subseteq \mathfrak{a}^{n}+\mathfrak{b}^{n} \subseteq(\mathfrak{a}+\mathfrak{b})^{n}$.]
 
-\item Let $A$ be a Noetherian ring and $\mathfrak{a}$ an ideal in $A$. Prove that $\mathfrak{a}$ is contained in the Jacobson radical of $A$ if and only if every maximal ideal of $A$ is closed for the a-topology. (A Noetherian topological ring in which the topology is defined by an ideal contained in the Jacobson radical is called a Zariski ring.\index{Zariski!ring} Examples are local rings and (by \eqref{prop:10.15}(iv)) $a$-adic completions.)
+\item Let $A$ be a Noetherian ring and $\mathfrak{a}$ an ideal in $A$. Prove that $\mathfrak{a}$ is contained in the Jacobson radical of $A$ if and only if every maximal ideal of $A$ is closed for the a-topology. (A Noetherian topological ring in which the topology is defined by an ideal contained in the Jacobson radical is called a \textit{Zariski ring}.\index{Zariski!ring} Examples are local rings and (by \eqref{prop:10.15}(iv)) $a$-adic completions.)
 
 \item Let $A$ be a Noetherian ring, $\alpha$ an ideal of $A$, and $\hat{A}$ the $a$-adic completion. Prove that $\hat{A}$ is faithfully flat over $A$ (Chapter 3, Exercise 16) if and only if $A$ is a Zariski ring (for the $a$-topology). [Since $\hat{A}$ is flat over $A$, it is enough to show that
 \[
@@ -615,7 +615,7 @@ now use \eqref{cor:10.19} and Exercise 6.]
 
 \item Let $A$ be the local ring of the origin in $C^{n}$ (i.e., the ring of all rational functions $f / g \in \mathbf{C}\left(z_{1}, \ldots, z_{n}\right)$ with $\left.g(0) \neq 0\right)$, let $B$ be the ring of power series in $z_{1}, \ldots, z_{n}$ which converge in some neighborhood of the origin, and let $C$ be the ring of formal power series in $z_{1}, \ldots, z_{n}$, so that $A \subset B \subset C$. Show that $B$ is a local ring and that its completion for the maximal ideal topology is $C$. Assuming that $B$ is Noetherian, prove that $B$ is $A$-flat. [Use Chapter 3, Exercise 17, and Exercise 7 above.]
 
-\item Let $A$ be a local ring, $\mathfrak{m}$ its maximal ideal. Assume that $A$ is $\mathfrak{m}$-adically complete. For any polynomial $f(x) \in A[x]$, let $\bar{f}(x) \in(A / \mathfrak{m})[x]$ denote its reduction mod. $\mathfrak{m}$. Prove Hensel's lemma\index{Hensel's lemma}: if $f(x)$ is monic of degree $n$ and if there exist coprime monic polynomials $\bar{g}(x), \bar{h}(x) \in(A / \mathfrak{m})[x]$ of degrees $r, n-\boldsymbol{r}$ with $\bar{f}(x)=$ $\bar{g}(x) \bar{h}(x)$, then we can lift $\bar{g}(x), \bar{h}(x)$ back to monic polynomials $g(x), h(x) \in A[x]$ such that $f(x)=g(x) h(x)$.
+\item Let $A$ be a local ring, $\mathfrak{m}$ its maximal ideal. Assume that $A$ is $\mathfrak{m}$-adically complete. For any polynomial $f(x) \in A[x]$, let $\bar{f}(x) \in(A / \mathfrak{m})[x]$ denote its reduction mod. $\mathfrak{m}$. Prove Hensel's lemma\index{Hensel's lemma}\textit{Hensel's lemma}: if $f(x)$ is monic of degree $n$ and if there exist coprime monic polynomials $\bar{g}(x), \bar{h}(x) \in(A / \mathfrak{m})[x]$ of degrees $r, n-\boldsymbol{r}$ with $\bar{f}(x)=$ $\bar{g}(x) \bar{h}(x)$, then we can lift $\bar{g}(x), \bar{h}(x)$ back to monic polynomials $g(x), h(x) \in A[x]$ such that $f(x)=g(x) h(x)$.
 
 [Assume inductively that we have constructed $g_{k}(x), h_{k}(x) \in A[x]$ such that $g_{k}(x) h_{k}(x)-f(x) \in \mathfrak{m}^{k} A[x]$. Then use the fact that since $\bar{g}(x)$ and $\bar{h}(x)$ are coprime we can find $\bar{a}_{p}(x), \bar{b}_{p}(x)$, of degrees $\leqslant n-r, r$ respectively, such that $x^{p}=\bar{a}_{p}(x) \bar{g}_{k}(x)+\bar{b}_{p}(x) \bar{h}_{k}(x)$, where $p$ is any integer such that $1 \leqslant p \leqslant n$. Finally, use the completeness of $A$ to show that the sequences $g_{k}(x), h_{k}(x)$ converge to the required $g(x), h(x)$.]
 

@@ -19,30 +19,29 @@ such that
         addition $(x(y+z)=x y+x z,(y+z) x=y x+z x)$.
 \end{enumerate}
 We shall consider only rings which are commutative:
-\begin{enumerate}[resume*]
+\begin{enumerate}[resume]
   \item $x y=y x$ for all $x, y \in A$,
 \end{enumerate}
 and have an identity element (denoted by $1$):
-\begin{enumerate}[resume*]
+\begin{enumerate}[resume]
   \item $\exists 1 \in A$ such that $x 1=1 x=x$ for all $x \in A$.
 \end{enumerate}
-
 The identity element is then unique.
 
-Throughout this book the word ``ring'' shall mean a commutative ring with an
-identity element, that is, a ring satisfying axioms (1) to (4) above.
+{\itshape Throughout this book the word ``ring'' shall mean a commutative ring with an
+identity element}, that is, a ring satisfying axioms (1) to (4) above.
 \begin{remark}
   We do not exclude the possibility in (4) that 1 might be equal to $0$. If so,
   then for any $x \in A$ we have
   \[
     x=x 1=x 0=0
   \]
-  and so $A$ has only one element, $0$. In this case $A$ is the zero ring,
+  and so $A$ has only one element, $0$. In this case $A$ is the {\itshape zero ring},
   denoted by $0$ (by abuse of notation).
 \end{remark}
 
-\index{Homomorphism}
-A ring homomorphism is a mapping $f$ of a ring $A$ into a ring $B$ such that
+\index{Ring!homomorphism}
+A {\itshape ring homomorphism} is a mapping $f$ of a ring $A$ into a ring $B$ such that
 \begin{enumerate}[i)]
   \item $f(x+y)=f(x)+f(y)$ (so that $f$ is a homomorphism of abelian groups, and
         therefore also $f(x-y)=f(x)-f(y), f(-x)=-f(x), f(0)=0)$,
@@ -53,7 +52,7 @@ A ring homomorphism is a mapping $f$ of a ring $A$ into a ring $B$ such that
 
 In other words, $f$ respects addition, multiplication and the identity element.
 
-A subset $S$ of a ring $A$ is a subring of $A$ if $S$ is closed under addition
+A subset $S$ of a ring $A$ is a {\itshape subring} of $A$ if $S$ is closed under addition
 and multiplication and contains the identity element of $A$. The identity
 mapping of $S$ into $A$ is then a ring homomorphism.
 
@@ -62,7 +61,7 @@ $g \circ f: A \to C$.
 
 \section{Ideals. Quotient rings}
 \index{Ideal}
-An ideal $\mathfrak{a}$ of a ring $A$ is a subset of $A$ which is an additive
+An {\itshape ideal} $\mathfrak{a}$ of a ring $A$ is a subset of $A$ which is an additive
 subgroup and is such that $A \mathfrak{a} \subseteq \mathfrak{a}$ (i.e.,
 $x \in A$ and $y \in \mathfrak{a}$ imply $x y \in \mathfrak{a}$). The quotient
 group $A / \mathfrak{a}$ inherits a uniquely defined multiplication from $A$
@@ -78,8 +77,8 @@ We shall frequently use the following fact:
   of $A / \mathfrak{a}$, given by $\mathfrak{b}=\phi^{-1}(\bar{b})$.
 \end{proposition}
 
-If $f: A \to B$ is any ring homomorphism, the \index{Kernel}kernel of
-$f\left(=f^{-1}(0)\right)$ is an ideal a of $A$, and the \index{Image}image of $f$ ($=f(A)$)
+If $f: A \to B$ is any ring homomorphism, the \index{Kernel}{\itshape kernel} of
+$f\left(=f^{-1}(0)\right)$ is an ideal a of $A$, and the \index{Image}{\itshape image} of $f$ ($=f(A)$)
 is a subring $C$ of $B$; and $f$ induces a ring isomorphism
 $A / \mathfrak{a} \cong C$.
 
@@ -88,23 +87,23 @@ $x-y \in \mathfrak{a}$.
 
 \section{Zero-divisors. Nilpotent elements. Units}
 \index{Zero-divisor}
-A zero-divisor in a ring $A$ is an element $x$ which ``divides 0'', i.e., for
+A {\itshape zero-divisor} in a ring $A$ is an element $x$ which ``divides 0'', i.e., for
 which there exists $y \neq 0$ in $A$ such that $x y=0$. A ring with no
-zero-divisors $\neq 0$ (and in which $1 \neq 0$) is called an \index{Domain!integral}integral domain.
+zero-divisors $\neq 0$ (and in which $1 \neq 0$) is called an \index{Domain!integral}\textit{integral domain}.
 For example, $\mathbf{Z}$ and $k\left[x_{1}, \ldots, x_{n}\right]$ ( $k$ a
 field, $x_{i}$ indeterminates) are integral domains.
 
-An element $x \in A$ is \index{Nilpotent}nilpotent if $x^{n}=0$ for some $n>0$. A nilpotent
+An element $x \in A$ is \index{Nilpotent}\textit{nilpotent} if $x^{n}=0$ for some $n>0$. A nilpotent
 element is a zero-divisor (unless $A=0$), but not conversely (in general).
 
-A \index{Unit}unit in $A$ is an element $x$ which ``divides 1'', i.e., an element $x$ such
+A \index{Unit}\textit{unit} in $A$ is an element $x$ which ``divides 1'', i.e., an element $x$ such
 that $x y=1$ for some $y \in A$. The element $y$ is then uniquely determined by
 $x$, and is written $x^{-1}$. The units in $A$ form a (multiplicative) abelian
-group. The multiples $a x$ of an element $x \in A$ form a \index{Ideal!principal}principal ideal,
+group. The multiples $a x$ of an element $x \in A$ form a \index{Ideal!principal}\textit{principal ideal},
 denoted by $(x)$ or $A x$. $x$ is a unit $\iff$ $(x)=A=(1)$. The zero ideal
 $(0)$ is usually denoted by $0$.
 
-A \index{Field}field is a ring $A$ in which $1 \neq 0$ and every non-zero element is a unit.
+A \index{Field}\textit{field} is a ring $A$ in which $1 \neq 0$ and every non-zero element is a unit.
 Every field is an integral domain (but not conversely: $\mathbf{Z}$ is not a
 field).
 
@@ -133,10 +132,10 @@ field).
   \end{enumerate}
 \end{proof}
 \section{Prime ideals and maximal ideals}
-An ideal $\mathfrak{p}$ in $A$ is \index{Ideal!prime}prime if $\mathfrak{p} \neq(1)$ and if
+An ideal $\mathfrak{p}$ in $A$ is \index{Ideal!prime}\textit{prime} if $\mathfrak{p} \neq(1)$ and if
 $x y \in \mathfrak{p} \implies x \in \mathfrak{p}$ or $y \in \mathfrak{p}$.
 
-An ideal $\mathfrak{m}$ in $A$ is \index{Ideal!maximal}maximal if $\mathfrak{m} \neq(1)$ and if there
+An ideal $\mathfrak{m}$ in $A$ is \index{Ideal!maximal}\textit{maximal} if $\mathfrak{m} \neq(1)$ and if there
 is no ideal $a$ such that $\mathfrak{m} \subset \mathfrak{a} \subset(1)$ (strict
 inclusions). Equivalently:
 
@@ -164,7 +163,7 @@ them.
     that ``ring'' means commutative ring with $1$.)}
 \end{theorem}
 \begin{proof}
-  This is a standard application of \index{Zorn's lemma}Zorn's lemma. \footnote{Let $S$ be a
+  This is a standard application of \index{Zorn's lemma}\textit{Zorn's lemma}. \footnote{Let $S$ be a
     non-empty partially ordered set (i.e., we are given a relation $x \leq y$ on
     $S$ which is reflexive and transitive and such that $x \leq y$ and
     $y \leq x$ together imply $x=y$ ). A subset $T$ of $S$ is a chain if either
@@ -194,8 +193,8 @@ them.
   containing a.
 \end{corollary}
 \begin{proof}
-  Apply (\eqref{thm:1.3}) to $A / \mathfrak{a}$, bearing in mind (\eqref{prop:1.1}). Alternatively,
-  modify the proof of (\eqref{thm:1.3}).
+  Apply \eqref{thm:1.3} to $A / \mathfrak{a}$, bearing in mind \eqref{prop:1.1}. Alternatively,
+  modify the proof of \eqref{thm:1.3}.
 \end{proof}
 \begin{corollary}\label{cor:1.5}
   Every non-unit of $A$ is contained in a maximal ideal.
@@ -205,8 +204,8 @@ them.
     \item If $A$ is Noetherian (Chapter 7) we can avoid the use of Zorn's lemma:
           the set of all ideals $\neq(1)$ has a maximal element.
     \item There exist rings with exactly one maximal ideal, for example fields.
-          \index{Local ring}A ring $A$ with exactly one maximal ideal $m$ is called a \index{Ring!local}local ring.
-          The field $k=A / \mathfrak{m}$ is called the \index{Field!residue}residue field of $A$.
+          \index{Local ring}A \textit{local ring} $A$ with exactly one maximal ideal $m$ is called a \index{Ring!local}local ring.
+          The field $k=A / \mathfrak{m}$ is called the \index{Field!residue}\textit{residue field} of $A$.
   \end{enumerate}
 \end{remark}
 \begin{proposition}\label{prop:1.6}
@@ -230,7 +229,7 @@ them.
           $i$).
   \end{enumerate}
 \end{proof}
-A ring with only a finite number of maximal ideals is called \index{Ring!semi-local}semi-local.
+A ring with only a finite number of maximal ideals is called \index{Ring!semi-local}\textit{semi-local}.
 \begin{example}
   \begin{enumerate}[1.]
     \item $A=k\left[x_{1}, \ldots, x_{n}\right], k$ a field. Let $f \in A$ be an
@@ -324,7 +323,7 @@ all the maximal ideals of $A$. It can be characterized as follows:
   $1-x y \in \mathfrak{m}$ and is therefore not a unit.
 \end{proof}
 \section{Operations on ideals}
-If $\mathfrak{a}, \mathfrak{b}$ are ideals in a ring $A$, their \index{Ideal!sum}sum
+If $\mathfrak{a}, \mathfrak{b}$ are ideals in a ring $A$, their \index{Ideal!sum}\textit{sum}
 $\mathfrak{a}+\mathfrak{b}$ is the set of all $x+y$ where $x \in \mathfrak{a}$
 and $y \in \mathfrak{b}$. It is the smallest ideal containing $\mathfrak{a}$ and
 $\mathfrak{b}$. More generally, we may define the sum
@@ -549,7 +548,7 @@ If $\mathfrak{a}$ is any ideal of $A$, the \textit{radical} of $\mathfrak{a}$ is
 \]
 If $\phi: A \to A / \mathfrak{a}$ is the standard homomorphism, then
 $r(\mathfrak{a})=\phi^{-1}\left(\mathfrak{R}_{A / \mathfrak{a}}\right)$ and
-hence $r(\mathfrak{a})$ is an ideal by (\eqref{prop:1.7}).
+hence $r(\mathfrak{a})$ is an ideal by \eqref{prop:1.7}.
 \begin{exercise}\label{exc:1.13}
   \begin{enumerate}[i)]
     \item $r(\mathfrak{a}) \supseteq \mathfrak{a}$
@@ -567,7 +566,7 @@ hence $r(\mathfrak{a})$ is an ideal by (\eqref{prop:1.7}).
   which contain $\mathfrak{a}$.
 \end{proposition}
 \begin{proof}
-  Apply (\eqref{prop:1.8}) to $A / \mathfrak{a}$.
+  Apply \eqref{prop:1.8} to $A / \mathfrak{a}$.
 \end{proof}
 
 More generally, we may define the radical $r(E)$ of any subset $E$ of $A$ in the
@@ -592,7 +591,7 @@ for any family of subsets $E_{\alpha}$ of $A$.
 \end{proposition}
 \begin{proof}
   $r(\mathfrak{a}+\mathfrak{b})=r(r(\mathfrak{a})+r(\mathfrak{b}))=r(1)=(1)$,
-  hence $\mathfrak{a}+\mathfrak{b}=(1)$ by (\eqref{exc:1.13}).
+  hence $\mathfrak{a}+\mathfrak{b}=(1)$ by \eqref{exc:1.13}.
 \end{proof}
 \section{Extension and contraction}
 \index{Extension}
@@ -752,7 +751,7 @@ ideal of $A$, and $m$ is generated by $\mathfrak{m}^{c}$ and $x$.
   \item $A / \mathfrak{N}$ is a field.
 \end{enumerate}
 
-  \item A ring $A$ is \index{Boolean ring}Boolean if $x^{2}=x$ for all $x \in A$. In a Boolean ring
+  \item A ring $A$ is \index{Boolean ring}\textit{Boolean} if $x^{2}=x$ for all $x \in A$. In a Boolean ring
   $A$, show that
   \begin{enumerate}[i)]
     \item $2 x=0$ for all $x \in A$;
@@ -1063,7 +1062,7 @@ mapping $\phi: X \to Y$ is said to be \textit{regular} if $\phi$ is the restrict
 $X$ of a polynomial mapping from $k^{n}$ to $k^{m}$.
 
 If $\eta$ is a polynomial function on $Y$, then $\eta \circ \phi$ is a
-polynomial function on $X$. Hence $\phi$ induces a $k$-\index{Algebra!homomorphism}algebra homomorphism
+polynomial function on $X$. Hence $\phi$ induces a $k$-\index{Algebra!homomorphism}\textit{algebra homomorphism}
 $P(Y) \to P(X)$, namely $\eta \mapsto \eta \circ \phi$. Show that in this way we
 obtain a one-to-one correspondence between the regular mappings $X \to Y$ and
 the $k$-algebra homomorphisms $P(Y) \to P(X)$.
